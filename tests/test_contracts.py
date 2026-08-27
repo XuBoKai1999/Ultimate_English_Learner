@@ -1,0 +1,161 @@
+import json
+import unittest
+from datetime import datetime
+from pathlib import Path
+from tempfile import TemporaryDirectory
+from unittest.mock import patch
+
+from src.articles import import_analysis, import_cards, save_draft
+from src.contracts import validate_analysis, validate_card, validate_cards
+from src.gui import align_word_spans, list_directory, nearest_span_index, parse_category_sources
+from src.settings import load_zoom, save_zoom
+from src.tts import build_article_audio
+
+
+CATEGORIES = ["AI & Technology", "Uncategorized"]
+
+
+class ContractTests(unittest.TestCase):
+    def test_category_source_table_is_read_from_markdown(self):
+        rows = parse_category_sources(
+            "## Default Categories\n\n| Category | 範圍 | 建議來源 |\n"
+            "| --- | --- | --- |\n| **Physics** | 物理 | Quanta |\n\n## General Sources\n"
+        )
+        self.assertEqual(rows, [("Physics", "物理", "Quanta")])
+
+    def test_timing_words_align_with_repeated_article_text(self):
+        timings = [{"text": word} for word in ("Hello", "world", "hello")]
+        spans = align_word_spans("Hello, world. Hello again.", timings)
+        self.assertEqual(spans, [(0, 5), (7, 12), (14, 19)])
+        self.assertEqual(nearest_span_index(10, spans), 1)
+
+    def test_valid_contracts(self):
+        item = {"text": "reason about", "type": "phrase", "level": "general"}
+        validate_analysis(
+            {"title": "Test", "category": "AI & Technology", "items": [item]},
+            CATEGORIES,
+        )
+        content = {
+            **item,
+            "meaning_zh": "推理、思考",
+            "example_en": "We need to reason about the result.",
+            "example_zh": "我們需要思考這個結果。",
+        }
+        validate_cards({"cards": [content]})
+        validate_card(
+            {
+                **content,
+                "id": "card_001",
+                "article_id": "test",
+                "category": "AI & Technology",
+                "status": "learning",
+                "review_stage": 0,
+                "review_count": 0,
+                "last_review": None,
+                "next_review": "2026-08-27",
+            },
+            CATEGORIES,
+        )
+
+    def test_rejects_invalid_ai_output(self):
+        with self.assertRaises(ValueError):
+            validate_analysis(
+                {"title": "Test", "category": "Invented", "items": []},
+                CATEGORIES,
+            )
+        with self.assertRaises(ValueError):
+            validate_cards({"cards": [{"text": "incomplete"}]})
+
+    def test_zoom_setting_round_trip_and_fallback(self):
+        with TemporaryDirectory() as directory:
+            path = Path(directory) / "settings.json"
+            self.assertEqual(load_zoom(path), 1.0)
+            save_zoom(1.4, path)
+            self.assertEqual(load_zoom(path), 1.4)
+            path.write_text('{"zoom": 99}', encoding="utf-8")
+            self.assertEqual(load_zoom(path), 1.0)
+
+    def test_directory_listing_is_live_and_sorted(self):
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "B.txt").touch()
+            (root / "A folder").mkdir()
+            (root / ".gitkeep").touch()
+            self.assertEqual(
+                [item.name for item in list_directory(root)],
+                ["A folder", "B.txt"],
+            )
+
+    def test_ai_cleaned_article_save(self):
+        cleaned = "# Title\n\nHello world."
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            draft = save_draft(cleaned, root / "drafts", datetime(2026, 8, 27, 12))
+            self.assertEqual((draft / "article.md").read_text(encoding="utf-8"), cleaned + "\n")
+            analysis = {
+                "title": "Title",
+                "category": "AI & Technology",
+                "items": [{"text": "reason about", "type": "phrase", "level": "general"}],
+            }
+            article = import_analysis(
+                draft, analysis, CATEGORIES, root / "text", root / "audio",
+                datetime(2026, 8, 28),
+            )
+            self.assertEqual(
+                article.relative_to(root / "text").parts[:3],
+                ("AI & Technology", "2026", "08"),
+            )
+            self.assertTrue((root / "audio" / article.relative_to(root / "text")).is_dir())
+            cards = {"cards": [{
+                "text": "reason about",
+                "type": "phrase",
+                "level": "general",
+                "meaning_zh": "思考",
+                "example_en": "Reason about the result.",
+                "example_zh": "思考這項結果。",
+            }]}
+            import_cards(article, cards, datetime(2026, 8, 28))
+            self.assertTrue((article / "cards.json").is_file())
+            card = json.loads(
+                (article / "cards" / "card_001.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(
+                (card["id"], card["article_id"], card["category"], card["next_review"]),
+                ("card_001", article.name, "AI & Technology", "2026-08-28"),
+            )
+            with self.assertRaises(ValueError):
+                import_cards(article, {"cards": []})
+            with self.assertRaises(ValueError):
+                save_draft("", root / "drafts")
+
+    def test_tts_builds_mirrored_audio_and_timings(self):
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            article = root / "text" / "Category" / "2026" / "08" / "article"
+            (article / "cards").mkdir(parents=True)
+            (article / "article.md").write_text("Hello article", encoding="utf-8")
+            (article / "cards" / "card_001.json").write_text(json.dumps({
+                "id": "card_001", "text": "hello", "example_en": "Hello there."
+            }), encoding="utf-8")
+
+            class FakeCommunicate:
+                def __init__(self, text, voice, **kwargs):
+                    self.text = text
+
+                async def stream(self):
+                    yield {"type": "audio", "data": self.text.encode()}
+                    yield {"type": "WordBoundary", "offset": 0, "duration": 5_000_000, "text": self.text}
+
+            audio = root / "audio" / "Category" / "2026" / "08" / "article"
+            with patch("src.tts.edge_tts.Communicate", FakeCommunicate):
+                progress = []
+                build_article_audio(article, audio, lambda done, total, name: progress.append((done, total, name)))
+            self.assertTrue((audio / "article.mp3").is_file())
+            self.assertTrue((audio / "cards" / "card_001" / "text.mp3").is_file())
+            timing = json.loads((audio / "article.timing.json").read_text(encoding="utf-8"))
+            self.assertEqual(timing[0], {"start": 0.0, "duration": 0.5, "text": "Hello article"})
+            self.assertEqual(progress[-1][:2], (3, 3))
+
+
+if __name__ == "__main__":
+    unittest.main()
