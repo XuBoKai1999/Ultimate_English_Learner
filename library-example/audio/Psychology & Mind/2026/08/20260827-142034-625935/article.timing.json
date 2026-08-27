@@ -1,0 +1,12292 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.5625,
+    "text": "#"
+  },
+  {
+    "start": 0.675,
+    "duration": 0.0375,
+    "text": "A"
+  },
+  {
+    "start": 0.725,
+    "duration": 0.1875,
+    "text": "New"
+  },
+  {
+    "start": 0.925,
+    "duration": 0.55,
+    "text": "Framework"
+  },
+  {
+    "start": 1.4875,
+    "duration": 0.1375,
+    "text": "for"
+  },
+  {
+    "start": 1.6375,
+    "duration": 0.1375,
+    "text": "How"
+  },
+  {
+    "start": 1.7875,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 1.9,
+    "duration": 0.2625,
+    "text": "Brain"
+  },
+  {
+    "start": 2.175,
+    "duration": 0.5875,
+    "text": "Compresses"
+  },
+  {
+    "start": 2.775,
+    "duration": 0.1125,
+    "text": "Our"
+  },
+  {
+    "start": 2.9,
+    "duration": 0.325,
+    "text": "Noisy"
+  },
+  {
+    "start": 3.2375,
+    "duration": 0.475,
+    "text": "World"
+  },
+  {
+    "start": 4.575,
+    "duration": 0.1625,
+    "text": "By"
+  },
+  {
+    "start": 4.75,
+    "duration": 0.3625,
+    "text": "Conor"
+  },
+  {
+    "start": 5.125,
+    "duration": 0.5625,
+    "text": "Feehly"
+  },
+  {
+    "start": 6.55,
+    "duration": 0.375,
+    "text": "August"
+  },
+  {
+    "start": 6.9375,
+    "duration": 0.7625,
+    "text": "24"
+  },
+  {
+    "start": 7.825,
+    "duration": 1.2375,
+    "text": "2026"
+  },
+  {
+    "start": 9.925,
+    "duration": 0.175,
+    "text": "An"
+  },
+  {
+    "start": 10.1125,
+    "duration": 0.425,
+    "text": "updated"
+  },
+  {
+    "start": 10.55,
+    "duration": 0.2125,
+    "text": "view"
+  },
+  {
+    "start": 10.775,
+    "duration": 0.1,
+    "text": "of"
+  },
+  {
+    "start": 10.8875,
+    "duration": 0.95,
+    "text": "categorization"
+  },
+  {
+    "start": 11.85,
+    "duration": 0.45,
+    "text": "reflects"
+  },
+  {
+    "start": 12.3125,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 12.4125,
+    "duration": 0.3625,
+    "text": "modern"
+  },
+  {
+    "start": 12.7875,
+    "duration": 0.675,
+    "text": "understanding"
+  },
+  {
+    "start": 13.475,
+    "duration": 0.125,
+    "text": "that"
+  },
+  {
+    "start": 13.6125,
+    "duration": 0.0625,
+    "text": "the"
+  },
+  {
+    "start": 13.6875,
+    "duration": 0.325,
+    "text": "nervous"
+  },
+  {
+    "start": 14.025,
+    "duration": 0.425,
+    "text": "system"
+  },
+  {
+    "start": 14.4625,
+    "duration": 0.175,
+    "text": "is"
+  },
+  {
+    "start": 14.65,
+    "duration": 0.2,
+    "text": "more"
+  },
+  {
+    "start": 14.8625,
+    "duration": 0.0625,
+    "text": "of"
+  },
+  {
+    "start": 14.9375,
+    "duration": 0.0625,
+    "text": "a"
+  },
+  {
+    "start": 15.0125,
+    "duration": 0.5375,
+    "text": "prediction"
+  },
+  {
+    "start": 15.5625,
+    "duration": 0.3625,
+    "text": "engine"
+  },
+  {
+    "start": 15.9375,
+    "duration": 0.1375,
+    "text": "than"
+  },
+  {
+    "start": 16.0875,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 16.15,
+    "duration": 0.4,
+    "text": "filing"
+  },
+  {
+    "start": 16.5625,
+    "duration": 0.5875,
+    "text": "cabinet"
+  },
+  {
+    "start": 18.0125,
+    "duration": 0.3375,
+    "text": "Zara"
+  },
+  {
+    "start": 18.3625,
+    "duration": 0.3625,
+    "text": "Picken"
+  },
+  {
+    "start": 18.7375,
+    "duration": 0.15,
+    "text": "for"
+  },
+  {
+    "start": 18.9,
+    "duration": 0.3125,
+    "text": "Quanta"
+  },
+  {
+    "start": 19.225,
+    "duration": 0.6875,
+    "text": "Magazine"
+  },
+  {
+    "start": 20.775,
+    "duration": 0.575,
+    "text": "#"
+  },
+  {
+    "start": 21.3625,
+    "duration": 0.4875,
+    "text": "#"
+  },
+  {
+    "start": 21.8625,
+    "duration": 0.825,
+    "text": "Introduction"
+  },
+  {
+    "start": 23.55,
+    "duration": 0.2625,
+    "text": "Every"
+  },
+  {
+    "start": 23.825,
+    "duration": 0.325,
+    "text": "moment"
+  },
+  {
+    "start": 24.1625,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 24.25,
+    "duration": 0.1375,
+    "text": "our"
+  },
+  {
+    "start": 24.4,
+    "duration": 0.5125,
+    "text": "lives"
+  },
+  {
+    "start": 25.1,
+    "duration": 0.1375,
+    "text": "our"
+  },
+  {
+    "start": 25.25,
+    "duration": 0.3875,
+    "text": "bodies"
+  },
+  {
+    "start": 25.65,
+    "duration": 0.15,
+    "text": "are"
+  },
+  {
+    "start": 25.8125,
+    "duration": 0.3625,
+    "text": "awash"
+  },
+  {
+    "start": 26.1875,
+    "duration": 0.125,
+    "text": "in"
+  },
+  {
+    "start": 26.325,
+    "duration": 0.4125,
+    "text": "sensory"
+  },
+  {
+    "start": 26.75,
+    "duration": 0.65,
+    "text": "signals"
+  },
+  {
+    "start": 28.2625,
+    "duration": 0.525,
+    "text": "Photons"
+  },
+  {
+    "start": 28.8,
+    "duration": 0.125,
+    "text": "hit"
+  },
+  {
+    "start": 28.9375,
+    "duration": 0.125,
+    "text": "our"
+  },
+  {
+    "start": 29.075,
+    "duration": 0.6375,
+    "text": "retinas"
+  },
+  {
+    "start": 30.575,
+    "duration": 0.3125,
+    "text": "Waves"
+  },
+  {
+    "start": 30.9,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 30.9875,
+    "duration": 0.5,
+    "text": "compressed"
+  },
+  {
+    "start": 31.5,
+    "duration": 0.2,
+    "text": "air"
+  },
+  {
+    "start": 31.7125,
+    "duration": 0.4,
+    "text": "collide"
+  },
+  {
+    "start": 32.125,
+    "duration": 0.125,
+    "text": "with"
+  },
+  {
+    "start": 32.2625,
+    "duration": 0.1125,
+    "text": "our"
+  },
+  {
+    "start": 32.3875,
+    "duration": 0.675,
+    "text": "eardrums"
+  },
+  {
+    "start": 33.925,
+    "duration": 0.45,
+    "text": "Volatile"
+  },
+  {
+    "start": 34.3875,
+    "duration": 0.6375,
+    "text": "molecules"
+  },
+  {
+    "start": 35.0375,
+    "duration": 0.2625,
+    "text": "bind"
+  },
+  {
+    "start": 35.3125,
+    "duration": 0.0875,
+    "text": "to"
+  },
+  {
+    "start": 35.4125,
+    "duration": 0.5375,
+    "text": "receptors"
+  },
+  {
+    "start": 35.9625,
+    "duration": 0.0875,
+    "text": "in"
+  },
+  {
+    "start": 36.0625,
+    "duration": 0.1125,
+    "text": "our"
+  },
+  {
+    "start": 36.1875,
+    "duration": 0.675,
+    "text": "nostrils"
+  },
+  {
+    "start": 37.05,
+    "duration": 0.1375,
+    "text": "and"
+  },
+  {
+    "start": 37.2,
+    "duration": 0.4875,
+    "text": "chemicals"
+  },
+  {
+    "start": 37.7,
+    "duration": 0.3875,
+    "text": "slather"
+  },
+  {
+    "start": 38.1,
+    "duration": 0.1125,
+    "text": "our"
+  },
+  {
+    "start": 38.225,
+    "duration": 0.3625,
+    "text": "taste"
+  },
+  {
+    "start": 38.6,
+    "duration": 0.5125,
+    "text": "buds"
+  },
+  {
+    "start": 39.975,
+    "duration": 0.45,
+    "text": "Pressure"
+  },
+  {
+    "start": 40.4375,
+    "duration": 0.075,
+    "text": "and"
+  },
+  {
+    "start": 40.525,
+    "duration": 0.275,
+    "text": "heat"
+  },
+  {
+    "start": 40.8125,
+    "duration": 0.5,
+    "text": "activate"
+  },
+  {
+    "start": 41.325,
+    "duration": 0.2,
+    "text": "nerve"
+  },
+  {
+    "start": 41.5375,
+    "duration": 0.3875,
+    "text": "endings"
+  },
+  {
+    "start": 41.9375,
+    "duration": 0.0875,
+    "text": "in"
+  },
+  {
+    "start": 42.0375,
+    "duration": 0.125,
+    "text": "our"
+  },
+  {
+    "start": 42.175,
+    "duration": 0.5125,
+    "text": "skin"
+  },
+  {
+    "start": 43.55,
+    "duration": 0.1875,
+    "text": "We"
+  },
+  {
+    "start": 43.75,
+    "duration": 0.1125,
+    "text": "are"
+  },
+  {
+    "start": 43.875,
+    "duration": 0.2125,
+    "text": "able"
+  },
+  {
+    "start": 44.1,
+    "duration": 0.1125,
+    "text": "to"
+  },
+  {
+    "start": 44.225,
+    "duration": 0.4875,
+    "text": "navigate"
+  },
+  {
+    "start": 44.725,
+    "duration": 0.1625,
+    "text": "this"
+  },
+  {
+    "start": 44.9,
+    "duration": 0.425,
+    "text": "torrent"
+  },
+  {
+    "start": 45.3375,
+    "duration": 0.3,
+    "text": "because"
+  },
+  {
+    "start": 45.65,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 45.7625,
+    "duration": 0.3375,
+    "text": "brain"
+  },
+  {
+    "start": 46.1125,
+    "duration": 0.1625,
+    "text": "does"
+  },
+  {
+    "start": 46.2875,
+    "duration": 0.0875,
+    "text": "an"
+  },
+  {
+    "start": 46.3875,
+    "duration": 0.4375,
+    "text": "enormous"
+  },
+  {
+    "start": 46.8375,
+    "duration": 0.2875,
+    "text": "amount"
+  },
+  {
+    "start": 47.1375,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 47.225,
+    "duration": 0.2625,
+    "text": "data"
+  },
+  {
+    "start": 47.5,
+    "duration": 0.7125,
+    "text": "compression"
+  },
+  {
+    "start": 49.075,
+    "duration": 0.2,
+    "text": "Through"
+  },
+  {
+    "start": 49.2875,
+    "duration": 0.0625,
+    "text": "a"
+  },
+  {
+    "start": 49.3625,
+    "duration": 0.475,
+    "text": "process"
+  },
+  {
+    "start": 49.85,
+    "duration": 0.2625,
+    "text": "known"
+  },
+  {
+    "start": 50.125,
+    "duration": 0.1125,
+    "text": "as"
+  },
+  {
+    "start": 50.25,
+    "duration": 0.9875,
+    "text": "categorization"
+  },
+  {
+    "start": 51.45,
+    "duration": 0.1125,
+    "text": "the"
+  },
+  {
+    "start": 51.575,
+    "duration": 0.2875,
+    "text": "brain"
+  },
+  {
+    "start": 51.875,
+    "duration": 0.2875,
+    "text": "turns"
+  },
+  {
+    "start": 52.175,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 52.275,
+    "duration": 0.5,
+    "text": "messy"
+  },
+  {
+    "start": 52.9625,
+    "duration": 0.4875,
+    "text": "noisy"
+  },
+  {
+    "start": 53.675,
+    "duration": 0.85,
+    "text": "information-rich"
+  },
+  {
+    "start": 54.5375,
+    "duration": 0.2875,
+    "text": "world"
+  },
+  {
+    "start": 54.8375,
+    "duration": 0.2,
+    "text": "into"
+  },
+  {
+    "start": 55.05,
+    "duration": 0.6625,
+    "text": "objects"
+  },
+  {
+    "start": 55.8375,
+    "duration": 0.5,
+    "text": "people"
+  },
+  {
+    "start": 56.475,
+    "duration": 0.6875,
+    "text": "concepts"
+  },
+  {
+    "start": 57.375,
+    "duration": 0.15,
+    "text": "and"
+  },
+  {
+    "start": 57.5375,
+    "duration": 0.5125,
+    "text": "emotions"
+  },
+  {
+    "start": 58.0625,
+    "duration": 0.1125,
+    "text": "that"
+  },
+  {
+    "start": 58.1875,
+    "duration": 0.1125,
+    "text": "we"
+  },
+  {
+    "start": 58.3125,
+    "duration": 0.1625,
+    "text": "can"
+  },
+  {
+    "start": 58.4875,
+    "duration": 0.6,
+    "text": "understand"
+  },
+  {
+    "start": 59.1,
+    "duration": 0.1375,
+    "text": "and"
+  },
+  {
+    "start": 59.25,
+    "duration": 0.275,
+    "text": "act"
+  },
+  {
+    "start": 59.5375,
+    "duration": 0.1875,
+    "text": "on"
+  },
+  {
+    "start": 59.7375,
+    "duration": 0.0875,
+    "text": "at"
+  },
+  {
+    "start": 59.8375,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 59.9375,
+    "duration": 0.3125,
+    "text": "level"
+  },
+  {
+    "start": 60.2625,
+    "duration": 0.0875,
+    "text": "of"
+  },
+  {
+    "start": 60.3625,
+    "duration": 0.8625,
+    "text": "experience"
+  },
+  {
+    "start": 62.0875,
+    "duration": 0.1625,
+    "text": "In"
+  },
+  {
+    "start": 62.2625,
+    "duration": 0.7375,
+    "text": "neuroscience’s"
+  },
+  {
+    "start": 63.0125,
+    "duration": 0.525,
+    "text": "traditional"
+  },
+  {
+    "start": 63.55,
+    "duration": 0.3625,
+    "text": "view"
+  },
+  {
+    "start": 64.125,
+    "duration": 0.8625,
+    "text": "categorization"
+  },
+  {
+    "start": 65.0,
+    "duration": 0.5,
+    "text": "happens"
+  },
+  {
+    "start": 65.5125,
+    "duration": 0.0875,
+    "text": "at"
+  },
+  {
+    "start": 65.6125,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 65.7,
+    "duration": 0.3125,
+    "text": "very"
+  },
+  {
+    "start": 66.025,
+    "duration": 0.2125,
+    "text": "end"
+  },
+  {
+    "start": 66.25,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 66.3375,
+    "duration": 0.4,
+    "text": "sensory"
+  },
+  {
+    "start": 66.75,
+    "duration": 0.775,
+    "text": "processing"
+  },
+  {
+    "start": 68.3875,
+    "duration": 0.15,
+    "text": "The"
+  },
+  {
+    "start": 68.55,
+    "duration": 0.275,
+    "text": "brain"
+  },
+  {
+    "start": 68.8375,
+    "duration": 0.5375,
+    "text": "passively"
+  },
+  {
+    "start": 69.3875,
+    "duration": 0.4,
+    "text": "receives"
+  },
+  {
+    "start": 69.8,
+    "duration": 0.4,
+    "text": "sensory"
+  },
+  {
+    "start": 70.2125,
+    "duration": 0.6625,
+    "text": "details"
+  },
+  {
+    "start": 71.1125,
+    "duration": 0.175,
+    "text": "then"
+  },
+  {
+    "start": 71.3,
+    "duration": 0.425,
+    "text": "decodes"
+  },
+  {
+    "start": 71.7375,
+    "duration": 0.15,
+    "text": "their"
+  },
+  {
+    "start": 71.9,
+    "duration": 0.5125,
+    "text": "features"
+  },
+  {
+    "start": 72.425,
+    "duration": 0.1625,
+    "text": "and"
+  },
+  {
+    "start": 72.6,
+    "duration": 0.3875,
+    "text": "matches"
+  },
+  {
+    "start": 73.0,
+    "duration": 0.175,
+    "text": "them"
+  },
+  {
+    "start": 73.1875,
+    "duration": 0.0875,
+    "text": "to"
+  },
+  {
+    "start": 73.2875,
+    "duration": 0.35,
+    "text": "stored"
+  },
+  {
+    "start": 73.65,
+    "duration": 0.4375,
+    "text": "templates"
+  },
+  {
+    "start": 74.1,
+    "duration": 0.1125,
+    "text": "in"
+  },
+  {
+    "start": 74.225,
+    "duration": 0.4625,
+    "text": "memory"
+  },
+  {
+    "start": 74.925,
+    "duration": 0.1875,
+    "text": "like"
+  },
+  {
+    "start": 75.125,
+    "duration": 0.075,
+    "text": "a"
+  },
+  {
+    "start": 75.2125,
+    "duration": 0.3375,
+    "text": "clerk"
+  },
+  {
+    "start": 75.5625,
+    "duration": 0.4875,
+    "text": "shuffling"
+  },
+  {
+    "start": 76.0625,
+    "duration": 0.15,
+    "text": "through"
+  },
+  {
+    "start": 76.225,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 76.2875,
+    "duration": 0.3,
+    "text": "neural"
+  },
+  {
+    "start": 76.6,
+    "duration": 0.45,
+    "text": "filing"
+  },
+  {
+    "start": 77.0625,
+    "duration": 0.6,
+    "text": "cabinet"
+  },
+  {
+    "start": 78.525,
+    "duration": 0.175,
+    "text": "But"
+  },
+  {
+    "start": 78.7125,
+    "duration": 0.2,
+    "text": "this"
+  },
+  {
+    "start": 78.925,
+    "duration": 0.3875,
+    "text": "approach"
+  },
+  {
+    "start": 79.325,
+    "duration": 0.0875,
+    "text": "to"
+  },
+  {
+    "start": 79.425,
+    "duration": 0.875,
+    "text": "categorization"
+  },
+  {
+    "start": 80.3125,
+    "duration": 0.4875,
+    "text": "struggles"
+  },
+  {
+    "start": 80.8125,
+    "duration": 0.1125,
+    "text": "to"
+  },
+  {
+    "start": 80.9375,
+    "duration": 0.4,
+    "text": "account"
+  },
+  {
+    "start": 81.35,
+    "duration": 0.125,
+    "text": "for"
+  },
+  {
+    "start": 81.4875,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 81.575,
+    "duration": 0.7,
+    "text": "extraordinary"
+  },
+  {
+    "start": 82.2875,
+    "duration": 0.85,
+    "text": "flexibility"
+  },
+  {
+    "start": 83.15,
+    "duration": 0.1125,
+    "text": "in"
+  },
+  {
+    "start": 83.275,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 83.3625,
+    "duration": 0.175,
+    "text": "way"
+  },
+  {
+    "start": 83.55,
+    "duration": 0.1375,
+    "text": "we"
+  },
+  {
+    "start": 83.7,
+    "duration": 0.3875,
+    "text": "assign"
+  },
+  {
+    "start": 84.1,
+    "duration": 0.4125,
+    "text": "labels"
+  },
+  {
+    "start": 84.525,
+    "duration": 0.1,
+    "text": "to"
+  },
+  {
+    "start": 84.6375,
+    "duration": 0.4125,
+    "text": "features"
+  },
+  {
+    "start": 85.0625,
+    "duration": 0.0625,
+    "text": "of"
+  },
+  {
+    "start": 85.1375,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 85.2375,
+    "duration": 0.475,
+    "text": "world"
+  },
+  {
+    "start": 86.575,
+    "duration": 0.1625,
+    "text": "On"
+  },
+  {
+    "start": 86.75,
+    "duration": 0.0625,
+    "text": "a"
+  },
+  {
+    "start": 86.825,
+    "duration": 0.2875,
+    "text": "clear"
+  },
+  {
+    "start": 87.125,
+    "duration": 0.2,
+    "text": "day"
+  },
+  {
+    "start": 87.3375,
+    "duration": 0.1125,
+    "text": "on"
+  },
+  {
+    "start": 87.4625,
+    "duration": 0.1125,
+    "text": "an"
+  },
+  {
+    "start": 87.5875,
+    "duration": 0.2875,
+    "text": "open"
+  },
+  {
+    "start": 87.8875,
+    "duration": 0.4,
+    "text": "street"
+  },
+  {
+    "start": 88.4625,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 88.525,
+    "duration": 0.3125,
+    "text": "sudden"
+  },
+  {
+    "start": 88.85,
+    "duration": 0.35,
+    "text": "rhythmic"
+  },
+  {
+    "start": 89.2125,
+    "duration": 0.4125,
+    "text": "patter"
+  },
+  {
+    "start": 89.6375,
+    "duration": 0.175,
+    "text": "is"
+  },
+  {
+    "start": 89.825,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 89.8875,
+    "duration": 0.375,
+    "text": "pigeon"
+  },
+  {
+    "start": 90.275,
+    "duration": 0.3625,
+    "text": "taking"
+  },
+  {
+    "start": 90.65,
+    "duration": 0.4625,
+    "text": "flight"
+  },
+  {
+    "start": 91.35,
+    "duration": 0.1625,
+    "text": "yet"
+  },
+  {
+    "start": 91.525,
+    "duration": 0.125,
+    "text": "when"
+  },
+  {
+    "start": 91.6625,
+    "duration": 0.125,
+    "text": "we’re"
+  },
+  {
+    "start": 91.8,
+    "duration": 0.375,
+    "text": "walking"
+  },
+  {
+    "start": 92.1875,
+    "duration": 0.2375,
+    "text": "down"
+  },
+  {
+    "start": 92.4375,
+    "duration": 0.0625,
+    "text": "a"
+  },
+  {
+    "start": 92.5125,
+    "duration": 0.3375,
+    "text": "dimly"
+  },
+  {
+    "start": 92.8625,
+    "duration": 0.2125,
+    "text": "lit"
+  },
+  {
+    "start": 93.0875,
+    "duration": 0.2875,
+    "text": "alley"
+  },
+  {
+    "start": 93.3875,
+    "duration": 0.1125,
+    "text": "at"
+  },
+  {
+    "start": 93.5125,
+    "duration": 0.3625,
+    "text": "night"
+  },
+  {
+    "start": 94.1,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 94.2125,
+    "duration": 0.2875,
+    "text": "same"
+  },
+  {
+    "start": 94.5125,
+    "duration": 0.4125,
+    "text": "sound"
+  },
+  {
+    "start": 94.9375,
+    "duration": 0.1,
+    "text": "is"
+  },
+  {
+    "start": 95.05,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 95.15,
+    "duration": 0.4125,
+    "text": "shuffle"
+  },
+  {
+    "start": 95.575,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 95.6625,
+    "duration": 0.0625,
+    "text": "a"
+  },
+  {
+    "start": 95.7375,
+    "duration": 0.4875,
+    "text": "stranger’s"
+  },
+  {
+    "start": 96.2375,
+    "duration": 0.7375,
+    "text": "footsteps"
+  },
+  {
+    "start": 97.8375,
+    "duration": 0.1875,
+    "text": "How"
+  },
+  {
+    "start": 98.0375,
+    "duration": 0.1375,
+    "text": "can"
+  },
+  {
+    "start": 98.1875,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 98.2875,
+    "duration": 0.275,
+    "text": "brain"
+  },
+  {
+    "start": 98.575,
+    "duration": 0.6,
+    "text": "categorize"
+  },
+  {
+    "start": 99.1875,
+    "duration": 0.4,
+    "text": "similar"
+  },
+  {
+    "start": 99.6,
+    "duration": 0.2625,
+    "text": "sets"
+  },
+  {
+    "start": 99.875,
+    "duration": 0.0875,
+    "text": "of"
+  },
+  {
+    "start": 99.975,
+    "duration": 0.4375,
+    "text": "sensory"
+  },
+  {
+    "start": 100.425,
+    "duration": 0.45,
+    "text": "signals"
+  },
+  {
+    "start": 100.8875,
+    "duration": 0.125,
+    "text": "in"
+  },
+  {
+    "start": 101.025,
+    "duration": 0.4625,
+    "text": "radically"
+  },
+  {
+    "start": 101.5,
+    "duration": 0.325,
+    "text": "different"
+  },
+  {
+    "start": 101.8375,
+    "duration": 0.325,
+    "text": "ways"
+  },
+  {
+    "start": 102.175,
+    "duration": 0.125,
+    "text": "for"
+  },
+  {
+    "start": 102.3125,
+    "duration": 0.3125,
+    "text": "different"
+  },
+  {
+    "start": 102.6375,
+    "duration": 0.975,
+    "text": "situations"
+  },
+  {
+    "start": 104.475,
+    "duration": 0.2125,
+    "text": "Two"
+  },
+  {
+    "start": 104.7,
+    "duration": 0.0875,
+    "text": "of"
+  },
+  {
+    "start": 104.8,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 104.9125,
+    "duration": 0.325,
+    "text": "world’s"
+  },
+  {
+    "start": 105.25,
+    "duration": 0.2875,
+    "text": "leading"
+  },
+  {
+    "start": 105.55,
+    "duration": 0.9625,
+    "text": "neuroscientists"
+  },
+  {
+    "start": 106.525,
+    "duration": 0.15,
+    "text": "have"
+  },
+  {
+    "start": 106.6875,
+    "duration": 0.2125,
+    "text": "brought"
+  },
+  {
+    "start": 106.9125,
+    "duration": 0.1125,
+    "text": "an"
+  },
+  {
+    "start": 107.0375,
+    "duration": 0.4375,
+    "text": "updated"
+  },
+  {
+    "start": 107.4875,
+    "duration": 0.675,
+    "text": "understanding"
+  },
+  {
+    "start": 108.175,
+    "duration": 0.0875,
+    "text": "of"
+  },
+  {
+    "start": 108.275,
+    "duration": 0.275,
+    "text": "brain"
+  },
+  {
+    "start": 108.5625,
+    "duration": 0.5875,
+    "text": "function"
+  },
+  {
+    "start": 109.1625,
+    "duration": 0.125,
+    "text": "and"
+  },
+  {
+    "start": 109.3,
+    "duration": 0.475,
+    "text": "structure"
+  },
+  {
+    "start": 109.7875,
+    "duration": 0.0875,
+    "text": "to"
+  },
+  {
+    "start": 109.8875,
+    "duration": 0.175,
+    "text": "this"
+  },
+  {
+    "start": 110.075,
+    "duration": 0.6125,
+    "text": "question"
+  },
+  {
+    "start": 111.55,
+    "duration": 0.15,
+    "text": "In"
+  },
+  {
+    "start": 111.7125,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 111.8,
+    "duration": 0.4125,
+    "text": "pages"
+  },
+  {
+    "start": 112.225,
+    "duration": 0.0875,
+    "text": "of"
+  },
+  {
+    "start": 112.325,
+    "duration": 0.3625,
+    "text": "Nature"
+  },
+  {
+    "start": 112.7,
+    "duration": 0.4125,
+    "text": "Reviews"
+  },
+  {
+    "start": 113.125,
+    "duration": 0.825,
+    "text": "Neuroscience"
+  },
+  {
+    "start": 114.1125,
+    "duration": 0.325,
+    "text": "Lisa"
+  },
+  {
+    "start": 114.45,
+    "duration": 0.4375,
+    "text": "Feldman"
+  },
+  {
+    "start": 114.9,
+    "duration": 0.425,
+    "text": "Barrett"
+  },
+  {
+    "start": 115.5375,
+    "duration": 0.1125,
+    "text": "who"
+  },
+  {
+    "start": 115.6625,
+    "duration": 0.3875,
+    "text": "studies"
+  },
+  {
+    "start": 116.0625,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 116.175,
+    "duration": 0.825,
+    "text": "psychology"
+  },
+  {
+    "start": 117.0125,
+    "duration": 0.15,
+    "text": "and"
+  },
+  {
+    "start": 117.175,
+    "duration": 0.65,
+    "text": "neuroscience"
+  },
+  {
+    "start": 117.8375,
+    "duration": 0.0875,
+    "text": "of"
+  },
+  {
+    "start": 117.9375,
+    "duration": 0.5375,
+    "text": "emotion"
+  },
+  {
+    "start": 118.4875,
+    "duration": 0.125,
+    "text": "at"
+  },
+  {
+    "start": 118.625,
+    "duration": 0.6,
+    "text": "Northeastern"
+  },
+  {
+    "start": 119.2375,
+    "duration": 0.75,
+    "text": "University"
+  },
+  {
+    "start": 120.225,
+    "duration": 0.15,
+    "text": "and"
+  },
+  {
+    "start": 120.3875,
+    "duration": 0.1875,
+    "text": "Earl"
+  },
+  {
+    "start": 120.5875,
+    "duration": 0.4375,
+    "text": "Miller"
+  },
+  {
+    "start": 121.2625,
+    "duration": 0.1125,
+    "text": "who"
+  },
+  {
+    "start": 121.3875,
+    "duration": 0.4125,
+    "text": "studies"
+  },
+  {
+    "start": 121.8125,
+    "duration": 0.1125,
+    "text": "how"
+  },
+  {
+    "start": 121.9375,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 122.05,
+    "duration": 0.375,
+    "text": "brain"
+  },
+  {
+    "start": 122.4375,
+    "duration": 0.375,
+    "text": "carries"
+  },
+  {
+    "start": 122.825,
+    "duration": 0.1625,
+    "text": "out"
+  },
+  {
+    "start": 123.0,
+    "duration": 0.625,
+    "text": "goal-directed"
+  },
+  {
+    "start": 123.6375,
+    "duration": 0.5625,
+    "text": "behavior"
+  },
+  {
+    "start": 124.2125,
+    "duration": 0.075,
+    "text": "at"
+  },
+  {
+    "start": 124.3,
+    "duration": 0.0625,
+    "text": "the"
+  },
+  {
+    "start": 124.375,
+    "duration": 0.75,
+    "text": "Massachusetts"
+  },
+  {
+    "start": 125.1375,
+    "duration": 0.5125,
+    "text": "Institute"
+  },
+  {
+    "start": 125.6625,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 125.75,
+    "duration": 0.8625,
+    "text": "Technology"
+  },
+  {
+    "start": 126.825,
+    "duration": 0.675,
+    "text": "collaborated"
+  },
+  {
+    "start": 127.5125,
+    "duration": 0.125,
+    "text": "on"
+  },
+  {
+    "start": 127.65,
+    "duration": 0.0375,
+    "text": "a"
+  },
+  {
+    "start": 127.7,
+    "duration": 0.2125,
+    "text": "new"
+  },
+  {
+    "start": 127.925,
+    "duration": 0.25,
+    "text": "view"
+  },
+  {
+    "start": 128.1875,
+    "duration": 0.1125,
+    "text": "of"
+  },
+  {
+    "start": 128.3125,
+    "duration": 1.0875,
+    "text": "categorization"
+  },
+  {
+    "start": 130.2625,
+    "duration": 0.15,
+    "text": "They"
+  },
+  {
+    "start": 130.425,
+    "duration": 0.4375,
+    "text": "describe"
+  },
+  {
+    "start": 130.875,
+    "duration": 0.125,
+    "text": "how"
+  },
+  {
+    "start": 131.0125,
+    "duration": 0.1125,
+    "text": "the"
+  },
+  {
+    "start": 131.1375,
+    "duration": 0.375,
+    "text": "brain"
+  },
+  {
+    "start": 131.525,
+    "duration": 0.6,
+    "text": "constantly"
+  },
+  {
+    "start": 132.1375,
+    "duration": 0.7375,
+    "text": "reconstructs"
+  },
+  {
+    "start": 132.8875,
+    "duration": 0.15,
+    "text": "its"
+  },
+  {
+    "start": 133.05,
+    "duration": 0.6,
+    "text": "categories"
+  },
+  {
+    "start": 133.6625,
+    "duration": 0.35,
+    "text": "moment"
+  },
+  {
+    "start": 134.025,
+    "duration": 0.0875,
+    "text": "to"
+  },
+  {
+    "start": 134.125,
+    "duration": 0.3875,
+    "text": "moment"
+  },
+  {
+    "start": 134.525,
+    "duration": 0.2875,
+    "text": "based"
+  },
+  {
+    "start": 134.825,
+    "duration": 0.225,
+    "text": "not"
+  },
+  {
+    "start": 135.0625,
+    "duration": 0.25,
+    "text": "only"
+  },
+  {
+    "start": 135.325,
+    "duration": 0.15,
+    "text": "on"
+  },
+  {
+    "start": 135.4875,
+    "duration": 0.425,
+    "text": "senses"
+  },
+  {
+    "start": 135.925,
+    "duration": 0.1125,
+    "text": "and"
+  },
+  {
+    "start": 136.05,
+    "duration": 0.4625,
+    "text": "memory"
+  },
+  {
+    "start": 136.75,
+    "duration": 0.1375,
+    "text": "but"
+  },
+  {
+    "start": 136.9,
+    "duration": 0.1,
+    "text": "on"
+  },
+  {
+    "start": 137.0125,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 137.1,
+    "duration": 0.375,
+    "text": "body’s"
+  },
+  {
+    "start": 137.4875,
+    "duration": 0.4375,
+    "text": "immediate"
+  },
+  {
+    "start": 137.9375,
+    "duration": 0.8125,
+    "text": "physiological"
+  },
+  {
+    "start": 138.7625,
+    "duration": 0.5375,
+    "text": "needs"
+  },
+  {
+    "start": 140.1625,
+    "duration": 0.3625,
+    "text": "Lisa"
+  },
+  {
+    "start": 140.5375,
+    "duration": 0.4125,
+    "text": "Feldman"
+  },
+  {
+    "start": 140.9625,
+    "duration": 0.3875,
+    "text": "Barrett"
+  },
+  {
+    "start": 141.3625,
+    "duration": 0.2125,
+    "text": "has"
+  },
+  {
+    "start": 141.5875,
+    "duration": 0.175,
+    "text": "led"
+  },
+  {
+    "start": 141.775,
+    "duration": 0.45,
+    "text": "research"
+  },
+  {
+    "start": 142.2375,
+    "duration": 0.3,
+    "text": "showing"
+  },
+  {
+    "start": 142.55,
+    "duration": 0.1125,
+    "text": "that"
+  },
+  {
+    "start": 142.675,
+    "duration": 0.1,
+    "text": "our"
+  },
+  {
+    "start": 142.7875,
+    "duration": 0.325,
+    "text": "nervous"
+  },
+  {
+    "start": 143.125,
+    "duration": 0.35,
+    "text": "system"
+  },
+  {
+    "start": 143.4875,
+    "duration": 0.5875,
+    "text": "constructs"
+  },
+  {
+    "start": 144.0875,
+    "duration": 0.525,
+    "text": "emotions"
+  },
+  {
+    "start": 144.625,
+    "duration": 0.1,
+    "text": "to"
+  },
+  {
+    "start": 144.7375,
+    "duration": 0.3375,
+    "text": "manage"
+  },
+  {
+    "start": 145.0875,
+    "duration": 0.4625,
+    "text": "energy"
+  },
+  {
+    "start": 145.5625,
+    "duration": 0.1125,
+    "text": "and"
+  },
+  {
+    "start": 145.6875,
+    "duration": 0.6375,
+    "text": "behavior"
+  },
+  {
+    "start": 147.1875,
+    "duration": 0.2875,
+    "text": "Mark"
+  },
+  {
+    "start": 147.4875,
+    "duration": 0.5125,
+    "text": "Karlsberg"
+  },
+  {
+    "start": 148.0125,
+    "duration": 0.425,
+    "text": "Studio"
+  },
+  {
+    "start": 148.45,
+    "duration": 0.5125,
+    "text": "Eleven"
+  },
+  {
+    "start": 149.825,
+    "duration": 0.1625,
+    "text": "At"
+  },
+  {
+    "start": 150.0,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 150.0875,
+    "duration": 0.225,
+    "text": "heart"
+  },
+  {
+    "start": 150.325,
+    "duration": 0.0625,
+    "text": "of"
+  },
+  {
+    "start": 150.4,
+    "duration": 0.125,
+    "text": "their"
+  },
+  {
+    "start": 150.5375,
+    "duration": 0.5375,
+    "text": "framework"
+  },
+  {
+    "start": 151.0875,
+    "duration": 0.1125,
+    "text": "is"
+  },
+  {
+    "start": 151.2125,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 151.275,
+    "duration": 0.775,
+    "text": "counterintuitive"
+  },
+  {
+    "start": 152.0625,
+    "duration": 0.6125,
+    "text": "insight"
+  },
+  {
+    "start": 153.5375,
+    "duration": 0.1875,
+    "text": "While"
+  },
+  {
+    "start": 153.7375,
+    "duration": 0.1125,
+    "text": "we"
+  },
+  {
+    "start": 153.8625,
+    "duration": 0.1625,
+    "text": "may"
+  },
+  {
+    "start": 154.0375,
+    "duration": 0.15,
+    "text": "have"
+  },
+  {
+    "start": 154.2,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 154.3,
+    "duration": 0.5375,
+    "text": "impression"
+  },
+  {
+    "start": 154.85,
+    "duration": 0.1375,
+    "text": "that"
+  },
+  {
+    "start": 155.0,
+    "duration": 0.125,
+    "text": "our"
+  },
+  {
+    "start": 155.1375,
+    "duration": 0.675,
+    "text": "categories"
+  },
+  {
+    "start": 155.825,
+    "duration": 0.425,
+    "text": "reflect"
+  },
+  {
+    "start": 156.2625,
+    "duration": 0.1,
+    "text": "an"
+  },
+  {
+    "start": 156.375,
+    "duration": 0.4625,
+    "text": "objective"
+  },
+  {
+    "start": 156.85,
+    "duration": 0.575,
+    "text": "reality"
+  },
+  {
+    "start": 157.6875,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 157.8,
+    "duration": 0.575,
+    "text": "researchers"
+  },
+  {
+    "start": 158.3875,
+    "duration": 0.3875,
+    "text": "argue"
+  },
+  {
+    "start": 158.7875,
+    "duration": 0.1625,
+    "text": "that"
+  },
+  {
+    "start": 158.9625,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 159.0625,
+    "duration": 0.2875,
+    "text": "brain"
+  },
+  {
+    "start": 159.3625,
+    "duration": 0.5125,
+    "text": "projects"
+  },
+  {
+    "start": 159.8875,
+    "duration": 0.6375,
+    "text": "categories"
+  },
+  {
+    "start": 160.5375,
+    "duration": 0.225,
+    "text": "onto"
+  },
+  {
+    "start": 160.775,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 160.8875,
+    "duration": 0.2875,
+    "text": "world"
+  },
+  {
+    "start": 161.1875,
+    "duration": 0.1,
+    "text": "in"
+  },
+  {
+    "start": 161.3,
+    "duration": 0.575,
+    "text": "response"
+  },
+  {
+    "start": 161.8875,
+    "duration": 0.1,
+    "text": "to"
+  },
+  {
+    "start": 162.0,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 162.1125,
+    "duration": 0.3875,
+    "text": "body’s"
+  },
+  {
+    "start": 162.5125,
+    "duration": 0.45,
+    "text": "survival"
+  },
+  {
+    "start": 162.975,
+    "duration": 0.525,
+    "text": "needs"
+  },
+  {
+    "start": 164.3625,
+    "duration": 0.4,
+    "text": "Before"
+  },
+  {
+    "start": 164.775,
+    "duration": 0.125,
+    "text": "we"
+  },
+  {
+    "start": 164.9125,
+    "duration": 0.1375,
+    "text": "are"
+  },
+  {
+    "start": 165.0625,
+    "duration": 0.25,
+    "text": "even"
+  },
+  {
+    "start": 165.325,
+    "duration": 0.2875,
+    "text": "aware"
+  },
+  {
+    "start": 165.625,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 165.7125,
+    "duration": 0.1375,
+    "text": "our"
+  },
+  {
+    "start": 165.8625,
+    "duration": 0.4375,
+    "text": "sensory"
+  },
+  {
+    "start": 166.3125,
+    "duration": 0.75,
+    "text": "impressions"
+  },
+  {
+    "start": 167.2625,
+    "duration": 0.1125,
+    "text": "the"
+  },
+  {
+    "start": 167.3875,
+    "duration": 0.275,
+    "text": "brain"
+  },
+  {
+    "start": 167.675,
+    "duration": 0.125,
+    "text": "is"
+  },
+  {
+    "start": 167.8125,
+    "duration": 0.375,
+    "text": "already"
+  },
+  {
+    "start": 168.2,
+    "duration": 0.4875,
+    "text": "preparing"
+  },
+  {
+    "start": 168.7,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 168.8125,
+    "duration": 0.35,
+    "text": "body"
+  },
+  {
+    "start": 169.175,
+    "duration": 0.1,
+    "text": "to"
+  },
+  {
+    "start": 169.2875,
+    "duration": 0.3375,
+    "text": "behave"
+  },
+  {
+    "start": 169.6375,
+    "duration": 0.125,
+    "text": "in"
+  },
+  {
+    "start": 169.775,
+    "duration": 0.35,
+    "text": "ways"
+  },
+  {
+    "start": 170.1375,
+    "duration": 0.1375,
+    "text": "that"
+  },
+  {
+    "start": 170.2875,
+    "duration": 0.4375,
+    "text": "maintain"
+  },
+  {
+    "start": 170.7375,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 170.8375,
+    "duration": 0.575,
+    "text": "energetic"
+  },
+  {
+    "start": 171.425,
+    "duration": 0.625,
+    "text": "resources"
+  },
+  {
+    "start": 172.0625,
+    "duration": 0.1625,
+    "text": "that"
+  },
+  {
+    "start": 172.2375,
+    "duration": 0.4,
+    "text": "power"
+  },
+  {
+    "start": 172.65,
+    "duration": 0.1125,
+    "text": "our"
+  },
+  {
+    "start": 172.775,
+    "duration": 0.8375,
+    "text": "physiological"
+  },
+  {
+    "start": 173.625,
+    "duration": 0.725,
+    "text": "systems"
+  },
+  {
+    "start": 175.2125,
+    "duration": 0.1625,
+    "text": "In"
+  },
+  {
+    "start": 175.3875,
+    "duration": 0.225,
+    "text": "this"
+  },
+  {
+    "start": 175.625,
+    "duration": 0.325,
+    "text": "way"
+  },
+  {
+    "start": 176.075,
+    "duration": 0.1125,
+    "text": "the"
+  },
+  {
+    "start": 176.2,
+    "duration": 0.325,
+    "text": "brain’s"
+  },
+  {
+    "start": 176.5375,
+    "duration": 0.75,
+    "text": "predictions"
+  },
+  {
+    "start": 177.4875,
+    "duration": 0.275,
+    "text": "rather"
+  },
+  {
+    "start": 177.775,
+    "duration": 0.1375,
+    "text": "than"
+  },
+  {
+    "start": 177.925,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 178.0375,
+    "duration": 0.6125,
+    "text": "cumulative"
+  },
+  {
+    "start": 178.6625,
+    "duration": 0.425,
+    "text": "effects"
+  },
+  {
+    "start": 179.1,
+    "duration": 0.0875,
+    "text": "of"
+  },
+  {
+    "start": 179.2,
+    "duration": 0.4625,
+    "text": "sensory"
+  },
+  {
+    "start": 179.675,
+    "duration": 0.775,
+    "text": "information"
+  },
+  {
+    "start": 180.6625,
+    "duration": 0.5125,
+    "text": "ultimately"
+  },
+  {
+    "start": 181.1875,
+    "duration": 0.3375,
+    "text": "shape"
+  },
+  {
+    "start": 181.5375,
+    "duration": 0.125,
+    "text": "and"
+  },
+  {
+    "start": 181.675,
+    "duration": 0.35,
+    "text": "limit"
+  },
+  {
+    "start": 182.0375,
+    "duration": 0.15,
+    "text": "how"
+  },
+  {
+    "start": 182.2,
+    "duration": 0.125,
+    "text": "we"
+  },
+  {
+    "start": 182.3375,
+    "duration": 0.65,
+    "text": "categorize"
+  },
+  {
+    "start": 183.0,
+    "duration": 0.525,
+    "text": "objects"
+  },
+  {
+    "start": 183.5375,
+    "duration": 0.175,
+    "text": "and"
+  },
+  {
+    "start": 183.725,
+    "duration": 0.4375,
+    "text": "features"
+  },
+  {
+    "start": 184.175,
+    "duration": 0.0625,
+    "text": "of"
+  },
+  {
+    "start": 184.25,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 184.35,
+    "duration": 0.475,
+    "text": "world"
+  },
+  {
+    "start": 185.6875,
+    "duration": 0.15,
+    "text": "The"
+  },
+  {
+    "start": 185.85,
+    "duration": 0.325,
+    "text": "duo’s"
+  },
+  {
+    "start": 186.1875,
+    "duration": 0.5375,
+    "text": "framework"
+  },
+  {
+    "start": 186.7375,
+    "duration": 0.125,
+    "text": "is"
+  },
+  {
+    "start": 186.9125,
+    "duration": 0.0625,
+    "text": "a"
+  },
+  {
+    "start": 186.9875,
+    "duration": 0.3,
+    "text": "fresh"
+  },
+  {
+    "start": 187.3,
+    "duration": 0.575,
+    "text": "perspective"
+  },
+  {
+    "start": 187.8875,
+    "duration": 0.125,
+    "text": "on"
+  },
+  {
+    "start": 188.025,
+    "duration": 0.9625,
+    "text": "categorization"
+  },
+  {
+    "start": 189.2,
+    "duration": 0.25,
+    "text": "said"
+  },
+  {
+    "start": 189.4625,
+    "duration": 0.275,
+    "text": "Luiz"
+  },
+  {
+    "start": 189.75,
+    "duration": 0.5625,
+    "text": "Pessoa"
+  },
+  {
+    "start": 190.5125,
+    "duration": 0.025,
+    "text": "a"
+  },
+  {
+    "start": 190.55,
+    "duration": 0.8875,
+    "text": "neuroscientist"
+  },
+  {
+    "start": 191.45,
+    "duration": 0.1375,
+    "text": "from"
+  },
+  {
+    "start": 191.6,
+    "duration": 0.0625,
+    "text": "the"
+  },
+  {
+    "start": 191.675,
+    "duration": 0.6375,
+    "text": "University"
+  },
+  {
+    "start": 192.325,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 192.4125,
+    "duration": 0.625,
+    "text": "Maryland"
+  },
+  {
+    "start": 193.9,
+    "duration": 0.2,
+    "text": "Their"
+  },
+  {
+    "start": 194.1125,
+    "duration": 0.3875,
+    "text": "idea"
+  },
+  {
+    "start": 194.5125,
+    "duration": 0.1,
+    "text": "of"
+  },
+  {
+    "start": 194.6625,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 194.7625,
+    "duration": 0.475,
+    "text": "maintenance"
+  },
+  {
+    "start": 195.25,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 195.3375,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 195.4375,
+    "duration": 0.5625,
+    "text": "energetic"
+  },
+  {
+    "start": 196.0125,
+    "duration": 0.525,
+    "text": "constraints"
+  },
+  {
+    "start": 196.55,
+    "duration": 0.1,
+    "text": "of"
+  },
+  {
+    "start": 196.6625,
+    "duration": 0.35,
+    "text": "life"
+  },
+  {
+    "start": 197.025,
+    "duration": 0.1375,
+    "text": "as"
+  },
+  {
+    "start": 197.175,
+    "duration": 0.625,
+    "text": "fundamental"
+  },
+  {
+    "start": 197.8125,
+    "duration": 0.1,
+    "text": "to"
+  },
+  {
+    "start": 197.925,
+    "duration": 0.1375,
+    "text": "how"
+  },
+  {
+    "start": 198.075,
+    "duration": 0.1125,
+    "text": "we"
+  },
+  {
+    "start": 198.2,
+    "duration": 0.4875,
+    "text": "structure"
+  },
+  {
+    "start": 198.7,
+    "duration": 0.125,
+    "text": "our"
+  },
+  {
+    "start": 198.8375,
+    "duration": 0.7625,
+    "text": "categories"
+  },
+  {
+    "start": 199.8,
+    "duration": 0.1,
+    "text": "he"
+  },
+  {
+    "start": 199.9125,
+    "duration": 0.3625,
+    "text": "said"
+  },
+  {
+    "start": 200.475,
+    "duration": 0.1375,
+    "text": "is"
+  },
+  {
+    "start": 200.6625,
+    "duration": 0.275,
+    "text": "really"
+  },
+  {
+    "start": 200.95,
+    "duration": 0.4875,
+    "text": "important"
+  },
+  {
+    "start": 201.45,
+    "duration": 0.0875,
+    "text": "to"
+  },
+  {
+    "start": 201.55,
+    "duration": 0.6,
+    "text": "pursue"
+  },
+  {
+    "start": 203.0125,
+    "duration": 0.3375,
+    "text": "Also"
+  },
+  {
+    "start": 203.3625,
+    "duration": 0.175,
+    "text": "new"
+  },
+  {
+    "start": 203.55,
+    "duration": 0.125,
+    "text": "in"
+  },
+  {
+    "start": 203.6875,
+    "duration": 0.3,
+    "text": "Barrett"
+  },
+  {
+    "start": 204.0,
+    "duration": 0.1125,
+    "text": "and"
+  },
+  {
+    "start": 204.125,
+    "duration": 0.3375,
+    "text": "Miller’s"
+  },
+  {
+    "start": 204.475,
+    "duration": 0.575,
+    "text": "framework"
+  },
+  {
+    "start": 205.0625,
+    "duration": 0.125,
+    "text": "is"
+  },
+  {
+    "start": 205.2,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 205.2875,
+    "duration": 0.7875,
+    "text": "hypothesis"
+  },
+  {
+    "start": 206.0875,
+    "duration": 0.1625,
+    "text": "that"
+  },
+  {
+    "start": 206.2625,
+    "duration": 0.925,
+    "text": "categorization"
+  },
+  {
+    "start": 207.2,
+    "duration": 0.325,
+    "text": "doesn’t"
+  },
+  {
+    "start": 207.5375,
+    "duration": 0.3875,
+    "text": "happen"
+  },
+  {
+    "start": 207.9375,
+    "duration": 0.15,
+    "text": "in"
+  },
+  {
+    "start": 208.1,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 208.1625,
+    "duration": 0.65,
+    "text": "particular"
+  },
+  {
+    "start": 208.825,
+    "duration": 0.3375,
+    "text": "area"
+  },
+  {
+    "start": 209.175,
+    "duration": 0.0875,
+    "text": "of"
+  },
+  {
+    "start": 209.275,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 209.3625,
+    "duration": 0.4,
+    "text": "brain"
+  },
+  {
+    "start": 210.0,
+    "duration": 0.1375,
+    "text": "but"
+  },
+  {
+    "start": 210.15,
+    "duration": 0.3375,
+    "text": "across"
+  },
+  {
+    "start": 210.5,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 210.6,
+    "duration": 0.5125,
+    "text": "entire"
+  },
+  {
+    "start": 211.125,
+    "duration": 0.3875,
+    "text": "organ"
+  },
+  {
+    "start": 211.525,
+    "duration": 0.0875,
+    "text": "and"
+  },
+  {
+    "start": 211.625,
+    "duration": 0.5875,
+    "text": "beyond"
+  },
+  {
+    "start": 213.075,
+    "duration": 0.15,
+    "text": "To"
+  },
+  {
+    "start": 213.2375,
+    "duration": 0.55,
+    "text": "understand"
+  },
+  {
+    "start": 213.8,
+    "duration": 0.175,
+    "text": "how"
+  },
+  {
+    "start": 213.9875,
+    "duration": 0.6625,
+    "text": "organisms"
+  },
+  {
+    "start": 214.6625,
+    "duration": 0.2625,
+    "text": "form"
+  },
+  {
+    "start": 214.9375,
+    "duration": 0.7875,
+    "text": "categories"
+  },
+  {
+    "start": 215.925,
+    "duration": 0.125,
+    "text": "they"
+  },
+  {
+    "start": 216.0625,
+    "duration": 0.4625,
+    "text": "argued"
+  },
+  {
+    "start": 216.7625,
+    "duration": 0.9375,
+    "text": "neuroscientists"
+  },
+  {
+    "start": 217.7125,
+    "duration": 0.15,
+    "text": "have"
+  },
+  {
+    "start": 217.875,
+    "duration": 0.1,
+    "text": "to"
+  },
+  {
+    "start": 217.9875,
+    "duration": 0.25,
+    "text": "look"
+  },
+  {
+    "start": 218.25,
+    "duration": 0.2,
+    "text": "all"
+  },
+  {
+    "start": 218.4625,
+    "duration": 0.1625,
+    "text": "over"
+  },
+  {
+    "start": 218.6375,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 218.7375,
+    "duration": 0.325,
+    "text": "nervous"
+  },
+  {
+    "start": 219.075,
+    "duration": 0.5375,
+    "text": "system"
+  },
+  {
+    "start": 219.8125,
+    "duration": 0.1875,
+    "text": "from"
+  },
+  {
+    "start": 220.0125,
+    "duration": 0.175,
+    "text": "head"
+  },
+  {
+    "start": 220.2,
+    "duration": 0.075,
+    "text": "to"
+  },
+  {
+    "start": 220.2875,
+    "duration": 0.475,
+    "text": "toe"
+  },
+  {
+    "start": 221.625,
+    "duration": 0.55,
+    "text": "#"
+  },
+  {
+    "start": 222.1875,
+    "duration": 0.525,
+    "text": "#"
+  },
+  {
+    "start": 222.725,
+    "duration": 0.425,
+    "text": "Heavyweight"
+  },
+  {
+    "start": 223.1625,
+    "duration": 0.55,
+    "text": "Match"
+  },
+  {
+    "start": 224.575,
+    "duration": 0.2,
+    "text": "For"
+  },
+  {
+    "start": 224.7875,
+    "duration": 0.2875,
+    "text": "many"
+  },
+  {
+    "start": 225.0875,
+    "duration": 0.4875,
+    "text": "years"
+  },
+  {
+    "start": 225.7125,
+    "duration": 0.2125,
+    "text": "these"
+  },
+  {
+    "start": 225.9375,
+    "duration": 0.1875,
+    "text": "two"
+  },
+  {
+    "start": 226.1375,
+    "duration": 0.6375,
+    "text": "influential"
+  },
+  {
+    "start": 226.7875,
+    "duration": 0.95,
+    "text": "neuroscientists"
+  },
+  {
+    "start": 227.75,
+    "duration": 0.125,
+    "text": "were"
+  },
+  {
+    "start": 227.8875,
+    "duration": 0.0875,
+    "text": "in"
+  },
+  {
+    "start": 227.9875,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 228.0875,
+    "duration": 0.3,
+    "text": "same"
+  },
+  {
+    "start": 228.4,
+    "duration": 0.4375,
+    "text": "orbit"
+  },
+  {
+    "start": 229.0,
+    "duration": 0.1375,
+    "text": "but"
+  },
+  {
+    "start": 229.15,
+    "duration": 0.15,
+    "text": "had"
+  },
+  {
+    "start": 229.3125,
+    "duration": 0.275,
+    "text": "never"
+  },
+  {
+    "start": 229.6,
+    "duration": 0.6375,
+    "text": "collaborated"
+  },
+  {
+    "start": 230.25,
+    "duration": 0.65,
+    "text": "directly"
+  },
+  {
+    "start": 231.868,
+    "duration": 0.3375,
+    "text": "Miller"
+  },
+  {
+    "start": 232.218,
+    "duration": 0.3875,
+    "text": "measures"
+  },
+  {
+    "start": 232.618,
+    "duration": 0.4625,
+    "text": "high-level"
+  },
+  {
+    "start": 233.093,
+    "duration": 0.5375,
+    "text": "electrical"
+  },
+  {
+    "start": 233.643,
+    "duration": 0.525,
+    "text": "patterns"
+  },
+  {
+    "start": 234.1805,
+    "duration": 0.0875,
+    "text": "in"
+  },
+  {
+    "start": 234.2805,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 234.368,
+    "duration": 0.375,
+    "text": "brain"
+  },
+  {
+    "start": 234.7555,
+    "duration": 0.1,
+    "text": "to"
+  },
+  {
+    "start": 234.868,
+    "duration": 0.275,
+    "text": "better"
+  },
+  {
+    "start": 235.1555,
+    "duration": 0.5,
+    "text": "understand"
+  },
+  {
+    "start": 235.668,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 235.7555,
+    "duration": 0.7,
+    "text": "mechanisms"
+  },
+  {
+    "start": 236.468,
+    "duration": 0.3375,
+    "text": "driving"
+  },
+  {
+    "start": 236.818,
+    "duration": 0.0375,
+    "text": "a"
+  },
+  {
+    "start": 236.868,
+    "duration": 0.3375,
+    "text": "model"
+  },
+  {
+    "start": 237.218,
+    "duration": 0.0875,
+    "text": "of"
+  },
+  {
+    "start": 237.318,
+    "duration": 0.2875,
+    "text": "neural"
+  },
+  {
+    "start": 237.618,
+    "duration": 0.825,
+    "text": "computation"
+  },
+  {
+    "start": 238.4555,
+    "duration": 0.3125,
+    "text": "known"
+  },
+  {
+    "start": 238.7805,
+    "duration": 0.1125,
+    "text": "as"
+  },
+  {
+    "start": 238.9055,
+    "duration": 0.4375,
+    "text": "predictive"
+  },
+  {
+    "start": 239.3555,
+    "duration": 0.525,
+    "text": "coding"
+  },
+  {
+    "start": 240.743,
+    "duration": 0.45,
+    "text": "Predictive"
+  },
+  {
+    "start": 241.2055,
+    "duration": 0.3875,
+    "text": "coding"
+  },
+  {
+    "start": 241.6055,
+    "duration": 0.425,
+    "text": "regards"
+  },
+  {
+    "start": 242.043,
+    "duration": 0.1,
+    "text": "our"
+  },
+  {
+    "start": 242.1555,
+    "duration": 0.725,
+    "text": "perceptions"
+  },
+  {
+    "start": 242.893,
+    "duration": 0.1125,
+    "text": "as"
+  },
+  {
+    "start": 243.018,
+    "duration": 0.475,
+    "text": "products"
+  },
+  {
+    "start": 243.5055,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 243.593,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 243.693,
+    "duration": 0.3375,
+    "text": "brain’s"
+  },
+  {
+    "start": 244.043,
+    "duration": 0.7625,
+    "text": "predictions"
+  },
+  {
+    "start": 245.068,
+    "duration": 0.275,
+    "text": "rather"
+  },
+  {
+    "start": 245.3555,
+    "duration": 0.125,
+    "text": "than"
+  },
+  {
+    "start": 245.493,
+    "duration": 0.0625,
+    "text": "a"
+  },
+  {
+    "start": 245.568,
+    "duration": 0.3,
+    "text": "scene"
+  },
+  {
+    "start": 245.8805,
+    "duration": 0.2375,
+    "text": "built"
+  },
+  {
+    "start": 246.1305,
+    "duration": 0.1625,
+    "text": "from"
+  },
+  {
+    "start": 246.3055,
+    "duration": 0.4375,
+    "text": "sensory"
+  },
+  {
+    "start": 246.7555,
+    "duration": 0.4625,
+    "text": "signals"
+  },
+  {
+    "start": 247.2305,
+    "duration": 0.1125,
+    "text": "it"
+  },
+  {
+    "start": 247.3555,
+    "duration": 0.5125,
+    "text": "passively"
+  },
+  {
+    "start": 247.8805,
+    "duration": 0.725,
+    "text": "receives"
+  },
+  {
+    "start": 249.468,
+    "duration": 0.65,
+    "text": "Typically"
+  },
+  {
+    "start": 250.2805,
+    "duration": 0.1125,
+    "text": "if"
+  },
+  {
+    "start": 250.4055,
+    "duration": 0.1125,
+    "text": "we"
+  },
+  {
+    "start": 250.5305,
+    "duration": 0.1,
+    "text": "are"
+  },
+  {
+    "start": 250.643,
+    "duration": 0.75,
+    "text": "experiencing"
+  },
+  {
+    "start": 251.4055,
+    "duration": 0.0375,
+    "text": "a"
+  },
+  {
+    "start": 251.4555,
+    "duration": 0.35,
+    "text": "normal"
+  },
+  {
+    "start": 251.818,
+    "duration": 0.425,
+    "text": "sensory"
+  },
+  {
+    "start": 252.2555,
+    "duration": 0.4125,
+    "text": "scene"
+  },
+  {
+    "start": 252.843,
+    "duration": 0.55,
+    "text": "relaxing"
+  },
+  {
+    "start": 253.4055,
+    "duration": 0.0875,
+    "text": "at"
+  },
+  {
+    "start": 253.5055,
+    "duration": 0.425,
+    "text": "home"
+  },
+  {
+    "start": 254.118,
+    "duration": 0.4125,
+    "text": "say"
+  },
+  {
+    "start": 254.718,
+    "duration": 0.35,
+    "text": "without"
+  },
+  {
+    "start": 255.0805,
+    "duration": 0.1875,
+    "text": "any"
+  },
+  {
+    "start": 255.2805,
+    "duration": 0.325,
+    "text": "novel"
+  },
+  {
+    "start": 255.618,
+    "duration": 0.7375,
+    "text": "information"
+  },
+  {
+    "start": 256.5555,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 256.668,
+    "duration": 0.2875,
+    "text": "brain"
+  },
+  {
+    "start": 256.968,
+    "duration": 0.4875,
+    "text": "generates"
+  },
+  {
+    "start": 257.468,
+    "duration": 0.45,
+    "text": "predictive"
+  },
+  {
+    "start": 257.9305,
+    "duration": 0.4625,
+    "text": "signals"
+  },
+  {
+    "start": 258.4055,
+    "duration": 0.225,
+    "text": "about"
+  },
+  {
+    "start": 258.643,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 258.7305,
+    "duration": 0.7,
+    "text": "environment"
+  },
+  {
+    "start": 259.668,
+    "duration": 0.2625,
+    "text": "known"
+  },
+  {
+    "start": 259.943,
+    "duration": 0.125,
+    "text": "as"
+  },
+  {
+    "start": 260.0805,
+    "duration": 0.4375,
+    "text": "feedback"
+  },
+  {
+    "start": 260.5305,
+    "duration": 0.575,
+    "text": "signals"
+  },
+  {
+    "start": 261.2805,
+    "duration": 0.1375,
+    "text": "that"
+  },
+  {
+    "start": 261.4305,
+    "duration": 0.1125,
+    "text": "will"
+  },
+  {
+    "start": 261.5555,
+    "duration": 0.475,
+    "text": "dominate"
+  },
+  {
+    "start": 262.043,
+    "duration": 0.5,
+    "text": "incoming"
+  },
+  {
+    "start": 262.5555,
+    "duration": 0.6,
+    "text": "sensory"
+  },
+  {
+    "start": 263.3555,
+    "duration": 0.15,
+    "text": "or"
+  },
+  {
+    "start": 263.518,
+    "duration": 0.7,
+    "text": "feedforward"
+  },
+  {
+    "start": 264.393,
+    "duration": 0.6875,
+    "text": "signals"
+  },
+  {
+    "start": 265.943,
+    "duration": 0.15,
+    "text": "But"
+  },
+  {
+    "start": 266.1055,
+    "duration": 0.0875,
+    "text": "if"
+  },
+  {
+    "start": 266.2055,
+    "duration": 0.4125,
+    "text": "something"
+  },
+  {
+    "start": 266.6305,
+    "duration": 0.6,
+    "text": "unexpected"
+  },
+  {
+    "start": 267.243,
+    "duration": 0.6,
+    "text": "happens"
+  },
+  {
+    "start": 268.0805,
+    "duration": 0.075,
+    "text": "an"
+  },
+  {
+    "start": 268.168,
+    "duration": 0.325,
+    "text": "event"
+  },
+  {
+    "start": 268.5055,
+    "duration": 0.1625,
+    "text": "that"
+  },
+  {
+    "start": 268.6805,
+    "duration": 0.5,
+    "text": "deviates"
+  },
+  {
+    "start": 269.193,
+    "duration": 0.15,
+    "text": "from"
+  },
+  {
+    "start": 269.3555,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 269.4555,
+    "duration": 0.4625,
+    "text": "predictive"
+  },
+  {
+    "start": 269.9305,
+    "duration": 0.45,
+    "text": "model"
+  },
+  {
+    "start": 270.6055,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 270.718,
+    "duration": 0.45,
+    "text": "sensory"
+  },
+  {
+    "start": 271.1805,
+    "duration": 0.65,
+    "text": "feedforward"
+  },
+  {
+    "start": 271.843,
+    "duration": 0.55,
+    "text": "signals"
+  },
+  {
+    "start": 272.6305,
+    "duration": 0.2375,
+    "text": "such"
+  },
+  {
+    "start": 272.8805,
+    "duration": 0.1,
+    "text": "as"
+  },
+  {
+    "start": 272.993,
+    "duration": 0.2125,
+    "text": "those"
+  },
+  {
+    "start": 273.218,
+    "duration": 0.4375,
+    "text": "arriving"
+  },
+  {
+    "start": 273.668,
+    "duration": 0.0875,
+    "text": "in"
+  },
+  {
+    "start": 273.768,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 273.8555,
+    "duration": 0.375,
+    "text": "visual"
+  },
+  {
+    "start": 274.243,
+    "duration": 0.6875,
+    "text": "cortex"
+  },
+  {
+    "start": 275.1805,
+    "duration": 0.175,
+    "text": "run"
+  },
+  {
+    "start": 275.368,
+    "duration": 0.1125,
+    "text": "up"
+  },
+  {
+    "start": 275.493,
+    "duration": 0.3875,
+    "text": "against"
+  },
+  {
+    "start": 275.893,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 275.9805,
+    "duration": 0.4625,
+    "text": "predictive"
+  },
+  {
+    "start": 276.4555,
+    "duration": 0.475,
+    "text": "feedback"
+  },
+  {
+    "start": 276.943,
+    "duration": 0.6375,
+    "text": "signals"
+  },
+  {
+    "start": 278.443,
+    "duration": 0.25,
+    "text": "This"
+  },
+  {
+    "start": 278.7055,
+    "duration": 0.4,
+    "text": "difference"
+  },
+  {
+    "start": 279.118,
+    "duration": 0.3625,
+    "text": "creates"
+  },
+  {
+    "start": 279.493,
+    "duration": 0.525,
+    "text": "prediction"
+  },
+  {
+    "start": 280.0305,
+    "duration": 0.525,
+    "text": "errors"
+  },
+  {
+    "start": 281.418,
+    "duration": 0.2125,
+    "text": "When"
+  },
+  {
+    "start": 281.643,
+    "duration": 0.4125,
+    "text": "sensory"
+  },
+  {
+    "start": 282.068,
+    "duration": 0.4125,
+    "text": "signals"
+  },
+  {
+    "start": 282.493,
+    "duration": 0.4375,
+    "text": "violate"
+  },
+  {
+    "start": 282.943,
+    "duration": 0.125,
+    "text": "your"
+  },
+  {
+    "start": 283.0805,
+    "duration": 0.425,
+    "text": "predictive"
+  },
+  {
+    "start": 283.518,
+    "duration": 0.45,
+    "text": "model"
+  },
+  {
+    "start": 284.193,
+    "duration": 0.0875,
+    "text": "they"
+  },
+  {
+    "start": 284.293,
+    "duration": 0.2625,
+    "text": "might"
+  },
+  {
+    "start": 284.568,
+    "duration": 0.2625,
+    "text": "enter"
+  },
+  {
+    "start": 284.843,
+    "duration": 0.4375,
+    "text": "conscious"
+  },
+  {
+    "start": 285.293,
+    "duration": 0.6625,
+    "text": "experience"
+  },
+  {
+    "start": 285.968,
+    "duration": 0.125,
+    "text": "as"
+  },
+  {
+    "start": 286.1055,
+    "duration": 0.0625,
+    "text": "a"
+  },
+  {
+    "start": 286.1805,
+    "duration": 0.3875,
+    "text": "feeling"
+  },
+  {
+    "start": 286.5805,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 286.668,
+    "duration": 0.775,
+    "text": "surprise"
+  },
+  {
+    "start": 288.3055,
+    "duration": 0.225,
+    "text": "Your"
+  },
+  {
+    "start": 288.543,
+    "duration": 0.3375,
+    "text": "brain"
+  },
+  {
+    "start": 288.893,
+    "duration": 0.1875,
+    "text": "has"
+  },
+  {
+    "start": 289.093,
+    "duration": 0.1,
+    "text": "to"
+  },
+  {
+    "start": 289.2055,
+    "duration": 0.575,
+    "text": "constantly"
+  },
+  {
+    "start": 289.793,
+    "duration": 0.2125,
+    "text": "make"
+  },
+  {
+    "start": 290.018,
+    "duration": 0.625,
+    "text": "predictions"
+  },
+  {
+    "start": 290.6555,
+    "duration": 0.2375,
+    "text": "about"
+  },
+  {
+    "start": 290.9055,
+    "duration": 0.2125,
+    "text": "what’s"
+  },
+  {
+    "start": 291.1305,
+    "duration": 0.2,
+    "text": "going"
+  },
+  {
+    "start": 291.343,
+    "duration": 0.0625,
+    "text": "to"
+  },
+  {
+    "start": 291.418,
+    "duration": 0.35,
+    "text": "happen"
+  },
+  {
+    "start": 291.7805,
+    "duration": 0.0875,
+    "text": "in"
+  },
+  {
+    "start": 291.8805,
+    "duration": 0.0625,
+    "text": "the"
+  },
+  {
+    "start": 291.9555,
+    "duration": 0.35,
+    "text": "next"
+  },
+  {
+    "start": 292.318,
+    "duration": 0.175,
+    "text": "few"
+  },
+  {
+    "start": 292.5055,
+    "duration": 0.55,
+    "text": "seconds"
+  },
+  {
+    "start": 293.068,
+    "duration": 0.325,
+    "text": "because"
+  },
+  {
+    "start": 293.4055,
+    "duration": 0.1375,
+    "text": "it’s"
+  },
+  {
+    "start": 293.5555,
+    "duration": 0.2,
+    "text": "got"
+  },
+  {
+    "start": 293.768,
+    "duration": 0.0875,
+    "text": "to"
+  },
+  {
+    "start": 293.868,
+    "duration": 0.3625,
+    "text": "filter"
+  },
+  {
+    "start": 294.243,
+    "duration": 0.1375,
+    "text": "out"
+  },
+  {
+    "start": 294.393,
+    "duration": 0.325,
+    "text": "most"
+  },
+  {
+    "start": 294.7305,
+    "duration": 0.0625,
+    "text": "of"
+  },
+  {
+    "start": 294.8055,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 294.893,
+    "duration": 0.4875,
+    "text": "incoming"
+  },
+  {
+    "start": 295.393,
+    "duration": 0.4375,
+    "text": "sensory"
+  },
+  {
+    "start": 295.843,
+    "duration": 0.7125,
+    "text": "information"
+  },
+  {
+    "start": 296.793,
+    "duration": 0.3,
+    "text": "Miller"
+  },
+  {
+    "start": 297.1055,
+    "duration": 0.4125,
+    "text": "said"
+  },
+  {
+    "start": 298.3805,
+    "duration": 0.1625,
+    "text": "It"
+  },
+  {
+    "start": 298.5555,
+    "duration": 0.2375,
+    "text": "can’t"
+  },
+  {
+    "start": 298.8055,
+    "duration": 0.4375,
+    "text": "process"
+  },
+  {
+    "start": 299.2555,
+    "duration": 0.1,
+    "text": "it"
+  },
+  {
+    "start": 299.368,
+    "duration": 0.325,
+    "text": "all"
+  },
+  {
+    "start": 299.868,
+    "duration": 0.1625,
+    "text": "so"
+  },
+  {
+    "start": 300.043,
+    "duration": 0.1375,
+    "text": "it’s"
+  },
+  {
+    "start": 300.193,
+    "duration": 0.325,
+    "text": "mainly"
+  },
+  {
+    "start": 300.5305,
+    "duration": 0.35,
+    "text": "looking"
+  },
+  {
+    "start": 300.893,
+    "duration": 0.1375,
+    "text": "for"
+  },
+  {
+    "start": 301.043,
+    "duration": 0.3125,
+    "text": "things"
+  },
+  {
+    "start": 301.368,
+    "duration": 0.125,
+    "text": "that"
+  },
+  {
+    "start": 301.5055,
+    "duration": 0.475,
+    "text": "mismatch"
+  },
+  {
+    "start": 301.993,
+    "duration": 0.65,
+    "text": "predictions"
+  },
+  {
+    "start": 302.6555,
+    "duration": 0.3125,
+    "text": "because"
+  },
+  {
+    "start": 302.9805,
+    "duration": 0.15,
+    "text": "it’s"
+  },
+  {
+    "start": 303.143,
+    "duration": 0.1875,
+    "text": "more"
+  },
+  {
+    "start": 303.343,
+    "duration": 0.7375,
+    "text": "informative"
+  },
+  {
+    "start": 304.943,
+    "duration": 0.15,
+    "text": "In"
+  },
+  {
+    "start": 305.1055,
+    "duration": 0.1625,
+    "text": "her"
+  },
+  {
+    "start": 305.2805,
+    "duration": 0.425,
+    "text": "work"
+  },
+  {
+    "start": 305.843,
+    "duration": 0.3125,
+    "text": "Barrett"
+  },
+  {
+    "start": 306.168,
+    "duration": 0.175,
+    "text": "has"
+  },
+  {
+    "start": 306.3555,
+    "duration": 0.3875,
+    "text": "applied"
+  },
+  {
+    "start": 306.7555,
+    "duration": 0.2,
+    "text": "these"
+  },
+  {
+    "start": 306.968,
+    "duration": 0.4,
+    "text": "ideas"
+  },
+  {
+    "start": 307.3805,
+    "duration": 0.0875,
+    "text": "of"
+  },
+  {
+    "start": 307.4805,
+    "duration": 0.6625,
+    "text": "prediction"
+  },
+  {
+    "start": 308.1555,
+    "duration": 0.125,
+    "text": "and"
+  },
+  {
+    "start": 308.293,
+    "duration": 0.9,
+    "text": "anticipation"
+  },
+  {
+    "start": 309.2055,
+    "duration": 0.125,
+    "text": "to"
+  },
+  {
+    "start": 309.343,
+    "duration": 0.125,
+    "text": "our"
+  },
+  {
+    "start": 309.4805,
+    "duration": 0.625,
+    "text": "theoretical"
+  },
+  {
+    "start": 310.118,
+    "duration": 0.6625,
+    "text": "understanding"
+  },
+  {
+    "start": 310.793,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 310.8805,
+    "duration": 0.7875,
+    "text": "emotions"
+  },
+  {
+    "start": 312.5305,
+    "duration": 0.4125,
+    "text": "Central"
+  },
+  {
+    "start": 312.9555,
+    "duration": 0.1125,
+    "text": "to"
+  },
+  {
+    "start": 313.0805,
+    "duration": 0.1375,
+    "text": "her"
+  },
+  {
+    "start": 313.2305,
+    "duration": 0.3,
+    "text": "work"
+  },
+  {
+    "start": 313.543,
+    "duration": 0.1,
+    "text": "is"
+  },
+  {
+    "start": 313.6555,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 313.768,
+    "duration": 0.5,
+    "text": "concept"
+  },
+  {
+    "start": 314.2805,
+    "duration": 0.0625,
+    "text": "of"
+  },
+  {
+    "start": 314.3555,
+    "duration": 0.85,
+    "text": "allostasis"
+  },
+  {
+    "start": 315.418,
+    "duration": 0.1375,
+    "text": "how"
+  },
+  {
+    "start": 315.568,
+    "duration": 0.1,
+    "text": "an"
+  },
+  {
+    "start": 315.6805,
+    "duration": 0.5875,
+    "text": "organism"
+  },
+  {
+    "start": 316.2805,
+    "duration": 0.5625,
+    "text": "predictively"
+  },
+  {
+    "start": 316.8555,
+    "duration": 0.5375,
+    "text": "regulates"
+  },
+  {
+    "start": 317.4055,
+    "duration": 0.15,
+    "text": "its"
+  },
+  {
+    "start": 317.568,
+    "duration": 0.4,
+    "text": "energy"
+  },
+  {
+    "start": 317.9805,
+    "duration": 0.5125,
+    "text": "use"
+  },
+  {
+    "start": 319.3555,
+    "duration": 0.1625,
+    "text": "In"
+  },
+  {
+    "start": 319.5305,
+    "duration": 0.15,
+    "text": "her"
+  },
+  {
+    "start": 319.693,
+    "duration": 0.4125,
+    "text": "view"
+  },
+  {
+    "start": 320.218,
+    "duration": 0.475,
+    "text": "emotion"
+  },
+  {
+    "start": 320.7055,
+    "duration": 0.725,
+    "text": "categories"
+  },
+  {
+    "start": 321.6055,
+    "duration": 0.45,
+    "text": "fear"
+  },
+  {
+    "start": 322.2555,
+    "duration": 0.6125,
+    "text": "happiness"
+  },
+  {
+    "start": 323.0305,
+    "duration": 0.4,
+    "text": "anger"
+  },
+  {
+    "start": 323.643,
+    "duration": 0.425,
+    "text": "resemble"
+  },
+  {
+    "start": 324.0805,
+    "duration": 0.4625,
+    "text": "predictive"
+  },
+  {
+    "start": 324.5555,
+    "duration": 0.4,
+    "text": "action"
+  },
+  {
+    "start": 324.968,
+    "duration": 0.425,
+    "text": "plans"
+  },
+  {
+    "start": 325.4055,
+    "duration": 0.125,
+    "text": "that"
+  },
+  {
+    "start": 325.543,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 325.6305,
+    "duration": 0.3375,
+    "text": "nervous"
+  },
+  {
+    "start": 325.9805,
+    "duration": 0.375,
+    "text": "system"
+  },
+  {
+    "start": 326.368,
+    "duration": 0.55,
+    "text": "generates"
+  },
+  {
+    "start": 326.9305,
+    "duration": 0.125,
+    "text": "to"
+  },
+  {
+    "start": 327.068,
+    "duration": 0.4875,
+    "text": "activate"
+  },
+  {
+    "start": 327.568,
+    "duration": 0.5875,
+    "text": "behaviors"
+  },
+  {
+    "start": 328.168,
+    "duration": 0.125,
+    "text": "that"
+  },
+  {
+    "start": 328.3055,
+    "duration": 0.1,
+    "text": "have"
+  },
+  {
+    "start": 328.418,
+    "duration": 0.2875,
+    "text": "served"
+  },
+  {
+    "start": 328.718,
+    "duration": 0.1375,
+    "text": "us"
+  },
+  {
+    "start": 328.868,
+    "duration": 0.2125,
+    "text": "well"
+  },
+  {
+    "start": 329.093,
+    "duration": 0.6,
+    "text": "before"
+  },
+  {
+    "start": 330.5555,
+    "duration": 0.2125,
+    "text": "For"
+  },
+  {
+    "start": 330.7805,
+    "duration": 0.65,
+    "text": "example"
+  },
+  {
+    "start": 331.593,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 331.6555,
+    "duration": 0.425,
+    "text": "worked-up"
+  },
+  {
+    "start": 332.093,
+    "duration": 0.4125,
+    "text": "bodily"
+  },
+  {
+    "start": 332.518,
+    "duration": 0.45,
+    "text": "state"
+  },
+  {
+    "start": 333.168,
+    "duration": 0.15,
+    "text": "with"
+  },
+  {
+    "start": 333.3305,
+    "duration": 0.4625,
+    "text": "elevated"
+  },
+  {
+    "start": 333.8055,
+    "duration": 0.275,
+    "text": "heart"
+  },
+  {
+    "start": 334.093,
+    "duration": 0.325,
+    "text": "rate"
+  },
+  {
+    "start": 334.5805,
+    "duration": 0.3875,
+    "text": "fast"
+  },
+  {
+    "start": 334.9805,
+    "duration": 0.5,
+    "text": "breathing"
+  },
+  {
+    "start": 335.6555,
+    "duration": 0.125,
+    "text": "and"
+  },
+  {
+    "start": 335.793,
+    "duration": 0.3,
+    "text": "tense"
+  },
+  {
+    "start": 336.1055,
+    "duration": 0.575,
+    "text": "muscles"
+  },
+  {
+    "start": 336.8555,
+    "duration": 0.1125,
+    "text": "in"
+  },
+  {
+    "start": 336.9805,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 337.0805,
+    "duration": 0.575,
+    "text": "context"
+  },
+  {
+    "start": 337.668,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 337.7555,
+    "duration": 0.2375,
+    "text": "being"
+  },
+  {
+    "start": 338.0055,
+    "duration": 0.3625,
+    "text": "chased"
+  },
+  {
+    "start": 338.3805,
+    "duration": 0.1625,
+    "text": "by"
+  },
+  {
+    "start": 338.5555,
+    "duration": 0.0625,
+    "text": "a"
+  },
+  {
+    "start": 338.6305,
+    "duration": 0.4125,
+    "text": "dog"
+  },
+  {
+    "start": 339.2805,
+    "duration": 0.15,
+    "text": "would"
+  },
+  {
+    "start": 339.443,
+    "duration": 0.425,
+    "text": "indicate"
+  },
+  {
+    "start": 339.8805,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 339.968,
+    "duration": 0.5125,
+    "text": "emotion"
+  },
+  {
+    "start": 340.493,
+    "duration": 0.575,
+    "text": "category"
+  },
+  {
+    "start": 341.0805,
+    "duration": 0.3875,
+    "text": "fear"
+  },
+  {
+    "start": 341.4805,
+    "duration": 0.1125,
+    "text": "to"
+  },
+  {
+    "start": 341.6055,
+    "duration": 0.525,
+    "text": "activate"
+  },
+  {
+    "start": 342.143,
+    "duration": 0.2875,
+    "text": "certain"
+  },
+  {
+    "start": 342.443,
+    "duration": 0.6625,
+    "text": "behaviors"
+  },
+  {
+    "start": 343.118,
+    "duration": 0.1875,
+    "text": "and"
+  },
+  {
+    "start": 343.318,
+    "duration": 0.2,
+    "text": "use"
+  },
+  {
+    "start": 343.5305,
+    "duration": 0.175,
+    "text": "our"
+  },
+  {
+    "start": 343.718,
+    "duration": 0.375,
+    "text": "energy"
+  },
+  {
+    "start": 344.1055,
+    "duration": 0.625,
+    "text": "resources"
+  },
+  {
+    "start": 344.743,
+    "duration": 0.1125,
+    "text": "to"
+  },
+  {
+    "start": 344.868,
+    "duration": 0.375,
+    "text": "fight"
+  },
+  {
+    "start": 345.2555,
+    "duration": 0.125,
+    "text": "or"
+  },
+  {
+    "start": 345.393,
+    "duration": 0.2,
+    "text": "run"
+  },
+  {
+    "start": 345.6055,
+    "duration": 0.425,
+    "text": "away"
+  },
+  {
+    "start": 346.893,
+    "duration": 0.8,
+    "text": "Traditionally"
+  },
+  {
+    "start": 347.8055,
+    "duration": 0.5125,
+    "text": "emotions"
+  },
+  {
+    "start": 348.3305,
+    "duration": 0.125,
+    "text": "were"
+  },
+  {
+    "start": 348.468,
+    "duration": 0.275,
+    "text": "thought"
+  },
+  {
+    "start": 348.7555,
+    "duration": 0.075,
+    "text": "to"
+  },
+  {
+    "start": 348.843,
+    "duration": 0.125,
+    "text": "be"
+  },
+  {
+    "start": 348.9805,
+    "duration": 0.6,
+    "text": "hardwired"
+  },
+  {
+    "start": 349.593,
+    "duration": 0.125,
+    "text": "in"
+  },
+  {
+    "start": 349.7305,
+    "duration": 0.5,
+    "text": "specific"
+  },
+  {
+    "start": 350.243,
+    "duration": 0.4125,
+    "text": "circuits"
+  },
+  {
+    "start": 350.668,
+    "duration": 0.3625,
+    "text": "present"
+  },
+  {
+    "start": 351.043,
+    "duration": 0.15,
+    "text": "from"
+  },
+  {
+    "start": 351.2055,
+    "duration": 0.45,
+    "text": "birth"
+  },
+  {
+    "start": 352.518,
+    "duration": 0.35,
+    "text": "Barrett"
+  },
+  {
+    "start": 352.8805,
+    "duration": 0.1625,
+    "text": "has"
+  },
+  {
+    "start": 353.0555,
+    "duration": 0.2375,
+    "text": "helped"
+  },
+  {
+    "start": 353.3055,
+    "duration": 0.275,
+    "text": "show"
+  },
+  {
+    "start": 353.593,
+    "duration": 0.125,
+    "text": "that"
+  },
+  {
+    "start": 353.7305,
+    "duration": 0.1125,
+    "text": "we"
+  },
+  {
+    "start": 353.8555,
+    "duration": 0.4875,
+    "text": "construct"
+  },
+  {
+    "start": 354.3555,
+    "duration": 0.5,
+    "text": "emotional"
+  },
+  {
+    "start": 354.868,
+    "duration": 0.6,
+    "text": "categories"
+  },
+  {
+    "start": 355.4805,
+    "duration": 0.0875,
+    "text": "in"
+  },
+  {
+    "start": 355.5805,
+    "duration": 0.5125,
+    "text": "relation"
+  },
+  {
+    "start": 356.1055,
+    "duration": 0.1,
+    "text": "to"
+  },
+  {
+    "start": 356.218,
+    "duration": 0.4375,
+    "text": "signals"
+  },
+  {
+    "start": 356.668,
+    "duration": 0.25,
+    "text": "both"
+  },
+  {
+    "start": 356.9305,
+    "duration": 0.1625,
+    "text": "from"
+  },
+  {
+    "start": 357.1055,
+    "duration": 0.2375,
+    "text": "within"
+  },
+  {
+    "start": 357.3555,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 357.443,
+    "duration": 0.4125,
+    "text": "body"
+  },
+  {
+    "start": 357.868,
+    "duration": 0.15,
+    "text": "and"
+  },
+  {
+    "start": 358.0305,
+    "duration": 0.1625,
+    "text": "from"
+  },
+  {
+    "start": 358.2055,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 358.293,
+    "duration": 0.4625,
+    "text": "external"
+  },
+  {
+    "start": 358.768,
+    "duration": 0.7875,
+    "text": "context"
+  },
+  {
+    "start": 360.418,
+    "duration": 1.275,
+    "text": "In 2025"
+  },
+  {
+    "start": 361.868,
+    "duration": 0.3,
+    "text": "Barrett"
+  },
+  {
+    "start": 362.1805,
+    "duration": 0.2875,
+    "text": "reached"
+  },
+  {
+    "start": 362.4805,
+    "duration": 0.125,
+    "text": "out"
+  },
+  {
+    "start": 362.618,
+    "duration": 0.1,
+    "text": "to"
+  },
+  {
+    "start": 362.7305,
+    "duration": 0.375,
+    "text": "Miller"
+  },
+  {
+    "start": 363.118,
+    "duration": 0.1,
+    "text": "to"
+  },
+  {
+    "start": 363.2305,
+    "duration": 0.175,
+    "text": "see"
+  },
+  {
+    "start": 363.418,
+    "duration": 0.0875,
+    "text": "if"
+  },
+  {
+    "start": 363.518,
+    "duration": 0.1375,
+    "text": "he’d"
+  },
+  {
+    "start": 363.668,
+    "duration": 0.1375,
+    "text": "be"
+  },
+  {
+    "start": 363.818,
+    "duration": 0.525,
+    "text": "interested"
+  },
+  {
+    "start": 364.3555,
+    "duration": 0.1,
+    "text": "in"
+  },
+  {
+    "start": 364.468,
+    "duration": 0.2875,
+    "text": "putting"
+  },
+  {
+    "start": 364.768,
+    "duration": 0.15,
+    "text": "their"
+  },
+  {
+    "start": 364.9305,
+    "duration": 0.4125,
+    "text": "ideas"
+  },
+  {
+    "start": 365.3555,
+    "duration": 0.5375,
+    "text": "together"
+  },
+  {
+    "start": 365.9055,
+    "duration": 0.125,
+    "text": "to"
+  },
+  {
+    "start": 366.043,
+    "duration": 0.3,
+    "text": "create"
+  },
+  {
+    "start": 366.3555,
+    "duration": 0.0375,
+    "text": "a"
+  },
+  {
+    "start": 366.4055,
+    "duration": 0.2125,
+    "text": "new"
+  },
+  {
+    "start": 366.6305,
+    "duration": 0.55,
+    "text": "framework"
+  },
+  {
+    "start": 367.193,
+    "duration": 0.15,
+    "text": "for"
+  },
+  {
+    "start": 367.3555,
+    "duration": 0.9875,
+    "text": "categorization"
+  },
+  {
+    "start": 368.643,
+    "duration": 0.1875,
+    "text": "one"
+  },
+  {
+    "start": 368.843,
+    "duration": 0.1125,
+    "text": "that"
+  },
+  {
+    "start": 368.968,
+    "duration": 0.125,
+    "text": "would"
+  },
+  {
+    "start": 369.1055,
+    "duration": 0.2375,
+    "text": "move"
+  },
+  {
+    "start": 369.3555,
+    "duration": 0.3875,
+    "text": "beyond"
+  },
+  {
+    "start": 369.7555,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 369.8555,
+    "duration": 0.825,
+    "text": "filing-cabinet"
+  },
+  {
+    "start": 370.693,
+    "duration": 0.4125,
+    "text": "model"
+  },
+  {
+    "start": 371.118,
+    "duration": 0.1375,
+    "text": "to"
+  },
+  {
+    "start": 371.268,
+    "duration": 0.3625,
+    "text": "include"
+  },
+  {
+    "start": 371.643,
+    "duration": 0.1375,
+    "text": "their"
+  },
+  {
+    "start": 371.793,
+    "duration": 0.4125,
+    "text": "ideas"
+  },
+  {
+    "start": 372.218,
+    "duration": 0.2375,
+    "text": "about"
+  },
+  {
+    "start": 372.468,
+    "duration": 0.65,
+    "text": "prediction"
+  },
+  {
+    "start": 373.1305,
+    "duration": 0.1125,
+    "text": "and"
+  },
+  {
+    "start": 373.2555,
+    "duration": 0.9125,
+    "text": "allostasis"
+  },
+  {
+    "start": 375.0305,
+    "duration": 0.35,
+    "text": "Even"
+  },
+  {
+    "start": 375.393,
+    "duration": 0.2625,
+    "text": "really"
+  },
+  {
+    "start": 375.668,
+    "duration": 0.45,
+    "text": "brilliant"
+  },
+  {
+    "start": 376.1305,
+    "duration": 0.75,
+    "text": "scientists"
+  },
+  {
+    "start": 376.893,
+    "duration": 0.1875,
+    "text": "can"
+  },
+  {
+    "start": 377.093,
+    "duration": 0.5375,
+    "text": "sometimes"
+  },
+  {
+    "start": 377.643,
+    "duration": 0.125,
+    "text": "be"
+  },
+  {
+    "start": 377.7805,
+    "duration": 0.35,
+    "text": "guided"
+  },
+  {
+    "start": 378.143,
+    "duration": 0.1125,
+    "text": "by"
+  },
+  {
+    "start": 378.268,
+    "duration": 0.575,
+    "text": "traditional"
+  },
+  {
+    "start": 378.8555,
+    "duration": 0.5375,
+    "text": "thinking"
+  },
+  {
+    "start": 379.643,
+    "duration": 0.1875,
+    "text": "which"
+  },
+  {
+    "start": 379.843,
+    "duration": 0.125,
+    "text": "can"
+  },
+  {
+    "start": 379.9805,
+    "duration": 0.1125,
+    "text": "be"
+  },
+  {
+    "start": 380.1055,
+    "duration": 0.2625,
+    "text": "hard"
+  },
+  {
+    "start": 380.3805,
+    "duration": 0.0875,
+    "text": "to"
+  },
+  {
+    "start": 380.4805,
+    "duration": 0.175,
+    "text": "get"
+  },
+  {
+    "start": 380.668,
+    "duration": 0.4875,
+    "text": "beyond"
+  },
+  {
+    "start": 381.2805,
+    "duration": 0.175,
+    "text": "she"
+  },
+  {
+    "start": 381.468,
+    "duration": 0.425,
+    "text": "said"
+  },
+  {
+    "start": 382.7555,
+    "duration": 0.1875,
+    "text": "He"
+  },
+  {
+    "start": 382.9555,
+    "duration": 0.5,
+    "text": "understood"
+  },
+  {
+    "start": 383.468,
+    "duration": 0.125,
+    "text": "what"
+  },
+  {
+    "start": 383.6055,
+    "duration": 0.075,
+    "text": "I"
+  },
+  {
+    "start": 383.693,
+    "duration": 0.15,
+    "text": "was"
+  },
+  {
+    "start": 383.8555,
+    "duration": 0.275,
+    "text": "saying"
+  },
+  {
+    "start": 384.143,
+    "duration": 0.7375,
+    "text": "immediately"
+  },
+  {
+    "start": 385.743,
+    "duration": 0.1875,
+    "text": "So"
+  },
+  {
+    "start": 385.943,
+    "duration": 0.2,
+    "text": "she"
+  },
+  {
+    "start": 386.1555,
+    "duration": 0.3375,
+    "text": "asked"
+  },
+  {
+    "start": 386.5055,
+    "duration": 0.075,
+    "text": "if"
+  },
+  {
+    "start": 386.593,
+    "duration": 0.0875,
+    "text": "he"
+  },
+  {
+    "start": 386.693,
+    "duration": 0.35,
+    "text": "wanted"
+  },
+  {
+    "start": 387.0555,
+    "duration": 0.0875,
+    "text": "to"
+  },
+  {
+    "start": 387.1555,
+    "duration": 0.2125,
+    "text": "write"
+  },
+  {
+    "start": 387.3805,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 387.443,
+    "duration": 0.3375,
+    "text": "paper"
+  },
+  {
+    "start": 387.793,
+    "duration": 0.5875,
+    "text": "together"
+  },
+  {
+    "start": 389.243,
+    "duration": 0.375,
+    "text": "Miller"
+  },
+  {
+    "start": 389.6305,
+    "duration": 0.2375,
+    "text": "said"
+  },
+  {
+    "start": 389.8805,
+    "duration": 0.525,
+    "text": "yes"
+  },
+  {
+    "start": 391.268,
+    "duration": 0.1375,
+    "text": "In"
+  },
+  {
+    "start": 391.418,
+    "duration": 0.1,
+    "text": "our"
+  },
+  {
+    "start": 391.5305,
+    "duration": 0.5875,
+    "text": "discussions"
+  },
+  {
+    "start": 392.1305,
+    "duration": 0.0875,
+    "text": "it"
+  },
+  {
+    "start": 392.2305,
+    "duration": 0.35,
+    "text": "became"
+  },
+  {
+    "start": 392.593,
+    "duration": 0.4,
+    "text": "clear"
+  },
+  {
+    "start": 393.0055,
+    "duration": 0.1,
+    "text": "we"
+  },
+  {
+    "start": 393.118,
+    "duration": 0.1375,
+    "text": "were"
+  },
+  {
+    "start": 393.268,
+    "duration": 0.25,
+    "text": "cut"
+  },
+  {
+    "start": 393.5305,
+    "duration": 0.15,
+    "text": "from"
+  },
+  {
+    "start": 393.693,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 393.793,
+    "duration": 0.2875,
+    "text": "same"
+  },
+  {
+    "start": 394.093,
+    "duration": 0.525,
+    "text": "cloth"
+  },
+  {
+    "start": 394.7305,
+    "duration": 0.3125,
+    "text": "Miller"
+  },
+  {
+    "start": 395.0555,
+    "duration": 0.4125,
+    "text": "said"
+  },
+  {
+    "start": 396.3305,
+    "duration": 0.175,
+    "text": "What"
+  },
+  {
+    "start": 396.518,
+    "duration": 0.075,
+    "text": "I"
+  },
+  {
+    "start": 396.6055,
+    "duration": 0.2125,
+    "text": "love"
+  },
+  {
+    "start": 396.8305,
+    "duration": 0.3,
+    "text": "about"
+  },
+  {
+    "start": 397.143,
+    "duration": 0.4625,
+    "text": "Lisa"
+  },
+  {
+    "start": 397.618,
+    "duration": 0.125,
+    "text": "is"
+  },
+  {
+    "start": 397.7555,
+    "duration": 0.15,
+    "text": "that"
+  },
+  {
+    "start": 397.918,
+    "duration": 0.1625,
+    "text": "she"
+  },
+  {
+    "start": 398.093,
+    "duration": 0.15,
+    "text": "is"
+  },
+  {
+    "start": 398.2555,
+    "duration": 0.3375,
+    "text": "always"
+  },
+  {
+    "start": 398.6055,
+    "duration": 0.3875,
+    "text": "thinking"
+  },
+  {
+    "start": 399.0055,
+    "duration": 0.0875,
+    "text": "in"
+  },
+  {
+    "start": 399.1055,
+    "duration": 0.5375,
+    "text": "big-picture"
+  },
+  {
+    "start": 399.6555,
+    "duration": 0.5625,
+    "text": "terms"
+  },
+  {
+    "start": 401.0805,
+    "duration": 0.2875,
+    "text": "Both"
+  },
+  {
+    "start": 401.3805,
+    "duration": 0.0875,
+    "text": "of"
+  },
+  {
+    "start": 401.4805,
+    "duration": 0.325,
+    "text": "us"
+  },
+  {
+    "start": 401.9555,
+    "duration": 0.125,
+    "text": "we"
+  },
+  {
+    "start": 402.093,
+    "duration": 0.0875,
+    "text": "are"
+  },
+  {
+    "start": 402.193,
+    "duration": 0.225,
+    "text": "not"
+  },
+  {
+    "start": 402.4305,
+    "duration": 0.325,
+    "text": "afraid"
+  },
+  {
+    "start": 402.768,
+    "duration": 0.0875,
+    "text": "to"
+  },
+  {
+    "start": 402.868,
+    "duration": 0.2375,
+    "text": "say"
+  },
+  {
+    "start": 403.118,
+    "duration": 0.325,
+    "text": "things"
+  },
+  {
+    "start": 403.4555,
+    "duration": 0.175,
+    "text": "that"
+  },
+  {
+    "start": 403.643,
+    "duration": 0.225,
+    "text": "run"
+  },
+  {
+    "start": 403.8805,
+    "duration": 0.4125,
+    "text": "counter"
+  },
+  {
+    "start": 404.3055,
+    "duration": 0.0875,
+    "text": "to"
+  },
+  {
+    "start": 404.4055,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 404.518,
+    "duration": 0.4375,
+    "text": "standard"
+  },
+  {
+    "start": 404.968,
+    "duration": 0.175,
+    "text": "way"
+  },
+  {
+    "start": 405.1555,
+    "duration": 0.0875,
+    "text": "of"
+  },
+  {
+    "start": 405.2555,
+    "duration": 0.325,
+    "text": "looking"
+  },
+  {
+    "start": 405.593,
+    "duration": 0.1125,
+    "text": "at"
+  },
+  {
+    "start": 405.718,
+    "duration": 0.575,
+    "text": "things"
+  },
+  {
+    "start": 407.1555,
+    "duration": 0.575,
+    "text": "#"
+  },
+  {
+    "start": 407.743,
+    "duration": 0.5,
+    "text": "#"
+  },
+  {
+    "start": 408.2555,
+    "duration": 0.5125,
+    "text": "Vivacious"
+  },
+  {
+    "start": 408.7805,
+    "duration": 0.8375,
+    "text": "Categories"
+  },
+  {
+    "start": 410.4805,
+    "duration": 0.225,
+    "text": "As"
+  },
+  {
+    "start": 410.718,
+    "duration": 0.6,
+    "text": "animals"
+  },
+  {
+    "start": 411.4305,
+    "duration": 0.125,
+    "text": "we"
+  },
+  {
+    "start": 411.568,
+    "duration": 0.1,
+    "text": "are"
+  },
+  {
+    "start": 411.6805,
+    "duration": 0.475,
+    "text": "tasked"
+  },
+  {
+    "start": 412.168,
+    "duration": 0.1125,
+    "text": "with"
+  },
+  {
+    "start": 412.293,
+    "duration": 0.5,
+    "text": "surviving"
+  },
+  {
+    "start": 412.8055,
+    "duration": 0.175,
+    "text": "through"
+  },
+  {
+    "start": 412.993,
+    "duration": 0.5625,
+    "text": "change"
+  },
+  {
+    "start": 413.768,
+    "duration": 0.1,
+    "text": "in"
+  },
+  {
+    "start": 413.8805,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 413.968,
+    "duration": 0.675,
+    "text": "environments"
+  },
+  {
+    "start": 414.6555,
+    "duration": 0.1375,
+    "text": "we"
+  },
+  {
+    "start": 414.8055,
+    "duration": 0.1,
+    "text": "are"
+  },
+  {
+    "start": 414.918,
+    "duration": 0.4,
+    "text": "embedded"
+  },
+  {
+    "start": 415.3305,
+    "duration": 0.2625,
+    "text": "in"
+  },
+  {
+    "start": 415.843,
+    "duration": 0.1125,
+    "text": "and"
+  },
+  {
+    "start": 415.968,
+    "duration": 0.0875,
+    "text": "in"
+  },
+  {
+    "start": 416.068,
+    "duration": 0.1375,
+    "text": "our"
+  },
+  {
+    "start": 416.218,
+    "duration": 0.175,
+    "text": "own"
+  },
+  {
+    "start": 416.4055,
+    "duration": 0.4125,
+    "text": "bodies"
+  },
+  {
+    "start": 416.8305,
+    "duration": 0.125,
+    "text": "as"
+  },
+  {
+    "start": 416.968,
+    "duration": 0.4125,
+    "text": "well"
+  },
+  {
+    "start": 418.243,
+    "duration": 0.3375,
+    "text": "Because"
+  },
+  {
+    "start": 418.593,
+    "duration": 0.1,
+    "text": "we"
+  },
+  {
+    "start": 418.7055,
+    "duration": 0.15,
+    "text": "have"
+  },
+  {
+    "start": 418.868,
+    "duration": 0.375,
+    "text": "limited"
+  },
+  {
+    "start": 419.2555,
+    "duration": 0.5625,
+    "text": "energy"
+  },
+  {
+    "start": 419.943,
+    "duration": 0.4,
+    "text": "time"
+  },
+  {
+    "start": 420.468,
+    "duration": 0.1,
+    "text": "and"
+  },
+  {
+    "start": 420.5805,
+    "duration": 0.8,
+    "text": "computational"
+  },
+  {
+    "start": 421.393,
+    "duration": 0.7875,
+    "text": "resources"
+  },
+  {
+    "start": 422.393,
+    "duration": 0.8,
+    "text": "understanding"
+  },
+  {
+    "start": 423.2055,
+    "duration": 0.2125,
+    "text": "every"
+  },
+  {
+    "start": 423.4305,
+    "duration": 0.4875,
+    "text": "detail"
+  },
+  {
+    "start": 423.9305,
+    "duration": 0.0875,
+    "text": "of"
+  },
+  {
+    "start": 424.0305,
+    "duration": 0.2375,
+    "text": "every"
+  },
+  {
+    "start": 424.2805,
+    "duration": 0.675,
+    "text": "situation"
+  },
+  {
+    "start": 424.968,
+    "duration": 0.125,
+    "text": "is"
+  },
+  {
+    "start": 425.1055,
+    "duration": 0.7375,
+    "text": "impossible"
+  },
+  {
+    "start": 426.7055,
+    "duration": 0.25,
+    "text": "That"
+  },
+  {
+    "start": 426.968,
+    "duration": 0.2625,
+    "text": "means"
+  },
+  {
+    "start": 427.243,
+    "duration": 0.0875,
+    "text": "we"
+  },
+  {
+    "start": 427.343,
+    "duration": 0.1625,
+    "text": "have"
+  },
+  {
+    "start": 427.518,
+    "duration": 0.075,
+    "text": "to"
+  },
+  {
+    "start": 427.6055,
+    "duration": 0.2375,
+    "text": "take"
+  },
+  {
+    "start": 427.8555,
+    "duration": 0.575,
+    "text": "shortcuts"
+  },
+  {
+    "start": 428.443,
+    "duration": 0.1,
+    "text": "to"
+  },
+  {
+    "start": 428.5555,
+    "duration": 0.225,
+    "text": "stay"
+  },
+  {
+    "start": 428.793,
+    "duration": 0.575,
+    "text": "alive"
+  },
+  {
+    "start": 430.2305,
+    "duration": 0.3,
+    "text": "That’s"
+  },
+  {
+    "start": 430.543,
+    "duration": 0.1375,
+    "text": "where"
+  },
+  {
+    "start": 430.693,
+    "duration": 0.6,
+    "text": "categories"
+  },
+  {
+    "start": 431.3055,
+    "duration": 0.2125,
+    "text": "come"
+  },
+  {
+    "start": 431.5305,
+    "duration": 0.325,
+    "text": "in"
+  },
+  {
+    "start": 432.718,
+    "duration": 0.1375,
+    "text": "A"
+  },
+  {
+    "start": 432.868,
+    "duration": 0.625,
+    "text": "category"
+  },
+  {
+    "start": 433.5055,
+    "duration": 0.1125,
+    "text": "is"
+  },
+  {
+    "start": 433.6305,
+    "duration": 0.1,
+    "text": "an"
+  },
+  {
+    "start": 433.743,
+    "duration": 0.35,
+    "text": "event"
+  },
+  {
+    "start": 434.1055,
+    "duration": 0.125,
+    "text": "in"
+  },
+  {
+    "start": 434.243,
+    "duration": 0.25,
+    "text": "which"
+  },
+  {
+    "start": 434.5055,
+    "duration": 0.325,
+    "text": "different"
+  },
+  {
+    "start": 434.843,
+    "duration": 0.2875,
+    "text": "things"
+  },
+  {
+    "start": 435.143,
+    "duration": 0.1,
+    "text": "are"
+  },
+  {
+    "start": 435.2555,
+    "duration": 0.3875,
+    "text": "treated"
+  },
+  {
+    "start": 435.6555,
+    "duration": 0.125,
+    "text": "as"
+  },
+  {
+    "start": 435.793,
+    "duration": 0.4875,
+    "text": "similar"
+  },
+  {
+    "start": 436.293,
+    "duration": 0.125,
+    "text": "or"
+  },
+  {
+    "start": 436.4305,
+    "duration": 0.575,
+    "text": "equivalent"
+  },
+  {
+    "start": 437.018,
+    "duration": 0.15,
+    "text": "in"
+  },
+  {
+    "start": 437.1805,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 437.243,
+    "duration": 0.6,
+    "text": "particular"
+  },
+  {
+    "start": 437.8555,
+    "duration": 0.7625,
+    "text": "situation"
+  },
+  {
+    "start": 438.843,
+    "duration": 0.3125,
+    "text": "Barrett"
+  },
+  {
+    "start": 439.168,
+    "duration": 0.425,
+    "text": "said"
+  },
+  {
+    "start": 440.4555,
+    "duration": 0.6125,
+    "text": "Categories"
+  },
+  {
+    "start": 441.0805,
+    "duration": 0.225,
+    "text": "might"
+  },
+  {
+    "start": 441.318,
+    "duration": 0.1375,
+    "text": "be"
+  },
+  {
+    "start": 441.468,
+    "duration": 0.125,
+    "text": "as"
+  },
+  {
+    "start": 441.6055,
+    "duration": 0.4125,
+    "text": "basic"
+  },
+  {
+    "start": 442.0305,
+    "duration": 0.1375,
+    "text": "as"
+  },
+  {
+    "start": 442.1805,
+    "duration": 0.3875,
+    "text": "food"
+  },
+  {
+    "start": 442.7305,
+    "duration": 0.4125,
+    "text": "threat"
+  },
+  {
+    "start": 443.3055,
+    "duration": 0.1125,
+    "text": "or"
+  },
+  {
+    "start": 443.4305,
+    "duration": 0.4625,
+    "text": "mate"
+  },
+  {
+    "start": 444.7555,
+    "duration": 0.425,
+    "text": "Humans"
+  },
+  {
+    "start": 445.193,
+    "duration": 0.1125,
+    "text": "have"
+  },
+  {
+    "start": 445.318,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 445.3805,
+    "duration": 0.6,
+    "text": "remarkable"
+  },
+  {
+    "start": 445.993,
+    "duration": 0.5,
+    "text": "ability"
+  },
+  {
+    "start": 446.5055,
+    "duration": 0.125,
+    "text": "to"
+  },
+  {
+    "start": 446.643,
+    "duration": 0.25,
+    "text": "form"
+  },
+  {
+    "start": 446.9055,
+    "duration": 0.2875,
+    "text": "much"
+  },
+  {
+    "start": 447.2055,
+    "duration": 0.2,
+    "text": "more"
+  },
+  {
+    "start": 447.418,
+    "duration": 0.475,
+    "text": "detailed"
+  },
+  {
+    "start": 447.9055,
+    "duration": 0.7375,
+    "text": "categories"
+  },
+  {
+    "start": 448.843,
+    "duration": 0.5,
+    "text": "including"
+  },
+  {
+    "start": 449.3555,
+    "duration": 0.275,
+    "text": "ones"
+  },
+  {
+    "start": 449.643,
+    "duration": 0.125,
+    "text": "that"
+  },
+  {
+    "start": 449.7805,
+    "duration": 0.1,
+    "text": "are"
+  },
+  {
+    "start": 449.893,
+    "duration": 0.3625,
+    "text": "highly"
+  },
+  {
+    "start": 450.268,
+    "duration": 0.7125,
+    "text": "abstract"
+  },
+  {
+    "start": 451.2055,
+    "duration": 0.2875,
+    "text": "Visit"
+  },
+  {
+    "start": 451.5055,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 451.568,
+    "duration": 0.6,
+    "text": "philosophy"
+  },
+  {
+    "start": 452.1805,
+    "duration": 0.55,
+    "text": "department"
+  },
+  {
+    "start": 452.743,
+    "duration": 0.075,
+    "text": "to"
+  },
+  {
+    "start": 452.8305,
+    "duration": 0.2375,
+    "text": "hear"
+  },
+  {
+    "start": 453.0805,
+    "duration": 0.25,
+    "text": "about"
+  },
+  {
+    "start": 453.343,
+    "duration": 0.6125,
+    "text": "categories"
+  },
+  {
+    "start": 453.968,
+    "duration": 0.2,
+    "text": "such"
+  },
+  {
+    "start": 454.1805,
+    "duration": 0.125,
+    "text": "as"
+  },
+  {
+    "start": 454.318,
+    "duration": 0.625,
+    "text": "justice"
+  },
+  {
+    "start": 455.1055,
+    "duration": 0.45,
+    "text": "truth"
+  },
+  {
+    "start": 455.7555,
+    "duration": 0.2,
+    "text": "and"
+  },
+  {
+    "start": 455.968,
+    "duration": 0.45,
+    "text": "beauty"
+  },
+  {
+    "start": 457.2805,
+    "duration": 0.2125,
+    "text": "Earl"
+  },
+  {
+    "start": 457.5055,
+    "duration": 0.3,
+    "text": "Miller"
+  },
+  {
+    "start": 457.818,
+    "duration": 0.4125,
+    "text": "measures"
+  },
+  {
+    "start": 458.243,
+    "duration": 0.1125,
+    "text": "the"
+  },
+  {
+    "start": 458.368,
+    "duration": 0.5625,
+    "text": "dynamics"
+  },
+  {
+    "start": 458.943,
+    "duration": 0.1,
+    "text": "of"
+  },
+  {
+    "start": 459.0555,
+    "duration": 0.3125,
+    "text": "brain"
+  },
+  {
+    "start": 459.3805,
+    "duration": 0.375,
+    "text": "waves"
+  },
+  {
+    "start": 459.768,
+    "duration": 0.1,
+    "text": "to"
+  },
+  {
+    "start": 459.8805,
+    "duration": 0.325,
+    "text": "study"
+  },
+  {
+    "start": 460.218,
+    "duration": 0.1875,
+    "text": "their"
+  },
+  {
+    "start": 460.418,
+    "duration": 0.25,
+    "text": "role"
+  },
+  {
+    "start": 460.6805,
+    "duration": 0.1125,
+    "text": "in"
+  },
+  {
+    "start": 460.8055,
+    "duration": 0.675,
+    "text": "cognition"
+  },
+  {
+    "start": 461.493,
+    "duration": 0.0875,
+    "text": "at"
+  },
+  {
+    "start": 461.593,
+    "duration": 0.0625,
+    "text": "the"
+  },
+  {
+    "start": 461.668,
+    "duration": 0.725,
+    "text": "Massachusetts"
+  },
+  {
+    "start": 462.4055,
+    "duration": 0.475,
+    "text": "Institute"
+  },
+  {
+    "start": 462.893,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 462.9805,
+    "duration": 0.875,
+    "text": "Technology"
+  },
+  {
+    "start": 464.718,
+    "duration": 0.4625,
+    "text": "Courtesy"
+  },
+  {
+    "start": 465.193,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 465.2805,
+    "duration": 0.175,
+    "text": "Earl"
+  },
+  {
+    "start": 465.468,
+    "duration": 0.45,
+    "text": "Miller"
+  },
+  {
+    "start": 466.9,
+    "duration": 0.1375,
+    "text": "The"
+  },
+  {
+    "start": 467.05,
+    "duration": 0.3625,
+    "text": "function"
+  },
+  {
+    "start": 467.425,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 467.5125,
+    "duration": 0.9875,
+    "text": "categorization"
+  },
+  {
+    "start": 468.675,
+    "duration": 0.325,
+    "text": "Barrett"
+  },
+  {
+    "start": 469.0125,
+    "duration": 0.3875,
+    "text": "said"
+  },
+  {
+    "start": 469.6125,
+    "duration": 0.125,
+    "text": "is"
+  },
+  {
+    "start": 469.75,
+    "duration": 0.0875,
+    "text": "to"
+  },
+  {
+    "start": 469.85,
+    "duration": 0.225,
+    "text": "use"
+  },
+  {
+    "start": 470.0875,
+    "duration": 0.3375,
+    "text": "past"
+  },
+  {
+    "start": 470.4375,
+    "duration": 0.7875,
+    "text": "experiences"
+  },
+  {
+    "start": 471.2375,
+    "duration": 0.1375,
+    "text": "that"
+  },
+  {
+    "start": 471.3875,
+    "duration": 0.425,
+    "text": "resemble"
+  },
+  {
+    "start": 471.825,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 471.8875,
+    "duration": 0.2125,
+    "text": "new"
+  },
+  {
+    "start": 472.1125,
+    "duration": 0.675,
+    "text": "situation"
+  },
+  {
+    "start": 472.8,
+    "duration": 0.1,
+    "text": "to"
+  },
+  {
+    "start": 472.9125,
+    "duration": 0.4375,
+    "text": "implement"
+  },
+  {
+    "start": 473.3625,
+    "duration": 0.575,
+    "text": "behaviors"
+  },
+  {
+    "start": 473.95,
+    "duration": 0.1625,
+    "text": "that"
+  },
+  {
+    "start": 474.125,
+    "duration": 0.225,
+    "text": "keep"
+  },
+  {
+    "start": 474.3625,
+    "duration": 0.125,
+    "text": "our"
+  },
+  {
+    "start": 474.5,
+    "duration": 0.4125,
+    "text": "bodily"
+  },
+  {
+    "start": 474.925,
+    "duration": 0.5125,
+    "text": "systems"
+  },
+  {
+    "start": 475.45,
+    "duration": 0.65,
+    "text": "functioning"
+  },
+  {
+    "start": 476.9625,
+    "duration": 0.1375,
+    "text": "The"
+  },
+  {
+    "start": 477.1125,
+    "duration": 0.575,
+    "text": "category"
+  },
+  {
+    "start": 477.7,
+    "duration": 0.325,
+    "text": "apple"
+  },
+  {
+    "start": 478.0375,
+    "duration": 0.225,
+    "text": "might"
+  },
+  {
+    "start": 478.275,
+    "duration": 0.1125,
+    "text": "be"
+  },
+  {
+    "start": 478.4,
+    "duration": 0.4375,
+    "text": "defined"
+  },
+  {
+    "start": 478.85,
+    "duration": 0.1625,
+    "text": "through"
+  },
+  {
+    "start": 479.025,
+    "duration": 0.4375,
+    "text": "physical"
+  },
+  {
+    "start": 479.475,
+    "duration": 0.575,
+    "text": "features"
+  },
+  {
+    "start": 480.225,
+    "duration": 0.4875,
+    "text": "smooth"
+  },
+  {
+    "start": 480.8875,
+    "duration": 0.3375,
+    "text": "round"
+  },
+  {
+    "start": 481.4125,
+    "duration": 0.3,
+    "text": "red"
+  },
+  {
+    "start": 481.8375,
+    "duration": 0.75,
+    "text": "palm-size"
+  },
+  {
+    "start": 482.7875,
+    "duration": 0.1375,
+    "text": "but"
+  },
+  {
+    "start": 482.9375,
+    "duration": 0.0875,
+    "text": "it"
+  },
+  {
+    "start": 483.0375,
+    "duration": 0.3,
+    "text": "also"
+  },
+  {
+    "start": 483.35,
+    "duration": 0.4,
+    "text": "includes"
+  },
+  {
+    "start": 483.7625,
+    "duration": 0.0625,
+    "text": "a"
+  },
+  {
+    "start": 483.8375,
+    "duration": 0.2125,
+    "text": "set"
+  },
+  {
+    "start": 484.0625,
+    "duration": 0.0625,
+    "text": "of"
+  },
+  {
+    "start": 484.1375,
+    "duration": 0.55,
+    "text": "behavioral"
+  },
+  {
+    "start": 484.7,
+    "duration": 0.675,
+    "text": "policies"
+  },
+  {
+    "start": 485.3875,
+    "duration": 0.1375,
+    "text": "for"
+  },
+  {
+    "start": 485.5375,
+    "duration": 0.15,
+    "text": "how"
+  },
+  {
+    "start": 485.7,
+    "duration": 0.1125,
+    "text": "we"
+  },
+  {
+    "start": 485.825,
+    "duration": 0.2,
+    "text": "should"
+  },
+  {
+    "start": 486.0375,
+    "duration": 0.5125,
+    "text": "interact"
+  },
+  {
+    "start": 486.5625,
+    "duration": 0.15,
+    "text": "with"
+  },
+  {
+    "start": 486.725,
+    "duration": 0.2125,
+    "text": "it"
+  },
+  {
+    "start": 487.15,
+    "duration": 0.2,
+    "text": "good"
+  },
+  {
+    "start": 487.3625,
+    "duration": 0.175,
+    "text": "for"
+  },
+  {
+    "start": 487.55,
+    "duration": 0.4,
+    "text": "eating"
+  },
+  {
+    "start": 488.0125,
+    "duration": 0.1625,
+    "text": "or"
+  },
+  {
+    "start": 488.2375,
+    "duration": 0.2625,
+    "text": "throw"
+  },
+  {
+    "start": 488.5125,
+    "duration": 0.2,
+    "text": "out"
+  },
+  {
+    "start": 488.725,
+    "duration": 0.15,
+    "text": "when"
+  },
+  {
+    "start": 488.8875,
+    "duration": 0.4375,
+    "text": "rotten"
+  },
+  {
+    "start": 490.1875,
+    "duration": 0.1375,
+    "text": "The"
+  },
+  {
+    "start": 490.3375,
+    "duration": 0.3,
+    "text": "point"
+  },
+  {
+    "start": 490.65,
+    "duration": 0.1375,
+    "text": "that"
+  },
+  {
+    "start": 490.8,
+    "duration": 0.1125,
+    "text": "is"
+  },
+  {
+    "start": 490.925,
+    "duration": 0.45,
+    "text": "important"
+  },
+  {
+    "start": 491.3875,
+    "duration": 0.2625,
+    "text": "about"
+  },
+  {
+    "start": 491.6625,
+    "duration": 0.95,
+    "text": "categorization"
+  },
+  {
+    "start": 492.625,
+    "duration": 0.1625,
+    "text": "is"
+  },
+  {
+    "start": 492.8,
+    "duration": 0.15,
+    "text": "that"
+  },
+  {
+    "start": 492.9625,
+    "duration": 0.1125,
+    "text": "you"
+  },
+  {
+    "start": 493.0875,
+    "duration": 0.175,
+    "text": "do"
+  },
+  {
+    "start": 493.275,
+    "duration": 0.1875,
+    "text": "all"
+  },
+  {
+    "start": 493.475,
+    "duration": 0.175,
+    "text": "that"
+  },
+  {
+    "start": 493.6625,
+    "duration": 0.1375,
+    "text": "for"
+  },
+  {
+    "start": 493.8125,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 493.875,
+    "duration": 0.575,
+    "text": "purpose"
+  },
+  {
+    "start": 494.7125,
+    "duration": 0.225,
+    "text": "said"
+  },
+  {
+    "start": 494.95,
+    "duration": 0.3875,
+    "text": "Timothy"
+  },
+  {
+    "start": 495.35,
+    "duration": 0.5375,
+    "text": "Buschman"
+  },
+  {
+    "start": 496.0875,
+    "duration": 0.025,
+    "text": "a"
+  },
+  {
+    "start": 496.125,
+    "duration": 0.825,
+    "text": "neuroscientist"
+  },
+  {
+    "start": 496.9625,
+    "duration": 0.1375,
+    "text": "from"
+  },
+  {
+    "start": 497.1125,
+    "duration": 0.4375,
+    "text": "Princeton"
+  },
+  {
+    "start": 497.5625,
+    "duration": 0.7875,
+    "text": "University"
+  },
+  {
+    "start": 499.2125,
+    "duration": 0.125,
+    "text": "The"
+  },
+  {
+    "start": 499.35,
+    "duration": 0.325,
+    "text": "reason"
+  },
+  {
+    "start": 499.6875,
+    "duration": 0.15,
+    "text": "for"
+  },
+  {
+    "start": 499.85,
+    "duration": 0.9125,
+    "text": "categorization"
+  },
+  {
+    "start": 500.775,
+    "duration": 0.1875,
+    "text": "is"
+  },
+  {
+    "start": 500.975,
+    "duration": 0.1,
+    "text": "to"
+  },
+  {
+    "start": 501.0875,
+    "duration": 0.4,
+    "text": "support"
+  },
+  {
+    "start": 501.5,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 501.6,
+    "duration": 0.3,
+    "text": "current"
+  },
+  {
+    "start": 501.9125,
+    "duration": 0.5625,
+    "text": "task"
+  },
+  {
+    "start": 503.3375,
+    "duration": 0.4,
+    "text": "Whatever"
+  },
+  {
+    "start": 503.75,
+    "duration": 0.0875,
+    "text": "it"
+  },
+  {
+    "start": 503.85,
+    "duration": 0.125,
+    "text": "is"
+  },
+  {
+    "start": 503.9875,
+    "duration": 0.15,
+    "text": "that"
+  },
+  {
+    "start": 504.15,
+    "duration": 0.125,
+    "text": "you"
+  },
+  {
+    "start": 504.2875,
+    "duration": 0.3,
+    "text": "want"
+  },
+  {
+    "start": 504.6,
+    "duration": 0.1125,
+    "text": "or"
+  },
+  {
+    "start": 504.725,
+    "duration": 0.3875,
+    "text": "whatever"
+  },
+  {
+    "start": 505.125,
+    "duration": 0.6375,
+    "text": "situation"
+  },
+  {
+    "start": 505.775,
+    "duration": 0.125,
+    "text": "you"
+  },
+  {
+    "start": 505.9125,
+    "duration": 0.1625,
+    "text": "are"
+  },
+  {
+    "start": 506.0875,
+    "duration": 0.2625,
+    "text": "in"
+  },
+  {
+    "start": 506.6125,
+    "duration": 0.1,
+    "text": "you"
+  },
+  {
+    "start": 506.725,
+    "duration": 0.125,
+    "text": "are"
+  },
+  {
+    "start": 506.8625,
+    "duration": 0.75,
+    "text": "categorizing"
+  },
+  {
+    "start": 507.625,
+    "duration": 0.3625,
+    "text": "something"
+  },
+  {
+    "start": 508.0,
+    "duration": 0.4125,
+    "text": "according"
+  },
+  {
+    "start": 508.425,
+    "duration": 0.1,
+    "text": "to"
+  },
+  {
+    "start": 508.5375,
+    "duration": 0.15,
+    "text": "what"
+  },
+  {
+    "start": 508.7,
+    "duration": 0.3,
+    "text": "meaning"
+  },
+  {
+    "start": 509.0125,
+    "duration": 0.075,
+    "text": "it"
+  },
+  {
+    "start": 509.1,
+    "duration": 0.2625,
+    "text": "has"
+  },
+  {
+    "start": 509.375,
+    "duration": 0.1375,
+    "text": "for"
+  },
+  {
+    "start": 509.525,
+    "duration": 0.3125,
+    "text": "you"
+  },
+  {
+    "start": 510.7,
+    "duration": 0.125,
+    "text": "But"
+  },
+  {
+    "start": 510.8375,
+    "duration": 0.1625,
+    "text": "how"
+  },
+  {
+    "start": 511.0125,
+    "duration": 0.0875,
+    "text": "are"
+  },
+  {
+    "start": 511.1125,
+    "duration": 0.575,
+    "text": "categories"
+  },
+  {
+    "start": 511.7,
+    "duration": 0.4875,
+    "text": "formed"
+  },
+  {
+    "start": 513.05,
+    "duration": 0.4375,
+    "text": "According"
+  },
+  {
+    "start": 513.5,
+    "duration": 0.0875,
+    "text": "to"
+  },
+  {
+    "start": 513.6,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 513.7,
+    "duration": 0.575,
+    "text": "traditional"
+  },
+  {
+    "start": 514.2875,
+    "duration": 0.3875,
+    "text": "view"
+  },
+  {
+    "start": 514.875,
+    "duration": 0.2375,
+    "text": "over"
+  },
+  {
+    "start": 515.125,
+    "duration": 0.2625,
+    "text": "time"
+  },
+  {
+    "start": 515.4,
+    "duration": 0.125,
+    "text": "our"
+  },
+  {
+    "start": 515.5375,
+    "duration": 0.8125,
+    "text": "experiences"
+  },
+  {
+    "start": 516.3625,
+    "duration": 0.5125,
+    "text": "construct"
+  },
+  {
+    "start": 516.8875,
+    "duration": 0.0625,
+    "text": "a"
+  },
+  {
+    "start": 516.9625,
+    "duration": 0.6875,
+    "text": "generalized"
+  },
+  {
+    "start": 517.6625,
+    "duration": 0.275,
+    "text": "list"
+  },
+  {
+    "start": 517.95,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 518.0375,
+    "duration": 0.6625,
+    "text": "attributes"
+  },
+  {
+    "start": 518.7125,
+    "duration": 0.1125,
+    "text": "to"
+  },
+  {
+    "start": 518.8375,
+    "duration": 0.2125,
+    "text": "form"
+  },
+  {
+    "start": 519.0625,
+    "duration": 0.0625,
+    "text": "a"
+  },
+  {
+    "start": 519.1375,
+    "duration": 0.5875,
+    "text": "category"
+  },
+  {
+    "start": 519.7375,
+    "duration": 0.2375,
+    "text": "such"
+  },
+  {
+    "start": 519.9875,
+    "duration": 0.1125,
+    "text": "as"
+  },
+  {
+    "start": 520.1125,
+    "duration": 0.35,
+    "text": "cat"
+  },
+  {
+    "start": 520.475,
+    "duration": 0.125,
+    "text": "that"
+  },
+  {
+    "start": 520.6125,
+    "duration": 0.1125,
+    "text": "we"
+  },
+  {
+    "start": 520.7375,
+    "duration": 0.1625,
+    "text": "can"
+  },
+  {
+    "start": 520.9125,
+    "duration": 0.2125,
+    "text": "use"
+  },
+  {
+    "start": 521.1375,
+    "duration": 0.1,
+    "text": "to"
+  },
+  {
+    "start": 521.25,
+    "duration": 0.6875,
+    "text": "differentiate"
+  },
+  {
+    "start": 521.95,
+    "duration": 0.2875,
+    "text": "furry"
+  },
+  {
+    "start": 522.25,
+    "duration": 0.7125,
+    "text": "creatures"
+  },
+  {
+    "start": 523.825,
+    "duration": 0.15,
+    "text": "By"
+  },
+  {
+    "start": 523.9875,
+    "duration": 0.2125,
+    "text": "this"
+  },
+  {
+    "start": 524.2125,
+    "duration": 0.4375,
+    "text": "model"
+  },
+  {
+    "start": 524.8625,
+    "duration": 0.1375,
+    "text": "we"
+  },
+  {
+    "start": 525.0125,
+    "duration": 0.2375,
+    "text": "take"
+  },
+  {
+    "start": 525.2625,
+    "duration": 0.125,
+    "text": "in"
+  },
+  {
+    "start": 525.4,
+    "duration": 0.4375,
+    "text": "sensory"
+  },
+  {
+    "start": 525.85,
+    "duration": 0.775,
+    "text": "information"
+  },
+  {
+    "start": 526.6375,
+    "duration": 0.125,
+    "text": "and"
+  },
+  {
+    "start": 526.775,
+    "duration": 0.2625,
+    "text": "pare"
+  },
+  {
+    "start": 527.05,
+    "duration": 0.1,
+    "text": "it"
+  },
+  {
+    "start": 527.1625,
+    "duration": 0.3125,
+    "text": "down"
+  },
+  {
+    "start": 527.4875,
+    "duration": 0.1,
+    "text": "to"
+  },
+  {
+    "start": 527.6,
+    "duration": 0.2875,
+    "text": "match"
+  },
+  {
+    "start": 527.9,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 528.0,
+    "duration": 0.675,
+    "text": "categorical"
+  },
+  {
+    "start": 528.6875,
+    "duration": 0.4375,
+    "text": "features"
+  },
+  {
+    "start": 529.1375,
+    "duration": 0.1,
+    "text": "in"
+  },
+  {
+    "start": 529.25,
+    "duration": 0.1125,
+    "text": "our"
+  },
+  {
+    "start": 529.375,
+    "duration": 0.5,
+    "text": "memory"
+  },
+  {
+    "start": 530.1375,
+    "duration": 0.3125,
+    "text": "Oh"
+  },
+  {
+    "start": 530.7,
+    "duration": 0.225,
+    "text": "there’s"
+  },
+  {
+    "start": 530.9375,
+    "duration": 0.2,
+    "text": "this"
+  },
+  {
+    "start": 531.15,
+    "duration": 0.2375,
+    "text": "thing"
+  },
+  {
+    "start": 531.4,
+    "duration": 0.2125,
+    "text": "that’s"
+  },
+  {
+    "start": 531.625,
+    "duration": 0.325,
+    "text": "shaped"
+  },
+  {
+    "start": 531.9625,
+    "duration": 0.175,
+    "text": "like"
+  },
+  {
+    "start": 532.15,
+    "duration": 0.0625,
+    "text": "a"
+  },
+  {
+    "start": 532.225,
+    "duration": 0.4875,
+    "text": "tail"
+  },
+  {
+    "start": 532.9625,
+    "duration": 0.0625,
+    "text": "it"
+  },
+  {
+    "start": 533.0375,
+    "duration": 0.15,
+    "text": "has"
+  },
+  {
+    "start": 533.2,
+    "duration": 0.4375,
+    "text": "ears"
+  },
+  {
+    "start": 533.85,
+    "duration": 0.075,
+    "text": "it"
+  },
+  {
+    "start": 533.9375,
+    "duration": 0.15,
+    "text": "has"
+  },
+  {
+    "start": 534.1,
+    "duration": 0.3875,
+    "text": "fur"
+  },
+  {
+    "start": 534.75,
+    "duration": 0.2,
+    "text": "now"
+  },
+  {
+    "start": 534.9625,
+    "duration": 0.125,
+    "text": "I’ve"
+  },
+  {
+    "start": 535.1,
+    "duration": 0.3125,
+    "text": "figured"
+  },
+  {
+    "start": 535.425,
+    "duration": 0.175,
+    "text": "out"
+  },
+  {
+    "start": 535.6125,
+    "duration": 0.15,
+    "text": "all"
+  },
+  {
+    "start": 535.775,
+    "duration": 0.225,
+    "text": "those"
+  },
+  {
+    "start": 536.0125,
+    "duration": 0.5875,
+    "text": "features"
+  },
+  {
+    "start": 536.775,
+    "duration": 0.3,
+    "text": "Miller"
+  },
+  {
+    "start": 537.0875,
+    "duration": 0.775,
+    "text": "suggested"
+  },
+  {
+    "start": 538.725,
+    "duration": 0.25,
+    "text": "Now"
+  },
+  {
+    "start": 538.9875,
+    "duration": 0.1,
+    "text": "I"
+  },
+  {
+    "start": 539.1,
+    "duration": 0.3375,
+    "text": "query"
+  },
+  {
+    "start": 539.45,
+    "duration": 0.1375,
+    "text": "my"
+  },
+  {
+    "start": 539.6,
+    "duration": 0.3375,
+    "text": "memory"
+  },
+  {
+    "start": 539.95,
+    "duration": 0.45,
+    "text": "banks"
+  },
+  {
+    "start": 540.575,
+    "duration": 0.3125,
+    "text": "Oh"
+  },
+  {
+    "start": 541.0125,
+    "duration": 0.1625,
+    "text": "it’s"
+  },
+  {
+    "start": 541.1875,
+    "duration": 0.0625,
+    "text": "a"
+  },
+  {
+    "start": 541.2625,
+    "duration": 0.55,
+    "text": "cat"
+  },
+  {
+    "start": 542.675,
+    "duration": 0.175,
+    "text": "In"
+  },
+  {
+    "start": 542.8625,
+    "duration": 0.3125,
+    "text": "Barrett"
+  },
+  {
+    "start": 543.1875,
+    "duration": 0.1125,
+    "text": "and"
+  },
+  {
+    "start": 543.3125,
+    "duration": 0.375,
+    "text": "Miller’s"
+  },
+  {
+    "start": 543.7,
+    "duration": 0.35,
+    "text": "view"
+  },
+  {
+    "start": 544.275,
+    "duration": 0.5,
+    "text": "however"
+  },
+  {
+    "start": 544.95,
+    "duration": 0.1125,
+    "text": "the"
+  },
+  {
+    "start": 545.075,
+    "duration": 0.275,
+    "text": "brain"
+  },
+  {
+    "start": 545.3625,
+    "duration": 0.3,
+    "text": "uses"
+  },
+  {
+    "start": 545.675,
+    "duration": 0.4375,
+    "text": "memories"
+  },
+  {
+    "start": 546.125,
+    "duration": 0.0875,
+    "text": "of"
+  },
+  {
+    "start": 546.225,
+    "duration": 0.4375,
+    "text": "similar"
+  },
+  {
+    "start": 546.675,
+    "duration": 0.375,
+    "text": "past"
+  },
+  {
+    "start": 547.0625,
+    "duration": 0.775,
+    "text": "situations"
+  },
+  {
+    "start": 547.85,
+    "duration": 0.1,
+    "text": "to"
+  },
+  {
+    "start": 547.9625,
+    "duration": 0.3625,
+    "text": "predict"
+  },
+  {
+    "start": 548.3375,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 548.4,
+    "duration": 0.2125,
+    "text": "set"
+  },
+  {
+    "start": 548.625,
+    "duration": 0.0875,
+    "text": "of"
+  },
+  {
+    "start": 548.725,
+    "duration": 0.6,
+    "text": "behaviors"
+  },
+  {
+    "start": 549.3375,
+    "duration": 0.1375,
+    "text": "that"
+  },
+  {
+    "start": 549.4875,
+    "duration": 0.0875,
+    "text": "are"
+  },
+  {
+    "start": 549.5875,
+    "duration": 0.5875,
+    "text": "appropriate"
+  },
+  {
+    "start": 550.1875,
+    "duration": 0.125,
+    "text": "for"
+  },
+  {
+    "start": 550.325,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 550.425,
+    "duration": 0.175,
+    "text": "new"
+  },
+  {
+    "start": 550.6125,
+    "duration": 0.7125,
+    "text": "situation"
+  },
+  {
+    "start": 551.3375,
+    "duration": 0.3375,
+    "text": "before"
+  },
+  {
+    "start": 551.6875,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 551.8,
+    "duration": 0.4875,
+    "text": "senses"
+  },
+  {
+    "start": 552.3,
+    "duration": 0.125,
+    "text": "have"
+  },
+  {
+    "start": 552.4375,
+    "duration": 0.625,
+    "text": "identified"
+  },
+  {
+    "start": 553.075,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 553.1375,
+    "duration": 0.55,
+    "text": "traditional"
+  },
+  {
+    "start": 553.7,
+    "duration": 0.7375,
+    "text": "category"
+  },
+  {
+    "start": 555.3,
+    "duration": 0.4875,
+    "text": "Imagine"
+  },
+  {
+    "start": 555.8,
+    "duration": 0.125,
+    "text": "you"
+  },
+  {
+    "start": 555.9375,
+    "duration": 0.125,
+    "text": "are"
+  },
+  {
+    "start": 556.075,
+    "duration": 0.55,
+    "text": "walking"
+  },
+  {
+    "start": 556.825,
+    "duration": 0.0875,
+    "text": "and"
+  },
+  {
+    "start": 556.925,
+    "duration": 0.1125,
+    "text": "you"
+  },
+  {
+    "start": 557.05,
+    "duration": 0.2,
+    "text": "feel"
+  },
+  {
+    "start": 557.2625,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 557.325,
+    "duration": 0.3875,
+    "text": "scratch"
+  },
+  {
+    "start": 557.725,
+    "duration": 0.1,
+    "text": "on"
+  },
+  {
+    "start": 557.8375,
+    "duration": 0.15,
+    "text": "your"
+  },
+  {
+    "start": 558.0,
+    "duration": 0.425,
+    "text": "leg"
+  },
+  {
+    "start": 559.2875,
+    "duration": 0.1625,
+    "text": "If"
+  },
+  {
+    "start": 559.4625,
+    "duration": 0.1375,
+    "text": "you’re"
+  },
+  {
+    "start": 559.6125,
+    "duration": 0.075,
+    "text": "in"
+  },
+  {
+    "start": 559.7,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 559.7625,
+    "duration": 0.2875,
+    "text": "safe"
+  },
+  {
+    "start": 560.0625,
+    "duration": 0.3625,
+    "text": "place"
+  },
+  {
+    "start": 560.4375,
+    "duration": 0.1125,
+    "text": "and"
+  },
+  {
+    "start": 560.5625,
+    "duration": 0.1125,
+    "text": "are"
+  },
+  {
+    "start": 560.6875,
+    "duration": 0.4125,
+    "text": "calm"
+  },
+  {
+    "start": 561.3,
+    "duration": 0.15,
+    "text": "you’ll"
+  },
+  {
+    "start": 561.4625,
+    "duration": 0.325,
+    "text": "carry"
+  },
+  {
+    "start": 561.8,
+    "duration": 0.1375,
+    "text": "on"
+  },
+  {
+    "start": 561.95,
+    "duration": 0.3375,
+    "text": "without"
+  },
+  {
+    "start": 562.3,
+    "duration": 0.225,
+    "text": "giving"
+  },
+  {
+    "start": 562.5375,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 562.65,
+    "duration": 0.6125,
+    "text": "sensation"
+  },
+  {
+    "start": 563.275,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 563.3375,
+    "duration": 0.35,
+    "text": "second"
+  },
+  {
+    "start": 563.7,
+    "duration": 0.4,
+    "text": "thought"
+  },
+  {
+    "start": 564.9625,
+    "duration": 0.175,
+    "text": "But"
+  },
+  {
+    "start": 565.15,
+    "duration": 0.2375,
+    "text": "let’s"
+  },
+  {
+    "start": 565.4,
+    "duration": 0.15,
+    "text": "say"
+  },
+  {
+    "start": 565.5625,
+    "duration": 0.15,
+    "text": "you"
+  },
+  {
+    "start": 565.725,
+    "duration": 0.125,
+    "text": "are"
+  },
+  {
+    "start": 565.8625,
+    "duration": 0.3625,
+    "text": "walking"
+  },
+  {
+    "start": 566.2375,
+    "duration": 0.1625,
+    "text": "through"
+  },
+  {
+    "start": 566.4125,
+    "duration": 0.275,
+    "text": "tall"
+  },
+  {
+    "start": 566.7,
+    "duration": 0.375,
+    "text": "grass"
+  },
+  {
+    "start": 567.0875,
+    "duration": 0.1125,
+    "text": "in"
+  },
+  {
+    "start": 567.2125,
+    "duration": 0.125,
+    "text": "an"
+  },
+  {
+    "start": 567.35,
+    "duration": 0.6125,
+    "text": "unfamiliar"
+  },
+  {
+    "start": 567.975,
+    "duration": 0.525,
+    "text": "place"
+  },
+  {
+    "start": 568.6875,
+    "duration": 0.1625,
+    "text": "your"
+  },
+  {
+    "start": 568.8625,
+    "duration": 0.4625,
+    "text": "heartbeat"
+  },
+  {
+    "start": 569.3375,
+    "duration": 0.1125,
+    "text": "and"
+  },
+  {
+    "start": 569.4625,
+    "duration": 0.4125,
+    "text": "breathing"
+  },
+  {
+    "start": 569.8875,
+    "duration": 0.1125,
+    "text": "are"
+  },
+  {
+    "start": 570.0125,
+    "duration": 0.4375,
+    "text": "faster"
+  },
+  {
+    "start": 570.4625,
+    "duration": 0.15,
+    "text": "than"
+  },
+  {
+    "start": 570.625,
+    "duration": 0.475,
+    "text": "normal"
+  },
+  {
+    "start": 571.9625,
+    "duration": 0.1875,
+    "text": "You"
+  },
+  {
+    "start": 572.1625,
+    "duration": 0.2125,
+    "text": "feel"
+  },
+  {
+    "start": 572.3875,
+    "duration": 0.425,
+    "text": "nervous"
+  },
+  {
+    "start": 572.825,
+    "duration": 0.325,
+    "text": "because"
+  },
+  {
+    "start": 573.1625,
+    "duration": 0.1375,
+    "text": "your"
+  },
+  {
+    "start": 573.3125,
+    "duration": 0.3375,
+    "text": "brain"
+  },
+  {
+    "start": 573.6625,
+    "duration": 0.1625,
+    "text": "has"
+  },
+  {
+    "start": 573.8375,
+    "duration": 0.6125,
+    "text": "predictively"
+  },
+  {
+    "start": 574.4625,
+    "duration": 0.55,
+    "text": "allocated"
+  },
+  {
+    "start": 575.025,
+    "duration": 0.675,
+    "text": "resources"
+  },
+  {
+    "start": 575.7125,
+    "duration": 0.1,
+    "text": "to"
+  },
+  {
+    "start": 575.825,
+    "duration": 0.1375,
+    "text": "your"
+  },
+  {
+    "start": 575.975,
+    "duration": 0.3875,
+    "text": "body"
+  },
+  {
+    "start": 576.375,
+    "duration": 0.1375,
+    "text": "to"
+  },
+  {
+    "start": 576.525,
+    "duration": 0.3,
+    "text": "flee"
+  },
+  {
+    "start": 576.8375,
+    "duration": 0.225,
+    "text": "any"
+  },
+  {
+    "start": 577.075,
+    "duration": 0.4875,
+    "text": "potential"
+  },
+  {
+    "start": 577.575,
+    "duration": 0.6,
+    "text": "threats"
+  },
+  {
+    "start": 579.0375,
+    "duration": 0.1625,
+    "text": "And"
+  },
+  {
+    "start": 579.2125,
+    "duration": 0.1375,
+    "text": "by"
+  },
+  {
+    "start": 579.3625,
+    "duration": 0.35,
+    "text": "feeling"
+  },
+  {
+    "start": 579.725,
+    "duration": 0.525,
+    "text": "nervous"
+  },
+  {
+    "start": 580.4,
+    "duration": 0.1125,
+    "text": "you"
+  },
+  {
+    "start": 580.525,
+    "duration": 0.1125,
+    "text": "have"
+  },
+  {
+    "start": 580.65,
+    "duration": 0.175,
+    "text": "been"
+  },
+  {
+    "start": 580.8375,
+    "duration": 0.3125,
+    "text": "primed"
+  },
+  {
+    "start": 581.1625,
+    "duration": 0.1125,
+    "text": "to"
+  },
+  {
+    "start": 581.2875,
+    "duration": 0.325,
+    "text": "assume"
+  },
+  {
+    "start": 581.625,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 581.7375,
+    "duration": 0.475,
+    "text": "scratch"
+  },
+  {
+    "start": 582.225,
+    "duration": 0.1375,
+    "text": "is"
+  },
+  {
+    "start": 582.375,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 582.4375,
+    "duration": 0.5,
+    "text": "potential"
+  },
+  {
+    "start": 582.95,
+    "duration": 0.4375,
+    "text": "threat"
+  },
+  {
+    "start": 583.6,
+    "duration": 0.1,
+    "text": "an"
+  },
+  {
+    "start": 583.7125,
+    "duration": 0.45,
+    "text": "insect"
+  },
+  {
+    "start": 584.175,
+    "duration": 0.25,
+    "text": "bite"
+  },
+  {
+    "start": 584.4375,
+    "duration": 0.3375,
+    "text": "or"
+  },
+  {
+    "start": 584.975,
+    "duration": 0.3875,
+    "text": "worse"
+  },
+  {
+    "start": 585.4875,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 585.55,
+    "duration": 0.5625,
+    "text": "snake"
+  },
+  {
+    "start": 586.975,
+    "duration": 0.1625,
+    "text": "In"
+  },
+  {
+    "start": 587.15,
+    "duration": 0.225,
+    "text": "both"
+  },
+  {
+    "start": 587.3875,
+    "duration": 0.875,
+    "text": "situations"
+  },
+  {
+    "start": 588.3875,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 588.5,
+    "duration": 0.6,
+    "text": "sensation"
+  },
+  {
+    "start": 589.1125,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 589.2,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 589.3,
+    "duration": 0.425,
+    "text": "scratch"
+  },
+  {
+    "start": 589.7375,
+    "duration": 0.1125,
+    "text": "is"
+  },
+  {
+    "start": 589.8625,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 589.975,
+    "duration": 0.45,
+    "text": "same"
+  },
+  {
+    "start": 590.6375,
+    "duration": 0.1375,
+    "text": "but"
+  },
+  {
+    "start": 590.7875,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 590.8875,
+    "duration": 0.325,
+    "text": "brain"
+  },
+  {
+    "start": 591.225,
+    "duration": 0.8,
+    "text": "categorizes"
+  },
+  {
+    "start": 592.0375,
+    "duration": 0.1,
+    "text": "it"
+  },
+  {
+    "start": 592.15,
+    "duration": 0.1,
+    "text": "in"
+  },
+  {
+    "start": 592.2625,
+    "duration": 0.4375,
+    "text": "vastly"
+  },
+  {
+    "start": 592.7125,
+    "duration": 0.3375,
+    "text": "different"
+  },
+  {
+    "start": 593.0625,
+    "duration": 0.55,
+    "text": "ways"
+  },
+  {
+    "start": 594.475,
+    "duration": 0.1375,
+    "text": "The"
+  },
+  {
+    "start": 594.625,
+    "duration": 0.4,
+    "text": "fact"
+  },
+  {
+    "start": 595.0375,
+    "duration": 0.1125,
+    "text": "that"
+  },
+  {
+    "start": 595.1625,
+    "duration": 0.0375,
+    "text": "a"
+  },
+  {
+    "start": 595.2125,
+    "duration": 0.3125,
+    "text": "much"
+  },
+  {
+    "start": 595.5375,
+    "duration": 0.3125,
+    "text": "broader"
+  },
+  {
+    "start": 595.8625,
+    "duration": 0.2,
+    "text": "set"
+  },
+  {
+    "start": 596.075,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 596.1625,
+    "duration": 0.5875,
+    "text": "signals"
+  },
+  {
+    "start": 596.9375,
+    "duration": 0.875,
+    "text": "environmental"
+  },
+  {
+    "start": 597.825,
+    "duration": 0.1,
+    "text": "and"
+  },
+  {
+    "start": 597.9375,
+    "duration": 0.75,
+    "text": "corporeal"
+  },
+  {
+    "start": 598.925,
+    "duration": 0.7125,
+    "text": "influences"
+  },
+  {
+    "start": 599.65,
+    "duration": 0.15,
+    "text": "how"
+  },
+  {
+    "start": 599.8125,
+    "duration": 0.125,
+    "text": "we"
+  },
+  {
+    "start": 599.95,
+    "duration": 0.3125,
+    "text": "form"
+  },
+  {
+    "start": 600.275,
+    "duration": 0.6375,
+    "text": "categories"
+  },
+  {
+    "start": 600.925,
+    "duration": 0.2625,
+    "text": "sets"
+  },
+  {
+    "start": 601.2,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 601.3125,
+    "duration": 0.4,
+    "text": "stage"
+  },
+  {
+    "start": 601.725,
+    "duration": 0.15,
+    "text": "for"
+  },
+  {
+    "start": 601.8875,
+    "duration": 0.35,
+    "text": "Barrett"
+  },
+  {
+    "start": 602.25,
+    "duration": 0.125,
+    "text": "and"
+  },
+  {
+    "start": 602.3875,
+    "duration": 0.375,
+    "text": "Miller’s"
+  },
+  {
+    "start": 602.775,
+    "duration": 0.1375,
+    "text": "new"
+  },
+  {
+    "start": 602.925,
+    "duration": 0.6875,
+    "text": "framework"
+  },
+  {
+    "start": 604.475,
+    "duration": 0.175,
+    "text": "Their"
+  },
+  {
+    "start": 604.6625,
+    "duration": 0.5875,
+    "text": "proposal"
+  },
+  {
+    "start": 605.2625,
+    "duration": 0.15,
+    "text": "is"
+  },
+  {
+    "start": 605.425,
+    "duration": 0.3125,
+    "text": "based"
+  },
+  {
+    "start": 605.75,
+    "duration": 0.1125,
+    "text": "on"
+  },
+  {
+    "start": 605.875,
+    "duration": 0.2625,
+    "text": "years"
+  },
+  {
+    "start": 606.15,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 606.2375,
+    "duration": 0.8375,
+    "text": "anatomical"
+  },
+  {
+    "start": 607.2625,
+    "duration": 1.4,
+    "text": "electrophysiological"
+  },
+  {
+    "start": 608.9,
+    "duration": 0.0875,
+    "text": "and"
+  },
+  {
+    "start": 609.0,
+    "duration": 0.6625,
+    "text": "brain-imaging"
+  },
+  {
+    "start": 609.675,
+    "duration": 0.45,
+    "text": "research"
+  },
+  {
+    "start": 610.1375,
+    "duration": 0.1625,
+    "text": "from"
+  },
+  {
+    "start": 610.3125,
+    "duration": 0.1625,
+    "text": "their"
+  },
+  {
+    "start": 610.4875,
+    "duration": 0.375,
+    "text": "labs"
+  },
+  {
+    "start": 610.875,
+    "duration": 0.1625,
+    "text": "and"
+  },
+  {
+    "start": 611.05,
+    "duration": 0.5375,
+    "text": "others"
+  },
+  {
+    "start": 612.45,
+    "duration": 0.1375,
+    "text": "They"
+  },
+  {
+    "start": 612.6,
+    "duration": 0.15,
+    "text": "have"
+  },
+  {
+    "start": 612.7625,
+    "duration": 0.225,
+    "text": "built"
+  },
+  {
+    "start": 613.0,
+    "duration": 0.125,
+    "text": "an"
+  },
+  {
+    "start": 613.1375,
+    "duration": 0.4875,
+    "text": "argument"
+  },
+  {
+    "start": 613.6375,
+    "duration": 0.1375,
+    "text": "that"
+  },
+  {
+    "start": 613.7875,
+    "duration": 0.9375,
+    "text": "categorization"
+  },
+  {
+    "start": 614.7375,
+    "duration": 0.175,
+    "text": "is"
+  },
+  {
+    "start": 614.925,
+    "duration": 0.125,
+    "text": "an"
+  },
+  {
+    "start": 615.0625,
+    "duration": 0.3875,
+    "text": "ongoing"
+  },
+  {
+    "start": 615.4625,
+    "duration": 0.475,
+    "text": "predictive"
+  },
+  {
+    "start": 615.95,
+    "duration": 0.3875,
+    "text": "tool"
+  },
+  {
+    "start": 616.35,
+    "duration": 0.125,
+    "text": "by"
+  },
+  {
+    "start": 616.4875,
+    "duration": 0.2375,
+    "text": "which"
+  },
+  {
+    "start": 616.7375,
+    "duration": 0.3125,
+    "text": "nervous"
+  },
+  {
+    "start": 617.0625,
+    "duration": 0.45,
+    "text": "systems"
+  },
+  {
+    "start": 617.525,
+    "duration": 0.2375,
+    "text": "guide"
+  },
+  {
+    "start": 617.775,
+    "duration": 0.5375,
+    "text": "behavior"
+  },
+  {
+    "start": 618.325,
+    "duration": 0.1125,
+    "text": "to"
+  },
+  {
+    "start": 618.45,
+    "duration": 0.225,
+    "text": "keep"
+  },
+  {
+    "start": 618.6875,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 618.775,
+    "duration": 0.525,
+    "text": "organism"
+  },
+  {
+    "start": 619.3125,
+    "duration": 0.55,
+    "text": "alive"
+  },
+  {
+    "start": 620.725,
+    "duration": 0.2625,
+    "text": "Some"
+  },
+  {
+    "start": 621.0,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 621.0875,
+    "duration": 0.1875,
+    "text": "their"
+  },
+  {
+    "start": 621.2875,
+    "duration": 0.4125,
+    "text": "evidence"
+  },
+  {
+    "start": 621.7125,
+    "duration": 0.1125,
+    "text": "is"
+  },
+  {
+    "start": 621.8375,
+    "duration": 0.1,
+    "text": "at"
+  },
+  {
+    "start": 621.95,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 622.0375,
+    "duration": 0.3625,
+    "text": "neuronal"
+  },
+  {
+    "start": 622.4125,
+    "duration": 0.475,
+    "text": "level"
+  },
+  {
+    "start": 623.75,
+    "duration": 0.1625,
+    "text": "They"
+  },
+  {
+    "start": 623.925,
+    "duration": 0.2875,
+    "text": "cite"
+  },
+  {
+    "start": 624.225,
+    "duration": 0.4375,
+    "text": "research"
+  },
+  {
+    "start": 624.675,
+    "duration": 0.3125,
+    "text": "showing"
+  },
+  {
+    "start": 625.0,
+    "duration": 0.1375,
+    "text": "how"
+  },
+  {
+    "start": 625.15,
+    "duration": 0.275,
+    "text": "brain"
+  },
+  {
+    "start": 625.4375,
+    "duration": 0.725,
+    "text": "connectivity"
+  },
+  {
+    "start": 626.175,
+    "duration": 0.1125,
+    "text": "is"
+  },
+  {
+    "start": 626.3,
+    "duration": 0.4875,
+    "text": "structured"
+  },
+  {
+    "start": 626.8,
+    "duration": 0.0875,
+    "text": "to"
+  },
+  {
+    "start": 626.9,
+    "duration": 0.2875,
+    "text": "favor"
+  },
+  {
+    "start": 627.2,
+    "duration": 0.425,
+    "text": "predictive"
+  },
+  {
+    "start": 627.6375,
+    "duration": 0.5125,
+    "text": "signals"
+  },
+  {
+    "start": 628.1625,
+    "duration": 0.1875,
+    "text": "over"
+  },
+  {
+    "start": 628.3625,
+    "duration": 0.425,
+    "text": "sensory"
+  },
+  {
+    "start": 628.8,
+    "duration": 0.5375,
+    "text": "ones"
+  },
+  {
+    "start": 630.2,
+    "duration": 0.2125,
+    "text": "For"
+  },
+  {
+    "start": 630.425,
+    "duration": 0.65,
+    "text": "example"
+  },
+  {
+    "start": 631.275,
+    "duration": 0.15,
+    "text": "there"
+  },
+  {
+    "start": 631.4375,
+    "duration": 0.075,
+    "text": "are"
+  },
+  {
+    "start": 631.525,
+    "duration": 0.2625,
+    "text": "many"
+  },
+  {
+    "start": 631.8,
+    "duration": 0.225,
+    "text": "more"
+  },
+  {
+    "start": 632.0375,
+    "duration": 0.6125,
+    "text": "connections"
+  },
+  {
+    "start": 632.6625,
+    "duration": 0.3875,
+    "text": "between"
+  },
+  {
+    "start": 633.0625,
+    "duration": 0.4625,
+    "text": "neurons"
+  },
+  {
+    "start": 633.5375,
+    "duration": 0.15,
+    "text": "that"
+  },
+  {
+    "start": 633.7,
+    "duration": 0.625,
+    "text": "facilitate"
+  },
+  {
+    "start": 634.3375,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 634.45,
+    "duration": 0.4625,
+    "text": "feedback"
+  },
+  {
+    "start": 634.925,
+    "duration": 0.375,
+    "text": "flow"
+  },
+  {
+    "start": 635.3125,
+    "duration": 0.125,
+    "text": "of"
+  },
+  {
+    "start": 635.45,
+    "duration": 0.5375,
+    "text": "internally"
+  },
+  {
+    "start": 636.0,
+    "duration": 0.5625,
+    "text": "generated"
+  },
+  {
+    "start": 636.575,
+    "duration": 0.475,
+    "text": "signals"
+  },
+  {
+    "start": 637.0625,
+    "duration": 0.125,
+    "text": "than"
+  },
+  {
+    "start": 637.2,
+    "duration": 0.3375,
+    "text": "between"
+  },
+  {
+    "start": 637.55,
+    "duration": 0.225,
+    "text": "those"
+  },
+  {
+    "start": 637.7875,
+    "duration": 0.3875,
+    "text": "handling"
+  },
+  {
+    "start": 638.1875,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 638.3,
+    "duration": 0.6,
+    "text": "feedforward"
+  },
+  {
+    "start": 638.9125,
+    "duration": 0.4625,
+    "text": "signals"
+  },
+  {
+    "start": 639.3875,
+    "duration": 0.125,
+    "text": "that"
+  },
+  {
+    "start": 639.525,
+    "duration": 0.4625,
+    "text": "originate"
+  },
+  {
+    "start": 640.0,
+    "duration": 0.15,
+    "text": "from"
+  },
+  {
+    "start": 640.1625,
+    "duration": 0.1375,
+    "text": "our"
+  },
+  {
+    "start": 640.3125,
+    "duration": 0.725,
+    "text": "senses"
+  },
+  {
+    "start": 641.9,
+    "duration": 0.275,
+    "text": "Even"
+  },
+  {
+    "start": 642.1875,
+    "duration": 0.25,
+    "text": "within"
+  },
+  {
+    "start": 642.45,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 642.5375,
+    "duration": 0.375,
+    "text": "visual"
+  },
+  {
+    "start": 642.925,
+    "duration": 0.6625,
+    "text": "cortex"
+  },
+  {
+    "start": 643.7375,
+    "duration": 0.7125,
+    "text": "90%"
+  },
+  {
+    "start": 644.4625,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 644.55,
+    "duration": 0.525,
+    "text": "synaptic"
+  },
+  {
+    "start": 645.0875,
+    "duration": 0.5625,
+    "text": "connections"
+  },
+  {
+    "start": 645.6625,
+    "duration": 0.65,
+    "text": "facilitate"
+  },
+  {
+    "start": 646.325,
+    "duration": 0.45,
+    "text": "feedback"
+  },
+  {
+    "start": 646.7875,
+    "duration": 0.625,
+    "text": "signaling"
+  },
+  {
+    "start": 648.275,
+    "duration": 0.2875,
+    "text": "That"
+  },
+  {
+    "start": 648.575,
+    "duration": 0.6375,
+    "text": "suggests"
+  },
+  {
+    "start": 649.225,
+    "duration": 0.1375,
+    "text": "that"
+  },
+  {
+    "start": 649.375,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 649.475,
+    "duration": 0.325,
+    "text": "brain"
+  },
+  {
+    "start": 649.8125,
+    "duration": 0.125,
+    "text": "is"
+  },
+  {
+    "start": 649.95,
+    "duration": 0.5125,
+    "text": "structured"
+  },
+  {
+    "start": 650.475,
+    "duration": 0.15,
+    "text": "for"
+  },
+  {
+    "start": 650.6375,
+    "duration": 0.475,
+    "text": "predicting"
+  },
+  {
+    "start": 651.125,
+    "duration": 0.775,
+    "text": "categories"
+  },
+  {
+    "start": 652.025,
+    "duration": 0.825,
+    "text": "perceptions"
+  },
+  {
+    "start": 653.025,
+    "duration": 0.125,
+    "text": "and"
+  },
+  {
+    "start": 653.1625,
+    "duration": 0.7,
+    "text": "behaviors"
+  },
+  {
+    "start": 654.1,
+    "duration": 0.275,
+    "text": "rather"
+  },
+  {
+    "start": 654.3875,
+    "duration": 0.1875,
+    "text": "than"
+  },
+  {
+    "start": 654.5875,
+    "duration": 0.15,
+    "text": "for"
+  },
+  {
+    "start": 654.75,
+    "duration": 0.7625,
+    "text": "categorizing"
+  },
+  {
+    "start": 655.525,
+    "duration": 0.1,
+    "text": "in"
+  },
+  {
+    "start": 655.6375,
+    "duration": 0.5125,
+    "text": "reaction"
+  },
+  {
+    "start": 656.1625,
+    "duration": 0.1,
+    "text": "to"
+  },
+  {
+    "start": 656.275,
+    "duration": 0.7125,
+    "text": "stimuli"
+  },
+  {
+    "start": 657.85,
+    "duration": 0.1625,
+    "text": "On"
+  },
+  {
+    "start": 658.025,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 658.125,
+    "duration": 0.625,
+    "text": "feedforward"
+  },
+  {
+    "start": 658.7625,
+    "duration": 0.4125,
+    "text": "side"
+  },
+  {
+    "start": 659.325,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 659.4375,
+    "duration": 0.3875,
+    "text": "authors"
+  },
+  {
+    "start": 659.8375,
+    "duration": 0.4375,
+    "text": "describe"
+  },
+  {
+    "start": 660.2875,
+    "duration": 0.1875,
+    "text": "how"
+  },
+  {
+    "start": 660.4875,
+    "duration": 0.5,
+    "text": "circuits"
+  },
+  {
+    "start": 661.0,
+    "duration": 0.1625,
+    "text": "that"
+  },
+  {
+    "start": 661.175,
+    "duration": 0.3,
+    "text": "carry"
+  },
+  {
+    "start": 661.4875,
+    "duration": 0.4625,
+    "text": "sensory"
+  },
+  {
+    "start": 661.9625,
+    "duration": 0.7,
+    "text": "information"
+  },
+  {
+    "start": 662.675,
+    "duration": 0.475,
+    "text": "undergo"
+  },
+  {
+    "start": 663.1625,
+    "duration": 0.55,
+    "text": "extensive"
+  },
+  {
+    "start": 663.725,
+    "duration": 0.725,
+    "text": "compression"
+  },
+  {
+    "start": 664.4625,
+    "duration": 0.1125,
+    "text": "as"
+  },
+  {
+    "start": 664.5875,
+    "duration": 0.1,
+    "text": "they"
+  },
+  {
+    "start": 664.7,
+    "duration": 0.4,
+    "text": "travel"
+  },
+  {
+    "start": 665.1125,
+    "duration": 0.325,
+    "text": "deeper"
+  },
+  {
+    "start": 665.45,
+    "duration": 0.1875,
+    "text": "into"
+  },
+  {
+    "start": 665.65,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 665.7625,
+    "duration": 0.475,
+    "text": "brain"
+  },
+  {
+    "start": 667.1,
+    "duration": 0.1375,
+    "text": "They"
+  },
+  {
+    "start": 667.25,
+    "duration": 0.5,
+    "text": "encounter"
+  },
+  {
+    "start": 667.7625,
+    "duration": 0.2625,
+    "text": "many"
+  },
+  {
+    "start": 668.0375,
+    "duration": 0.3125,
+    "text": "small"
+  },
+  {
+    "start": 668.3625,
+    "duration": 0.4625,
+    "text": "neurons"
+  },
+  {
+    "start": 668.8375,
+    "duration": 0.125,
+    "text": "that"
+  },
+  {
+    "start": 668.975,
+    "duration": 0.0875,
+    "text": "are"
+  },
+  {
+    "start": 669.075,
+    "duration": 0.4,
+    "text": "densely"
+  },
+  {
+    "start": 669.4875,
+    "duration": 0.5,
+    "text": "packed"
+  },
+  {
+    "start": 670.0,
+    "duration": 0.175,
+    "text": "but"
+  },
+  {
+    "start": 670.1875,
+    "duration": 0.45,
+    "text": "scarcely"
+  },
+  {
+    "start": 670.65,
+    "duration": 0.575,
+    "text": "connected"
+  },
+  {
+    "start": 671.475,
+    "duration": 0.125,
+    "text": "and"
+  },
+  {
+    "start": 671.6125,
+    "duration": 0.15,
+    "text": "their"
+  },
+  {
+    "start": 671.775,
+    "duration": 0.45,
+    "text": "signals"
+  },
+  {
+    "start": 672.2375,
+    "duration": 0.1625,
+    "text": "get"
+  },
+  {
+    "start": 672.4125,
+    "duration": 0.25,
+    "text": "whittled"
+  },
+  {
+    "start": 672.675,
+    "duration": 0.225,
+    "text": "down"
+  },
+  {
+    "start": 672.9125,
+    "duration": 0.1625,
+    "text": "through"
+  },
+  {
+    "start": 673.0875,
+    "duration": 0.475,
+    "text": "fewer"
+  },
+  {
+    "start": 673.75,
+    "duration": 0.4125,
+    "text": "bigger"
+  },
+  {
+    "start": 674.325,
+    "duration": 0.7,
+    "text": "better-connected"
+  },
+  {
+    "start": 675.0375,
+    "duration": 0.6625,
+    "text": "neurons"
+  },
+  {
+    "start": 676.5625,
+    "duration": 0.4625,
+    "text": "Traveling"
+  },
+  {
+    "start": 677.0375,
+    "duration": 0.2875,
+    "text": "along"
+  },
+  {
+    "start": 677.3375,
+    "duration": 0.1875,
+    "text": "this"
+  },
+  {
+    "start": 677.5375,
+    "duration": 0.5625,
+    "text": "gradient"
+  },
+  {
+    "start": 678.25,
+    "duration": 0.475,
+    "text": "sensory"
+  },
+  {
+    "start": 678.7375,
+    "duration": 0.4375,
+    "text": "signals"
+  },
+  {
+    "start": 679.1875,
+    "duration": 0.325,
+    "text": "become"
+  },
+  {
+    "start": 679.525,
+    "duration": 0.3875,
+    "text": "highly"
+  },
+  {
+    "start": 679.925,
+    "duration": 0.725,
+    "text": "abstracted"
+  },
+  {
+    "start": 680.8875,
+    "duration": 0.15,
+    "text": "and"
+  },
+  {
+    "start": 681.05,
+    "duration": 0.5375,
+    "text": "eventually"
+  },
+  {
+    "start": 681.6,
+    "duration": 0.25,
+    "text": "reach"
+  },
+  {
+    "start": 681.8625,
+    "duration": 0.575,
+    "text": "integrative"
+  },
+  {
+    "start": 682.45,
+    "duration": 0.6,
+    "text": "regions"
+  },
+  {
+    "start": 683.2375,
+    "duration": 0.2125,
+    "text": "which"
+  },
+  {
+    "start": 683.4625,
+    "duration": 0.5,
+    "text": "coordinate"
+  },
+  {
+    "start": 683.975,
+    "duration": 0.6375,
+    "text": "information"
+  },
+  {
+    "start": 684.625,
+    "duration": 0.1625,
+    "text": "from"
+  },
+  {
+    "start": 684.8,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 684.9,
+    "duration": 0.6625,
+    "text": "senses"
+  },
+  {
+    "start": 685.7125,
+    "duration": 0.5,
+    "text": "memory"
+  },
+  {
+    "start": 686.425,
+    "duration": 0.1375,
+    "text": "and"
+  },
+  {
+    "start": 686.575,
+    "duration": 0.3125,
+    "text": "body"
+  },
+  {
+    "start": 686.9,
+    "duration": 0.1125,
+    "text": "to"
+  },
+  {
+    "start": 687.025,
+    "duration": 0.2375,
+    "text": "guide"
+  },
+  {
+    "start": 687.275,
+    "duration": 0.675,
+    "text": "behavior"
+  },
+  {
+    "start": 688.924,
+    "duration": 0.1625,
+    "text": "The"
+  },
+  {
+    "start": 689.099,
+    "duration": 0.4,
+    "text": "authors"
+  },
+  {
+    "start": 689.5115,
+    "duration": 0.2,
+    "text": "then"
+  },
+  {
+    "start": 689.724,
+    "duration": 0.2875,
+    "text": "draw"
+  },
+  {
+    "start": 690.024,
+    "duration": 0.125,
+    "text": "on"
+  },
+  {
+    "start": 690.1615,
+    "duration": 1.25,
+    "text": "electrophysiological"
+  },
+  {
+    "start": 691.424,
+    "duration": 0.2625,
+    "text": "work"
+  },
+  {
+    "start": 691.699,
+    "duration": 0.1625,
+    "text": "from"
+  },
+  {
+    "start": 691.874,
+    "duration": 0.3625,
+    "text": "Miller’s"
+  },
+  {
+    "start": 692.249,
+    "duration": 0.325,
+    "text": "lab"
+  },
+  {
+    "start": 692.5865,
+    "duration": 0.0875,
+    "text": "to"
+  },
+  {
+    "start": 692.6865,
+    "duration": 0.2125,
+    "text": "show"
+  },
+  {
+    "start": 692.9115,
+    "duration": 0.1625,
+    "text": "how"
+  },
+  {
+    "start": 693.0865,
+    "duration": 0.5375,
+    "text": "feedback"
+  },
+  {
+    "start": 693.6365,
+    "duration": 0.1,
+    "text": "and"
+  },
+  {
+    "start": 693.749,
+    "duration": 0.6,
+    "text": "feedforward"
+  },
+  {
+    "start": 694.3615,
+    "duration": 0.4125,
+    "text": "signals"
+  },
+  {
+    "start": 694.7865,
+    "duration": 0.6875,
+    "text": "interact"
+  },
+  {
+    "start": 696.3365,
+    "duration": 0.15,
+    "text": "In"
+  },
+  {
+    "start": 696.499,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 696.5615,
+    "duration": 0.4625,
+    "text": "zoomed-out"
+  },
+  {
+    "start": 697.0365,
+    "duration": 0.225,
+    "text": "view"
+  },
+  {
+    "start": 697.274,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 697.3615,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 697.4615,
+    "duration": 0.4,
+    "text": "brain"
+  },
+  {
+    "start": 698.049,
+    "duration": 0.4625,
+    "text": "traveling"
+  },
+  {
+    "start": 698.524,
+    "duration": 0.4875,
+    "text": "waves"
+  },
+  {
+    "start": 699.1865,
+    "duration": 0.1875,
+    "text": "which"
+  },
+  {
+    "start": 699.3865,
+    "duration": 0.5,
+    "text": "represent"
+  },
+  {
+    "start": 699.899,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 699.999,
+    "duration": 0.575,
+    "text": "activity"
+  },
+  {
+    "start": 700.5865,
+    "duration": 0.1,
+    "text": "of"
+  },
+  {
+    "start": 700.699,
+    "duration": 0.2625,
+    "text": "many"
+  },
+  {
+    "start": 700.974,
+    "duration": 0.6375,
+    "text": "neurons"
+  },
+  {
+    "start": 701.8115,
+    "duration": 0.3,
+    "text": "carry"
+  },
+  {
+    "start": 702.124,
+    "duration": 0.6375,
+    "text": "information"
+  },
+  {
+    "start": 702.774,
+    "duration": 0.275,
+    "text": "about"
+  },
+  {
+    "start": 703.0615,
+    "duration": 0.5125,
+    "text": "goals"
+  },
+  {
+    "start": 703.749,
+    "duration": 0.575,
+    "text": "plans"
+  },
+  {
+    "start": 704.5365,
+    "duration": 0.125,
+    "text": "and"
+  },
+  {
+    "start": 704.674,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 704.774,
+    "duration": 0.5625,
+    "text": "energetic"
+  },
+  {
+    "start": 705.349,
+    "duration": 0.25,
+    "text": "state"
+  },
+  {
+    "start": 705.6115,
+    "duration": 0.0625,
+    "text": "of"
+  },
+  {
+    "start": 705.6865,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 705.774,
+    "duration": 0.5125,
+    "text": "body"
+  },
+  {
+    "start": 707.149,
+    "duration": 0.2625,
+    "text": "These"
+  },
+  {
+    "start": 707.424,
+    "duration": 0.325,
+    "text": "waves"
+  },
+  {
+    "start": 707.7615,
+    "duration": 0.1875,
+    "text": "then"
+  },
+  {
+    "start": 707.9615,
+    "duration": 0.5875,
+    "text": "encounter"
+  },
+  {
+    "start": 708.5615,
+    "duration": 0.1,
+    "text": "and"
+  },
+  {
+    "start": 708.674,
+    "duration": 0.45,
+    "text": "combine"
+  },
+  {
+    "start": 709.1365,
+    "duration": 0.125,
+    "text": "with"
+  },
+  {
+    "start": 709.274,
+    "duration": 0.375,
+    "text": "others"
+  },
+  {
+    "start": 709.6615,
+    "duration": 0.375,
+    "text": "carrying"
+  },
+  {
+    "start": 710.049,
+    "duration": 0.6125,
+    "text": "information"
+  },
+  {
+    "start": 710.674,
+    "duration": 0.1375,
+    "text": "from"
+  },
+  {
+    "start": 710.824,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 710.924,
+    "duration": 0.7375,
+    "text": "senses"
+  },
+  {
+    "start": 712.524,
+    "duration": 0.4375,
+    "text": "According"
+  },
+  {
+    "start": 712.974,
+    "duration": 0.1,
+    "text": "to"
+  },
+  {
+    "start": 713.0865,
+    "duration": 0.3,
+    "text": "Barrett"
+  },
+  {
+    "start": 713.399,
+    "duration": 0.1125,
+    "text": "and"
+  },
+  {
+    "start": 713.524,
+    "duration": 0.425,
+    "text": "Miller"
+  },
+  {
+    "start": 714.124,
+    "duration": 0.6625,
+    "text": "interaction"
+  },
+  {
+    "start": 714.799,
+    "duration": 0.3875,
+    "text": "between"
+  },
+  {
+    "start": 715.199,
+    "duration": 0.275,
+    "text": "waves"
+  },
+  {
+    "start": 715.4865,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 715.574,
+    "duration": 0.6625,
+    "text": "information"
+  },
+  {
+    "start": 716.249,
+    "duration": 0.5875,
+    "text": "cascading"
+  },
+  {
+    "start": 716.849,
+    "duration": 0.35,
+    "text": "across"
+  },
+  {
+    "start": 717.2115,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 717.324,
+    "duration": 0.4125,
+    "text": "brain"
+  },
+  {
+    "start": 717.749,
+    "duration": 0.1875,
+    "text": "can"
+  },
+  {
+    "start": 717.949,
+    "duration": 0.2875,
+    "text": "start"
+  },
+  {
+    "start": 718.249,
+    "duration": 0.1125,
+    "text": "to"
+  },
+  {
+    "start": 718.374,
+    "duration": 0.575,
+    "text": "explain"
+  },
+  {
+    "start": 718.9615,
+    "duration": 0.1375,
+    "text": "how"
+  },
+  {
+    "start": 719.1115,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 719.224,
+    "duration": 0.3125,
+    "text": "same"
+  },
+  {
+    "start": 719.549,
+    "duration": 0.2375,
+    "text": "set"
+  },
+  {
+    "start": 719.799,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 719.8865,
+    "duration": 0.4625,
+    "text": "external"
+  },
+  {
+    "start": 720.3615,
+    "duration": 0.4375,
+    "text": "sensory"
+  },
+  {
+    "start": 720.8115,
+    "duration": 0.5,
+    "text": "signals"
+  },
+  {
+    "start": 721.324,
+    "duration": 0.225,
+    "text": "might"
+  },
+  {
+    "start": 721.5615,
+    "duration": 0.1125,
+    "text": "be"
+  },
+  {
+    "start": 721.6865,
+    "duration": 0.7125,
+    "text": "categorized"
+  },
+  {
+    "start": 722.4115,
+    "duration": 0.5,
+    "text": "differently"
+  },
+  {
+    "start": 722.924,
+    "duration": 0.1,
+    "text": "in"
+  },
+  {
+    "start": 723.0365,
+    "duration": 0.325,
+    "text": "different"
+  },
+  {
+    "start": 723.374,
+    "duration": 1.0,
+    "text": "situations"
+  },
+  {
+    "start": 725.2365,
+    "duration": 0.1625,
+    "text": "If"
+  },
+  {
+    "start": 725.4115,
+    "duration": 0.1375,
+    "text": "you"
+  },
+  {
+    "start": 725.5615,
+    "duration": 0.1,
+    "text": "are"
+  },
+  {
+    "start": 725.674,
+    "duration": 0.525,
+    "text": "exhausted"
+  },
+  {
+    "start": 726.2115,
+    "duration": 0.075,
+    "text": "and"
+  },
+  {
+    "start": 726.299,
+    "duration": 0.5125,
+    "text": "hungry"
+  },
+  {
+    "start": 726.9365,
+    "duration": 0.0625,
+    "text": "a"
+  },
+  {
+    "start": 727.0115,
+    "duration": 0.4875,
+    "text": "bruised"
+  },
+  {
+    "start": 727.599,
+    "duration": 0.4,
+    "text": "overripe"
+  },
+  {
+    "start": 728.0115,
+    "duration": 0.3375,
+    "text": "apple"
+  },
+  {
+    "start": 728.3615,
+    "duration": 0.15,
+    "text": "is"
+  },
+  {
+    "start": 728.524,
+    "duration": 0.7125,
+    "text": "categorized"
+  },
+  {
+    "start": 729.249,
+    "duration": 0.125,
+    "text": "as"
+  },
+  {
+    "start": 729.3865,
+    "duration": 0.5375,
+    "text": "much-needed"
+  },
+  {
+    "start": 729.9365,
+    "duration": 0.4875,
+    "text": "food"
+  },
+  {
+    "start": 731.2865,
+    "duration": 0.1625,
+    "text": "If"
+  },
+  {
+    "start": 731.4615,
+    "duration": 0.1375,
+    "text": "you"
+  },
+  {
+    "start": 731.6115,
+    "duration": 0.1125,
+    "text": "are"
+  },
+  {
+    "start": 731.7365,
+    "duration": 0.225,
+    "text": "well"
+  },
+  {
+    "start": 731.974,
+    "duration": 0.425,
+    "text": "rested"
+  },
+  {
+    "start": 732.4115,
+    "duration": 0.1875,
+    "text": "and"
+  },
+  {
+    "start": 732.6115,
+    "duration": 0.6375,
+    "text": "energetically"
+  },
+  {
+    "start": 733.2615,
+    "duration": 0.675,
+    "text": "satiated"
+  },
+  {
+    "start": 734.174,
+    "duration": 0.125,
+    "text": "it’s"
+  },
+  {
+    "start": 734.3115,
+    "duration": 0.0625,
+    "text": "a"
+  },
+  {
+    "start": 734.3865,
+    "duration": 0.2875,
+    "text": "piece"
+  },
+  {
+    "start": 734.6865,
+    "duration": 0.0875,
+    "text": "of"
+  },
+  {
+    "start": 734.7865,
+    "duration": 0.475,
+    "text": "subpar"
+  },
+  {
+    "start": 735.274,
+    "duration": 0.325,
+    "text": "fruit"
+  },
+  {
+    "start": 735.6115,
+    "duration": 0.0875,
+    "text": "to"
+  },
+  {
+    "start": 735.7115,
+    "duration": 0.1125,
+    "text": "be"
+  },
+  {
+    "start": 735.8365,
+    "duration": 0.375,
+    "text": "passed"
+  },
+  {
+    "start": 736.224,
+    "duration": 0.4,
+    "text": "over"
+  },
+  {
+    "start": 737.4865,
+    "duration": 0.1625,
+    "text": "Our"
+  },
+  {
+    "start": 737.6615,
+    "duration": 0.4375,
+    "text": "internal"
+  },
+  {
+    "start": 738.1115,
+    "duration": 0.275,
+    "text": "state"
+  },
+  {
+    "start": 738.399,
+    "duration": 0.1375,
+    "text": "is"
+  },
+  {
+    "start": 738.549,
+    "duration": 0.2875,
+    "text": "just"
+  },
+  {
+    "start": 738.849,
+    "duration": 0.3375,
+    "text": "as"
+  },
+  {
+    "start": 739.324,
+    "duration": 0.1375,
+    "text": "if"
+  },
+  {
+    "start": 739.474,
+    "duration": 0.225,
+    "text": "not"
+  },
+  {
+    "start": 739.7115,
+    "duration": 0.4625,
+    "text": "more"
+  },
+  {
+    "start": 740.3865,
+    "duration": 0.475,
+    "text": "important"
+  },
+  {
+    "start": 740.874,
+    "duration": 0.1625,
+    "text": "than"
+  },
+  {
+    "start": 741.049,
+    "duration": 0.4375,
+    "text": "sensory"
+  },
+  {
+    "start": 741.499,
+    "duration": 0.325,
+    "text": "input"
+  },
+  {
+    "start": 741.8365,
+    "duration": 0.125,
+    "text": "to"
+  },
+  {
+    "start": 741.974,
+    "duration": 0.3375,
+    "text": "us"
+  },
+  {
+    "start": 742.574,
+    "duration": 0.225,
+    "text": "said"
+  },
+  {
+    "start": 742.8115,
+    "duration": 0.3625,
+    "text": "Sandra"
+  },
+  {
+    "start": 743.1865,
+    "duration": 0.3625,
+    "text": "Reinert"
+  },
+  {
+    "start": 743.5615,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 743.649,
+    "duration": 0.6125,
+    "text": "University"
+  },
+  {
+    "start": 744.274,
+    "duration": 0.425,
+    "text": "College"
+  },
+  {
+    "start": 744.7115,
+    "duration": 0.45,
+    "text": "London"
+  },
+  {
+    "start": 745.3865,
+    "duration": 0.1,
+    "text": "who"
+  },
+  {
+    "start": 745.499,
+    "duration": 0.1375,
+    "text": "has"
+  },
+  {
+    "start": 745.649,
+    "duration": 0.3375,
+    "text": "studied"
+  },
+  {
+    "start": 745.999,
+    "duration": 0.8625,
+    "text": "categorization"
+  },
+  {
+    "start": 746.874,
+    "duration": 0.125,
+    "text": "in"
+  },
+  {
+    "start": 747.0115,
+    "duration": 0.6,
+    "text": "rodents"
+  },
+  {
+    "start": 748.474,
+    "duration": 0.2125,
+    "text": "It’s"
+  },
+  {
+    "start": 748.699,
+    "duration": 0.5625,
+    "text": "completely"
+  },
+  {
+    "start": 749.274,
+    "duration": 0.5875,
+    "text": "intuitive"
+  },
+  {
+    "start": 749.874,
+    "duration": 0.1,
+    "text": "to"
+  },
+  {
+    "start": 749.9865,
+    "duration": 0.1875,
+    "text": "see"
+  },
+  {
+    "start": 750.1865,
+    "duration": 0.15,
+    "text": "how"
+  },
+  {
+    "start": 750.349,
+    "duration": 0.0875,
+    "text": "an"
+  },
+  {
+    "start": 750.449,
+    "duration": 0.4625,
+    "text": "internal"
+  },
+  {
+    "start": 750.924,
+    "duration": 0.5875,
+    "text": "context"
+  },
+  {
+    "start": 751.524,
+    "duration": 0.4125,
+    "text": "remaps"
+  },
+  {
+    "start": 751.949,
+    "duration": 0.1375,
+    "text": "our"
+  },
+  {
+    "start": 752.099,
+    "duration": 0.45,
+    "text": "rules"
+  },
+  {
+    "start": 752.7365,
+    "duration": 0.1375,
+    "text": "for"
+  },
+  {
+    "start": 752.8865,
+    "duration": 0.1375,
+    "text": "how"
+  },
+  {
+    "start": 753.0365,
+    "duration": 0.125,
+    "text": "we"
+  },
+  {
+    "start": 753.174,
+    "duration": 0.2375,
+    "text": "form"
+  },
+  {
+    "start": 753.424,
+    "duration": 0.0625,
+    "text": "a"
+  },
+  {
+    "start": 753.499,
+    "duration": 0.7625,
+    "text": "category"
+  },
+  {
+    "start": 755.124,
+    "duration": 0.5625,
+    "text": "#"
+  },
+  {
+    "start": 755.699,
+    "duration": 0.5125,
+    "text": "#"
+  },
+  {
+    "start": 756.224,
+    "duration": 0.475,
+    "text": "Everywhere"
+  },
+  {
+    "start": 756.7115,
+    "duration": 0.1625,
+    "text": "All"
+  },
+  {
+    "start": 756.8865,
+    "duration": 0.1,
+    "text": "at"
+  },
+  {
+    "start": 756.999,
+    "duration": 0.525,
+    "text": "Once"
+  },
+  {
+    "start": 758.3865,
+    "duration": 0.125,
+    "text": "A"
+  },
+  {
+    "start": 758.524,
+    "duration": 0.35,
+    "text": "central"
+  },
+  {
+    "start": 758.8865,
+    "duration": 0.55,
+    "text": "component"
+  },
+  {
+    "start": 759.449,
+    "duration": 0.1,
+    "text": "of"
+  },
+  {
+    "start": 759.5615,
+    "duration": 0.325,
+    "text": "Barrett"
+  },
+  {
+    "start": 759.899,
+    "duration": 0.1125,
+    "text": "and"
+  },
+  {
+    "start": 760.024,
+    "duration": 0.35,
+    "text": "Miller’s"
+  },
+  {
+    "start": 760.3865,
+    "duration": 0.5625,
+    "text": "framework"
+  },
+  {
+    "start": 760.9615,
+    "duration": 0.125,
+    "text": "is"
+  },
+  {
+    "start": 761.099,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 761.2115,
+    "duration": 0.4375,
+    "text": "origin"
+  },
+  {
+    "start": 761.6615,
+    "duration": 0.0875,
+    "text": "of"
+  },
+  {
+    "start": 761.7615,
+    "duration": 0.45,
+    "text": "predictive"
+  },
+  {
+    "start": 762.224,
+    "duration": 0.45,
+    "text": "signals"
+  },
+  {
+    "start": 762.6865,
+    "duration": 0.0875,
+    "text": "in"
+  },
+  {
+    "start": 762.7865,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 762.874,
+    "duration": 0.475,
+    "text": "brain"
+  },
+  {
+    "start": 764.2115,
+    "duration": 0.1625,
+    "text": "In"
+  },
+  {
+    "start": 764.3865,
+    "duration": 0.3125,
+    "text": "most"
+  },
+  {
+    "start": 764.7115,
+    "duration": 0.8,
+    "text": "neuroscientific"
+  },
+  {
+    "start": 765.524,
+    "duration": 0.575,
+    "text": "literature"
+  },
+  {
+    "start": 766.1115,
+    "duration": 0.1125,
+    "text": "on"
+  },
+  {
+    "start": 766.2365,
+    "duration": 0.3625,
+    "text": "visual"
+  },
+  {
+    "start": 766.6115,
+    "duration": 1.0,
+    "text": "categorization"
+  },
+  {
+    "start": 767.874,
+    "duration": 0.5375,
+    "text": "integrative"
+  },
+  {
+    "start": 768.424,
+    "duration": 0.3875,
+    "text": "regions"
+  },
+  {
+    "start": 768.824,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 768.9115,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 769.0115,
+    "duration": 0.6875,
+    "text": "cortex"
+  },
+  {
+    "start": 769.874,
+    "duration": 0.4625,
+    "text": "located"
+  },
+  {
+    "start": 770.349,
+    "duration": 0.1,
+    "text": "on"
+  },
+  {
+    "start": 770.4615,
+    "duration": 0.1125,
+    "text": "the"
+  },
+  {
+    "start": 770.5865,
+    "duration": 0.2875,
+    "text": "outer"
+  },
+  {
+    "start": 770.8865,
+    "duration": 0.4125,
+    "text": "surface"
+  },
+  {
+    "start": 771.3115,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 771.399,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 771.499,
+    "duration": 0.4,
+    "text": "brain"
+  },
+  {
+    "start": 772.1365,
+    "duration": 0.1375,
+    "text": "are"
+  },
+  {
+    "start": 772.2865,
+    "duration": 0.45,
+    "text": "considered"
+  },
+  {
+    "start": 772.749,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 772.849,
+    "duration": 0.3375,
+    "text": "source"
+  },
+  {
+    "start": 773.199,
+    "duration": 0.0875,
+    "text": "of"
+  },
+  {
+    "start": 773.299,
+    "duration": 0.45,
+    "text": "predictive"
+  },
+  {
+    "start": 773.7615,
+    "duration": 1.125,
+    "text": "expectations"
+  },
+  {
+    "start": 775.749,
+    "duration": 0.3125,
+    "text": "They"
+  },
+  {
+    "start": 776.224,
+    "duration": 0.3125,
+    "text": "Barrett"
+  },
+  {
+    "start": 776.549,
+    "duration": 0.1125,
+    "text": "and"
+  },
+  {
+    "start": 776.674,
+    "duration": 0.4,
+    "text": "Miller"
+  },
+  {
+    "start": 777.249,
+    "duration": 0.1875,
+    "text": "make"
+  },
+  {
+    "start": 777.449,
+    "duration": 0.0625,
+    "text": "a"
+  },
+  {
+    "start": 777.524,
+    "duration": 0.3375,
+    "text": "different"
+  },
+  {
+    "start": 777.874,
+    "duration": 0.3875,
+    "text": "move"
+  },
+  {
+    "start": 778.374,
+    "duration": 0.4,
+    "text": "Pessoa"
+  },
+  {
+    "start": 778.7865,
+    "duration": 0.45,
+    "text": "said"
+  },
+  {
+    "start": 780.099,
+    "duration": 0.15,
+    "text": "They"
+  },
+  {
+    "start": 780.2615,
+    "duration": 0.2375,
+    "text": "take"
+  },
+  {
+    "start": 780.5115,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 780.624,
+    "duration": 0.325,
+    "text": "limbic"
+  },
+  {
+    "start": 780.9615,
+    "duration": 0.4,
+    "text": "core"
+  },
+  {
+    "start": 781.374,
+    "duration": 0.1,
+    "text": "as"
+  },
+  {
+    "start": 781.4865,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 781.599,
+    "duration": 0.3125,
+    "text": "source"
+  },
+  {
+    "start": 781.924,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 782.0115,
+    "duration": 0.2125,
+    "text": "these"
+  },
+  {
+    "start": 782.2365,
+    "duration": 0.4375,
+    "text": "predictive"
+  },
+  {
+    "start": 782.6865,
+    "duration": 0.6625,
+    "text": "signals"
+  },
+  {
+    "start": 784.2115,
+    "duration": 0.1375,
+    "text": "The"
+  },
+  {
+    "start": 784.3615,
+    "duration": 0.325,
+    "text": "limbic"
+  },
+  {
+    "start": 784.699,
+    "duration": 0.275,
+    "text": "core"
+  },
+  {
+    "start": 784.9865,
+    "duration": 0.475,
+    "text": "includes"
+  },
+  {
+    "start": 785.474,
+    "duration": 0.525,
+    "text": "structures"
+  },
+  {
+    "start": 786.0115,
+    "duration": 0.225,
+    "text": "deep"
+  },
+  {
+    "start": 786.249,
+    "duration": 0.0875,
+    "text": "in"
+  },
+  {
+    "start": 786.349,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 786.449,
+    "duration": 0.3375,
+    "text": "brain"
+  },
+  {
+    "start": 786.799,
+    "duration": 0.15,
+    "text": "that"
+  },
+  {
+    "start": 786.9615,
+    "duration": 0.425,
+    "text": "combine"
+  },
+  {
+    "start": 787.399,
+    "duration": 0.5125,
+    "text": "signals"
+  },
+  {
+    "start": 787.924,
+    "duration": 0.4125,
+    "text": "carrying"
+  },
+  {
+    "start": 788.349,
+    "duration": 0.625,
+    "text": "information"
+  },
+  {
+    "start": 788.9865,
+    "duration": 0.15,
+    "text": "from"
+  },
+  {
+    "start": 789.149,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 789.2365,
+    "duration": 0.45,
+    "text": "body"
+  },
+  {
+    "start": 789.8615,
+    "duration": 0.6625,
+    "text": "senses"
+  },
+  {
+    "start": 790.649,
+    "duration": 0.5,
+    "text": "memory"
+  },
+  {
+    "start": 791.349,
+    "duration": 0.125,
+    "text": "and"
+  },
+  {
+    "start": 791.4865,
+    "duration": 0.6125,
+    "text": "higher-level"
+  },
+  {
+    "start": 792.1115,
+    "duration": 0.475,
+    "text": "cognitive"
+  },
+  {
+    "start": 792.599,
+    "duration": 0.7875,
+    "text": "functions"
+  },
+  {
+    "start": 794.249,
+    "duration": 0.25,
+    "text": "This"
+  },
+  {
+    "start": 794.5115,
+    "duration": 0.5625,
+    "text": "integrative"
+  },
+  {
+    "start": 795.0865,
+    "duration": 0.475,
+    "text": "network"
+  },
+  {
+    "start": 795.574,
+    "duration": 0.1125,
+    "text": "is"
+  },
+  {
+    "start": 795.699,
+    "duration": 0.25,
+    "text": "both"
+  },
+  {
+    "start": 795.9615,
+    "duration": 0.3625,
+    "text": "close"
+  },
+  {
+    "start": 796.3365,
+    "duration": 0.125,
+    "text": "to"
+  },
+  {
+    "start": 796.474,
+    "duration": 0.0875,
+    "text": "and"
+  },
+  {
+    "start": 796.574,
+    "duration": 0.3625,
+    "text": "highly"
+  },
+  {
+    "start": 796.949,
+    "duration": 0.5,
+    "text": "connected"
+  },
+  {
+    "start": 797.4615,
+    "duration": 0.075,
+    "text": "to"
+  },
+  {
+    "start": 797.549,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 797.6365,
+    "duration": 1.0,
+    "text": "hypothalamus"
+  },
+  {
+    "start": 798.874,
+    "duration": 0.125,
+    "text": "an"
+  },
+  {
+    "start": 799.0115,
+    "duration": 0.3375,
+    "text": "ancient"
+  },
+  {
+    "start": 799.3615,
+    "duration": 0.225,
+    "text": "part"
+  },
+  {
+    "start": 799.599,
+    "duration": 0.0625,
+    "text": "of"
+  },
+  {
+    "start": 799.674,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 799.774,
+    "duration": 0.325,
+    "text": "brain"
+  },
+  {
+    "start": 800.1115,
+    "duration": 0.1375,
+    "text": "that"
+  },
+  {
+    "start": 800.2615,
+    "duration": 0.5,
+    "text": "monitors"
+  },
+  {
+    "start": 800.774,
+    "duration": 0.425,
+    "text": "basic"
+  },
+  {
+    "start": 801.2115,
+    "duration": 0.375,
+    "text": "bodily"
+  },
+  {
+    "start": 801.599,
+    "duration": 0.6625,
+    "text": "functions"
+  },
+  {
+    "start": 802.4865,
+    "duration": 0.2125,
+    "text": "such"
+  },
+  {
+    "start": 802.7115,
+    "duration": 0.1,
+    "text": "as"
+  },
+  {
+    "start": 802.824,
+    "duration": 0.3125,
+    "text": "body"
+  },
+  {
+    "start": 803.149,
+    "duration": 0.65,
+    "text": "temperature"
+  },
+  {
+    "start": 804.024,
+    "duration": 0.2125,
+    "text": "heart"
+  },
+  {
+    "start": 804.249,
+    "duration": 0.3125,
+    "text": "rate"
+  },
+  {
+    "start": 804.7365,
+    "duration": 0.0875,
+    "text": "and"
+  },
+  {
+    "start": 804.8365,
+    "duration": 0.5375,
+    "text": "hunger"
+  },
+  {
+    "start": 806.2365,
+    "duration": 0.3375,
+    "text": "Because"
+  },
+  {
+    "start": 806.5865,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 806.6865,
+    "duration": 0.8125,
+    "text": "hypothalamus"
+  },
+  {
+    "start": 807.5115,
+    "duration": 0.2875,
+    "text": "helps"
+  },
+  {
+    "start": 807.8115,
+    "duration": 0.3625,
+    "text": "inform"
+  },
+  {
+    "start": 808.1865,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 808.299,
+    "duration": 0.6875,
+    "text": "cortex"
+  },
+  {
+    "start": 809.1865,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 809.299,
+    "duration": 0.475,
+    "text": "folded"
+  },
+  {
+    "start": 809.974,
+    "duration": 0.5,
+    "text": "outermost"
+  },
+  {
+    "start": 810.4865,
+    "duration": 0.275,
+    "text": "layer"
+  },
+  {
+    "start": 810.774,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 810.8615,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 810.9615,
+    "duration": 0.3875,
+    "text": "brain"
+  },
+  {
+    "start": 811.549,
+    "duration": 0.175,
+    "text": "which"
+  },
+  {
+    "start": 811.7365,
+    "duration": 0.1,
+    "text": "is"
+  },
+  {
+    "start": 811.849,
+    "duration": 0.4125,
+    "text": "involved"
+  },
+  {
+    "start": 812.274,
+    "duration": 0.0875,
+    "text": "in"
+  },
+  {
+    "start": 812.374,
+    "duration": 0.4875,
+    "text": "high-level"
+  },
+  {
+    "start": 812.874,
+    "duration": 0.675,
+    "text": "cognition"
+  },
+  {
+    "start": 813.5615,
+    "duration": 0.2375,
+    "text": "such"
+  },
+  {
+    "start": 813.8115,
+    "duration": 0.0875,
+    "text": "as"
+  },
+  {
+    "start": 813.9115,
+    "duration": 0.575,
+    "text": "executive"
+  },
+  {
+    "start": 814.499,
+    "duration": 0.6125,
+    "text": "control"
+  },
+  {
+    "start": 815.349,
+    "duration": 0.225,
+    "text": "about"
+  },
+  {
+    "start": 815.5865,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 815.6865,
+    "duration": 0.45,
+    "text": "body’s"
+  },
+  {
+    "start": 816.149,
+    "duration": 0.525,
+    "text": "energetic"
+  },
+  {
+    "start": 816.6865,
+    "duration": 0.4125,
+    "text": "state"
+  },
+  {
+    "start": 817.3115,
+    "duration": 0.1125,
+    "text": "the"
+  },
+  {
+    "start": 817.4365,
+    "duration": 0.3875,
+    "text": "authors"
+  },
+  {
+    "start": 817.8365,
+    "duration": 0.95,
+    "text": "hypothesized"
+  },
+  {
+    "start": 818.799,
+    "duration": 0.125,
+    "text": "that"
+  },
+  {
+    "start": 818.9365,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 819.049,
+    "duration": 0.325,
+    "text": "limbic"
+  },
+  {
+    "start": 819.3865,
+    "duration": 0.3,
+    "text": "core"
+  },
+  {
+    "start": 819.699,
+    "duration": 0.7375,
+    "text": "facilitates"
+  },
+  {
+    "start": 820.449,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 820.5615,
+    "duration": 0.3125,
+    "text": "brain’s"
+  },
+  {
+    "start": 820.8865,
+    "duration": 0.4875,
+    "text": "ability"
+  },
+  {
+    "start": 821.3865,
+    "duration": 0.15,
+    "text": "to"
+  },
+  {
+    "start": 821.549,
+    "duration": 0.625,
+    "text": "anticipate"
+  },
+  {
+    "start": 822.1865,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 822.2865,
+    "duration": 0.4375,
+    "text": "body’s"
+  },
+  {
+    "start": 822.7365,
+    "duration": 0.375,
+    "text": "energy"
+  },
+  {
+    "start": 823.124,
+    "duration": 0.5625,
+    "text": "needs"
+  },
+  {
+    "start": 824.549,
+    "duration": 0.15,
+    "text": "The"
+  },
+  {
+    "start": 824.7115,
+    "duration": 0.325,
+    "text": "limbic"
+  },
+  {
+    "start": 825.049,
+    "duration": 0.3375,
+    "text": "core"
+  },
+  {
+    "start": 825.399,
+    "duration": 0.1875,
+    "text": "is"
+  },
+  {
+    "start": 825.599,
+    "duration": 0.125,
+    "text": "where"
+  },
+  {
+    "start": 825.7365,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 825.8365,
+    "duration": 0.3125,
+    "text": "most"
+  },
+  {
+    "start": 826.1615,
+    "duration": 0.4625,
+    "text": "compressed"
+  },
+  {
+    "start": 826.6365,
+    "duration": 0.425,
+    "text": "summaries"
+  },
+  {
+    "start": 827.074,
+    "duration": 0.0875,
+    "text": "of"
+  },
+  {
+    "start": 827.174,
+    "duration": 0.5875,
+    "text": "internal"
+  },
+  {
+    "start": 827.774,
+    "duration": 0.1,
+    "text": "and"
+  },
+  {
+    "start": 827.8865,
+    "duration": 0.4375,
+    "text": "external"
+  },
+  {
+    "start": 828.3365,
+    "duration": 0.425,
+    "text": "signals"
+  },
+  {
+    "start": 828.774,
+    "duration": 0.75,
+    "text": "intersect"
+  },
+  {
+    "start": 830.3865,
+    "duration": 0.175,
+    "text": "You"
+  },
+  {
+    "start": 830.574,
+    "duration": 0.1375,
+    "text": "can"
+  },
+  {
+    "start": 830.724,
+    "duration": 0.4625,
+    "text": "imagine"
+  },
+  {
+    "start": 831.199,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 831.299,
+    "duration": 0.3375,
+    "text": "nervous"
+  },
+  {
+    "start": 831.649,
+    "duration": 0.4125,
+    "text": "system"
+  },
+  {
+    "start": 832.074,
+    "duration": 0.1375,
+    "text": "as"
+  },
+  {
+    "start": 832.224,
+    "duration": 0.225,
+    "text": "being"
+  },
+  {
+    "start": 832.4615,
+    "duration": 0.5125,
+    "text": "structured"
+  },
+  {
+    "start": 832.9865,
+    "duration": 0.2,
+    "text": "like"
+  },
+  {
+    "start": 833.199,
+    "duration": 0.1875,
+    "text": "two"
+  },
+  {
+    "start": 833.399,
+    "duration": 0.5625,
+    "text": "funnels"
+  },
+  {
+    "start": 834.1365,
+    "duration": 0.325,
+    "text": "shaped"
+  },
+  {
+    "start": 834.474,
+    "duration": 0.175,
+    "text": "like"
+  },
+  {
+    "start": 834.6615,
+    "duration": 0.0625,
+    "text": "a"
+  },
+  {
+    "start": 834.7365,
+    "duration": 0.225,
+    "text": "bow"
+  },
+  {
+    "start": 834.974,
+    "duration": 0.4375,
+    "text": "tie"
+  },
+  {
+    "start": 835.7115,
+    "duration": 0.1625,
+    "text": "that"
+  },
+  {
+    "start": 835.8865,
+    "duration": 0.225,
+    "text": "meet"
+  },
+  {
+    "start": 836.124,
+    "duration": 0.0875,
+    "text": "at"
+  },
+  {
+    "start": 836.224,
+    "duration": 0.1375,
+    "text": "their"
+  },
+  {
+    "start": 836.374,
+    "duration": 0.525,
+    "text": "narrowest"
+  },
+  {
+    "start": 836.9115,
+    "duration": 0.4125,
+    "text": "point"
+  },
+  {
+    "start": 837.499,
+    "duration": 0.1125,
+    "text": "the"
+  },
+  {
+    "start": 837.624,
+    "duration": 0.325,
+    "text": "limbic"
+  },
+  {
+    "start": 837.9615,
+    "duration": 0.4375,
+    "text": "core"
+  },
+  {
+    "start": 838.599,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 838.7115,
+    "duration": 0.3,
+    "text": "point"
+  },
+  {
+    "start": 839.024,
+    "duration": 0.0625,
+    "text": "of"
+  },
+  {
+    "start": 839.099,
+    "duration": 0.4,
+    "text": "highest"
+  },
+  {
+    "start": 839.5115,
+    "duration": 0.7625,
+    "text": "compression"
+  },
+  {
+    "start": 841.1365,
+    "duration": 0.3,
+    "text": "Just"
+  },
+  {
+    "start": 841.449,
+    "duration": 0.1,
+    "text": "as"
+  },
+  {
+    "start": 841.5615,
+    "duration": 0.3625,
+    "text": "visual"
+  },
+  {
+    "start": 841.9365,
+    "duration": 0.6625,
+    "text": "information"
+  },
+  {
+    "start": 842.6115,
+    "duration": 0.1625,
+    "text": "is"
+  },
+  {
+    "start": 842.7865,
+    "duration": 0.525,
+    "text": "compressed"
+  },
+  {
+    "start": 843.324,
+    "duration": 0.1,
+    "text": "as"
+  },
+  {
+    "start": 843.4365,
+    "duration": 0.0875,
+    "text": "it"
+  },
+  {
+    "start": 843.5365,
+    "duration": 0.45,
+    "text": "travels"
+  },
+  {
+    "start": 843.999,
+    "duration": 0.125,
+    "text": "through"
+  },
+  {
+    "start": 844.1365,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 844.249,
+    "duration": 0.3625,
+    "text": "visual"
+  },
+  {
+    "start": 844.624,
+    "duration": 0.575,
+    "text": "cortex"
+  },
+  {
+    "start": 845.2115,
+    "duration": 0.2,
+    "text": "and"
+  },
+  {
+    "start": 845.424,
+    "duration": 0.3125,
+    "text": "deeper"
+  },
+  {
+    "start": 845.749,
+    "duration": 0.175,
+    "text": "into"
+  },
+  {
+    "start": 845.9365,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 846.049,
+    "duration": 0.425,
+    "text": "brain"
+  },
+  {
+    "start": 846.699,
+    "duration": 0.825,
+    "text": "physiological"
+  },
+  {
+    "start": 847.5365,
+    "duration": 0.475,
+    "text": "signals"
+  },
+  {
+    "start": 848.024,
+    "duration": 0.15,
+    "text": "are"
+  },
+  {
+    "start": 848.1865,
+    "duration": 0.6,
+    "text": "compressed"
+  },
+  {
+    "start": 848.799,
+    "duration": 0.1,
+    "text": "as"
+  },
+  {
+    "start": 848.9115,
+    "duration": 0.1,
+    "text": "they"
+  },
+  {
+    "start": 849.024,
+    "duration": 0.4125,
+    "text": "travel"
+  },
+  {
+    "start": 849.449,
+    "duration": 0.15,
+    "text": "from"
+  },
+  {
+    "start": 849.6115,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 849.724,
+    "duration": 0.325,
+    "text": "body"
+  },
+  {
+    "start": 850.0615,
+    "duration": 0.1125,
+    "text": "up"
+  },
+  {
+    "start": 850.1865,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 850.2865,
+    "duration": 0.375,
+    "text": "vagus"
+  },
+  {
+    "start": 850.674,
+    "duration": 0.3375,
+    "text": "nerve"
+  },
+  {
+    "start": 851.024,
+    "duration": 0.125,
+    "text": "and"
+  },
+  {
+    "start": 851.1615,
+    "duration": 0.1875,
+    "text": "into"
+  },
+  {
+    "start": 851.3615,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 851.474,
+    "duration": 0.4625,
+    "text": "brain"
+  },
+  {
+    "start": 852.799,
+    "duration": 0.15,
+    "text": "They"
+  },
+  {
+    "start": 852.9615,
+    "duration": 0.225,
+    "text": "then"
+  },
+  {
+    "start": 853.199,
+    "duration": 0.25,
+    "text": "reach"
+  },
+  {
+    "start": 853.4615,
+    "duration": 0.1125,
+    "text": "the"
+  },
+  {
+    "start": 853.5865,
+    "duration": 0.325,
+    "text": "limbic"
+  },
+  {
+    "start": 853.924,
+    "duration": 0.425,
+    "text": "core"
+  },
+  {
+    "start": 854.5615,
+    "duration": 0.15,
+    "text": "where"
+  },
+  {
+    "start": 854.724,
+    "duration": 0.1125,
+    "text": "they"
+  },
+  {
+    "start": 854.849,
+    "duration": 0.1125,
+    "text": "are"
+  },
+  {
+    "start": 854.974,
+    "duration": 0.575,
+    "text": "integrated"
+  },
+  {
+    "start": 855.5615,
+    "duration": 0.1375,
+    "text": "with"
+  },
+  {
+    "start": 855.7115,
+    "duration": 0.5125,
+    "text": "compressed"
+  },
+  {
+    "start": 856.2365,
+    "duration": 0.425,
+    "text": "sensory"
+  },
+  {
+    "start": 856.674,
+    "duration": 0.775,
+    "text": "information"
+  },
+  {
+    "start": 858.3115,
+    "duration": 0.6,
+    "text": "Together"
+  },
+  {
+    "start": 859.0615,
+    "duration": 0.2125,
+    "text": "these"
+  },
+  {
+    "start": 859.2865,
+    "duration": 0.3875,
+    "text": "signals"
+  },
+  {
+    "start": 859.6865,
+    "duration": 0.4125,
+    "text": "generate"
+  },
+  {
+    "start": 860.1115,
+    "duration": 0.0875,
+    "text": "an"
+  },
+  {
+    "start": 860.2115,
+    "duration": 0.4875,
+    "text": "appropriate"
+  },
+  {
+    "start": 860.7115,
+    "duration": 0.65,
+    "text": "category"
+  },
+  {
+    "start": 861.374,
+    "duration": 0.1625,
+    "text": "and"
+  },
+  {
+    "start": 861.549,
+    "duration": 0.125,
+    "text": "its"
+  },
+  {
+    "start": 861.6865,
+    "duration": 0.625,
+    "text": "associated"
+  },
+  {
+    "start": 862.324,
+    "duration": 0.65,
+    "text": "behavior"
+  },
+  {
+    "start": 863.8365,
+    "duration": 0.5,
+    "text": "Depending"
+  },
+  {
+    "start": 864.349,
+    "duration": 0.1,
+    "text": "on"
+  },
+  {
+    "start": 864.4615,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 864.5615,
+    "duration": 0.675,
+    "text": "category"
+  },
+  {
+    "start": 865.4115,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 865.474,
+    "duration": 0.3875,
+    "text": "visual"
+  },
+  {
+    "start": 865.874,
+    "duration": 0.55,
+    "text": "category"
+  },
+  {
+    "start": 866.4365,
+    "duration": 0.25,
+    "text": "like"
+  },
+  {
+    "start": 866.699,
+    "duration": 0.4375,
+    "text": "apple"
+  },
+  {
+    "start": 867.3615,
+    "duration": 0.1125,
+    "text": "an"
+  },
+  {
+    "start": 867.4865,
+    "duration": 0.5625,
+    "text": "abstract"
+  },
+  {
+    "start": 868.0615,
+    "duration": 0.5375,
+    "text": "category"
+  },
+  {
+    "start": 868.6115,
+    "duration": 0.2375,
+    "text": "like"
+  },
+  {
+    "start": 868.8615,
+    "duration": 0.625,
+    "text": "justice"
+  },
+  {
+    "start": 869.699,
+    "duration": 0.15,
+    "text": "or"
+  },
+  {
+    "start": 869.8615,
+    "duration": 0.075,
+    "text": "an"
+  },
+  {
+    "start": 869.949,
+    "duration": 0.45,
+    "text": "emotion"
+  },
+  {
+    "start": 870.4115,
+    "duration": 0.55,
+    "text": "category"
+  },
+  {
+    "start": 870.974,
+    "duration": 0.2625,
+    "text": "like"
+  },
+  {
+    "start": 871.249,
+    "duration": 0.3125,
+    "text": "awe"
+  },
+  {
+    "start": 871.824,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 871.9365,
+    "duration": 0.675,
+    "text": "interaction"
+  },
+  {
+    "start": 872.624,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 872.7115,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 872.8115,
+    "duration": 0.4625,
+    "text": "predictive"
+  },
+  {
+    "start": 873.2865,
+    "duration": 0.5,
+    "text": "feedback"
+  },
+  {
+    "start": 873.799,
+    "duration": 0.45,
+    "text": "signals"
+  },
+  {
+    "start": 874.2615,
+    "duration": 0.1125,
+    "text": "with"
+  },
+  {
+    "start": 874.3865,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 874.4865,
+    "duration": 0.5,
+    "text": "compressed"
+  },
+  {
+    "start": 874.999,
+    "duration": 0.425,
+    "text": "sensory"
+  },
+  {
+    "start": 875.4365,
+    "duration": 0.625,
+    "text": "feedforward"
+  },
+  {
+    "start": 876.074,
+    "duration": 0.5125,
+    "text": "signals"
+  },
+  {
+    "start": 876.599,
+    "duration": 0.1375,
+    "text": "can"
+  },
+  {
+    "start": 876.749,
+    "duration": 0.3875,
+    "text": "happen"
+  },
+  {
+    "start": 877.149,
+    "duration": 0.2125,
+    "text": "in"
+  },
+  {
+    "start": 877.374,
+    "duration": 0.2125,
+    "text": "any"
+  },
+  {
+    "start": 877.599,
+    "duration": 0.3,
+    "text": "number"
+  },
+  {
+    "start": 877.9115,
+    "duration": 0.0875,
+    "text": "of"
+  },
+  {
+    "start": 878.0115,
+    "duration": 0.3,
+    "text": "neural"
+  },
+  {
+    "start": 878.324,
+    "duration": 0.675,
+    "text": "regions"
+  },
+  {
+    "start": 879.8615,
+    "duration": 0.1375,
+    "text": "The"
+  },
+  {
+    "start": 880.0115,
+    "duration": 0.475,
+    "text": "process"
+  },
+  {
+    "start": 880.499,
+    "duration": 0.375,
+    "text": "spans"
+  },
+  {
+    "start": 880.8865,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 880.9865,
+    "duration": 0.4875,
+    "text": "entire"
+  },
+  {
+    "start": 881.4865,
+    "duration": 0.3,
+    "text": "nervous"
+  },
+  {
+    "start": 881.799,
+    "duration": 0.5,
+    "text": "system"
+  },
+  {
+    "start": 882.4365,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 882.549,
+    "duration": 0.4125,
+    "text": "authors"
+  },
+  {
+    "start": 882.974,
+    "duration": 0.425,
+    "text": "wrote"
+  },
+  {
+    "start": 884.2615,
+    "duration": 0.325,
+    "text": "Barrett"
+  },
+  {
+    "start": 884.599,
+    "duration": 0.675,
+    "text": "emphasized"
+  },
+  {
+    "start": 885.2865,
+    "duration": 0.1625,
+    "text": "that"
+  },
+  {
+    "start": 885.4615,
+    "duration": 0.55,
+    "text": "selecting"
+  },
+  {
+    "start": 886.024,
+    "duration": 0.1875,
+    "text": "any"
+  },
+  {
+    "start": 886.224,
+    "duration": 0.6125,
+    "text": "particular"
+  },
+  {
+    "start": 886.849,
+    "duration": 0.375,
+    "text": "starting"
+  },
+  {
+    "start": 887.2365,
+    "duration": 0.275,
+    "text": "point"
+  },
+  {
+    "start": 887.524,
+    "duration": 0.1375,
+    "text": "for"
+  },
+  {
+    "start": 887.674,
+    "duration": 0.175,
+    "text": "this"
+  },
+  {
+    "start": 887.8615,
+    "duration": 0.5125,
+    "text": "process"
+  },
+  {
+    "start": 888.3865,
+    "duration": 0.125,
+    "text": "is"
+  },
+  {
+    "start": 888.524,
+    "duration": 0.75,
+    "text": "arbitrary"
+  },
+  {
+    "start": 890.1365,
+    "duration": 0.175,
+    "text": "For"
+  },
+  {
+    "start": 890.324,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 890.424,
+    "duration": 0.2875,
+    "text": "sake"
+  },
+  {
+    "start": 890.724,
+    "duration": 0.0875,
+    "text": "of"
+  },
+  {
+    "start": 890.824,
+    "duration": 0.3125,
+    "text": "having"
+  },
+  {
+    "start": 891.149,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 891.2115,
+    "duration": 0.6125,
+    "text": "scientific"
+  },
+  {
+    "start": 891.8365,
+    "duration": 0.6375,
+    "text": "discussion"
+  },
+  {
+    "start": 892.699,
+    "duration": 0.0875,
+    "text": "you"
+  },
+  {
+    "start": 892.799,
+    "duration": 0.2,
+    "text": "have"
+  },
+  {
+    "start": 893.0115,
+    "duration": 0.1,
+    "text": "to"
+  },
+  {
+    "start": 893.124,
+    "duration": 0.425,
+    "text": "say"
+  },
+  {
+    "start": 893.749,
+    "duration": 0.15,
+    "text": "I’m"
+  },
+  {
+    "start": 893.9115,
+    "duration": 0.2,
+    "text": "going"
+  },
+  {
+    "start": 894.124,
+    "duration": 0.0875,
+    "text": "to"
+  },
+  {
+    "start": 894.224,
+    "duration": 0.2375,
+    "text": "pick"
+  },
+  {
+    "start": 894.474,
+    "duration": 0.2125,
+    "text": "this"
+  },
+  {
+    "start": 894.699,
+    "duration": 0.2875,
+    "text": "point"
+  },
+  {
+    "start": 894.999,
+    "duration": 0.1125,
+    "text": "as"
+  },
+  {
+    "start": 895.124,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 895.2365,
+    "duration": 0.4625,
+    "text": "start"
+  },
+  {
+    "start": 895.9115,
+    "duration": 0.325,
+    "text": "Barrett"
+  },
+  {
+    "start": 896.249,
+    "duration": 0.1875,
+    "text": "said"
+  },
+  {
+    "start": 896.449,
+    "duration": 0.0625,
+    "text": "of"
+  },
+  {
+    "start": 896.524,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 896.624,
+    "duration": 0.325,
+    "text": "limbic"
+  },
+  {
+    "start": 896.9615,
+    "duration": 0.4875,
+    "text": "core"
+  },
+  {
+    "start": 898.3115,
+    "duration": 0.1625,
+    "text": "We"
+  },
+  {
+    "start": 898.4865,
+    "duration": 0.2625,
+    "text": "could’ve"
+  },
+  {
+    "start": 898.7615,
+    "duration": 0.3625,
+    "text": "easily"
+  },
+  {
+    "start": 899.1365,
+    "duration": 0.2625,
+    "text": "just"
+  },
+  {
+    "start": 899.4115,
+    "duration": 0.2375,
+    "text": "picked"
+  },
+  {
+    "start": 899.6615,
+    "duration": 0.1625,
+    "text": "some"
+  },
+  {
+    "start": 899.8365,
+    "duration": 0.2,
+    "text": "other"
+  },
+  {
+    "start": 900.049,
+    "duration": 0.5375,
+    "text": "point"
+  },
+  {
+    "start": 901.449,
+    "duration": 0.3625,
+    "text": "Miller"
+  },
+  {
+    "start": 901.824,
+    "duration": 0.5125,
+    "text": "agreed"
+  },
+  {
+    "start": 903.199,
+    "duration": 0.4375,
+    "text": "Lisa"
+  },
+  {
+    "start": 903.649,
+    "duration": 0.1375,
+    "text": "and"
+  },
+  {
+    "start": 903.799,
+    "duration": 0.15,
+    "text": "I"
+  },
+  {
+    "start": 903.9615,
+    "duration": 0.15,
+    "text": "are"
+  },
+  {
+    "start": 904.124,
+    "duration": 0.425,
+    "text": "arguing"
+  },
+  {
+    "start": 904.5615,
+    "duration": 0.15,
+    "text": "that"
+  },
+  {
+    "start": 904.724,
+    "duration": 0.2,
+    "text": "this"
+  },
+  {
+    "start": 904.9365,
+    "duration": 0.1125,
+    "text": "is"
+  },
+  {
+    "start": 905.0615,
+    "duration": 0.35,
+    "text": "something"
+  },
+  {
+    "start": 905.424,
+    "duration": 0.15,
+    "text": "that"
+  },
+  {
+    "start": 905.5865,
+    "duration": 0.1125,
+    "text": "is"
+  },
+  {
+    "start": 905.7115,
+    "duration": 0.475,
+    "text": "happening"
+  },
+  {
+    "start": 906.199,
+    "duration": 0.1125,
+    "text": "at"
+  },
+  {
+    "start": 906.324,
+    "duration": 0.2375,
+    "text": "every"
+  },
+  {
+    "start": 906.574,
+    "duration": 0.4875,
+    "text": "level"
+  },
+  {
+    "start": 907.299,
+    "duration": 0.075,
+    "text": "and"
+  },
+  {
+    "start": 907.3865,
+    "duration": 0.1375,
+    "text": "it’s"
+  },
+  {
+    "start": 907.5365,
+    "duration": 0.425,
+    "text": "happening"
+  },
+  {
+    "start": 907.974,
+    "duration": 0.1125,
+    "text": "in"
+  },
+  {
+    "start": 908.099,
+    "duration": 0.2625,
+    "text": "lots"
+  },
+  {
+    "start": 908.374,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 908.4615,
+    "duration": 0.6625,
+    "text": "places"
+  },
+  {
+    "start": 909.349,
+    "duration": 0.15,
+    "text": "and"
+  },
+  {
+    "start": 909.5115,
+    "duration": 0.1375,
+    "text": "it’s"
+  },
+  {
+    "start": 909.6615,
+    "duration": 0.4625,
+    "text": "happening"
+  },
+  {
+    "start": 910.1365,
+    "duration": 0.1125,
+    "text": "as"
+  },
+  {
+    "start": 910.2615,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 910.324,
+    "duration": 0.375,
+    "text": "result"
+  },
+  {
+    "start": 910.7115,
+    "duration": 0.0625,
+    "text": "of"
+  },
+  {
+    "start": 910.7865,
+    "duration": 0.1875,
+    "text": "these"
+  },
+  {
+    "start": 910.9865,
+    "duration": 0.6,
+    "text": "opposing"
+  },
+  {
+    "start": 911.849,
+    "duration": 0.5875,
+    "text": "interacting"
+  },
+  {
+    "start": 912.449,
+    "duration": 0.325,
+    "text": "flows"
+  },
+  {
+    "start": 912.7865,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 912.874,
+    "duration": 0.75,
+    "text": "information"
+  },
+  {
+    "start": 913.8115,
+    "duration": 0.625,
+    "text": "feedforward"
+  },
+  {
+    "start": 914.449,
+    "duration": 0.0875,
+    "text": "and"
+  },
+  {
+    "start": 914.549,
+    "duration": 0.5875,
+    "text": "feedback"
+  },
+  {
+    "start": 915.324,
+    "duration": 0.1,
+    "text": "he"
+  },
+  {
+    "start": 915.4365,
+    "duration": 0.425,
+    "text": "said"
+  },
+  {
+    "start": 916.724,
+    "duration": 0.2125,
+    "text": "It’s"
+  },
+  {
+    "start": 916.949,
+    "duration": 0.2125,
+    "text": "not"
+  },
+  {
+    "start": 917.174,
+    "duration": 0.1,
+    "text": "at"
+  },
+  {
+    "start": 917.2865,
+    "duration": 0.2125,
+    "text": "one"
+  },
+  {
+    "start": 917.5115,
+    "duration": 0.1625,
+    "text": "end"
+  },
+  {
+    "start": 917.6865,
+    "duration": 0.0625,
+    "text": "of"
+  },
+  {
+    "start": 917.7615,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 917.8615,
+    "duration": 0.375,
+    "text": "brain"
+  },
+  {
+    "start": 918.399,
+    "duration": 0.175,
+    "text": "which"
+  },
+  {
+    "start": 918.5865,
+    "duration": 0.075,
+    "text": "it"
+  },
+  {
+    "start": 918.674,
+    "duration": 0.1375,
+    "text": "has"
+  },
+  {
+    "start": 918.824,
+    "duration": 0.65,
+    "text": "traditionally"
+  },
+  {
+    "start": 919.4865,
+    "duration": 0.2125,
+    "text": "been"
+  },
+  {
+    "start": 919.7115,
+    "duration": 0.4625,
+    "text": "thought"
+  },
+  {
+    "start": 921.148,
+    "duration": 0.35,
+    "text": "Barrett"
+  },
+  {
+    "start": 921.5105,
+    "duration": 0.1125,
+    "text": "and"
+  },
+  {
+    "start": 921.6355,
+    "duration": 0.4375,
+    "text": "Miller"
+  },
+  {
+    "start": 922.0855,
+    "duration": 0.2,
+    "text": "are"
+  },
+  {
+    "start": 922.298,
+    "duration": 0.3375,
+    "text": "asking"
+  },
+  {
+    "start": 922.648,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 922.7605,
+    "duration": 0.325,
+    "text": "field"
+  },
+  {
+    "start": 923.098,
+    "duration": 0.0875,
+    "text": "to"
+  },
+  {
+    "start": 923.198,
+    "duration": 0.2375,
+    "text": "move"
+  },
+  {
+    "start": 923.448,
+    "duration": 0.3375,
+    "text": "beyond"
+  },
+  {
+    "start": 923.798,
+    "duration": 0.0375,
+    "text": "a"
+  },
+  {
+    "start": 923.848,
+    "duration": 0.425,
+    "text": "model"
+  },
+  {
+    "start": 924.2855,
+    "duration": 0.125,
+    "text": "in"
+  },
+  {
+    "start": 924.423,
+    "duration": 0.225,
+    "text": "which"
+  },
+  {
+    "start": 924.6605,
+    "duration": 0.6375,
+    "text": "categories"
+  },
+  {
+    "start": 925.3105,
+    "duration": 0.175,
+    "text": "are"
+  },
+  {
+    "start": 925.498,
+    "duration": 0.2875,
+    "text": "stored"
+  },
+  {
+    "start": 925.798,
+    "duration": 0.1875,
+    "text": "like"
+  },
+  {
+    "start": 925.998,
+    "duration": 0.575,
+    "text": "documents"
+  },
+  {
+    "start": 926.5855,
+    "duration": 0.1,
+    "text": "in"
+  },
+  {
+    "start": 926.698,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 926.7855,
+    "duration": 0.35,
+    "text": "brain’s"
+  },
+  {
+    "start": 927.148,
+    "duration": 0.375,
+    "text": "filing"
+  },
+  {
+    "start": 927.5355,
+    "duration": 0.5875,
+    "text": "cabinet"
+  },
+  {
+    "start": 928.9855,
+    "duration": 0.2125,
+    "text": "From"
+  },
+  {
+    "start": 929.2105,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 929.298,
+    "duration": 0.175,
+    "text": "way"
+  },
+  {
+    "start": 929.4855,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 929.598,
+    "duration": 0.3125,
+    "text": "brain"
+  },
+  {
+    "start": 929.923,
+    "duration": 0.125,
+    "text": "is"
+  },
+  {
+    "start": 930.0605,
+    "duration": 0.475,
+    "text": "structured"
+  },
+  {
+    "start": 930.548,
+    "duration": 0.0875,
+    "text": "to"
+  },
+  {
+    "start": 930.648,
+    "duration": 0.45,
+    "text": "compress"
+  },
+  {
+    "start": 931.1105,
+    "duration": 0.4,
+    "text": "sensory"
+  },
+  {
+    "start": 931.523,
+    "duration": 0.7375,
+    "text": "information"
+  },
+  {
+    "start": 932.473,
+    "duration": 0.1,
+    "text": "to"
+  },
+  {
+    "start": 932.5855,
+    "duration": 0.175,
+    "text": "how"
+  },
+  {
+    "start": 932.773,
+    "duration": 0.0875,
+    "text": "it"
+  },
+  {
+    "start": 932.873,
+    "duration": 0.475,
+    "text": "predicts"
+  },
+  {
+    "start": 933.3605,
+    "duration": 0.1375,
+    "text": "and"
+  },
+  {
+    "start": 933.5105,
+    "duration": 0.45,
+    "text": "prepares"
+  },
+  {
+    "start": 933.973,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 934.073,
+    "duration": 0.3125,
+    "text": "body"
+  },
+  {
+    "start": 934.398,
+    "duration": 0.125,
+    "text": "to"
+  },
+  {
+    "start": 934.5355,
+    "duration": 0.6125,
+    "text": "respond"
+  },
+  {
+    "start": 935.348,
+    "duration": 0.85,
+    "text": "categorization"
+  },
+  {
+    "start": 936.2105,
+    "duration": 0.1375,
+    "text": "is"
+  },
+  {
+    "start": 936.3605,
+    "duration": 0.3,
+    "text": "baked"
+  },
+  {
+    "start": 936.673,
+    "duration": 0.2375,
+    "text": "in"
+  },
+  {
+    "start": 937.123,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 937.2355,
+    "duration": 0.4125,
+    "text": "authors"
+  },
+  {
+    "start": 937.6605,
+    "duration": 0.425,
+    "text": "wrote"
+  },
+  {
+    "start": 938.948,
+    "duration": 0.15,
+    "text": "It"
+  },
+  {
+    "start": 939.1105,
+    "duration": 0.1,
+    "text": "is"
+  },
+  {
+    "start": 939.223,
+    "duration": 0.0625,
+    "text": "a"
+  },
+  {
+    "start": 939.298,
+    "duration": 0.275,
+    "text": "core"
+  },
+  {
+    "start": 939.5855,
+    "duration": 0.7875,
+    "text": "organizational"
+  },
+  {
+    "start": 940.3855,
+    "duration": 0.5625,
+    "text": "principle"
+  },
+  {
+    "start": 940.9605,
+    "duration": 0.0875,
+    "text": "of"
+  },
+  {
+    "start": 941.0605,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 941.148,
+    "duration": 0.325,
+    "text": "nervous"
+  },
+  {
+    "start": 941.4855,
+    "duration": 0.4375,
+    "text": "system"
+  },
+  {
+    "start": 941.9355,
+    "duration": 0.15,
+    "text": "that"
+  },
+  {
+    "start": 942.098,
+    "duration": 0.2875,
+    "text": "draws"
+  },
+  {
+    "start": 942.398,
+    "duration": 0.125,
+    "text": "on"
+  },
+  {
+    "start": 942.5355,
+    "duration": 0.4625,
+    "text": "memory"
+  },
+  {
+    "start": 943.123,
+    "duration": 0.7375,
+    "text": "perception"
+  },
+  {
+    "start": 944.1105,
+    "duration": 0.1,
+    "text": "and"
+  },
+  {
+    "start": 944.223,
+    "duration": 0.4375,
+    "text": "behavior"
+  },
+  {
+    "start": 944.673,
+    "duration": 0.075,
+    "text": "to"
+  },
+  {
+    "start": 944.7605,
+    "duration": 0.2125,
+    "text": "help"
+  },
+  {
+    "start": 944.9855,
+    "duration": 0.125,
+    "text": "us"
+  },
+  {
+    "start": 945.123,
+    "duration": 0.425,
+    "text": "survive"
+  },
+  {
+    "start": 945.5605,
+    "duration": 0.25,
+    "text": "well"
+  },
+  {
+    "start": 945.823,
+    "duration": 0.1125,
+    "text": "in"
+  },
+  {
+    "start": 945.948,
+    "duration": 0.1,
+    "text": "an"
+  },
+  {
+    "start": 946.0605,
+    "duration": 0.7875,
+    "text": "information-rich"
+  },
+  {
+    "start": 946.8605,
+    "duration": 0.4625,
+    "text": "world"
+  }
+]

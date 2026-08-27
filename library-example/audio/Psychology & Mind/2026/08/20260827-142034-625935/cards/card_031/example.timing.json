@@ -1,0 +1,52 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.3125,
+    "text": "Many"
+  },
+  {
+    "start": 0.425,
+    "duration": 0.5125,
+    "text": "synaptic"
+  },
+  {
+    "start": 0.95,
+    "duration": 0.5875,
+    "text": "connections"
+  },
+  {
+    "start": 1.55,
+    "duration": 0.1,
+    "text": "in"
+  },
+  {
+    "start": 1.6625,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 1.75,
+    "duration": 0.3625,
+    "text": "visual"
+  },
+  {
+    "start": 2.125,
+    "duration": 0.5375,
+    "text": "cortex"
+  },
+  {
+    "start": 2.675,
+    "duration": 0.6375,
+    "text": "facilitate"
+  },
+  {
+    "start": 3.325,
+    "duration": 0.4625,
+    "text": "feedback"
+  },
+  {
+    "start": 3.8,
+    "duration": 0.6375,
+    "text": "signaling"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.2625,
+    "text": "Every"
+  },
+  {
+    "start": 0.375,
+    "duration": 0.325,
+    "text": "moment"
+  },
+  {
+    "start": 0.7125,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 0.8,
+    "duration": 0.1375,
+    "text": "our"
+  },
+  {
+    "start": 0.95,
+    "duration": 0.5125,
+    "text": "lives"
+  },
+  {
+    "start": 1.65,
+    "duration": 0.1375,
+    "text": "our"
+  },
+  {
+    "start": 1.8,
+    "duration": 0.3875,
+    "text": "bodies"
+  },
+  {
+    "start": 2.2,
+    "duration": 0.15,
+    "text": "are"
+  },
+  {
+    "start": 2.3625,
+    "duration": 0.3625,
+    "text": "awash"
+  },
+  {
+    "start": 2.7375,
+    "duration": 0.125,
+    "text": "in"
+  },
+  {
+    "start": 2.875,
+    "duration": 0.4125,
+    "text": "sensory"
+  },
+  {
+    "start": 3.3,
+    "duration": 0.65,
+    "text": "signals"
+  }
+]

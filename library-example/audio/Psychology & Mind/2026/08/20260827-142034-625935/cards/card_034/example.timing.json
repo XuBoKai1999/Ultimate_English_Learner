@@ -1,0 +1,72 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.1625,
+    "text": "The"
+  },
+  {
+    "start": 0.275,
+    "duration": 0.3625,
+    "text": "authors"
+  },
+  {
+    "start": 0.65,
+    "duration": 0.45,
+    "text": "propose"
+  },
+  {
+    "start": 1.1125,
+    "duration": 0.1375,
+    "text": "that"
+  },
+  {
+    "start": 1.2625,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 1.3625,
+    "duration": 0.325,
+    "text": "limbic"
+  },
+  {
+    "start": 1.7,
+    "duration": 0.3375,
+    "text": "core"
+  },
+  {
+    "start": 2.05,
+    "duration": 0.2,
+    "text": "is"
+  },
+  {
+    "start": 2.2625,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 2.325,
+    "duration": 0.375,
+    "text": "major"
+  },
+  {
+    "start": 2.7125,
+    "duration": 0.3125,
+    "text": "source"
+  },
+  {
+    "start": 3.0375,
+    "duration": 0.0875,
+    "text": "of"
+  },
+  {
+    "start": 3.1375,
+    "duration": 0.425,
+    "text": "predictive"
+  },
+  {
+    "start": 3.575,
+    "duration": 0.65,
+    "text": "signals"
+  }
+]

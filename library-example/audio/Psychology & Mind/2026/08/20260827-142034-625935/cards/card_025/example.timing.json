@@ -1,0 +1,62 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.1375,
+    "text": "The"
+  },
+  {
+    "start": 0.25,
+    "duration": 0.15,
+    "text": "way"
+  },
+  {
+    "start": 0.4125,
+    "duration": 0.125,
+    "text": "we"
+  },
+  {
+    "start": 0.55,
+    "duration": 0.6125,
+    "text": "categorize"
+  },
+  {
+    "start": 1.175,
+    "duration": 0.125,
+    "text": "an"
+  },
+  {
+    "start": 1.3125,
+    "duration": 0.4875,
+    "text": "object"
+  },
+  {
+    "start": 1.8125,
+    "duration": 0.3875,
+    "text": "depends"
+  },
+  {
+    "start": 2.2125,
+    "duration": 0.425,
+    "text": "partly"
+  },
+  {
+    "start": 2.65,
+    "duration": 0.0875,
+    "text": "on"
+  },
+  {
+    "start": 2.75,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 2.8625,
+    "duration": 0.2875,
+    "text": "current"
+  },
+  {
+    "start": 3.1625,
+    "duration": 0.575,
+    "text": "task"
+  }
+]

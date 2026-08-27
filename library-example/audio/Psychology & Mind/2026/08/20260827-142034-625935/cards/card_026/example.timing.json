@@ -1,0 +1,92 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.1375,
+    "text": "The"
+  },
+  {
+    "start": 0.25,
+    "duration": 0.525,
+    "text": "traditional"
+  },
+  {
+    "start": 0.7875,
+    "duration": 0.325,
+    "text": "model"
+  },
+  {
+    "start": 1.125,
+    "duration": 0.6875,
+    "text": "suggests"
+  },
+  {
+    "start": 1.825,
+    "duration": 0.125,
+    "text": "that"
+  },
+  {
+    "start": 1.9625,
+    "duration": 0.1125,
+    "text": "we"
+  },
+  {
+    "start": 2.0875,
+    "duration": 0.25,
+    "text": "take"
+  },
+  {
+    "start": 2.35,
+    "duration": 0.125,
+    "text": "in"
+  },
+  {
+    "start": 2.4875,
+    "duration": 0.4375,
+    "text": "sensory"
+  },
+  {
+    "start": 2.9375,
+    "duration": 0.775,
+    "text": "information"
+  },
+  {
+    "start": 3.725,
+    "duration": 0.125,
+    "text": "and"
+  },
+  {
+    "start": 3.8625,
+    "duration": 0.25,
+    "text": "pare"
+  },
+  {
+    "start": 4.125,
+    "duration": 0.0875,
+    "text": "it"
+  },
+  {
+    "start": 4.225,
+    "duration": 0.2625,
+    "text": "down"
+  },
+  {
+    "start": 4.5,
+    "duration": 0.0875,
+    "text": "to"
+  },
+  {
+    "start": 4.6,
+    "duration": 0.2875,
+    "text": "match"
+  },
+  {
+    "start": 4.9,
+    "duration": 0.2875,
+    "text": "stored"
+  },
+  {
+    "start": 5.2,
+    "duration": 0.6875,
+    "text": "features"
+  }
+]

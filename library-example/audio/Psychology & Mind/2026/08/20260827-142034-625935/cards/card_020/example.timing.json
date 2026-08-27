@@ -1,0 +1,52 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.2,
+    "text": "She"
+  },
+  {
+    "start": 0.3125,
+    "duration": 0.2875,
+    "text": "tends"
+  },
+  {
+    "start": 0.6125,
+    "duration": 0.0875,
+    "text": "to"
+  },
+  {
+    "start": 0.7125,
+    "duration": 0.2375,
+    "text": "think"
+  },
+  {
+    "start": 0.9625,
+    "duration": 0.2625,
+    "text": "about"
+  },
+  {
+    "start": 1.2375,
+    "duration": 0.575,
+    "text": "scientific"
+  },
+  {
+    "start": 1.825,
+    "duration": 0.4875,
+    "text": "problems"
+  },
+  {
+    "start": 2.325,
+    "duration": 0.1375,
+    "text": "in"
+  },
+  {
+    "start": 2.475,
+    "duration": 0.5375,
+    "text": "big-picture"
+  },
+  {
+    "start": 3.025,
+    "duration": 0.5625,
+    "text": "terms"
+  }
+]

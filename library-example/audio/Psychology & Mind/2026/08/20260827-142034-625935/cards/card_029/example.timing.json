@@ -1,0 +1,47 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.125,
+    "text": "The"
+  },
+  {
+    "start": 0.2375,
+    "duration": 0.5,
+    "text": "proposal"
+  },
+  {
+    "start": 0.75,
+    "duration": 0.275,
+    "text": "draws"
+  },
+  {
+    "start": 1.0375,
+    "duration": 0.1375,
+    "text": "on"
+  },
+  {
+    "start": 1.1875,
+    "duration": 0.8,
+    "text": "anatomical"
+  },
+  {
+    "start": 2.1375,
+    "duration": 1.3875,
+    "text": "electrophysiological"
+  },
+  {
+    "start": 3.725,
+    "duration": 0.0875,
+    "text": "and"
+  },
+  {
+    "start": 3.825,
+    "duration": 0.65,
+    "text": "brain-imaging"
+  },
+  {
+    "start": 4.4875,
+    "duration": 0.6875,
+    "text": "research"
+  }
+]

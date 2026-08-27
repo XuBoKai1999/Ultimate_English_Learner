@@ -1,0 +1,16 @@
+{
+  "text": "current task",
+  "type": "phrase",
+  "level": "general",
+  "meaning_zh": "當前任務",
+  "example_en": "The way we categorize an object depends partly on the current task.",
+  "example_zh": "我們如何對物體進行分類，部分取決於當前任務。",
+  "id": "card_025",
+  "article_id": "20260827-142034-625935",
+  "category": "Psychology & Mind",
+  "status": "learning",
+  "review_stage": 0,
+  "review_count": 0,
+  "last_review": null,
+  "next_review": "2026-08-27"
+}

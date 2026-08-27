@@ -1,0 +1,316 @@
+{
+  "cards": [
+    {
+      "text": "awash in",
+      "type": "phrase",
+      "level": "general",
+      "meaning_zh": "充滿；被大量事物淹沒",
+      "example_en": "Every moment of our lives, our bodies are awash in sensory signals.",
+      "example_zh": "在生命中的每一刻，我們的身體都充滿了感官訊號。"
+    },
+    {
+      "text": "navigate this torrent",
+      "type": "chunk",
+      "level": "general",
+      "meaning_zh": "應對這股大量湧入的資訊",
+      "example_en": "We are able to navigate this torrent because the brain does an enormous amount of data compression.",
+      "example_zh": "我們之所以能應對這股資訊洪流，是因為大腦進行了大量的資料壓縮。"
+    },
+    {
+      "text": "data compression",
+      "type": "phrase",
+      "level": "domain",
+      "meaning_zh": "資料壓縮",
+      "example_en": "The brain relies on data compression to handle enormous amounts of sensory information.",
+      "example_zh": "大腦依靠資料壓縮來處理龐大的感官資訊。"
+    },
+    {
+      "text": "categorization",
+      "type": "word",
+      "level": "domain",
+      "meaning_zh": "分類；範疇化",
+      "example_en": "Through categorization, the brain turns noisy sensory input into meaningful objects and concepts.",
+      "example_zh": "透過範疇化，大腦將雜亂的感官輸入轉化為有意義的物體與概念。"
+    },
+    {
+      "text": "account for",
+      "type": "phrase",
+      "level": "general",
+      "meaning_zh": "解釋；說明……的原因",
+      "example_en": "The traditional model struggles to account for the flexibility of human perception.",
+      "example_zh": "傳統模型難以解釋人類知覺的靈活性。"
+    },
+    {
+      "text": "assign labels to",
+      "type": "chunk",
+      "level": "general",
+      "meaning_zh": "為……貼上標籤；將……歸類",
+      "example_en": "Context influences how we assign labels to ambiguous sensory signals.",
+      "example_zh": "情境會影響我們如何為模糊的感官訊號貼上標籤。"
+    },
+    {
+      "text": "physiological needs",
+      "type": "phrase",
+      "level": "domain",
+      "meaning_zh": "生理需求",
+      "example_en": "The brain may adjust its predictions according to the body's immediate physiological needs.",
+      "example_zh": "大腦可能會根據身體當下的生理需求調整其預測。"
+    },
+    {
+      "text": "at the heart of",
+      "type": "chunk",
+      "level": "general",
+      "meaning_zh": "位於……的核心；是……的關鍵",
+      "example_en": "At the heart of their framework is a counterintuitive insight.",
+      "example_zh": "他們的理論框架核心是一項違反直覺的見解。"
+    },
+    {
+      "text": "counterintuitive",
+      "type": "word",
+      "level": "general",
+      "meaning_zh": "違反直覺的",
+      "example_en": "The idea that perception depends heavily on prediction may seem counterintuitive at first.",
+      "example_zh": "知覺高度依賴預測這個想法，一開始可能顯得違反直覺。"
+    },
+    {
+      "text": "cumulative effects",
+      "type": "phrase",
+      "level": "general",
+      "meaning_zh": "累積效應",
+      "example_en": "The researchers argue that predictions matter more than the cumulative effects of sensory information.",
+      "example_zh": "研究人員主張，預測比感官資訊的累積效應更為重要。"
+    },
+    {
+      "text": "energetic resources",
+      "type": "phrase",
+      "level": "domain",
+      "meaning_zh": "能量資源",
+      "example_en": "The nervous system helps maintain the energetic resources required by the body.",
+      "example_zh": "神經系統有助於維持身體所需的能量資源。"
+    },
+    {
+      "text": "predictive coding",
+      "type": "phrase",
+      "level": "specialized",
+      "meaning_zh": "預測編碼",
+      "example_en": "Predictive coding regards perception as a product of the brain's predictions.",
+      "example_zh": "預測編碼將知覺視為大腦預測的產物。"
+    },
+    {
+      "text": "feedforward signals",
+      "type": "phrase",
+      "level": "specialized",
+      "meaning_zh": "前饋訊號",
+      "example_en": "Feedforward signals carry sensory information from lower to higher levels of processing.",
+      "example_zh": "前饋訊號將感官資訊從較低層次傳向較高層次的處理系統。"
+    },
+    {
+      "text": "feedback signals",
+      "type": "phrase",
+      "level": "specialized",
+      "meaning_zh": "回饋訊號",
+      "example_en": "The brain generates feedback signals that reflect its predictions about the environment.",
+      "example_zh": "大腦會產生反映其對環境預測的回饋訊號。"
+    },
+    {
+      "text": "prediction errors",
+      "type": "phrase",
+      "level": "domain",
+      "meaning_zh": "預測誤差",
+      "example_en": "Unexpected sensory information creates prediction errors that can update the brain's model.",
+      "example_zh": "非預期的感官資訊會產生預測誤差，進而更新大腦的模型。"
+    },
+    {
+      "text": "allostasis",
+      "type": "word",
+      "level": "specialized",
+      "meaning_zh": "異穩態；預測性生理調節",
+      "example_en": "Allostasis describes how an organism predictively regulates its energy use.",
+      "example_zh": "異穩態描述生物如何以預測方式調節其能量使用。"
+    },
+    {
+      "text": "hardwired",
+      "type": "word",
+      "level": "general",
+      "meaning_zh": "天生固定的；先天內建的",
+      "example_en": "Emotions were traditionally thought to be hardwired in specific neural circuits.",
+      "example_zh": "傳統上，人們認為情緒是先天固定在特定神經迴路中的。"
+    },
+    {
+      "text": "move beyond",
+      "type": "phrase",
+      "level": "general",
+      "meaning_zh": "超越；擺脫既有框架",
+      "example_en": "The researchers wanted to move beyond the traditional filing-cabinet model of the brain.",
+      "example_zh": "研究人員希望超越傳統將大腦比作檔案櫃的模型。"
+    },
+    {
+      "text": "cut from the same cloth",
+      "type": "phrase",
+      "level": "general",
+      "meaning_zh": "理念或性格十分相似",
+      "example_en": "After several discussions, the two researchers realized they were cut from the same cloth.",
+      "example_zh": "經過幾次討論後，兩位研究人員發現彼此的理念十分相似。"
+    },
+    {
+      "text": "big-picture terms",
+      "type": "phrase",
+      "level": "general",
+      "meaning_zh": "從宏觀角度；著眼於整體",
+      "example_en": "She tends to think about scientific problems in big-picture terms.",
+      "example_zh": "她傾向從宏觀角度思考科學問題。"
+    },
+    {
+      "text": "run counter to",
+      "type": "phrase",
+      "level": "general",
+      "meaning_zh": "與……相反；違背",
+      "example_en": "Their theory runs counter to the standard view of how categorization works.",
+      "example_zh": "他們的理論與分類機制的傳統觀點相反。"
+    },
+    {
+      "text": "embedded in",
+      "type": "phrase",
+      "level": "general",
+      "meaning_zh": "處於……之中；嵌入於",
+      "example_en": "Animals must survive in environments that are constantly changing around them.",
+      "example_zh": "動物必須在自身所處且不斷變化的環境中生存。"
+    },
+    {
+      "text": "take shortcuts",
+      "type": "phrase",
+      "level": "general",
+      "meaning_zh": "採取捷徑；使用簡化方法",
+      "example_en": "Because our computational resources are limited, the brain has to take shortcuts.",
+      "example_zh": "由於我們的運算資源有限，大腦不得不採取捷徑。"
+    },
+    {
+      "text": "implement behaviors",
+      "type": "phrase",
+      "level": "domain",
+      "meaning_zh": "執行行為；採取相應行動",
+      "example_en": "Past experiences help the nervous system implement behaviors appropriate to the current situation.",
+      "example_zh": "過去的經驗幫助神經系統執行適合當前情境的行為。"
+    },
+    {
+      "text": "current task",
+      "type": "phrase",
+      "level": "general",
+      "meaning_zh": "當前任務",
+      "example_en": "The way we categorize an object depends partly on the current task.",
+      "example_zh": "我們如何對物體進行分類，部分取決於當前任務。"
+    },
+    {
+      "text": "pare it down",
+      "type": "phrase",
+      "level": "general",
+      "meaning_zh": "將其精簡；削減至較簡單形式",
+      "example_en": "The traditional model suggests that we take in sensory information and pare it down to match stored features.",
+      "example_zh": "傳統模型認為，我們接收感官資訊後會將其精簡，以符合記憶中儲存的特徵。"
+    },
+    {
+      "text": "prime",
+      "type": "word",
+      "level": "general",
+      "meaning_zh": "使預先準備好；使傾向於某種反應",
+      "example_en": "Feeling nervous can prime you to interpret an ambiguous sensation as a threat.",
+      "example_zh": "緊張感可能使你預先傾向於把模糊的感覺解讀為威脅。"
+    },
+    {
+      "text": "sets the stage for",
+      "type": "chunk",
+      "level": "general",
+      "meaning_zh": "為……奠定基礎；為……創造條件",
+      "example_en": "The influence of bodily and environmental signals sets the stage for the new framework.",
+      "example_zh": "身體與環境訊號的影響，為這套新理論框架奠定了基礎。"
+    },
+    {
+      "text": "electrophysiological",
+      "type": "word",
+      "level": "specialized",
+      "meaning_zh": "電生理學的",
+      "example_en": "The proposal draws on anatomical, electrophysiological, and brain-imaging research.",
+      "example_zh": "這項理論以解剖學、電生理學及腦部影像研究為基礎。"
+    },
+    {
+      "text": "neuronal level",
+      "type": "phrase",
+      "level": "domain",
+      "meaning_zh": "神經元層級",
+      "example_en": "Some evidence for the theory can be observed at the neuronal level.",
+      "example_zh": "支持這項理論的部分證據可以在神經元層級觀察到。"
+    },
+    {
+      "text": "synaptic connections",
+      "type": "phrase",
+      "level": "domain",
+      "meaning_zh": "突觸連結",
+      "example_en": "Many synaptic connections in the visual cortex facilitate feedback signaling.",
+      "example_zh": "視覺皮質中的許多突觸連結有助於回饋訊號的傳遞。"
+    },
+    {
+      "text": "sensory input",
+      "type": "phrase",
+      "level": "domain",
+      "meaning_zh": "感官輸入",
+      "example_en": "Our internal state may be just as important as sensory input.",
+      "example_zh": "我們的內在狀態可能與感官輸入同樣重要。"
+    },
+    {
+      "text": "integrative regions",
+      "type": "phrase",
+      "level": "specialized",
+      "meaning_zh": "整合性腦區",
+      "example_en": "Sensory signals eventually reach integrative regions that combine information from multiple sources.",
+      "example_zh": "感官訊號最終會到達整合性腦區，在那裡結合來自多種來源的資訊。"
+    },
+    {
+      "text": "limbic core",
+      "type": "phrase",
+      "level": "specialized",
+      "meaning_zh": "邊緣系統核心區域",
+      "example_en": "The authors propose that the limbic core is a major source of predictive signals.",
+      "example_zh": "作者提出，邊緣系統核心區域是預測訊號的重要來源。"
+    },
+    {
+      "text": "hypothalamus",
+      "type": "word",
+      "level": "domain",
+      "meaning_zh": "下視丘",
+      "example_en": "The hypothalamus monitors basic bodily functions such as temperature, heart rate, and hunger.",
+      "example_zh": "下視丘監控體溫、心率與飢餓等基本身體功能。"
+    },
+    {
+      "text": "executive control",
+      "type": "phrase",
+      "level": "domain",
+      "meaning_zh": "執行控制",
+      "example_en": "The cortex is involved in high-level cognitive functions such as executive control.",
+      "example_zh": "大腦皮質參與執行控制等高階認知功能。"
+    },
+    {
+      "text": "vagus nerve",
+      "type": "phrase",
+      "level": "domain",
+      "meaning_zh": "迷走神經",
+      "example_en": "Physiological signals travel from the body up the vagus nerve and into the brain.",
+      "example_zh": "生理訊號會從身體沿著迷走神經傳入大腦。"
+    },
+    {
+      "text": "draws on",
+      "type": "phrase",
+      "level": "general",
+      "meaning_zh": "利用；借助；取材自",
+      "example_en": "Categorization draws on memory, perception, and behavior.",
+      "example_zh": "範疇化會利用記憶、知覺與行為等資訊。"
+    },
+    {
+      "text": "baked in",
+      "type": "phrase",
+      "level": "general",
+      "meaning_zh": "內建於其中；成為固有的一部分",
+      "example_en": "The authors argue that categorization is baked in to the organization of the nervous system.",
+      "example_zh": "作者主張，範疇化是神經系統組織中內建的固有部分。"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.8625,
+    "text": "Physiological"
+  },
+  {
+    "start": 0.975,
+    "duration": 0.425,
+    "text": "signals"
+  },
+  {
+    "start": 1.4125,
+    "duration": 0.3625,
+    "text": "travel"
+  },
+  {
+    "start": 1.7875,
+    "duration": 0.15,
+    "text": "from"
+  },
+  {
+    "start": 1.95,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 2.05,
+    "duration": 0.325,
+    "text": "body"
+  },
+  {
+    "start": 2.3875,
+    "duration": 0.1125,
+    "text": "up"
+  },
+  {
+    "start": 2.5125,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 2.6125,
+    "duration": 0.375,
+    "text": "vagus"
+  },
+  {
+    "start": 3.0,
+    "duration": 0.3375,
+    "text": "nerve"
+  },
+  {
+    "start": 3.35,
+    "duration": 0.125,
+    "text": "and"
+  },
+  {
+    "start": 3.4875,
+    "duration": 0.1875,
+    "text": "into"
+  },
+  {
+    "start": 3.6875,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 3.8,
+    "duration": 0.4625,
+    "text": "brain"
+  }
+]

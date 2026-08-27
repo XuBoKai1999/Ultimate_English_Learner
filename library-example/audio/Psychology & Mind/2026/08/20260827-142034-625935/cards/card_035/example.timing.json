@@ -1,0 +1,67 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.1125,
+    "text": "The"
+  },
+  {
+    "start": 0.225,
+    "duration": 0.8,
+    "text": "hypothalamus"
+  },
+  {
+    "start": 1.0375,
+    "duration": 0.525,
+    "text": "monitors"
+  },
+  {
+    "start": 1.575,
+    "duration": 0.45,
+    "text": "basic"
+  },
+  {
+    "start": 2.0375,
+    "duration": 0.4,
+    "text": "bodily"
+  },
+  {
+    "start": 2.45,
+    "duration": 0.5125,
+    "text": "functions"
+  },
+  {
+    "start": 2.975,
+    "duration": 0.2,
+    "text": "such"
+  },
+  {
+    "start": 3.1875,
+    "duration": 0.0875,
+    "text": "as"
+  },
+  {
+    "start": 3.2875,
+    "duration": 0.6125,
+    "text": "temperature"
+  },
+  {
+    "start": 4.125,
+    "duration": 0.2125,
+    "text": "heart"
+  },
+  {
+    "start": 4.35,
+    "duration": 0.3125,
+    "text": "rate"
+  },
+  {
+    "start": 4.85,
+    "duration": 0.0875,
+    "text": "and"
+  },
+  {
+    "start": 4.95,
+    "duration": 0.5375,
+    "text": "hunger"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.125,
+    "text": "The"
+  },
+  {
+    "start": 0.2375,
+    "duration": 0.3375,
+    "text": "nervous"
+  },
+  {
+    "start": 0.5875,
+    "duration": 0.375,
+    "text": "system"
+  },
+  {
+    "start": 0.975,
+    "duration": 0.3,
+    "text": "helps"
+  },
+  {
+    "start": 1.2875,
+    "duration": 0.4375,
+    "text": "maintain"
+  },
+  {
+    "start": 1.7375,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 1.8375,
+    "duration": 0.575,
+    "text": "energetic"
+  },
+  {
+    "start": 2.425,
+    "duration": 0.6125,
+    "text": "resources"
+  },
+  {
+    "start": 3.05,
+    "duration": 0.4625,
+    "text": "required"
+  },
+  {
+    "start": 3.525,
+    "duration": 0.1125,
+    "text": "by"
+  },
+  {
+    "start": 3.65,
+    "duration": 0.0875,
+    "text": "the"
+  },
+  {
+    "start": 3.75,
+    "duration": 0.4875,
+    "text": "body"
+  }
+]

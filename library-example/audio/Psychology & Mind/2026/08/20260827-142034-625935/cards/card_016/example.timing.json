@@ -1,0 +1,52 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.6875,
+    "text": "Allostasis"
+  },
+  {
+    "start": 0.8,
+    "duration": 0.5125,
+    "text": "describes"
+  },
+  {
+    "start": 1.325,
+    "duration": 0.1375,
+    "text": "how"
+  },
+  {
+    "start": 1.475,
+    "duration": 0.1125,
+    "text": "an"
+  },
+  {
+    "start": 1.6,
+    "duration": 0.5875,
+    "text": "organism"
+  },
+  {
+    "start": 2.2,
+    "duration": 0.575,
+    "text": "predictively"
+  },
+  {
+    "start": 2.7875,
+    "duration": 0.5375,
+    "text": "regulates"
+  },
+  {
+    "start": 3.3375,
+    "duration": 0.15,
+    "text": "its"
+  },
+  {
+    "start": 3.5,
+    "duration": 0.4,
+    "text": "energy"
+  },
+  {
+    "start": 3.9125,
+    "duration": 0.4875,
+    "text": "use"
+  }
+]

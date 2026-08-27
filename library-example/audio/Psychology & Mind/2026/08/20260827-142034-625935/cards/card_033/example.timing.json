@@ -1,0 +1,62 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.5,
+    "text": "Sensory"
+  },
+  {
+    "start": 0.6125,
+    "duration": 0.425,
+    "text": "signals"
+  },
+  {
+    "start": 1.05,
+    "duration": 0.5625,
+    "text": "eventually"
+  },
+  {
+    "start": 1.625,
+    "duration": 0.25,
+    "text": "reach"
+  },
+  {
+    "start": 1.8875,
+    "duration": 0.55,
+    "text": "integrative"
+  },
+  {
+    "start": 2.45,
+    "duration": 0.4625,
+    "text": "regions"
+  },
+  {
+    "start": 2.925,
+    "duration": 0.15,
+    "text": "that"
+  },
+  {
+    "start": 3.0875,
+    "duration": 0.3625,
+    "text": "combine"
+  },
+  {
+    "start": 3.4625,
+    "duration": 0.6375,
+    "text": "information"
+  },
+  {
+    "start": 4.1125,
+    "duration": 0.175,
+    "text": "from"
+  },
+  {
+    "start": 4.3,
+    "duration": 0.4,
+    "text": "multiple"
+  },
+  {
+    "start": 4.7125,
+    "duration": 0.7375,
+    "text": "sources"
+  }
+]

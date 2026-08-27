@@ -1,0 +1,67 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.15,
+    "text": "The"
+  },
+  {
+    "start": 0.2625,
+    "duration": 0.3875,
+    "text": "idea"
+  },
+  {
+    "start": 0.6625,
+    "duration": 0.1375,
+    "text": "that"
+  },
+  {
+    "start": 0.8125,
+    "duration": 0.5625,
+    "text": "perception"
+  },
+  {
+    "start": 1.3875,
+    "duration": 0.3625,
+    "text": "depends"
+  },
+  {
+    "start": 1.7625,
+    "duration": 0.4125,
+    "text": "heavily"
+  },
+  {
+    "start": 2.1875,
+    "duration": 0.1,
+    "text": "on"
+  },
+  {
+    "start": 2.3,
+    "duration": 0.5875,
+    "text": "prediction"
+  },
+  {
+    "start": 2.9,
+    "duration": 0.1625,
+    "text": "may"
+  },
+  {
+    "start": 3.075,
+    "duration": 0.2625,
+    "text": "seem"
+  },
+  {
+    "start": 3.35,
+    "duration": 0.8125,
+    "text": "counterintuitive"
+  },
+  {
+    "start": 4.175,
+    "duration": 0.1125,
+    "text": "at"
+  },
+  {
+    "start": 4.3,
+    "duration": 0.55,
+    "text": "first"
+  }
+]

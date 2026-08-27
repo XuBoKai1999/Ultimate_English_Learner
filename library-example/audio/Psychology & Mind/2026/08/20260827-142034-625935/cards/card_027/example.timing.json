@@ -1,0 +1,67 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.375,
+    "text": "Feeling"
+  },
+  {
+    "start": 0.4875,
+    "duration": 0.4,
+    "text": "nervous"
+  },
+  {
+    "start": 0.9,
+    "duration": 0.1625,
+    "text": "can"
+  },
+  {
+    "start": 1.075,
+    "duration": 0.25,
+    "text": "prime"
+  },
+  {
+    "start": 1.3375,
+    "duration": 0.1,
+    "text": "you"
+  },
+  {
+    "start": 1.45,
+    "duration": 0.125,
+    "text": "to"
+  },
+  {
+    "start": 1.5875,
+    "duration": 0.4625,
+    "text": "interpret"
+  },
+  {
+    "start": 2.0625,
+    "duration": 0.1,
+    "text": "an"
+  },
+  {
+    "start": 2.175,
+    "duration": 0.4875,
+    "text": "ambiguous"
+  },
+  {
+    "start": 2.675,
+    "duration": 0.6125,
+    "text": "sensation"
+  },
+  {
+    "start": 3.3,
+    "duration": 0.1375,
+    "text": "as"
+  },
+  {
+    "start": 3.45,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 3.5125,
+    "duration": 0.5375,
+    "text": "threat"
+  }
+]

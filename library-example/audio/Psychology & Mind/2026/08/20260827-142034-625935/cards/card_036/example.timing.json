@@ -1,0 +1,62 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.15,
+    "text": "The"
+  },
+  {
+    "start": 0.2625,
+    "duration": 0.5125,
+    "text": "cortex"
+  },
+  {
+    "start": 0.7875,
+    "duration": 0.1125,
+    "text": "is"
+  },
+  {
+    "start": 0.9125,
+    "duration": 0.4125,
+    "text": "involved"
+  },
+  {
+    "start": 1.3375,
+    "duration": 0.0875,
+    "text": "in"
+  },
+  {
+    "start": 1.4375,
+    "duration": 0.5,
+    "text": "high-level"
+  },
+  {
+    "start": 1.95,
+    "duration": 0.4875,
+    "text": "cognitive"
+  },
+  {
+    "start": 2.45,
+    "duration": 0.575,
+    "text": "functions"
+  },
+  {
+    "start": 3.0375,
+    "duration": 0.2,
+    "text": "such"
+  },
+  {
+    "start": 3.25,
+    "duration": 0.0875,
+    "text": "as"
+  },
+  {
+    "start": 3.35,
+    "duration": 0.5375,
+    "text": "executive"
+  },
+  {
+    "start": 3.9,
+    "duration": 0.6375,
+    "text": "control"
+  }
+]

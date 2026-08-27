@@ -1,0 +1,17 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.2625,
+    "text": "run"
+  },
+  {
+    "start": 0.375,
+    "duration": 0.375,
+    "text": "counter"
+  },
+  {
+    "start": 0.7625,
+    "duration": 0.325,
+    "text": "to"
+  }
+]

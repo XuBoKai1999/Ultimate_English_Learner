@@ -1,0 +1,67 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.1375,
+    "text": "The"
+  },
+  {
+    "start": 0.25,
+    "duration": 0.3,
+    "text": "brain"
+  },
+  {
+    "start": 0.5625,
+    "duration": 0.15,
+    "text": "may"
+  },
+  {
+    "start": 0.725,
+    "duration": 0.3625,
+    "text": "adjust"
+  },
+  {
+    "start": 1.1,
+    "duration": 0.1375,
+    "text": "its"
+  },
+  {
+    "start": 1.25,
+    "duration": 0.6,
+    "text": "predictions"
+  },
+  {
+    "start": 1.8625,
+    "duration": 0.3875,
+    "text": "according"
+  },
+  {
+    "start": 2.2625,
+    "duration": 0.0875,
+    "text": "to"
+  },
+  {
+    "start": 2.3625,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 2.475,
+    "duration": 0.375,
+    "text": "body's"
+  },
+  {
+    "start": 2.8625,
+    "duration": 0.4375,
+    "text": "immediate"
+  },
+  {
+    "start": 3.3125,
+    "duration": 0.8,
+    "text": "physiological"
+  },
+  {
+    "start": 4.125,
+    "duration": 0.525,
+    "text": "needs"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.15,
+    "text": "The"
+  },
+  {
+    "start": 0.2625,
+    "duration": 0.275,
+    "text": "brain"
+  },
+  {
+    "start": 0.55,
+    "duration": 0.475,
+    "text": "generates"
+  },
+  {
+    "start": 1.0375,
+    "duration": 0.425,
+    "text": "feedback"
+  },
+  {
+    "start": 1.475,
+    "duration": 0.45,
+    "text": "signals"
+  },
+  {
+    "start": 1.9375,
+    "duration": 0.1375,
+    "text": "that"
+  },
+  {
+    "start": 2.0875,
+    "duration": 0.425,
+    "text": "reflect"
+  },
+  {
+    "start": 2.525,
+    "duration": 0.15,
+    "text": "its"
+  },
+  {
+    "start": 2.6875,
+    "duration": 0.6125,
+    "text": "predictions"
+  },
+  {
+    "start": 3.3125,
+    "duration": 0.2375,
+    "text": "about"
+  },
+  {
+    "start": 3.5625,
+    "duration": 0.0625,
+    "text": "the"
+  },
+  {
+    "start": 3.6375,
+    "duration": 0.7625,
+    "text": "environment"
+  }
+]

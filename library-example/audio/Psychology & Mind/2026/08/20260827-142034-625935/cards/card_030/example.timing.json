@@ -1,0 +1,62 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.3125,
+    "text": "Some"
+  },
+  {
+    "start": 0.425,
+    "duration": 0.4,
+    "text": "evidence"
+  },
+  {
+    "start": 0.8375,
+    "duration": 0.1125,
+    "text": "for"
+  },
+  {
+    "start": 0.9625,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 1.075,
+    "duration": 0.425,
+    "text": "theory"
+  },
+  {
+    "start": 1.5125,
+    "duration": 0.175,
+    "text": "can"
+  },
+  {
+    "start": 1.7,
+    "duration": 0.1125,
+    "text": "be"
+  },
+  {
+    "start": 1.825,
+    "duration": 0.4,
+    "text": "observed"
+  },
+  {
+    "start": 2.2375,
+    "duration": 0.075,
+    "text": "at"
+  },
+  {
+    "start": 2.325,
+    "duration": 0.0625,
+    "text": "the"
+  },
+  {
+    "start": 2.4,
+    "duration": 0.375,
+    "text": "neuronal"
+  },
+  {
+    "start": 2.7875,
+    "duration": 0.475,
+    "text": "level"
+  }
+]

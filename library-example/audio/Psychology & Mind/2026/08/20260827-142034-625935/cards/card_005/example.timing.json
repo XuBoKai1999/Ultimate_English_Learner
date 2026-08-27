@@ -1,0 +1,62 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.1375,
+    "text": "The"
+  },
+  {
+    "start": 0.25,
+    "duration": 0.5375,
+    "text": "traditional"
+  },
+  {
+    "start": 0.8,
+    "duration": 0.325,
+    "text": "model"
+  },
+  {
+    "start": 1.1375,
+    "duration": 0.5,
+    "text": "struggles"
+  },
+  {
+    "start": 1.65,
+    "duration": 0.1125,
+    "text": "to"
+  },
+  {
+    "start": 1.775,
+    "duration": 0.375,
+    "text": "account"
+  },
+  {
+    "start": 2.1625,
+    "duration": 0.125,
+    "text": "for"
+  },
+  {
+    "start": 2.3,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 2.4125,
+    "duration": 0.7875,
+    "text": "flexibility"
+  },
+  {
+    "start": 3.2125,
+    "duration": 0.1,
+    "text": "of"
+  },
+  {
+    "start": 3.325,
+    "duration": 0.3,
+    "text": "human"
+  },
+  {
+    "start": 3.6375,
+    "duration": 0.775,
+    "text": "perception"
+  }
+]

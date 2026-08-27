@@ -1,0 +1,52 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.5625,
+    "text": "Context"
+  },
+  {
+    "start": 0.675,
+    "duration": 0.6875,
+    "text": "influences"
+  },
+  {
+    "start": 1.375,
+    "duration": 0.15,
+    "text": "how"
+  },
+  {
+    "start": 1.5375,
+    "duration": 0.1375,
+    "text": "we"
+  },
+  {
+    "start": 1.6875,
+    "duration": 0.375,
+    "text": "assign"
+  },
+  {
+    "start": 2.075,
+    "duration": 0.3875,
+    "text": "labels"
+  },
+  {
+    "start": 2.475,
+    "duration": 0.1125,
+    "text": "to"
+  },
+  {
+    "start": 2.6,
+    "duration": 0.5,
+    "text": "ambiguous"
+  },
+  {
+    "start": 3.1125,
+    "duration": 0.3875,
+    "text": "sensory"
+  },
+  {
+    "start": 3.5125,
+    "duration": 0.65,
+    "text": "signals"
+  }
+]

@@ -1,0 +1,201 @@
+{
+  "title": "A New Framework for How the Brain Compresses Our Noisy World",
+  "category": "Psychology & Mind",
+  "items": [
+    {
+      "text": "awash in",
+      "type": "phrase",
+      "level": "general"
+    },
+    {
+      "text": "navigate this torrent",
+      "type": "chunk",
+      "level": "general"
+    },
+    {
+      "text": "data compression",
+      "type": "phrase",
+      "level": "domain"
+    },
+    {
+      "text": "categorization",
+      "type": "word",
+      "level": "domain"
+    },
+    {
+      "text": "account for",
+      "type": "phrase",
+      "level": "general"
+    },
+    {
+      "text": "assign labels to",
+      "type": "chunk",
+      "level": "general"
+    },
+    {
+      "text": "physiological needs",
+      "type": "phrase",
+      "level": "domain"
+    },
+    {
+      "text": "at the heart of",
+      "type": "chunk",
+      "level": "general"
+    },
+    {
+      "text": "counterintuitive",
+      "type": "word",
+      "level": "general"
+    },
+    {
+      "text": "cumulative effects",
+      "type": "phrase",
+      "level": "general"
+    },
+    {
+      "text": "energetic resources",
+      "type": "phrase",
+      "level": "domain"
+    },
+    {
+      "text": "predictive coding",
+      "type": "phrase",
+      "level": "specialized"
+    },
+    {
+      "text": "feedforward signals",
+      "type": "phrase",
+      "level": "specialized"
+    },
+    {
+      "text": "feedback signals",
+      "type": "phrase",
+      "level": "specialized"
+    },
+    {
+      "text": "prediction errors",
+      "type": "phrase",
+      "level": "domain"
+    },
+    {
+      "text": "allostasis",
+      "type": "word",
+      "level": "specialized"
+    },
+    {
+      "text": "hardwired",
+      "type": "word",
+      "level": "general"
+    },
+    {
+      "text": "move beyond",
+      "type": "phrase",
+      "level": "general"
+    },
+    {
+      "text": "cut from the same cloth",
+      "type": "phrase",
+      "level": "general"
+    },
+    {
+      "text": "big-picture terms",
+      "type": "phrase",
+      "level": "general"
+    },
+    {
+      "text": "run counter to",
+      "type": "phrase",
+      "level": "general"
+    },
+    {
+      "text": "embedded in",
+      "type": "phrase",
+      "level": "general"
+    },
+    {
+      "text": "take shortcuts",
+      "type": "phrase",
+      "level": "general"
+    },
+    {
+      "text": "implement behaviors",
+      "type": "phrase",
+      "level": "domain"
+    },
+    {
+      "text": "current task",
+      "type": "phrase",
+      "level": "general"
+    },
+    {
+      "text": "pare it down",
+      "type": "phrase",
+      "level": "general"
+    },
+    {
+      "text": "prime",
+      "type": "word",
+      "level": "general"
+    },
+    {
+      "text": "sets the stage for",
+      "type": "chunk",
+      "level": "general"
+    },
+    {
+      "text": "electrophysiological",
+      "type": "word",
+      "level": "specialized"
+    },
+    {
+      "text": "neuronal level",
+      "type": "phrase",
+      "level": "domain"
+    },
+    {
+      "text": "synaptic connections",
+      "type": "phrase",
+      "level": "domain"
+    },
+    {
+      "text": "sensory input",
+      "type": "phrase",
+      "level": "domain"
+    },
+    {
+      "text": "integrative regions",
+      "type": "phrase",
+      "level": "specialized"
+    },
+    {
+      "text": "limbic core",
+      "type": "phrase",
+      "level": "specialized"
+    },
+    {
+      "text": "hypothalamus",
+      "type": "word",
+      "level": "domain"
+    },
+    {
+      "text": "executive control",
+      "type": "phrase",
+      "level": "domain"
+    },
+    {
+      "text": "vagus nerve",
+      "type": "phrase",
+      "level": "domain"
+    },
+    {
+      "text": "draws on",
+      "type": "phrase",
+      "level": "general"
+    },
+    {
+      "text": "baked in",
+      "type": "phrase",
+      "level": "general"
+    }
+  ]
+}

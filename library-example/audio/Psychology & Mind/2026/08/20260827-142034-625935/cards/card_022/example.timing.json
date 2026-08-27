@@ -1,0 +1,57 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.4625,
+    "text": "Animals"
+  },
+  {
+    "start": 0.575,
+    "duration": 0.2625,
+    "text": "must"
+  },
+  {
+    "start": 0.85,
+    "duration": 0.4,
+    "text": "survive"
+  },
+  {
+    "start": 1.2625,
+    "duration": 0.0875,
+    "text": "in"
+  },
+  {
+    "start": 1.3625,
+    "duration": 0.6625,
+    "text": "environments"
+  },
+  {
+    "start": 2.0375,
+    "duration": 0.125,
+    "text": "that"
+  },
+  {
+    "start": 2.175,
+    "duration": 0.0875,
+    "text": "are"
+  },
+  {
+    "start": 2.275,
+    "duration": 0.55,
+    "text": "constantly"
+  },
+  {
+    "start": 2.8375,
+    "duration": 0.425,
+    "text": "changing"
+  },
+  {
+    "start": 3.275,
+    "duration": 0.2875,
+    "text": "around"
+  },
+  {
+    "start": 3.575,
+    "duration": 0.325,
+    "text": "them"
+  }
+]

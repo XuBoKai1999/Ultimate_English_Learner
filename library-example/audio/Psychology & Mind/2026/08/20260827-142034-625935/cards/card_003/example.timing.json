@@ -1,0 +1,67 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.15,
+    "text": "The"
+  },
+  {
+    "start": 0.2625,
+    "duration": 0.275,
+    "text": "brain"
+  },
+  {
+    "start": 0.55,
+    "duration": 0.4125,
+    "text": "relies"
+  },
+  {
+    "start": 0.975,
+    "duration": 0.125,
+    "text": "on"
+  },
+  {
+    "start": 1.1125,
+    "duration": 0.275,
+    "text": "data"
+  },
+  {
+    "start": 1.4,
+    "duration": 0.6125,
+    "text": "compression"
+  },
+  {
+    "start": 2.025,
+    "duration": 0.0875,
+    "text": "to"
+  },
+  {
+    "start": 2.125,
+    "duration": 0.325,
+    "text": "handle"
+  },
+  {
+    "start": 2.4625,
+    "duration": 0.425,
+    "text": "enormous"
+  },
+  {
+    "start": 2.9,
+    "duration": 0.3375,
+    "text": "amounts"
+  },
+  {
+    "start": 3.25,
+    "duration": 0.0875,
+    "text": "of"
+  },
+  {
+    "start": 3.35,
+    "duration": 0.425,
+    "text": "sensory"
+  },
+  {
+    "start": 3.7875,
+    "duration": 0.775,
+    "text": "information"
+  }
+]

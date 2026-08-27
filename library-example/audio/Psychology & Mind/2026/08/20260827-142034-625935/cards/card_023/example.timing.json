@@ -1,0 +1,62 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.3125,
+    "text": "Because"
+  },
+  {
+    "start": 0.425,
+    "duration": 0.125,
+    "text": "our"
+  },
+  {
+    "start": 0.5625,
+    "duration": 0.8125,
+    "text": "computational"
+  },
+  {
+    "start": 1.3875,
+    "duration": 0.575,
+    "text": "resources"
+  },
+  {
+    "start": 1.975,
+    "duration": 0.1125,
+    "text": "are"
+  },
+  {
+    "start": 2.1,
+    "duration": 0.4625,
+    "text": "limited"
+  },
+  {
+    "start": 2.75,
+    "duration": 0.1125,
+    "text": "the"
+  },
+  {
+    "start": 2.875,
+    "duration": 0.3,
+    "text": "brain"
+  },
+  {
+    "start": 3.1875,
+    "duration": 0.2,
+    "text": "has"
+  },
+  {
+    "start": 3.4,
+    "duration": 0.0875,
+    "text": "to"
+  },
+  {
+    "start": 3.5,
+    "duration": 0.2375,
+    "text": "take"
+  },
+  {
+    "start": 3.75,
+    "duration": 0.775,
+    "text": "shortcuts"
+  }
+]

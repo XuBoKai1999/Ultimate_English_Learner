@@ -1,0 +1,52 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.1625,
+    "text": "At"
+  },
+  {
+    "start": 0.275,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 0.3625,
+    "duration": 0.225,
+    "text": "heart"
+  },
+  {
+    "start": 0.6,
+    "duration": 0.0625,
+    "text": "of"
+  },
+  {
+    "start": 0.675,
+    "duration": 0.125,
+    "text": "their"
+  },
+  {
+    "start": 0.8125,
+    "duration": 0.5375,
+    "text": "framework"
+  },
+  {
+    "start": 1.3625,
+    "duration": 0.1125,
+    "text": "is"
+  },
+  {
+    "start": 1.4875,
+    "duration": 0.05,
+    "text": "a"
+  },
+  {
+    "start": 1.55,
+    "duration": 0.775,
+    "text": "counterintuitive"
+  },
+  {
+    "start": 2.3375,
+    "duration": 0.6125,
+    "text": "insight"
+  }
+]

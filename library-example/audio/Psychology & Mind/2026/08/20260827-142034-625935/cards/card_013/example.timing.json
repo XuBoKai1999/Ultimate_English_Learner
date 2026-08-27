@@ -1,0 +1,62 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.65,
+    "text": "Feedforward"
+  },
+  {
+    "start": 0.7625,
+    "duration": 0.45,
+    "text": "signals"
+  },
+  {
+    "start": 1.225,
+    "duration": 0.2875,
+    "text": "carry"
+  },
+  {
+    "start": 1.525,
+    "duration": 0.4375,
+    "text": "sensory"
+  },
+  {
+    "start": 1.975,
+    "duration": 0.65,
+    "text": "information"
+  },
+  {
+    "start": 2.6375,
+    "duration": 0.2,
+    "text": "from"
+  },
+  {
+    "start": 2.85,
+    "duration": 0.2875,
+    "text": "lower"
+  },
+  {
+    "start": 3.15,
+    "duration": 0.0875,
+    "text": "to"
+  },
+  {
+    "start": 3.25,
+    "duration": 0.3375,
+    "text": "higher"
+  },
+  {
+    "start": 3.6,
+    "duration": 0.3625,
+    "text": "levels"
+  },
+  {
+    "start": 3.975,
+    "duration": 0.075,
+    "text": "of"
+  },
+  {
+    "start": 4.0625,
+    "duration": 0.7625,
+    "text": "processing"
+  }
+]

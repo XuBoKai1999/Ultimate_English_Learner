@@ -1,0 +1,22 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.1625,
+    "text": "at"
+  },
+  {
+    "start": 0.275,
+    "duration": 0.075,
+    "text": "the"
+  },
+  {
+    "start": 0.3625,
+    "duration": 0.25,
+    "text": "heart"
+  },
+  {
+    "start": 0.625,
+    "duration": 0.3125,
+    "text": "of"
+  }
+]

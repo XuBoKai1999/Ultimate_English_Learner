@@ -1,0 +1,62 @@
+[
+  {
+    "start": 0.1,
+    "duration": 0.2125,
+    "text": "Their"
+  },
+  {
+    "start": 0.325,
+    "duration": 0.3375,
+    "text": "theory"
+  },
+  {
+    "start": 0.675,
+    "duration": 0.3375,
+    "text": "runs"
+  },
+  {
+    "start": 1.025,
+    "duration": 0.425,
+    "text": "counter"
+  },
+  {
+    "start": 1.4625,
+    "duration": 0.0875,
+    "text": "to"
+  },
+  {
+    "start": 1.5625,
+    "duration": 0.1,
+    "text": "the"
+  },
+  {
+    "start": 1.675,
+    "duration": 0.4375,
+    "text": "standard"
+  },
+  {
+    "start": 2.125,
+    "duration": 0.3,
+    "text": "view"
+  },
+  {
+    "start": 2.4375,
+    "duration": 0.1125,
+    "text": "of"
+  },
+  {
+    "start": 2.5625,
+    "duration": 0.1125,
+    "text": "how"
+  },
+  {
+    "start": 2.6875,
+    "duration": 0.85,
+    "text": "categorization"
+  },
+  {
+    "start": 3.55,
+    "duration": 0.4875,
+    "text": "works"
+  }
+]
