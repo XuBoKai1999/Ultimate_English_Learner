@@ -1,6 +1,6 @@
 # English Reader — Architecture v0
 
-> Last synchronized with implementation: 2026-08-27 15:13:01 +08:00
+> Specification updated: 2026-08-27 17:00:22 +08:00. Step 07 requirements are not yet implemented.
 
 ## 1. Goal
 
@@ -43,7 +43,9 @@ GUI 有四個主要入口：
 
 顯示：
 
-- 今日到期的單字片語卡；
+- **New Cards**：每日首次學習 cards；
+- **History Review**：每日排程複習及 Dictation；
+- **Active Dictation**：不限量的主動聽寫；
 - 建議尋找新文章的來源。
 
 來源與分類見 `categories.md`。
@@ -318,38 +320,118 @@ next_review
 
 不要要求 AI 產生 learning state。
 
+不同文章中的相同 vocabulary 保留為各文章自己的 card，不做跨文章 deduplication、merge、global vocabulary index 或 frequency database。重複出現視為額外 exposure；使用者已熟悉時可將個別 card 標記為 `known`。
+
 ------
 
 ## 8. Review
 
-v0 使用固定間隔的 spaced repetition。
+v0 直接使用每篇文章既有 card 與 review state，不建立每日副本或另一套狀態。
 
-複習間隔集中設定，不將數值散落 hard-code 在各處。
+### 8.1 Central Configuration
 
-卡片至少支援：
+下列數值必須集中管理：
+
+```text
+MAX_NEW_CARDS_PER_DAY = 15
+MAX_HISTORY_CARDS_PER_DAY = 10
+INTERVALS = [2, 5, 10, 21, 45, 90, 180]
+LEVEL_WEIGHTS = {general: 4, domain: 2, specialized: 1}
+OVERDUE_WEIGHTS = {due_today: 1, overdue_1_7: 2, overdue_8_30: 4, overdue_over_30: 8}
+AUDIO_CACHE_DAYS = 30
+```
+
+不得散落 hard-code，不加入 FSRS。
+
+### 8.2 Status and Stages
+
+至少支援：
 
 ```text
 learning
+graduated
 known
 ```
 
-規則：
+- `learning`：首次學習或正常排程中；
+- `graduated`：完成主要 Dictation intervals，進入 long-term pool；
+- `known`：使用者主動表示已會，退出一般排程。
 
-- `learning`：進入正常複習排程。
-- `known`：不再進入正常 Daily Learning 推送。
+`review_stage` 沿用既有欄位。Stage 0 表示尚未成功完成首次 Dictation；每次成功才加 1。完成最後 interval 後改為 `graduated`。
 
-Daily Learning 取得：
+### 8.3 New Cards
+
+每日最多 15 張。候選為 `status == learning AND review_stage == 0 AND next_review <= today`；成功後進入後續 History Review 排程，失敗則維持 Stage 0 並於明日再派發。
+
+選取時：
+
+- 優先近期文章；
+- 依既有 level 權重 `general 4 / domain 2 / specialized 1`；
+- 超額留在 backlog；候選不足不補滿；
+- 若存在 old backlog，每日至少保留 3 個名額；其餘名額優先最新文章；任一側候選不足時由另一側補位，不為配額留空。
+
+v0 將 old backlog 定義為：article 建立時間早於目前最新 eligible article 的 Stage 0 candidates。保留名額從 old backlog 中優先較舊文章；其餘名額依 article 建立時間由新到舊。相同 article 優先度內使用既有 level weight，最後再隨機。
+
+### 8.4 History Review
+
+每日總上限 10 張，不是每個 stage 各 10 張。主要候選：
 
 ```text
 next_review <= today
 AND status == learning
+AND review_stage > 0
 ```
 
-的既有卡片。
+抽取優先考慮 overdue 程度、level，最後才隨機；基礎權重可使用：
 
-不建立每日卡片副本。
+```text
+weight = level_weight * overdue_weight
+```
 
-暫不實作 FSRS。
+overdue 權重為今天到期 ×1、逾期 1–7 天 ×2、8–30 天 ×4、超過 30 天 ×8，避免舊 card 永久沉沒。
+
+History Review 通常為 9 張 learning 加 1 張 `graduated` long-term card。若 graduated pool 為空，該名額改由 learning 補上；若 learning 不足，graduated 可補滿其餘名額。不得只為維持 9:1 配額而讓每日 10 張名額空置。畢業卡通過後保持 `graduated`；失敗則回到 `learning` 並從較後 stage 恢復，v0 可使用 Stage 5，不回 Stage 0。不要建立無限延伸的 long-term fixed intervals。
+
+### 8.5 Review Mode and Dictation
+
+一般 Review Mode 支援 English → Chinese 與 Chinese → English，可查看 `text`、`meaning_zh`、`example_en`、`example_zh` 及 TTS。它只供熟悉，不更新 `review_stage`；可標記 `known`。
+
+正式通關只使用完整 `example_en` Dictation：
+
+```text
+play example_en
+→ hide English sentence
+→ user types full sentence
+→ check answer
+```
+
+Scheduled Dictation：
+
+- Pass：`review_stage += 1`、`last_review = today`、依下一 interval 設定 `next_review`；最後 stage 完成後設為 `graduated`；當天不再派發同一卡。
+- Fail：stage 不變、`last_review = today`、`next_review = tomorrow`；不 reset，當天不再派發。
+
+interval 表示距離上一次成功 Dictation 的天數：首次成功後依序 `+2d → +5d → +10d → +21d → +45d → +90d → +180d → graduated`。
+
+Dictation 答案使用 deterministic normalization，之後做 normalized token sequence 的 exact comparison；禁止 fuzzy matching 與 AI grading。
+
+Normalization 依固定順序：
+
+1. Unicode normalize；
+2. case-fold；
+3. 依集中維護的 standard contraction table 展開 contraction；
+4. 移除 punctuation；
+5. 將 repeated whitespace 合併為單一空格並 trim。
+
+大小寫、標點、首尾／重複空白及 contraction／expanded form 視為相同。拼字、單字增減、articles、prepositions、number、tense 與其他文法差異不得忽略；數字與英文數字詞不得互換。
+
+對 `he's`、`she'd` 等可有多種標準展開的 contraction，normalizer 產生有限候選 token sequences；兩邊只要有一組 normalized sequence 完全相等即通過。不得因此把兩個本來都已展開但文法不同的句子視為相同。contraction table 必須集中管理並有測試。
+
+### 8.6 Active Dictation
+
+Active Dictation 不受每日 15/10 張限制，可持續至使用者停止。候選包含 overdue/due learning、Stage 0、graduated，優先順序為 overdue、due、unlearned，再依既有 level 權重處理同優先度項目。
+
+- Pass：與 Scheduled Dictation 相同，具有正式排程效力；最後 stage 後畢業。本次 session 已成功的 card 不立即重複派發。
+- Fail：`review_stage`、`status`、`next_review` 全部不變，不降級、不 reset、不延後、不建立 penalty；card 留在原 pool，之後仍可抽到。
 
 ------
 
@@ -357,7 +439,7 @@ AND status == learning
 
 TTS 是跨程式共用功能。
 
-教材在建立流程完成時，使用 `edge-tts` 預先產生自然語音 MP3；播放按鈕不得臨時生成音訊。此服務不需要 API key，但生成時需要網路。
+教材在建立流程完成時，使用 `edge-tts` 預先產生自然語音 MP3。此服務不需要 API key，但生成時需要網路。
 
 生成工作在背景執行，不阻塞 GUI。每篇文章各自顯示一條完成進度與成功／失敗狀態，並允許失敗任務重試。
 
@@ -383,7 +465,9 @@ TTS 是跨程式共用功能。
 
 文字資料是 source of truth。
 
-音訊是 derived data，可重新生成。
+音訊是 derived/cache data，canonical data 只有 article text 與 JSON/card data。超過 `AUDIO_CACHE_DAYS` 且未使用的音訊可清除，但不得刪除 text 或 JSON。
+
+所有播放入口（article、vocabulary、example）必須支援 lazy regeneration：音訊存在則直接播放；不存在則重新生成、存回 cache 後播放。Old Articles 不得要求使用者先手動 Build Audio。
 
 ------
 

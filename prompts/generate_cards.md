@@ -51,9 +51,11 @@ For each item:
 - provide one natural English example sentence;
 - provide a Traditional Chinese translation of that example.
 
-The example should clearly demonstrate the relevant meaning and normal usage.
+The example should clearly demonstrate the relevant meaning and normal usage. It must be a natural, complete sentence suitable for full-sentence dictation.
 
-Use the original article sentence when it is a good learning example. Otherwise create a concise natural example with the same relevant meaning.
+Apart from the target word, phrase, or chunk, prefer common and easy-to-understand English. Avoid unnecessary rare vocabulary and specialist terminology.
+
+Use the original article sentence only when it is clear and suitably concise for learning and dictation. If it is overly complex, create a simpler natural sentence with the same relevant meaning.
 
 ## Output
 
@@ -84,6 +86,7 @@ Produce one batch JSON file:
 - Use Traditional Chinese.
 - Keep meanings concise.
 - Keep examples natural and useful for learning.
+- Make every `example_en` a complete sentence suitable for full-sentence dictation.
 - Do not generate IDs, filenames, paths, categories, dates, audio information, review state, or other application metadata.
 - Do not split the output into separate card files. The application will perform that step.
 - Return JSON only.

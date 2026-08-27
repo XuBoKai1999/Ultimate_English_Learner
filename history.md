@@ -1,6 +1,6 @@
 # Ultimate English Learner — Development History
 
-> Last updated: 2026-08-27 15:13:01 +08:00 (Asia/Taipei)
+> Last updated: 2026-08-27 17:00:22 +08:00 (Asia/Taipei)
 
 本文件供新開發者或新 agent 快速接手。規格以 `arch.md` 為準，施工順序與狀態以 `steps.md` 為準；此處記錄已完成工作、設計演變與目前限制。
 
@@ -62,7 +62,7 @@
 ## Important Decisions
 
 - 不使用 Whisper 做 TTS；Whisper 是 STT，本專案語音生成使用 `edge-tts`。
-- 不在播放時臨時生成音訊；Play 只播放已生成檔案。
+- 目前實作的 Play 只播放已生成音訊；Step 07 規格要求缺檔時 lazy regenerate。
 - 文字與 JSON 是 source of truth；audio 是可重新生成的 derived data。
 - v0 不呼叫 AI API、不自動抓文章、不實作 FSRS、雲端同步或多使用者。
 - 不新增 speculative service layer；目前以小型函式、JSON 與本地檔案完成流程。
@@ -71,10 +71,29 @@
 
 依 `steps.md` 執行 Step 07：
 
-1. 掃描 `cards/card_XXX.json`，找出 `status == learning` 且 `next_review <= today` 的卡片。
-2. 在 Daily Learning 顯示到期卡片並提供最小複習操作。
-3. 更新 `review_stage`、`review_count`、`last_review`、`next_review`。
-4. 支援標記 `known`，使卡片退出一般排程。
+1. 集中加入每日上限、interval、level/overdue weight 與 audio cache 設定。
+2. 實作 New Cards、History Review、Review Mode、Scheduled Dictation、Active Dictation。
+3. 擴充 `graduated` 狀態與 long-term 抽查。
+4. 實作 deterministic Dictation normalization 與 contraction table。
+5. 實作 audio cache 清理及所有播放入口的 lazy TTS regeneration。
+
+### 2026-08-27 16:15:22 +08:00 — Step 07 specification update
+
+- 規格確立 Daily Learning 三區塊與每日 15/10 張上限。
+- 正式學習進度只由完整例句 Dictation 推進；Review Mode 不改 stage。
+- 加入固定 intervals、overdue/level weights、graduation、long-term pool 與 Active Dictation。
+- 確認跨文章同 vocabulary 不合併。
+- audio 定義為 30 天 derived cache，播放缺檔時必須 lazy regenerate。
+- 本次只更新文件與 prompt；Python 實作尚未變更。
+
+### 2026-08-27 17:00:22 +08:00 — Step 07 open decisions resolved
+
+- New Cards 每日 15 張；有 old backlog 時至少保留 3 張，其餘優先最新文章，缺額互補。
+- History Review 每日 10 張；通常 9 learning + 1 graduated，任一 pool 不足時由另一 pool 補位。
+- Dictation 忽略 case、punctuation、空白差異與 standard contraction／expanded form。
+- spelling、word 增減、articles、prepositions、number、tense 與其他文法差異仍必須完全一致。
+- 判定採 deterministic normalization 後 exact comparison，不使用 fuzzy matching 或 AI grading。
+- Step 07 目前沒有待使用者決定的規格阻塞；Python 實作仍未開始。
 
 ## Known Limitations
 
@@ -83,4 +102,3 @@
 - Category 尚無 GUI 管理功能；新增分類需同步修改文件、設定與 Library 骨架。
 - Daily Learning 尚未有 spaced-repetition 行為。
 - 未做自動 GUI 視覺測試；現有測試涵蓋資料合約、目錄讀取、設定、TTS 輸出、prompt 來源表解析與文字／timing 對齊。
-
