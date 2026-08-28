@@ -111,7 +111,11 @@ GUI 提供複製 `prompts/clean_article.md` 的按鈕，並只接收、顯示清
 
 將人工 AI 分析與卡片產生流程接入 `New Article`。
 
-### Stage 1
+### Stage 1 — Full Article Translation
+
+接續 cleaned article 的同一個 AI 對話，GUI 顯示、複製及可確認覆蓋 `prompts/translate_article.md`。使用者貼回完整繁體中文 Markdown，程式驗證非空後保存為 `translation_zh.md`。
+
+### Stage 2 — Article Analysis
 
 使用者將 prompt 接續貼入同一個 AI 對話；Copy 按鈕只複製 prompt，不重貼文章內容：
 
@@ -136,7 +140,7 @@ GUI 提供匯入功能。
 - 同步建立 text 與 audio 的鏡像文章目錄；
 - 將文章移至正確 Library 路徑。
 
-### Stage 2
+### Stage 3 — Card Generation
 
 再次接續同一個 AI 對話；Copy 按鈕只複製 prompt，不附加 article 或 analysis JSON：
 
@@ -381,5 +385,7 @@ Dictation 畫面只保留 Play Word、Play Example、完整句子輸入框與必
 文章播放另提供 Normal／Typewriter 閱讀模式；Typewriter 會讓目前反白朗讀行保持在文字框中央。
 
 Old Articles 提供最近閱讀入口，持久保存去重後最近 10 篇並可直接重新開啟。
+
+單篇文章功能區提供 Change Category 與 Delete Article。兩者都需確認；分類變更同步 text/audio 與 card metadata，刪除同步移除 text/audio。背景 TTS 進行中或目標路徑已存在時拒絕操作。
 
 除非另有指示，不要施工 `arch.md` 中列為 v0 non-goals 的功能。

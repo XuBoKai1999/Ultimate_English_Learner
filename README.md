@@ -5,21 +5,24 @@
 ## Current Status
 
 - Step 01–07 已完成。
-- 最後同步：2026-08-28 13:07:46 +08:00。
+- 最後同步：2026-08-28 14:48:13 +08:00。
 
 ## Features
 
 - 四個首頁入口：Daily Learning、New Article、Old Articles、Material Generation Tasks。
-- 三段連續式 AI prompts：文章清理、文章分析、單字卡生成。
+- 四段連續式 AI prompts：文章清理、全文翻譯、文章分析、單字卡生成。
 - prompt 可在 GUI 編輯、複製，並在確認後覆蓋原檔。
 - 即時 Library 檔案瀏覽器。
 - Old Articles 提供最近閱讀清單，保留最近開啟的 10 篇文章。
+- Old Articles 可經確認後修改文章分類或永久刪除文章，並同步處理鏡像音訊與卡片 metadata。
 - `edge-tts` 背景生成文章、單字／片語及例句 MP3。
 - 多篇教材生成進度與失敗重試。
 - 文章時間軸、拖曳跳轉、雙擊文字跳轉、朗讀行反白及自動捲動。
 - Article 播放器顯示目前播放時間與音檔總時長。
 - 文章朗讀可切換 Normal／Typewriter；Typewriter 讓目前朗讀行保持在閱讀框中央。
 - Article 以可縮放的 Markdown 樣式顯示標題、基本文字格式、程式碼、引用與清單；不處理數學公式。
+- 有全文翻譯時，可按 Show Chinese 將原英文閱讀框展開為同步捲動的英／中雙欄。
+- 缺少全文翻譯時，可從 Article Functions 進入既有翻譯 prompt/editor 補寫。
 - Vocabulary Cards 獨立的短音訊控制與卡片閱讀介面。
 - GUI 整體縮放與閱讀模式設定記憶。
 - Daily Learning 直接顯示 `categories.md` 定義的分類、範圍與建議來源。
@@ -50,10 +53,11 @@ python main.py
 
 1. 將原始文章交給 AI，複製 GUI 顯示的 cleaning prompt。
 2. 將 AI 清理後的文章貼回 New Article 並保存。
-3. 在同一個 AI 對話貼上 analysis prompt，再將 JSON 貼回 GUI。
-4. 繼續貼上 card generation prompt，再將 cards JSON 貼回 GUI。
-5. 程式拆分 cards，並在背景生成所有文章及卡片音訊。
-6. 可返回 Home、繼續建立另一篇文章，或在 Material Generation Tasks 查看進度。
+3. 在同一個 AI 對話貼上 translation prompt，將完整繁體中文 Markdown 貼回 GUI。
+4. 繼續貼上 analysis prompt，再將 JSON 貼回 GUI。
+5. 繼續貼上 card generation prompt，再將 cards JSON 貼回 GUI。
+6. 程式拆分 cards，並在背景生成所有文章及卡片音訊。
+7. 可返回 Home、繼續建立另一篇文章，或在 Material Generation Tasks 查看進度。
 
 Copy 按鈕只複製 prompt，不會附加文章或上一階段 JSON。
 
@@ -64,6 +68,7 @@ library/
 ├── drafts/
 ├── text/Category/YYYY/MM/YYYY-MM-DD-article-title/
 │   ├── article.md
+│   ├── translation_zh.md
 │   ├── analysis.json
 │   ├── cards.json
 │   └── cards/card_XXX.json

@@ -7,7 +7,7 @@ import tkinter.font as tkfont
 from tkinter import messagebox, ttk
 from pathlib import Path
 
-from .articles import import_analysis, import_cards, save_draft
+from .articles import change_article_category, delete_article, import_analysis, import_cards, save_draft, save_translation
 from .player import AudioPlayer
 from .review import complete_scheduled, daily_cards, dictation_matches, history_groups
 from .settings import CATEGORIES, CATEGORIES_FILE, DRAFTS_DIR, LIBRARY_DIR, PROMPTS_DIR, load_reading_mode, load_zoom, save_reading_mode, save_zoom
@@ -200,6 +200,10 @@ class EnglishReader(tk.Tk):
         self._current_page = builder
         self.home_button.pack(side="left")
         self.back_button.pack(side="left", padx=(8, 0))
+        self._show(builder)
+
+    def _replace_page(self, builder):
+        self._current_page = builder
         self._show(builder)
 
     def _go_back(self):
@@ -580,7 +584,7 @@ class EnglishReader(tk.Tk):
         refresh()
         return page
 
-    def _new_article(self, parent):
+    def _new_article(self, parent, translation_target=None):
         page = ttk.Frame(parent, padding=16)
 
         def editor(title, help_text, prompt_name):
@@ -630,7 +634,7 @@ class EnglishReader(tk.Tk):
         def show_cards(article_dir):
             text, actions, status, copy_prompt = editor(
                 "Paste cards.json from AI",
-                "Stage 2: generate exactly one card for every analysis item.",
+                "Stage 3: generate exactly one card for every analysis item.",
                 "generate_cards.md",
             )
 
@@ -657,13 +661,13 @@ class EnglishReader(tk.Tk):
                     command=lambda: self._show_page(self._new_article),
                 ).pack(pady=6)
 
-            ttk.Button(actions, text="Copy Stage 2 Request", command=copy).pack(side="left", padx=4)
+            ttk.Button(actions, text="Copy Stage 3 Request", command=copy).pack(side="left", padx=4)
             ttk.Button(actions, text="Import cards.json", command=save).pack(side="left", padx=4)
 
         def show_analysis(draft):
             text, actions, status, copy_prompt = editor(
                 "Paste analysis.json from AI",
-                "Stage 1: AI must choose an existing Category.",
+                "Stage 2: AI must choose an existing Category.",
                 "analyze_article.md",
             )
 
@@ -685,8 +689,37 @@ class EnglishReader(tk.Tk):
                     return
                 show_cards(article_dir)
 
-            ttk.Button(actions, text="Copy Stage 1 Request", command=copy).pack(side="left", padx=4)
+            ttk.Button(actions, text="Copy Stage 2 Request", command=copy).pack(side="left", padx=4)
             ttk.Button(actions, text="Import analysis.json", command=save).pack(side="left", padx=4)
+
+        def show_translation(draft):
+            text, actions, status, copy_prompt = editor(
+                "Paste the complete Traditional Chinese translation",
+                "Stage 1: translate the full cleaned article without summarizing.",
+                "translate_article.md",
+            )
+
+            def copy():
+                copy_prompt()
+                status.config(text="Article translation request copied to clipboard.")
+
+            def save():
+                try:
+                    save_translation(draft, text.get("1.0", "end-1c"))
+                except (OSError, ValueError) as error:
+                    messagebox.showerror("Cannot save translation", str(error), parent=self)
+                    return
+                if translation_target is not None:
+                    self._replace_page(lambda parent: self._article(parent, Path(draft)))
+                else:
+                    show_analysis(draft)
+
+            ttk.Button(actions, text="Copy Stage 1 Request", command=copy).pack(side="left", padx=4)
+            ttk.Button(actions, text="Save Translation", command=save).pack(side="left", padx=4)
+
+        if translation_target is not None:
+            show_translation(Path(translation_target))
+            return page
 
         text, actions, status, copy_prompt = editor(
             "Paste an AI-cleaned article",
@@ -700,7 +733,7 @@ class EnglishReader(tk.Tk):
             except (OSError, ValueError) as error:
                 messagebox.showerror("Cannot save article", str(error), parent=self)
                 return
-            show_analysis(draft)
+            show_translation(draft)
 
         def copy_cleaning_prompt():
             copy_prompt()
@@ -732,8 +765,8 @@ class EnglishReader(tk.Tk):
         panes = ttk.Notebook(page)
         panes.pack(fill="both", expand=True, pady=(8, 0))
         article_panel = ttk.Frame(panes, padding=6)
-        article_panel.columnconfigure(0, weight=4)
-        article_panel.columnconfigure(1, weight=1)
+        article_panel.columnconfigure(0, weight=4, uniform="article-layout")
+        article_panel.columnconfigure(1, weight=1, uniform="article-layout")
         article_panel.rowconfigure(1, weight=1)
         panes.add(article_panel, text="Article")
 
@@ -743,23 +776,81 @@ class EnglishReader(tk.Tk):
         def load_audio(audio, timing, label, text, on_word=None):
             self._play_or_build(player, text, audio, timing, label, status, on_word)
 
-        article_text = tk.Text(article_panel, wrap="word", font=self.reader_content_font)
-        rendered_article, markdown_tags = markdown_layout(article)
-        article_text.insert("1.0", rendered_article)
-        article_text.tag_configure("syntax", elide=True)
-        article_text.tag_configure("bold", font=self.reader_bold_font)
-        article_text.tag_configure("italic", font=self.reader_italic_font)
-        article_text.tag_configure("code", font=self.reader_code_font, background="#eeeeee")
-        article_text.tag_configure("code_block", font=self.reader_code_font, background="#eeeeee", lmargin1=16, lmargin2=16)
-        article_text.tag_configure("quote", foreground="#555555", lmargin1=20, lmargin2=20)
-        article_text.tag_configure("list", lmargin1=12, lmargin2=30)
-        for level, font in self.reader_heading_fonts.items():
-            article_text.tag_configure(f"heading{level}", font=font, spacing1=10, spacing3=6)
-        for tag, start, end in markdown_tags:
-            article_text.tag_add(tag, f"1.0+{start}c", f"1.0+{end}c")
+        def render_markdown(widget, source):
+            rendered, tags = markdown_layout(source)
+            widget.insert("1.0", rendered)
+            widget.tag_configure("syntax", elide=True)
+            widget.tag_configure("bold", font=self.reader_bold_font)
+            widget.tag_configure("italic", font=self.reader_italic_font)
+            widget.tag_configure("code", font=self.reader_code_font, background="#eeeeee")
+            widget.tag_configure("code_block", font=self.reader_code_font, background="#eeeeee", lmargin1=16, lmargin2=16)
+            widget.tag_configure("quote", foreground="#555555", lmargin1=20, lmargin2=20)
+            widget.tag_configure("list", lmargin1=12, lmargin2=30)
+            for level, font in self.reader_heading_fonts.items():
+                widget.tag_configure(f"heading{level}", font=font, spacing1=10, spacing3=6)
+            for tag, start, end in tags:
+                widget.tag_add(tag, f"1.0+{start}c", f"1.0+{end}c")
+            widget.config(state="disabled")
+
+        translation_path = article_dir / "translation_zh.md"
+        translation = translation_path.read_text(encoding="utf-8") if translation_path.is_file() else None
+        reading_frame = ttk.Frame(article_panel)
+        reading_frame.grid(row=1, column=0, sticky="nsew", padx=(0, 6))
+        reading_frame.columnconfigure(0, weight=1, uniform="bilingual")
+        reading_frame.rowconfigure(0, weight=1)
+        english_frame = ttk.LabelFrame(reading_frame, text="English", padding=4)
+        english_frame.grid(row=0, column=0, sticky="nsew", padx=(0, 3) if translation else 0)
+        english_frame.columnconfigure(0, weight=1)
+        english_frame.rowconfigure(0, weight=1)
+        article_text = tk.Text(
+            english_frame, wrap="word", width=1, height=1, font=self.reader_content_font
+        )
+        render_markdown(article_text, article)
         article_text.tag_configure("spoken", background="#ffe66d", foreground="#111111")
-        article_text.config(state="disabled")
-        article_text.grid(row=1, column=0, sticky="nsew", padx=(0, 6))
+        article_text.grid(row=0, column=0, sticky="nsew")
+        article_scroll = ttk.Scrollbar(english_frame, orient="vertical", command=article_text.yview)
+        article_scroll.grid(row=0, column=1, sticky="ns")
+
+        if translation:
+            translation_visible = {"value": False}
+            reading_frame.columnconfigure(1, weight=1, uniform="bilingual")
+            chinese_frame = ttk.LabelFrame(reading_frame, text="繁體中文", padding=4)
+            chinese_frame.grid(row=0, column=1, sticky="nsew", padx=(3, 0))
+            chinese_frame.columnconfigure(0, weight=1)
+            chinese_frame.rowconfigure(0, weight=1)
+            translation_text = tk.Text(
+                chinese_frame, wrap="word", width=1, height=1, font=self.reader_content_font
+            )
+            render_markdown(translation_text, translation)
+            translation_text.grid(row=0, column=0, sticky="nsew")
+            translation_scroll = ttk.Scrollbar(chinese_frame, orient="vertical", command=translation_text.yview)
+            translation_scroll.grid(row=0, column=1, sticky="ns")
+            syncing_scroll = {"active": False}
+
+            def sync_scrollbar(scrollbar, other, first, last):
+                scrollbar.set(first, last)
+                if not translation_visible["value"] or syncing_scroll["active"]:
+                    return
+                syncing_scroll["active"] = True
+                other.yview_moveto(first)
+                article_text.after_idle(
+                    lambda: syncing_scroll.update(active=False)
+                )
+
+            article_text.configure(
+                yscrollcommand=lambda first, last: sync_scrollbar(
+                    article_scroll, translation_text, first, last
+                )
+            )
+            translation_text.configure(
+                yscrollcommand=lambda first, last: sync_scrollbar(
+                    translation_scroll, article_text, first, last
+                )
+            )
+            chinese_frame.grid_remove()
+            reading_frame.columnconfigure(1, weight=0)
+        else:
+            article_text.configure(yscrollcommand=article_scroll.set)
 
         article_actions = ttk.LabelFrame(article_panel, text="Functions", padding=8)
         article_actions.grid(row=1, column=1, sticky="nsew")
@@ -854,6 +945,93 @@ class EnglishReader(tk.Tk):
             article_actions, text="Typewriter", variable=reading_mode, value="typewriter",
             command=change_reading_mode,
         ).pack(anchor="w")
+        if translation:
+            def toggle_translation():
+                if translation_visible["value"]:
+                    chinese_frame.grid_remove()
+                    reading_frame.columnconfigure(1, weight=0)
+                    translation_button.config(text="Show Chinese")
+                else:
+                    reading_frame.columnconfigure(1, weight=1)
+                    chinese_frame.grid()
+                    translation_text.yview_moveto(article_text.yview()[0])
+                    translation_button.config(text="Hide Chinese")
+                translation_visible["value"] = not translation_visible["value"]
+
+            translation_button = ttk.Button(
+                article_actions, text="Show Chinese", command=toggle_translation
+            )
+            translation_button.pack(fill="x", pady=(12, 0))
+        else:
+            ttk.Button(
+                article_actions,
+                text="Add Chinese Translation",
+                command=lambda: self._show_page(
+                    lambda parent: self._new_article(parent, article_dir)
+                ),
+            ).pack(fill="x", pady=(12, 0))
+
+        ttk.Separator(article_actions).pack(fill="x", pady=16)
+        ttk.Label(article_actions, text="Category").pack(anchor="w")
+        category = tk.StringVar(value=article_dir.relative_to(LIBRARY_DIR / "text").parts[0])
+        category_box = ttk.Combobox(
+            article_actions, textvariable=category, values=CATEGORIES, state="readonly", width=1
+        )
+        category_box.pack(fill="x", pady=(4, 6))
+
+        def article_busy():
+            task = self.audio_tasks.get(str(article_dir))
+            if task and task["status"] in ("Queued", "Generating"):
+                messagebox.showinfo(
+                    "Article is busy",
+                    "Wait for its background audio task to finish before moving or deleting it.",
+                    parent=self,
+                )
+                return True
+            return False
+
+        def move_category():
+            if article_busy():
+                return
+            if category.get() == article_dir.relative_to(LIBRARY_DIR / "text").parts[0]:
+                return
+            if not messagebox.askyesno(
+                "Change category",
+                f'Move this article to "{category.get()}"?',
+                parent=self,
+            ):
+                return
+            try:
+                target = change_article_category(
+                    article_dir, category.get(), LIBRARY_DIR / "text", LIBRARY_DIR / "audio"
+                )
+                remember_recent_article(target)
+            except (OSError, ValueError, json.JSONDecodeError) as error:
+                messagebox.showerror("Cannot change category", str(error), parent=self)
+                return
+            player.stop()
+            self._replace_page(self._old_articles)
+
+        def remove_article():
+            if article_busy():
+                return
+            if not messagebox.askyesno(
+                "Delete article",
+                f'Permanently delete "{article_dir.name}" and its audio?\n\nThis cannot be undone.',
+                icon="warning",
+                parent=self,
+            ):
+                return
+            player.stop()
+            try:
+                delete_article(article_dir, LIBRARY_DIR / "text", LIBRARY_DIR / "audio")
+            except (OSError, ValueError) as error:
+                messagebox.showerror("Cannot delete article", str(error), parent=self)
+                return
+            self._replace_page(self._old_articles)
+
+        ttk.Button(article_actions, text="Change Category", command=move_category).pack(fill="x", pady=2)
+        ttk.Button(article_actions, text="Delete Article", command=remove_article).pack(fill="x", pady=2)
 
         def jump_from_text(event):
             clicked = article_text.count("1.0", article_text.index(f"@{event.x},{event.y}"), "chars")[0]

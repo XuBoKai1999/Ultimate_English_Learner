@@ -135,6 +135,15 @@ v0 已完成；後續只處理實際使用時發現的問題，不預建下一�
 ### 2026-08-28 — Recently read articles
 
 - Old Articles 新增 Recent Articles，記錄並直接開啟去重後最近 10 篇文章。
+- 單篇文章新增確認式 Change Category／Delete Article；同步處理 text/audio 鏡像與 category metadata，並禁止在背景 TTS 進行中操作。
+
+### 2026-08-28 — Full article translation stage
+
+- New Article 在清理與分析之間新增連續式 AI 全文繁體中文翻譯 prompt。
+- 翻譯保存為 `translation_zh.md`；analysis/cards 順延為 Stage 2/3。Old Articles 維持原布局，按 Show Chinese 後才將左側閱讀框等分為同步捲動的英／中雙欄。
+- 修正 zoom 時 Text/Combobox requested width 撐壞布局；Article/Functions 固定 4:1，英／中欄可隨容器縮放。
+- 缺少全文翻譯的 Old Article 可由 Add Chinese Translation 進入既有翻譯 prompt/editor，補寫後直接返回文章。
+- 修正英／中雙向捲動在文章中段因長度換算誤差形成 callback 回授、造成閱讀框跳動閃爍；中文收合時停用同步，展開時以 event-loop lock 防止反推。
 
 ### 2026-08-28 13:37:06 +08:00 — Reading and navigation checkpoint
 
@@ -143,6 +152,14 @@ v0 已完成；後續只處理實際使用時發現的問題，不預建下一�
 - 文章提供平滑 Typewriter 模式並記憶偏好；Old Articles 保留最近閱讀的 10 篇文章。
 - `settings.json` 可同時保存 zoom 與 reading mode，兩者不互相覆蓋。
 - 13 項自動測試通過。
+
+### 2026-08-28 14:48:13 +08:00 — Translation and article management checkpoint
+
+- New Article 已加入完整繁體中文翻譯階段；Old Articles 可補寫缺少的翻譯。
+- Article 維持 4:1 閱讀／功能布局；Show Chinese 只在左側閱讀區展開同步捲動的英／中雙欄。
+- 修正 zoom requested width 與英／中捲動 callback 回授造成的擠壓、跳動及閃爍。
+- Old Articles 支援最近閱讀、修改 Category 與確認式永久刪除。
+- 16 項自動測試通過。
 
 ## Known Limitations
 

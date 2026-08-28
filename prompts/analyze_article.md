@@ -2,7 +2,7 @@
 
 ## Task
 
-Analyze the cleaned English article you just produced for English-learning purposes.
+Analyze the cleaned English article produced earlier in this conversation, before its Chinese translation, for English-learning purposes.
 
 Your job is to:
 
@@ -92,7 +92,7 @@ Specialized terminology may still be selected when it is important for understan
 
 - Use the article title when available.
 - Select exactly one Category.
-- Every item must occur in the cleaned article you just produced.
+- Every item must occur in the cleaned English article produced earlier in this conversation.
 - Do not duplicate the same item.
 - Do not generate definitions, translations, examples, notes, scores, IDs, or learning-state data.
 - Return JSON only.

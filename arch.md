@@ -62,9 +62,11 @@ GUI 直接讀取 `categories.md` 的 Default Categories 表格，逐項顯示 Ca
 ```text
 AI-cleaned article input
 → article.md
-→ Stage 1 AI analysis
+→ Stage 1 full Traditional Chinese translation
+→ translation_zh.md
+→ Stage 2 AI analysis
 → analysis.json
-→ Stage 2 card generation
+→ Stage 3 card generation
 → cards.json
 → import / split
 → save
@@ -78,6 +80,12 @@ AI-cleaned article input
 閱讀頁的功能控制使用較小字型；Article、Vocabulary List 與卡片正文使用較大內容字型。GUI 縮放時兩級字型維持比例同步縮放。
 
 Article 分頁頂端顯示完整音訊時間軸，下方左側為正文、右側為功能區。Vocabulary Cards 分頁左側為短音訊控制與清單，右側為卡片內容；卡片音訊不顯示時間軸。
+
+Article 預設維持左側英文閱讀區、右側 Functions 的既有布局。存在 `translation_zh.md` 時，Functions 顯示 Show Chinese；按下後只將左側閱讀區等分為英文／繁體中文雙欄，右側功能區不移動。任一側依相對百分比同步捲動；可再次收合中文，不建立逐句 alignment data。沒有翻譯檔的舊文章維持英文單欄。
+
+缺少 `translation_zh.md` 時，Functions 顯示 Add Chinese Translation，重用 New Article 的 translation prompt/editor；保存後只補寫現有文章並返回閱讀頁，不重跑 analysis/cards 或建立新 article unit。
+
+Article 閱讀區與 Functions 固定使用 4:1 layout weight；英／中 Text widgets 不得以預設字元寬度撐大容器，GUI zoom 只能縮放內容，不得改變區域比例或擠掉功能區。
 
 切換分頁時立即停止音訊；進入 Article 分頁時立即將播放器來源重設為文章音訊，但將 MP3 解碼延後至上方播放器 Play 或文章雙擊操作，避免播放器保留上一張單字卡音訊，也避免分頁切換卡頓。
 
@@ -100,6 +108,10 @@ Category
 - 全文 TTS；
 - 該文章的單字片語卡；
 - 單字、片語與例句 TTS。
+- 從既有 Categories 手動修改分類；同步移動 text/audio 鏡像並更新 analysis 與 card category；
+- 經確認後永久刪除文章及其鏡像音訊。
+
+背景音訊任務仍在 Queued／Generating 時不得修改分類或刪除，以避免路徑競態。分類目標已存在時不得覆蓋。
 
 ------
 
@@ -112,6 +124,7 @@ Category
 ```text
 Article Unit
 ├── article.md (cleaned article)
+├── translation_zh.md
 ├── analysis
 ├── cards
 └── audio
@@ -154,7 +167,11 @@ cleaned article text
 
 AI 負責辨識並移除導覽、廣告、cookie、newsletter、推薦內容與其他網頁雜訊，保留文章標題、小標與正文。程式只接收清理後文字並保存為 `article.md`，不保存清理前內容，也不自行清理。
 
-### Stage 1 — Article Analysis
+### Stage 1 — Full Article Translation
+
+使用 `prompts/translate_article.md` 接續同一個 AI 對話，將剛完成的 cleaned English article 完整翻譯為繁體中文 Markdown。不得摘要、刪節或加入解說；GUI 驗證非空後保存為 `translation_zh.md`。
+
+### Stage 2 — Article Analysis
 
 使用：
 
@@ -185,7 +202,7 @@ AI 負責：
 
 詳細規則與 JSON schema 以 `analyze_article.md` 為準。
 
-### Stage 2 — Card Generation
+### Stage 3 — Card Generation
 
 使用：
 
@@ -277,7 +294,7 @@ Category 用於文章管理，不要求嚴格學術分類。
 
 ## 7. Cards
 
-Stage 2 產生單一批次檔案：
+Stage 3 產生單一批次檔案：
 
 ```text
 cards.json
@@ -485,8 +502,9 @@ cards/
 其中：
 
 - `article.md`：清理後文章；
-- `analysis.json`：Stage 1 AI 原始輸出；
-- `cards.json`：Stage 2 AI 批次原始輸出；
+- `translation_zh.md`：Stage 1 完整繁體中文翻譯；
+- `analysis.json`：Stage 2 AI 原始輸出；
+- `cards.json`：Stage 3 AI 批次原始輸出；
 - `cards/`：程式拆分後的獨立卡片。
 
 音訊側保存對應 TTS 檔案。

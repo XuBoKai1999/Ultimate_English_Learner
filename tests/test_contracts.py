@@ -6,7 +6,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 from unittest.mock import patch
 
-from src.articles import article_directory_name, import_analysis, import_cards, save_draft
+from src.articles import article_directory_name, change_article_category, delete_article, import_analysis, import_cards, save_draft, save_translation
 from src.contracts import validate_analysis, validate_card, validate_cards
 from src.gui import align_word_spans, centered_scroll_fraction, list_directory, load_recent_articles, markdown_layout, nearest_span_index, parse_category_sources, remember_recent_article
 from src.player import AudioPlayer, format_audio_time
@@ -186,12 +186,33 @@ class ContractTests(unittest.TestCase):
             loaded = load_recent_articles(root, recent)
             self.assertEqual((len(loaded), loaded[0]), (10, articles[5].resolve()))
 
+    def test_article_category_move_and_delete_include_audio(self):
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            text, audio = root / "text", root / "audio"
+            article = text / "Old" / "2026" / "08" / "2026-08-28-Title"
+            (article / "cards").mkdir(parents=True)
+            (article / "article.md").write_text("x", encoding="utf-8")
+            (article / "analysis.json").write_text(json.dumps({"category": "Old"}), encoding="utf-8")
+            (article / "cards" / "card_001.json").write_text(json.dumps({"category": "Old"}), encoding="utf-8")
+            mirrored = audio / article.relative_to(text)
+            mirrored.mkdir(parents=True)
+            (mirrored / "article.mp3").touch()
+            moved = change_article_category(article, "New", text, audio)
+            self.assertEqual(json.loads((moved / "cards" / "card_001.json").read_text())["category"], "New")
+            self.assertTrue((audio / moved.relative_to(text) / "article.mp3").is_file())
+            delete_article(moved, text, audio)
+            self.assertFalse(moved.exists())
+            self.assertFalse((audio / moved.relative_to(text)).exists())
+
     def test_ai_cleaned_article_save(self):
         cleaned = "# Title\n\nHello world."
         with TemporaryDirectory() as directory:
             root = Path(directory)
             draft = save_draft(cleaned, root / "drafts", datetime(2026, 8, 27, 12))
             self.assertEqual((draft / "article.md").read_text(encoding="utf-8"), cleaned + "\n")
+            save_translation(draft, "# 標題\n\n內文。")
+            self.assertTrue((draft / "translation_zh.md").is_file())
             analysis = {
                 "title": "Title",
                 "category": "AI & Technology",
