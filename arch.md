@@ -1,6 +1,6 @@
 # English Reader — Architecture v0
 
-> Specification updated: 2026-08-27 17:00:22 +08:00. Step 07 requirements are not yet implemented.
+> Synchronized with implementation: 2026-08-28 11:38:06 +08:00.
 
 ## 1. Goal
 
@@ -43,9 +43,8 @@ GUI 有四個主要入口：
 
 顯示：
 
-- **New Cards**：每日首次學習 cards；
-- **History Review**：每日排程複習及 Dictation；
-- **Active Dictation**：不限量的主動聽寫；
+- **New Cards**：尚未完成首次 encounter 的所有 cards；
+- **History Review**：依固定複習週期分層顯示的所有到期 cards；
 - 建議尋找新文章的來源。
 
 來源與分類見 `categories.md`。
@@ -308,7 +307,7 @@ example_zh
 article reference
 ```
 
-### Learning state
+### Schedule bookkeeping
 
 ```text
 status
@@ -318,85 +317,69 @@ last_review
 next_review
 ```
 
-不要要求 AI 產生 learning state。
+不要要求 AI 產生 schedule bookkeeping。
 
-不同文章中的相同 vocabulary 保留為各文章自己的 card，不做跨文章 deduplication、merge、global vocabulary index 或 frequency database。重複出現視為額外 exposure；使用者已熟悉時可將個別 card 標記為 `known`。
+不同文章中的相同 vocabulary 保留為各文章自己的 card，不做跨文章 deduplication、merge、global vocabulary index 或 frequency database。重複出現視為額外 exposure。
 
 ------
 
 ## 8. Review
 
-v0 直接使用每篇文章既有 card 與 review state，不建立每日副本或另一套狀態。
+v0 直接使用每篇文章既有 card 與 schedule bookkeeping，不建立每日副本或另一套狀態。
 
 ### 8.1 Central Configuration
 
 下列數值必須集中管理：
 
 ```text
-MAX_NEW_CARDS_PER_DAY = 15
-MAX_HISTORY_CARDS_PER_DAY = 10
 INTERVALS = [2, 5, 10, 21, 45, 90, 180]
-LEVEL_WEIGHTS = {general: 4, domain: 2, specialized: 1}
-OVERDUE_WEIGHTS = {due_today: 1, overdue_1_7: 2, overdue_8_30: 4, overdue_over_30: 8}
 AUDIO_CACHE_DAYS = 30
 ```
 
-不得散落 hard-code，不加入 FSRS。
+不得散落 hard-code，不加入 FSRS、level/overdue weights、graduated pool 或 mastery scoring。
 
-### 8.2 Status and Stages
+### 8.2 Time-only Schedule
 
-至少支援：
+派發只依 article 日期與固定週期，不依 Dictation 成功／失敗，也不判斷是否已學會。文章日期取自資料夾名稱 `YYYY-MM-DD-文章標題`。
+
+Stage 0 為文章建立日的 New Card encounter；後續 History Review dates 從文章日固定起算：
 
 ```text
-learning
-graduated
-known
+article day
+→ +2d
+→ +7d
+→ +17d
+→ +38d
+→ +83d
+→ +173d
+→ +353d
+→ schedule complete
 ```
 
-- `learning`：首次學習或正常排程中；
-- `graduated`：完成主要 Dictation intervals，進入 long-term pool；
-- `known`：使用者主動表示已會，退出一般排程。
-
-`review_stage` 沿用既有欄位。Stage 0 表示尚未成功完成首次 Dictation；每次成功才加 1。完成最後 interval 後改為 `graduated`。
+這些是 `INTERVALS` 的累積日期，不因延遲完成或答案結果重新起算。沿用 `review_stage` 只記錄下一個尚未完成的 scheduled encounter；沿用 `last_review`、`next_review` 與 `review_count` 作 bookkeeping，不代表 mastery。既有 `status` 不參與候選篩選，不再加入 `known` 或 `graduated` 行為。
 
 ### 8.3 New Cards
 
-每日最多 15 張。候選為 `status == learning AND review_stage == 0 AND next_review <= today`；成功後進入後續 History Review 排程，失敗則維持 Stage 0 並於明日再派發。
+候選為尚未完成 Stage 0 且 article date 已到的所有 cards，不設每日數量上限。開始前可選擇依 article/card 原始順序派發，或將本次候選隨機排序。完成當次 encounter 後，不論 Dictation 結果，進入固定 History Review 時間表。
 
-選取時：
-
-- 優先近期文章；
-- 依既有 level 權重 `general 4 / domain 2 / specialized 1`；
-- 超額留在 backlog；候選不足不補滿；
-- 若存在 old backlog，每日至少保留 3 個名額；其餘名額優先最新文章；任一側候選不足時由另一側補位，不為配額留空。
-
-v0 將 old backlog 定義為：article 建立時間早於目前最新 eligible article 的 Stage 0 candidates。保留名額從 old backlog 中優先較舊文章；其餘名額依 article 建立時間由新到舊。相同 article 優先度內使用既有 level weight，最後再隨機。
+當天已派發的 cards 必須留在當日 New Cards pool，離開頁面或完成一次後仍可重複練習；同一卡一天只推進一次 scheduled encounter。
 
 ### 8.4 History Review
 
-每日總上限 10 張，不是每個 stage 各 10 張。主要候選：
-
-```text
-next_review <= today
-AND status == learning
-AND review_stage > 0
-```
-
-抽取優先考慮 overdue 程度、level，最後才隨機；基礎權重可使用：
-
-```text
-weight = level_weight * overdue_weight
-```
-
-overdue 權重為今天到期 ×1、逾期 1–7 天 ×2、8–30 天 ×4、超過 30 天 ×8，避免舊 card 永久沉沒。
-
-History Review 通常為 9 張 learning 加 1 張 `graduated` long-term card。若 graduated pool 為空，該名額改由 learning 補上；若 learning 不足，graduated 可補滿其餘名額。不得只為維持 9:1 配額而讓每日 10 張名額空置。畢業卡通過後保持 `graduated`；失敗則回到 `learning` 並從較後 stage 恢復，v0 可使用 Stage 5，不回 Stage 0。不要建立無限延伸的 long-term fixed intervals。
+候選為下一個固定 scheduled date 已到且尚未完成的所有 cards，不設每日數量上限。History Review 入口先按複習週期分層；每層明確顯示 interval、相對 article date 的累積天數與 card 數量，例如 `5-day interval / appeared 7 days ago / 31 cards`。使用者選定週期後，再選擇依原始順序或隨機派發。不同週期不得混在同一 session；不使用 vocabulary level、overdue weight、graduated reservation 或 long-term pool。
 
 ### 8.5 Review Mode and Dictation
 
-一般 Review Mode 支援 English → Chinese 與 Chinese → English，可查看 `text`、`meaning_zh`、`example_en`、`example_zh` 及 TTS。它只供熟悉，不更新 `review_stage`；可標記 `known`。
+點入 New Cards，或點入 History Review 的某個週期後，先選擇 English → Chinese、Chinese → English 或 Dictation，再選擇順序／隨機。三種模式使用獨立畫面，不得把控制項混在一起。
 
-正式通關只使用完整 `example_en` Dictation：
+Daily Learning 的多層流程必須提供全域 Back，可逐層返回上一頁以更換順序、模式或 History Review 週期，不必回 Home 重新開始。
+
+- English → Chinese：先顯示 `text`、`example_en`，按「顯示答案」後才顯示 `meaning_zh`、`example_zh`。
+- Chinese → English：先顯示 `meaning_zh`、`example_zh`，按「顯示答案」後才顯示 `text`、`example_en`。
+- 每張 card 上方提供兩個且僅兩個音訊入口：Play Word 播放 `text`，Play Example 播放 `example_en`；不得在下方重複放置播放按鈕。
+- session 左側顯示本次全部 cards 的可點選摘要清單，並提供顯示／隱藏；卡片操作提供 Previous，不能只能單向 Next。
+
+Dictation 使用完整 `example_en`：
 
 ```text
 play example_en
@@ -405,12 +388,9 @@ play example_en
 → check answer
 ```
 
-Scheduled Dictation：
+Dictation 畫面只保留 Play Word、Play Example、完整句子輸入框及必要的 Previous、Next、送出／檢查操作，不顯示另外兩種 Review Mode 的控制項。
 
-- Pass：`review_stage += 1`、`last_review = today`、依下一 interval 設定 `next_review`；最後 stage 完成後設為 `graduated`；當天不再派發同一卡。
-- Fail：stage 不變、`last_review = today`、`next_review = tomorrow`；不 reset，當天不再派發。
-
-interval 表示距離上一次成功 Dictation 的天數：首次成功後依序 `+2d → +5d → +10d → +21d → +45d → +90d → +180d → graduated`。
+Scheduled Dictation 完成後，不論 Pass／Fail，都將該 scheduled encounter 標記完成、更新 bookkeeping，並指向自 article date 計算的下一個固定日期；同一卡當天不再派發。答案只作即時回饋，不推進或延後 mastery stage，因為沒有 mastery state。
 
 Dictation 答案使用 deterministic normalization，之後做 normalized token sequence 的 exact comparison；禁止 fuzzy matching 與 AI grading。
 
@@ -425,13 +405,6 @@ Normalization 依固定順序：
 大小寫、標點、首尾／重複空白及 contraction／expanded form 視為相同。拼字、單字增減、articles、prepositions、number、tense 與其他文法差異不得忽略；數字與英文數字詞不得互換。
 
 對 `he's`、`she'd` 等可有多種標準展開的 contraction，normalizer 產生有限候選 token sequences；兩邊只要有一組 normalized sequence 完全相等即通過。不得因此把兩個本來都已展開但文法不同的句子視為相同。contraction table 必須集中管理並有測試。
-
-### 8.6 Active Dictation
-
-Active Dictation 不受每日 15/10 張限制，可持續至使用者停止。候選包含 overdue/due learning、Stage 0、graduated，優先順序為 overdue、due、unlearned，再依既有 level 權重處理同優先度項目。
-
-- Pass：與 Scheduled Dictation 相同，具有正式排程效力；最後 stage 後畢業。本次 session 已成功的 card 不立即重複派發。
-- Fail：`review_stage`、`status`、`next_review` 全部不變，不降級、不 reset、不延後、不建立 penalty；card 留在原 pool，之後仍可抽到。
 
 ------
 
@@ -483,19 +456,21 @@ Category / Year / Month
 
 文字與音訊使用鏡像目錄。
 
+文章資料夾使用 `YYYY-MM-DD-文章標題`。標題保留可讀文字，只清除作業系統不允許的字元並限制長度；同日同名依序加 `-2`、`-3`。日期同時是 Step 07 time-only schedule 的基準。
+
 ```text
 library/
 ├── text/
 │   └── Category/
 │       └── YYYY/
 │           └── MM/
-│               └── article-id/
+│               └── YYYY-MM-DD-article-title/
 │
 └── audio/
     └── Category/
         └── YYYY/
             └── MM/
-                └── article-id/
+                └── YYYY-MM-DD-article-title/
 ```
 
 文字側至少保存：

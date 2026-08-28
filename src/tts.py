@@ -1,10 +1,11 @@
 import asyncio
 import json
+from datetime import datetime, timedelta
 from pathlib import Path
 
 import edge_tts
 
-from .settings import TTS_VOICE
+from .settings import AUDIO_CACHE_DAYS, TTS_VOICE
 
 
 async def _synthesize(text, audio_path, timing_path, voice=TTS_VOICE):
@@ -61,3 +62,18 @@ async def _build(article_dir, audio_dir, progress=None):
 
 def build_article_audio(article_dir, audio_dir, progress=None):
     asyncio.run(_build(article_dir, audio_dir, progress))
+
+
+def build_speech(text, audio_path, timing_path):
+    asyncio.run(_synthesize(text, Path(audio_path), Path(timing_path)))
+
+
+def cleanup_audio_cache(audio_root, days=AUDIO_CACHE_DAYS, now=None):
+    cutoff = (now or datetime.now()).timestamp() - timedelta(days=days).total_seconds()
+    removed = 0
+    for audio in Path(audio_root).rglob("*.mp3"):
+        if audio.stat().st_mtime < cutoff:
+            audio.unlink()
+            audio.with_suffix(".timing.json").unlink(missing_ok=True)
+            removed += 1
+    return removed

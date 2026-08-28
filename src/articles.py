@@ -1,9 +1,20 @@
 import json
+import re
 import shutil
 from datetime import datetime
 from pathlib import Path
 
 from .contracts import validate_analysis, validate_card, validate_cards_match_analysis
+
+
+def article_directory_name(title, now, parent):
+    title = re.sub(r'[<>:"/\\|?*\x00-\x1f]+', "-", title).strip(" .-")
+    title = re.sub(r"\s+", " ", title)[:120].rstrip(" .-") or "Untitled"
+    base = f"{now:%Y-%m-%d}-{title}"
+    name, suffix = base, 2
+    while (Path(parent) / name).exists():
+        name, suffix = f"{base}-{suffix}", suffix + 1
+    return name
 
 def save_draft(cleaned, drafts_dir, now=None):
     if not cleaned.strip():
@@ -20,7 +31,11 @@ def import_analysis(draft, analysis, categories, text_dir, audio_dir, now=None):
     validate_analysis(analysis, categories)
     draft = Path(draft)
     now = now or datetime.now()
-    relative = Path(analysis["category"], now.strftime("%Y"), now.strftime("%m"), draft.name)
+    parent = Path(text_dir, analysis["category"], now.strftime("%Y"), now.strftime("%m"))
+    relative = Path(
+        analysis["category"], now.strftime("%Y"), now.strftime("%m"),
+        article_directory_name(analysis["title"], now, parent),
+    )
     target = Path(text_dir) / relative
     if target.exists():
         raise FileExistsError(target)

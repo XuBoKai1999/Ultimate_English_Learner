@@ -1,6 +1,6 @@
 # English Reader — Implementation Steps
 
-> Specification updated: 2026-08-27 17:00:22 +08:00. Step 07 requirements are not yet implemented.
+> Synchronized with implementation: 2026-08-28 11:38:06 +08:00.
 
 ## Current Status
 
@@ -12,7 +12,7 @@
 | Step 04 — Manual AI Workflow | ✅ Completed |
 | Step 05 — Card Import & Old Articles | ✅ Completed |
 | Step 06 — TTS | ✅ Completed |
-| Step 07 — Review System | ⏳ Next; not implemented |
+| Step 07 — Review System | ✅ Completed |
 
 依 `arch.md`、`categories.md` 與 `prompts/` 實作。
 
@@ -132,7 +132,7 @@ GUI 提供匯入功能。
 
 - 驗證 JSON；
 - 讀取 Category；
-- Category 確定後，由 GUI 依當下年月建立 `Category/YYYY/MM/article-id/`；不得預先建立年月目錄；
+- Category 確定後，由 GUI 依當下年月建立 `Category/YYYY/MM/YYYY-MM-DD-文章標題/`；標題需清除非法檔名字元，同日同名加數字 suffix；不得預先建立年月目錄；
 - 同步建立 text 與 audio 的鏡像文章目錄；
 - 將文章移至正確 Library 路徑。
 
@@ -233,7 +233,7 @@ Category
 音訊保存於：
 
 ```text
-library/audio/Category/YYYY/MM/article-id/
+library/audio/Category/YYYY/MM/YYYY-MM-DD-article-title/
 ```
 
 並與文字 Library 鏡像。
@@ -273,58 +273,58 @@ cards/card_XXX/example.timing.json
 
 ## Step 07 — Review System
 
-狀態：尚未施工。既有 Daily Learning 來源表保留，新增以下三個區塊：
+狀態：已完成。Daily Learning 來源表保留，學習區塊為：
 
 | 區塊 | 功能 |
 | --- | --- |
-| **New Cards** | 每日首次學習 cards |
-| **History Review** | scheduled spaced-repetition |
-| **Active Dictation** | 不限量主動聽寫 |
+| **New Cards** | 所有尚未完成首次 encounter 的 cards |
+| **History Review** | 按固定週期分層的所有到期 cards |
 
 ### Step 07.1 — Central Configuration and Card Contract
 
 集中定義，不得散落 hard-code：
 
 ```text
-MAX_NEW_CARDS_PER_DAY = 15
-MAX_HISTORY_CARDS_PER_DAY = 10
 INTERVALS = [2, 5, 10, 21, 45, 90, 180]
-LEVEL_WEIGHTS = {general: 4, domain: 2, specialized: 1}
-OVERDUE_WEIGHTS = {due_today: 1, overdue_1_7: 2, overdue_8_30: 4, overdue_over_30: 8}
 AUDIO_CACHE_DAYS = 30
 ```
 
-- `status` 擴充為 `learning | graduated | known`；不得另建 learning state。
+- 派發只依 article date 與固定 schedule；不使用 mastery status、level/overdue weight、graduated pool 或 FSRS。
+- article date 從 `YYYY-MM-DD-文章標題` 資料夾取得。
+- 沿用 `review_stage`、`review_count`、`last_review`、`next_review` 只記錄 scheduled encounters，不代表是否學會；`status` 不參與候選篩選。
 - 保留每篇文章自己的 cards；不同文章的同 vocabulary 不 deduplicate、不 merge。
 - 不建立 global vocabulary index、frequency database 或額外資料庫。
 
 ### Step 07.2 — New Cards
 
-- 每日最多 15 張；候選不足不補滿。
-- 候選：`status == learning AND review_stage == 0 AND next_review <= today`。
-- old backlog 定義為 article 建立時間早於目前最新 eligible article 的 Stage 0 candidates。
-- old backlog 存在時至少保留 3 個名額；其餘優先最新文章；任一側不足時由另一側補位，不保留空位。
-- 保留名額優先較舊 article，其餘依 article 時間由新到舊；同 article 優先度內使用既有 level 權重，最後隨機。
-- Review Mode 只供熟悉，不推進 stage；正式通關使用完整例句 Dictation。
+- 候選為 article date 已到且尚未完成 Stage 0 的所有 cards，不設每日上限。
+- session 開始前提供「按原始順序」與「隨機派發」。
+- 完成 encounter 後無論 Dictation Pass／Fail，都進入固定 History Review schedule。
+- 當天派發的 pool 在當日保持可見並可反覆練習；同一卡一天最多推進一次 schedule。
 
 ### Step 07.3 — History Review
 
-- 每日總上限 10 張，不按 stage 分別計算。
-- learning 候選：`next_review <= today AND status == learning AND review_stage > 0`。
-- 依 overdue、level、最後隨機抽取，可用 `level_weight * overdue_weight`。
-- overdue 權重：今天 ×1、1–7 天 ×2、8–30 天 ×4、超過 30 天 ×8。
-- 通常選 9 張 learning 加 1 張 graduated；graduated 為空則由 learning 補，learning 不足則由 graduated 補，不得為維持比例留下空位。
+- 顯示所有到期 cards，不設每日上限。
+- 固定日期從 article date 累積 `INTERVALS`：article day、+2、+7、+17、+38、+83、+173、+353 天。
+- History Review 入口先按週期分層；每層顯示 interval、距 article date 的累積天數與 card 數量，讓使用者知道卡片是幾天前出現的。
+- 選定週期後提供「按原始順序」與「隨機派發」；不同週期不得混合。
+- 延遲完成與答案結果都不得重新起算日期。
 
 ### Step 07.4 — Review Mode and Scheduled Dictation
 
-Review Mode 支援 English → Chinese、Chinese → English，顯示雙語內容與 TTS，但不更新 stage；可標記 `known`。
+New Cards，或 History Review 選定週期後，先選 English → Chinese、Chinese → English 或 Dictation，再選順序／隨機。三種模式使用獨立畫面：
 
-Dictation 播放 `example_en`、隱藏英文全文、要求輸入完整句子。只有成功才推進：
+- 全域 Back 可逐層返回順序、模式、週期或 Daily Learning 頁面，不必回 Home。
 
-- Pass：stage +1、更新 `last_review`，依 `INTERVALS` 設定 `next_review`；最後 stage 後 `graduated`；當天不再派發。
-- Fail：stage 不變、`last_review = today`、`next_review = tomorrow`；不 reset，當天不再派發。
+- English → Chinese：顯示英文，按「顯示答案」後才顯示中文。
+- Chinese → English：顯示中文，按「顯示答案」後才顯示英文。
+- 每張 card 上方只有 Play Word 與 Play Example；不得在內容下方重複播放控制。
+- 左側提供可點選、可隱藏的本次 card 清單；提供 Previous 與 Next／送出流程。
 
-排程：首次成功後 `+2d → +5d → +10d → +21d → +45d → +90d → +180d → graduated`。
+Dictation 畫面只保留 Play Word、Play Example、完整句子輸入框與必要的 Previous、Next、送出／檢查操作。播放 `example_en`、隱藏英文全文、要求輸入完整句子。Pass／Fail 只提供回饋，不影響派發：
+
+- 完成 scheduled encounter 後，不論結果都更新 bookkeeping 並指向從 article date 計算的下一固定日期。
+- 同一卡當天不再派發；完成 +353 天 encounter 後 schedule complete。
 
 答案判定只使用 deterministic normalization 後的 exact token comparison，不使用 fuzzy matching 或 AI grading：
 
@@ -336,16 +336,7 @@ Dictation 播放 `example_en`、隱藏英文全文、要求輸入完整句子。
 
 忽略 case、punctuation、首尾／重複空白及 contraction／expanded form；不得忽略 spelling、word omission/addition、articles、prepositions、number、tense 或其他 grammar differences。數字與英文數字詞不互換。歧義 contraction 產生有限展開候選，任一 normalized sequence 完全吻合才通過；不得讓兩個不同的 expanded sentences 互相等價。contraction table 與 normalization 必須有單元測試。
 
-graduated 通過抽查保持畢業；失敗回 `learning` 並從較後 stage 恢復，v0 可用 Stage 5，不回 Stage 0；不建立無限 long-term intervals。
-
-### Step 07.5 — Active Dictation
-
-- 不受每日 15/10 張限制，持續至使用者停止。
-- 候選包含 overdue/due learning、Stage 0 與 graduated；優先 overdue、due、unlearned，同優先度使用既有 level 權重。
-- Pass 與 Scheduled Dictation 相同並正式更新排程；本 session 已成功的 card 不立即重複。
-- Fail 不改 stage、status 或 next_review，不降級、不 reset、不延後、不 penalty；之後仍可再次抽到。
-
-### Step 07.6 — TTS Cache and Lazy Regeneration
+### Step 07.5 — TTS Cache and Lazy Regeneration
 
 - article text 與 JSON/card data 為 canonical；audio 只是 derived/cache data。
 - 只可清除超過 `AUDIO_CACHE_DAYS` 且未使用的 audio，不得刪除 text 或 JSON。
@@ -354,17 +345,20 @@ graduated 通過抽查保持畢業；失敗回 `learning` 並從較後 stage 恢
 
 ### Completion Criteria
 
-- 三個 Daily Learning 區塊可操作；
-- 每日 15 張 New Cards 與總計 10 張 History Review 上限正確；
-- Review Mode 不改 stage，Scheduled／Active Dictation 依規則更新；
-- `learning`、`graduated`、`known` 狀態正確流轉；
-- graduated long-term 抽查與失敗恢復正確；
+- New Cards 與 History Review 兩個學習區塊可操作，且不限制每日張數；
+- History Review 可按週期分層，並顯示 interval、累積天數與 card 數量；
+- 三種學習模式分開，且順序／隨機派發均可操作；
+- 每張 card 的 Play Word 與 Play Example 可用，沒有重複播放按鈕；
+- 當日 cards 完成後仍留在當日 pool，且可用 Previous 或左側清單返回；
+- 所有 scheduled dates 固定由 article date 推導，Pass／Fail 不改變時間表；
+- New／History 只按時間派發，不使用 mastery 或 vocabulary level；
+- Dictation normalization 與 exact comparison 正確；
 - audio cache 只清 audio，且所有播放入口可 lazy regenerate；
 - categories 來源表繼續正常顯示。
 
 ### Decisions Before Coding
 
-New Cards backlog 配額、graduated 配額與 Dictation normalization 已於 2026-08-27 17:00:22 +08:00 確定。目前沒有必須由使用者先決定的 Step 07 規格事項。
+2026-08-28 改為 time-only schedule；先前的 backlog reservation、level/overdue weights、known/graduated 與 mastery-dependent progression 全部撤銷。其後再取消 New／History 每日上限與 Active Dictation，新增 History Review 週期分層、順序／隨機派發、三種模式分頁及 card 雙播放鍵。Dictation normalization 與 TTS cache 規格保留。
 
 ------
 

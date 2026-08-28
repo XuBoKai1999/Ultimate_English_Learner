@@ -1,21 +1,82 @@
 import json
+import os
 import unittest
-from datetime import datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from tempfile import TemporaryDirectory
 from unittest.mock import patch
 
-from src.articles import import_analysis, import_cards, save_draft
+from src.articles import article_directory_name, import_analysis, import_cards, save_draft
 from src.contracts import validate_analysis, validate_card, validate_cards
 from src.gui import align_word_spans, list_directory, nearest_span_index, parse_category_sources
+from src.review import complete_scheduled, daily_cards, dictation_matches, due_date, history_groups
 from src.settings import load_zoom, save_zoom
-from src.tts import build_article_audio
+from src.tts import build_article_audio, cleanup_audio_cache
 
 
 CATEGORIES = ["AI & Technology", "Uncategorized"]
 
 
 class ContractTests(unittest.TestCase):
+    def test_time_only_review_and_dictation(self):
+        card = {
+            "article_id": "2026-08-01-Title", "review_stage": 2,
+            "review_count": 1, "last_review": None, "next_review": "2026-08-08",
+        }
+        self.assertEqual(due_date(card), date(2026, 8, 8))
+        self.assertTrue(dictation_matches("  HE'S here! ", "He is here."))
+        self.assertFalse(dictation_matches("He was here.", "He is here."))
+
+    def test_unlimited_daily_cards_and_history_cycles(self):
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            article = root / "Category" / "2026" / "08" / "2026-08-01-Title" / "cards"
+            article.mkdir(parents=True)
+            for index in range(27):
+                card = {
+                    "id": f"card_{index:03d}", "article_id": "2026-08-01-Title",
+                    "review_stage": 0 if index < 16 else 1, "review_count": 0,
+                    "last_review": None, "next_review": "2026-08-01",
+                }
+                (article / f'card_{index:03d}.json').write_text(json.dumps(card), encoding="utf-8")
+            new, history = daily_cards(root, date(2026, 8, 28))
+            self.assertEqual((len(new), len(history)), (16, 11))
+            self.assertEqual(history_groups(history)[0][1:3], (2, 2))
+            complete_scheduled(new[0], date(2026, 8, 28))
+            card_path = new[0]["_path"]
+            saved = json.loads(card_path.read_text(encoding="utf-8"))
+            self.assertEqual((saved["review_stage"], saved["next_review"]), (1, "2026-08-03"))
+            new_again, _ = daily_cards(root, date(2026, 8, 28))
+            self.assertEqual(len(new_again), 16)
+            complete_scheduled(new_again[0], date(2026, 8, 28))
+            saved_again = json.loads(card_path.read_text(encoding="utf-8"))
+            self.assertEqual(saved_again["review_stage"], 1)
+
+    def test_audio_cache_removes_only_old_audio(self):
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            old = root / "old.mp3"
+            timing = root / "old.timing.json"
+            keep = root / "article.md"
+            for path in (old, timing, keep):
+                path.write_text("x", encoding="utf-8")
+            timestamp = (datetime(2026, 8, 28) - timedelta(days=31)).timestamp()
+            os.utime(old, (timestamp, timestamp))
+            self.assertEqual(cleanup_audio_cache(root, 30, datetime(2026, 8, 28)), 1)
+            self.assertFalse(old.exists())
+            self.assertFalse(timing.exists())
+            self.assertTrue(keep.exists())
+
+    def test_article_directory_name_is_readable_and_safe(self):
+        with TemporaryDirectory() as directory:
+            now = datetime(2026, 8, 28)
+            self.assertEqual(
+                article_directory_name('A: Useful / Title?', now, directory),
+                "2026-08-28-A- Useful - Title",
+            )
+            Path(directory, "2026-08-28-Title").mkdir()
+            self.assertEqual(article_directory_name("Title", now, directory), "2026-08-28-Title-2")
+
     def test_category_source_table_is_read_from_markdown(self):
         rows = parse_category_sources(
             "## Default Categories\n\n| Category | 範圍 | 建議來源 |\n"
@@ -105,6 +166,7 @@ class ContractTests(unittest.TestCase):
                 article.relative_to(root / "text").parts[:3],
                 ("AI & Technology", "2026", "08"),
             )
+            self.assertEqual(article.name, "2026-08-28-Title")
             self.assertTrue((root / "audio" / article.relative_to(root / "text")).is_dir())
             cards = {"cards": [{
                 "text": "reason about",

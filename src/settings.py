@@ -8,6 +8,8 @@ PROMPTS_DIR = PROJECT_ROOT / "prompts"
 CATEGORIES_FILE = PROJECT_ROOT / "categories.md"
 SETTINGS_FILE = PROJECT_ROOT / "settings.json"
 TTS_VOICE = "en-US-JennyNeural"
+INTERVALS = (2, 5, 10, 21, 45, 90, 180)
+AUDIO_CACHE_DAYS = 30
 
 CATEGORIES = (
     "Physics & Mathematics",

@@ -4,9 +4,8 @@
 
 ## Current Status
 
-- Step 01–06 已完成。
-- Step 07（Daily Learning 間隔複習）尚未實作。
-- Step 07 規格已於 2026-08-27 17:00:22 +08:00 完成決策，但尚未實作。
+- Step 01–07 已完成。
+- 最後同步：2026-08-28 11:09:29 +08:00。
 
 ## Features
 
@@ -20,6 +19,8 @@
 - Vocabulary Cards 獨立的短音訊控制與卡片閱讀介面。
 - GUI 整體縮放與設定記憶。
 - Daily Learning 直接顯示 `categories.md` 定義的分類、範圍與建議來源。
+- Daily Learning 提供 New Cards、History Review 與不限量 Active Dictation。
+- time-only schedule、deterministic Dictation comparison 與 lazy TTS regeneration。
 
 ## Requirements
 
@@ -55,12 +56,12 @@ Copy 按鈕只複製 prompt，不會附加文章或上一階段 JSON。
 ```text
 library/
 ├── drafts/
-├── text/Category/YYYY/MM/article-id/
+├── text/Category/YYYY/MM/YYYY-MM-DD-article-title/
 │   ├── article.md
 │   ├── analysis.json
 │   ├── cards.json
 │   └── cards/card_XXX.json
-└── audio/Category/YYYY/MM/article-id/
+└── audio/Category/YYYY/MM/YYYY-MM-DD-article-title/
     ├── article.mp3
     ├── article.timing.json
     └── cards/card_XXX/
@@ -89,17 +90,15 @@ python -m unittest discover -s tests -v
 
 - AI 操作目前為人工流程，沒有串接 AI API。
 - 背景音訊任務只存在目前程式執行期間；關閉程式會終止未完成工作。
-- Daily Learning 尚未實作到期卡片與間隔複習。
 - Category 尚無 GUI 管理功能。
 
-## Planned Step 07
+## Step 07 Review System
 
 - Daily Learning 分為 New Cards、History Review、Active Dictation。
 - 每日上限：15 張新卡、10 張歷史複習卡。
-- New Cards 為 old backlog 保留至少 3 張；History Review 通常保留 1 張 graduated card，候選不足時互相補位。
-- 完整例句 Dictation 才推進固定間隔排程。
+- 派發只依 article date 與固定累積週期，不判斷是否學會，也不使用 level／overdue 權重或 graduated pool。
+- Dictation Pass／Fail 只提供回饋，不改變時間表。
 - Dictation 使用 deterministic normalization 後精確比較，不使用 fuzzy matching 或 AI grading。
-- 狀態支援 `learning`、`graduated`、`known`。
 - 音訊採 30 天 cache，缺檔時由播放操作 lazy regenerate。
 
-詳細規則見 [Implementation Steps](steps.md#step-07--review-system)。目前沒有必須先由使用者決定的 Step 07 規格事項。
+詳細規則見 [Implementation Steps](steps.md#step-07--review-system)。

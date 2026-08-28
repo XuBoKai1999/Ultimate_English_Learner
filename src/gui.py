@@ -1,5 +1,6 @@
 import json
 import threading
+import random
 import tkinter as tk
 import tkinter.font as tkfont
 from tkinter import messagebox, ttk
@@ -7,8 +8,9 @@ from pathlib import Path
 
 from .articles import import_analysis, import_cards, save_draft
 from .player import AudioPlayer
+from .review import complete_scheduled, daily_cards, dictation_matches, history_groups
 from .settings import CATEGORIES, CATEGORIES_FILE, DRAFTS_DIR, LIBRARY_DIR, PROMPTS_DIR, load_zoom, save_zoom
-from .tts import build_article_audio
+from .tts import build_article_audio, build_speech, cleanup_audio_cache
 
 def list_directory(path):
     return sorted(
@@ -76,11 +78,19 @@ class EnglishReader(tk.Tk):
         }
         self._tree_row_height = 20
         self.audio_tasks = {}
+        self.lazy_audio_jobs = set()
+        self._page_stack = []
+        self._current_page = None
+        threading.Thread(
+            target=lambda: cleanup_audio_cache(LIBRARY_DIR / "audio"), daemon=True
+        ).start()
 
         toolbar = ttk.Frame(self, padding=(12, 8, 12, 0))
         toolbar.pack(fill="x")
         self.home_button = ttk.Button(toolbar, text="Home", command=self._show_home)
         self.home_button.pack(side="left")
+        self.back_button = ttk.Button(toolbar, text="← Back", command=self._go_back)
+        self.back_button.pack(side="left", padx=(8, 0))
         ttk.Button(toolbar, text="−", width=3, command=lambda: self._zoom(-1)).pack(side="right")
         self.zoom_label = ttk.Label(toolbar, text="100%", width=6, anchor="center")
         self.zoom_label.pack(side="right")
@@ -104,11 +114,28 @@ class EnglishReader(tk.Tk):
         builder(self.content).pack(fill="both", expand=True)
 
     def _show_page(self, builder):
+        self._page_stack.append(self._current_page)
+        self._current_page = builder
         self.home_button.pack(side="left")
+        self.back_button.pack(side="left", padx=(8, 0))
+        self._show(builder)
+
+    def _go_back(self):
+        if not self._page_stack:
+            self._show_home()
+            return
+        builder = self._page_stack.pop()
+        if builder is None:
+            self._show_home()
+            return
+        self._current_page = builder
         self._show(builder)
 
     def _show_home(self):
+        self._page_stack.clear()
+        self._current_page = None
         self.home_button.pack_forget()
+        self.back_button.pack_forget()
 
         def build(parent):
             page = ttk.Frame(parent, padding=20)
@@ -159,7 +186,17 @@ class EnglishReader(tk.Tk):
 
     def _daily(self, parent):
         page = ttk.Frame(parent, padding=16)
-        ttk.Label(page, text="No cards are due today.").pack(anchor="w")
+        new, history = daily_cards(LIBRARY_DIR / "text")
+        actions = ttk.Frame(page)
+        actions.pack(fill="x", pady=(0, 12))
+        ttk.Button(
+            actions, text=f"New Cards ({len(new)})",
+            command=lambda: self._show_page(lambda parent: self._review_modes(parent, new, "New Cards")),
+        ).pack(side="left", padx=4)
+        ttk.Button(
+            actions, text=f"History Review ({len(history)})",
+            command=lambda: self._show_page(lambda parent: self._history_cycles(parent, history)),
+        ).pack(side="left", padx=4)
         ttk.Label(page, text="Suggested reading sources by category").pack(anchor="w", pady=(24, 6))
         body = ttk.Frame(page)
         body.pack(fill="both", expand=True)
@@ -178,6 +215,231 @@ class EnglishReader(tk.Tk):
         text.tag_configure("category", font=self.reader_content_font, spacing1=6)
         text.config(state="disabled")
         return page
+
+    def _history_cycles(self, parent, cards):
+        page = ttk.Frame(parent, padding=24)
+        ttk.Label(page, text="History Review — choose a review cycle").pack(anchor="w", pady=(0, 16))
+        groups = history_groups(cards)
+        if not groups:
+            ttk.Label(page, text="No cards are due.").pack(pady=40)
+            return page
+        for _, interval, age, group in groups:
+            ttk.Button(
+                page,
+                text=f"{interval}-day interval · appeared {age} days ago · {len(group)} cards",
+                command=lambda group=group, interval=interval: self._show_page(
+                    lambda parent: self._review_modes(parent, group, f"History Review · {interval}-day interval")
+                ),
+            ).pack(fill="x", pady=6)
+        return page
+
+    def _review_modes(self, parent, cards, title):
+        page = ttk.Frame(parent, padding=24)
+        ttk.Label(page, text=f"{title} — choose a mode").pack(anchor="w", pady=(0, 16))
+        if not cards:
+            ttk.Label(page, text="No cards available.").pack(pady=40)
+            return page
+        for label, mode in (("English → Chinese", "en-zh"), ("Chinese → English", "zh-en"), ("Dictation", "dictation")):
+            ttk.Button(
+                page, text=label,
+                command=lambda label=label, mode=mode: self._show_page(
+                    lambda parent: self._review_order(parent, cards, f"{title} · {label}", mode)
+                ),
+            ).pack(fill="x", pady=6)
+        return page
+
+    def _review_order(self, parent, cards, title, mode):
+        page = ttk.Frame(parent, padding=24)
+        ttk.Label(page, text=f"{title} — card order").pack(anchor="w", pady=(0, 16))
+        ttk.Button(
+            page, text="In order",
+            command=lambda: self._show_page(lambda parent: self._review_session(parent, list(cards), title, mode)),
+        ).pack(fill="x", pady=6)
+        ttk.Button(
+            page, text="Random",
+            command=lambda: self._show_page(
+                lambda parent: self._review_session(parent, random.sample(cards, len(cards)), title, mode)
+            ),
+        ).pack(fill="x", pady=6)
+        return page
+
+    def _review_session(self, parent, cards, title, mode):
+        page = ttk.Frame(parent, padding=16)
+        header = ttk.Frame(page)
+        header.pack(fill="x")
+        ttk.Label(header, text=title).pack(side="left")
+        if not cards:
+            ttk.Label(page, text="No cards available.").pack(pady=40)
+            return page
+
+        body = ttk.Frame(page)
+        body.pack(fill="both", expand=True, pady=(8, 0))
+        sidebar = ttk.Frame(body, padding=(0, 0, 12, 0))
+        sidebar.pack(side="left", fill="y")
+        card_list = tk.Listbox(sidebar, width=28, exportselection=False)
+        card_list.pack(fill="both", expand=True)
+        for index, card in enumerate(cards, 1):
+            card_list.insert("end", f'{index}. {card["text"]} — {card["meaning_zh"]}')
+        main = ttk.Frame(body)
+        main.pack(side="left", fill="both", expand=True)
+
+        def toggle_list():
+            if sidebar.winfo_manager():
+                sidebar.pack_forget()
+                list_button.config(text="Show List")
+            else:
+                sidebar.pack(side="left", fill="y", before=main)
+                list_button.config(text="Hide List")
+
+        list_button = ttk.Button(header, text="Hide List", command=toggle_list)
+        list_button.pack(side="right")
+        player = AudioPlayer(main)
+        audio_actions = ttk.Frame(main)
+        audio_actions.pack(fill="x", pady=8)
+        content = tk.Text(main, wrap="word", height=10, font=self.reader_content_font)
+        content.pack(fill="both", expand=True)
+        answer = ttk.Entry(main, font=self.reader_content_font)
+        if mode == "dictation":
+            answer.pack(fill="x", pady=8)
+        status = ttk.Label(main, text="")
+        status.pack(fill="x")
+        actions = ttk.Frame(main)
+        actions.pack(fill="x", pady=8)
+        state = {"index": 0, "revealed": False, "checked": False}
+
+        def card_audio(card, kind):
+            article_dir = card["_path"].parents[1]
+            audio_dir = LIBRARY_DIR / "audio" / article_dir.relative_to(LIBRARY_DIR / "text")
+            base = audio_dir / "cards" / card["id"] / kind
+            return base.with_suffix(".mp3"), base.with_suffix(".timing.json")
+
+        def show():
+            card = cards[state["index"]]
+            content.config(state="normal")
+            content.delete("1.0", "end")
+            if mode == "dictation":
+                shown = "Listen and type the complete example sentence."
+                hidden = f'\n\n{card["example_en"]}'
+            elif mode == "en-zh":
+                shown = f'{card["text"]}\n\n{card["example_en"]}'
+                hidden = f'\n\n{card["meaning_zh"]}\n{card["example_zh"]}'
+            else:
+                shown = f'{card["meaning_zh"]}\n\n{card["example_zh"]}'
+                hidden = f'\n\n{card["text"]}\n{card["example_en"]}'
+            content.insert("1.0", shown + (hidden if state["revealed"] else ""))
+            content.config(state="disabled")
+            answer.delete(0, "end")
+            status.config(text=f'{state["index"] + 1} / {len(cards)} · Due {card["_due"]}')
+            card_list.selection_clear(0, "end")
+            card_list.selection_set(state["index"])
+            card_list.see(state["index"])
+
+        def play(kind):
+            card = cards[state["index"]]
+            text = card["text"] if kind == "text" else card["example_en"]
+            audio, timing = card_audio(card, kind)
+            self._play_or_build(player, text, audio, timing, card["text"], status)
+
+        def reveal():
+            state["revealed"] = not state["revealed"]
+            show()
+
+        def check():
+            if state["checked"]:
+                next_card()
+                return
+            card = cards[state["index"]]
+            correct = dictation_matches(answer.get(), card["example_en"])
+            if not complete(card):
+                return
+            state.update(revealed=True, checked=True)
+            show()
+            status.config(text="Correct. Press Enter to continue." if correct else f'Incorrect. Expected: {card["example_en"]} · Press Enter to continue.')
+
+        def complete(card):
+            try:
+                complete_scheduled(card)
+            except (OSError, ValueError) as error:
+                messagebox.showerror("Cannot save review", str(error), parent=self)
+                return False
+            return True
+
+        def advance():
+            if complete(cards[state["index"]]):
+                next_card()
+
+        def previous_card():
+            if state["index"] == 0:
+                return
+            player.stop()
+            state.update(index=state["index"] - 1, revealed=False, checked=False)
+            show()
+
+        def select_card(event=None):
+            selection = card_list.curselection()
+            if not selection or selection[0] == state["index"]:
+                return
+            player.stop()
+            state.update(index=selection[0], revealed=False, checked=False)
+            show()
+
+        def next_card():
+            player.stop()
+            state["index"] += 1
+            if state["index"] >= len(cards):
+                player.stop()
+                for widget in (content, answer, actions):
+                    widget.pack_forget()
+                status.config(text="Session complete.")
+                return
+            state.update(revealed=False, checked=False)
+            show()
+
+        ttk.Button(audio_actions, text="Play Word", command=lambda: play("text")).pack(side="left", padx=4)
+        ttk.Button(audio_actions, text="Play Example", command=lambda: play("example")).pack(side="left", padx=4)
+        ttk.Button(actions, text="Previous", command=previous_card).pack(side="left", padx=4)
+        if mode == "dictation":
+            answer.bind("<Return>", lambda event: check())
+            answer.focus_set()
+            ttk.Button(actions, text="Next", command=advance).pack(side="left", padx=4)
+        else:
+            ttk.Button(actions, text="Show Answer", command=reveal).pack(side="left", padx=4)
+            ttk.Button(actions, text="Next", command=advance).pack(side="left", padx=4)
+        card_list.bind("<<ListboxSelect>>", select_card)
+        show()
+        return page
+
+    def _play_or_build(self, player, text, audio, timing, label, status, on_word=None, on_ready=None):
+        key = str(audio)
+        def missing():
+            if key in self.lazy_audio_jobs:
+                return
+            self.lazy_audio_jobs.add(key)
+            status.config(text="Generating audio…")
+
+            def worker():
+                try:
+                    build_speech(text, audio, timing)
+                except Exception as error:
+                    message = str(error)
+                    self.after(0, lambda: failed(message))
+                    return
+                self.after(0, ready)
+
+            threading.Thread(target=worker, daemon=True).start()
+
+        def ready():
+            self.lazy_audio_jobs.discard(key)
+            status.config(text="Audio ready.")
+            player.queue(audio, timing, label, on_word, missing)
+            (on_ready or player.toggle)()
+
+        def failed(message):
+            self.lazy_audio_jobs.discard(key)
+            status.config(text=f"TTS error: {message}")
+
+        player.queue(audio, timing, label, on_word, missing)
+        player.toggle()
 
     def _start_audio_task(self, article_dir):
         article_dir = Path(article_dir)
@@ -392,15 +654,8 @@ class EnglishReader(tk.Tk):
         player = AudioPlayer(article_panel)
         player.grid(row=0, column=0, columnspan=2, sticky="ew", pady=(0, 6))
 
-        def load_audio(audio, timing, label=None, on_word=None):
-            if player.load(audio, timing, label, on_word):
-                player.toggle()
-                return True
-            return False
-
-        def rebuild_audio():
-            self._start_audio_task(article_dir)
-            status.config(text="Audio task started in background.")
+        def load_audio(audio, timing, label, text, on_word=None):
+            self._play_or_build(player, text, audio, timing, label, status, on_word)
 
         article_text = tk.Text(article_panel, wrap="word", font=self.reader_content_font)
         article_text.insert("1.0", article)
@@ -415,6 +670,11 @@ class EnglishReader(tk.Tk):
         article_timings = []
 
         def highlight_word(index, item):
+            if not article_spans and player.timings:
+                for span in align_word_spans(article, player.timings):
+                    article_spans.append(
+                        None if span is None else (f"1.0+{span[0]}c", f"1.0+{span[1]}c")
+                    )
             article_text.tag_remove("spoken", "1.0", "end")
             if 0 <= index < len(article_spans) and article_spans[index]:
                 start, end = article_spans[index]
@@ -426,25 +686,18 @@ class EnglishReader(tk.Tk):
         def prepare_article_audio(show_error=True):
             audio = audio_dir / "article.mp3"
             timing = audio_dir / "article.timing.json"
-            if not audio.is_file() or not timing.is_file():
-                if show_error:
-                    player.load(audio, timing)
-                else:
-                    status.config(text="Article audio has not been built yet.")
-                return False
             article_spans.clear()
-            article_timings[:] = json.loads(timing.read_text(encoding="utf-8"))
+            article_timings[:] = json.loads(timing.read_text(encoding="utf-8")) if timing.is_file() else []
             for span in align_word_spans(article, article_timings):
                 if span is None:
                     article_spans.append(None)
                     continue
                 start, end = span
                 article_spans.append((f"1.0+{start}c", f"1.0+{end}c"))
-            return player.queue(audio, timing, "Article", highlight_word)
-
-        ttk.Button(
-            article_actions, text="Build Missing Audio", command=rebuild_audio
-        ).pack(fill="x", pady=3)
+            return player.queue(
+                audio, timing, "Article", highlight_word,
+                lambda: load_audio(audio, timing, "Article", article, highlight_word),
+            )
         ttk.Label(
             article_actions,
             text="Double-click the article to jump audio to that position.",
@@ -452,9 +705,21 @@ class EnglishReader(tk.Tk):
         ).pack(fill="x", pady=(12, 0))
 
         def jump_from_text(event):
-            if not article_timings and not prepare_article_audio():
-                return "break"
             clicked = article_text.count("1.0", article_text.index(f"@{event.x},{event.y}"), "chars")[0]
+
+            def jump():
+                prepare_article_audio()
+                index = nearest_span_index(clicked, align_word_spans(article, article_timings))
+                if index is not None:
+                    player.seek_to(article_timings[index]["start"])
+
+            if not (audio_dir / "article.timing.json").is_file():
+                self._play_or_build(
+                    player, article, audio_dir / "article.mp3", audio_dir / "article.timing.json",
+                    "Article", status, highlight_word, jump,
+                )
+                return "break"
+            prepare_article_audio()
             index = nearest_span_index(clicked, align_word_spans(article, article_timings))
             if index is not None:
                 player.seek_to(article_timings[index]["start"])
@@ -512,6 +777,7 @@ class EnglishReader(tk.Tk):
                     card_audio / f"{stem}.mp3",
                     card_audio / f"{stem}.timing.json",
                     f'{card["text"]} — {"word / phrase" if stem == "text" else "example"}',
+                    card["text"] if stem == "text" else card["example_en"],
                 )
 
         card_list.bind("<<ListboxSelect>>", show_card)

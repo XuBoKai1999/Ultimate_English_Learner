@@ -1,23 +1,22 @@
 # Ultimate English Learner — Development History
 
-> Last updated: 2026-08-27 17:00:22 +08:00 (Asia/Taipei)
+> Last updated: 2026-08-28 11:09:29 +08:00 (Asia/Taipei)
 
 本文件供新開發者或新 agent 快速接手。規格以 `arch.md` 為準，施工順序與狀態以 `steps.md` 為準；此處記錄已完成工作、設計演變與目前限制。
 
 ## Current State
 
-- Step 01–06 已完成。
-- Step 07（Daily Learning 複習系統）尚未施工。
+- Step 01–07 已完成。
 - 啟動入口：`python main.py`。
 - 技術：Python、Tkinter、`edge-tts==7.2.8`、`pygame-ce==2.5.8`。
-- 驗證：`python -m unittest discover -s tests -v`，目前 8 項測試。
+- 驗證：`python -m unittest discover -s tests -v`，目前 12 項測試。
 
 ## Implemented Milestones
 
 ### 2026-08-27 — Project and storage foundation
 
 - 建立 `main.py`、`src/`、`tests/`、`prompts/` 與 `library/`。
-- `library/text/` 與 `library/audio/` 只預建 Category；`YYYY/MM/article-id` 在文章匯入後建立。
+- `library/text/` 與 `library/audio/` 只預建 Category；`YYYY/MM/YYYY-MM-DD-文章標題` 在文章匯入後建立。
 - text/audio 採鏡像目錄；測試資料已清除，Category 骨架保留。
 - 每篇文章保存 `article.md`、`analysis.json`、`cards.json` 與拆分後的 `cards/card_XXX.json`。
 
@@ -62,20 +61,14 @@
 ## Important Decisions
 
 - 不使用 Whisper 做 TTS；Whisper 是 STT，本專案語音生成使用 `edge-tts`。
-- 目前實作的 Play 只播放已生成音訊；Step 07 規格要求缺檔時 lazy regenerate。
+- Play 優先播放 cache；缺檔時背景 lazy regenerate 後自動播放。
 - 文字與 JSON 是 source of truth；audio 是可重新生成的 derived data。
 - v0 不呼叫 AI API、不自動抓文章、不實作 FSRS、雲端同步或多使用者。
 - 不新增 speculative service layer；目前以小型函式、JSON 與本地檔案完成流程。
 
 ## Next Work
 
-依 `steps.md` 執行 Step 07：
-
-1. 集中加入每日上限、interval、level/overdue weight 與 audio cache 設定。
-2. 實作 New Cards、History Review、Review Mode、Scheduled Dictation、Active Dictation。
-3. 擴充 `graduated` 狀態與 long-term 抽查。
-4. 實作 deterministic Dictation normalization 與 contraction table。
-5. 實作 audio cache 清理及所有播放入口的 lazy TTS regeneration。
+v0 已完成；後續只處理實際使用時發現的問題，不預建下一版功能。
 
 ### 2026-08-27 16:15:22 +08:00 — Step 07 specification update
 
@@ -95,10 +88,46 @@
 - 判定採 deterministic normalization 後 exact comparison，不使用 fuzzy matching 或 AI grading。
 - Step 07 目前沒有待使用者決定的規格阻塞；Python 實作仍未開始。
 
+### 2026-08-28 — Review schedule simplified and article naming changed
+
+- Step 07 改為只依 article date 與固定累積 intervals 派發，不再判斷是否學會。
+- 撤銷 level/overdue weights、old backlog reservation、known、graduated、long-term pool 與依答案結果升降 stage。
+- Dictation comparison、每日 15/10 上限、Active Dictation 與 TTS cache 規格保留。
+- 文章目錄改為 `YYYY-MM-DD-文章標題`；非法字元會清理，同日同名加數字 suffix。
+- 已修改文章匯入實作與測試；Step 07 本身仍未施工。
+
+### 2026-08-28 11:09:29 +08:00 — Step 07 implemented
+
+- 加入集中設定與 `src/review.py` time-only schedule。
+- Daily Learning 已接入 New Cards、History Review、Review Mode 與 Active Dictation。
+- Scheduled encounter 無論 Dictation 結果都按 article date 固定前進；Active Dictation 不改排程。
+- Dictation 使用 deterministic contraction normalization 與 exact comparison。
+- audio cache 啟動時清除 30 天未用 MP3；article、vocabulary、example 缺檔時由 Play 背景重建。
+- 現有 `status` 欄位只為相容舊 cards 保留，派發器不使用。
+- 12 項自動測試通過。
+
+### 2026-08-28 11:38:06 +08:00 — Step 07 card flow simplified
+
+- 移除 Active Dictation 與 New／History 每日張數上限。
+- History Review 改為先按固定週期分層，顯示 interval、article age 與 card 數量。
+- New／History 接著分別選擇 English → Chinese、Chinese → English 或 Dictation，再選原始順序／隨機派發。
+- card 畫面只保留上方 Play Word 與 Play Example；兩種翻譯模式僅顯示答案，Dictation 僅保留雙播放鍵與輸入框。
+- 12 項自動測試通過。
+
+### 2026-08-28 — Daily card sessions retained
+
+- 已完成的 card 在當天仍保留於原 New／History pool，可反覆練習；同一天不重複推進 schedule。
+- 學習頁加入 Previous 與可點選、可隱藏的左側 card 摘要清單。
+- 12 項自動測試通過。
+
+### 2026-08-28 — Review navigation improved
+
+- Dictation 加入 Next。
+- 全域工具列加入 Back，可逐層返回 Daily Learning 的週期、模式與排序頁。
+
 ## Known Limitations
 
 - 背景音訊任務不跨程式啟動保存。
 - `edge-tts` 生成依賴網路。
 - Category 尚無 GUI 管理功能；新增分類需同步修改文件、設定與 Library 骨架。
-- Daily Learning 尚未有 spaced-repetition 行為。
 - 未做自動 GUI 視覺測試；現有測試涵蓋資料合約、目錄讀取、設定、TTS 輸出、prompt 來源表解析與文字／timing 對齊。

@@ -1,4 +1,5 @@
 import json
+import os
 import tkinter as tk
 from pathlib import Path
 from tkinter import messagebox, ttk
@@ -13,6 +14,7 @@ class AudioPlayer(ttk.LabelFrame):
             pygame.mixer.init()
         self.audio = None
         self.pending = None
+        self.on_missing = None
         self.timings = []
         self.duration = 0.0
         self.position = 0.0
@@ -51,21 +53,26 @@ class AudioPlayer(ttk.LabelFrame):
         self.stop()
         self.audio = audio
         self.pending = None
+        self.on_missing = None
         self.timings = json.loads(timing.read_text(encoding="utf-8"))
         self.on_word = on_word
         self._word_index = -1
         self.duration = pygame.mixer.Sound(str(audio)).get_length()
         pygame.mixer.music.load(str(audio))
+        try:
+            os.utime(audio)
+            os.utime(timing)
+        except OSError:
+            pass
         self.track_label.config(text=label or audio.stem)
         return True
 
-    def queue(self, audio, timing, label=None, on_word=None):
+    def queue(self, audio, timing, label=None, on_word=None, on_missing=None):
         audio, timing = Path(audio), Path(timing)
-        if not audio.is_file() or not timing.is_file():
-            return False
         self.stop()
         self.audio = None
         self.pending = (audio, timing, label, on_word)
+        self.on_missing = on_missing
         self.track_label.config(text=label or audio.stem)
         return True
 
@@ -75,6 +82,10 @@ class AudioPlayer(ttk.LabelFrame):
         if not self.pending:
             return False
         pending = self.pending
+        if not pending[0].is_file() or not pending[1].is_file():
+            if self.on_missing:
+                self.on_missing()
+            return False
         return self.load(*pending)
 
     def _current(self):
@@ -105,7 +116,7 @@ class AudioPlayer(ttk.LabelFrame):
             self.on_word(-1, None)
 
     def replay(self):
-        if self.audio:
+        if self._load_pending():
             self.position = 0.0
             pygame.mixer.music.play(start=0.0)
             self.playing = True
