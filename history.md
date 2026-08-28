@@ -154,13 +154,14 @@ v0 已完成；後續只處理實際使用時發現的問題，不預建下一�
 - `settings.json` 可同時保存 zoom 與 reading mode，兩者不互相覆蓋。
 - 13 項自動測試通過。
 
-### 2026-08-28 14:48:13 +08:00 — Translation and article management checkpoint
+### 2026-08-28 14:58:12 +08:00 — Translation and article management checkpoint
 
 - New Article 已加入完整繁體中文翻譯階段；Old Articles 可補寫缺少的翻譯。
 - Article 維持 4:1 閱讀／功能布局；Show Chinese 只在左側閱讀區展開同步捲動的英／中雙欄。
 - 修正 zoom requested width 與英／中捲動 callback 回授造成的擠壓、跳動及閃爍。
 - Old Articles 支援最近閱讀、修改 Category 與確認式永久刪除。
-- 16 項自動測試通過。
+- Old Articles 可切換 Category-first 與 `Year → Month → Article` 日期檢索；日期模式不顯示 Category，文章由新到舊。
+- 17 項自動測試通過。
 
 ## Known Limitations
 

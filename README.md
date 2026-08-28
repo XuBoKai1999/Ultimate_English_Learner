@@ -5,7 +5,7 @@
 ## Current Status
 
 - Step 01–07 已完成。
-- 最後同步：2026-08-28 14:48:13 +08:00。
+- 最後同步：2026-08-28 14:58:12 +08:00。
 
 ## Features
 
@@ -14,7 +14,7 @@
 - prompt 可在 GUI 編輯、複製，並在確認後覆蓋原檔。
 - 即時 Library 檔案瀏覽器。
 - Old Articles 提供最近閱讀清單，保留最近開啟的 10 篇文章。
-- Old Articles 可切換依 Category 或依 Year／Month 瀏覽 Library。
+- Old Articles 可切換 `Category → Year → Month → Article` 或 `Year → Month → Article`；日期模式不顯示 Category，文章由新到舊。
 - Old Articles 可經確認後修改文章分類或永久刪除文章，並同步處理鏡像音訊與卡片 metadata。
 - `edge-tts` 背景生成文章、單字／片語及例句 MP3。
 - 多篇教材生成進度與失敗重試。

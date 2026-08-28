@@ -198,13 +198,19 @@ next_review
 
 保留原始 `cards.json`。
 
-同時完成 `Old Articles` 的基本閱讀功能：
+同時完成 `Old Articles` 的兩種即時 Library 瀏覽模式：
 
 ```text
+View by Category:
 Category
 → Year
 → Month
 → Article
+
+View by Date:
+Year
+→ Month
+→ Article (newest first)
 ```
 
 文章頁顯示：
@@ -385,6 +391,8 @@ Dictation 畫面只保留 Play Word、Play Example、完整句子輸入框與必
 文章播放另提供 Normal／Typewriter 閱讀模式；Typewriter 會讓目前反白朗讀行保持在文字框中央。
 
 Old Articles 提供最近閱讀入口，持久保存去重後最近 10 篇並可直接重新開啟。
+
+Old Articles 可切換 Category-first 與 Date-first；Date-first 不顯示 Category 層，月份內文章由新到舊。
 
 單篇文章功能區提供 Change Category 與 Delete Article。兩者都需確認；分類變更同步 text/audio 與 card metadata，刪除同步移除 text/audio。背景 TTS 進行中或目標路徑已存在時拒絕操作。
 
