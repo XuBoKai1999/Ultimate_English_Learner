@@ -8,7 +8,7 @@ from unittest.mock import patch
 
 from src.articles import article_directory_name, change_article_category, delete_article, import_analysis, import_cards, save_draft, save_translation
 from src.contracts import validate_analysis, validate_card, validate_cards
-from src.gui import align_word_spans, centered_scroll_fraction, list_directory, load_recent_articles, markdown_layout, nearest_span_index, parse_category_sources, remember_recent_article
+from src.gui import align_word_spans, centered_scroll_fraction, list_articles_by_date, list_directory, load_recent_articles, markdown_layout, nearest_span_index, parse_category_sources, remember_recent_article
 from src.player import AudioPlayer, format_audio_time
 from src.review import complete_scheduled, daily_cards, dictation_matches, due_date, history_groups
 from src.settings import load_reading_mode, load_zoom, save_reading_mode, save_zoom
@@ -169,6 +169,21 @@ class ContractTests(unittest.TestCase):
             self.assertEqual(
                 [item.name for item in list_directory(root)],
                 ["A folder", "B.txt"],
+            )
+
+    def test_articles_can_be_grouped_by_date(self):
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            for category, year, month, name in (
+                ("B", "2025", "12", "old"), ("A", "2026", "08", "new")
+            ):
+                article = root / category / year / month / name
+                article.mkdir(parents=True)
+                (article / "article.md").touch()
+            grouped = list_articles_by_date(root)
+            self.assertEqual(
+                [(row[0], row[1], row[2].name) for row in grouped],
+                [("2026", "08", "new"), ("2025", "12", "old")],
             )
 
     def test_recent_articles_are_deduplicated_and_limited(self):

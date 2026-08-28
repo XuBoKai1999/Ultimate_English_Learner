@@ -93,14 +93,22 @@ Article 閱讀區與 Functions 固定使用 4:1 layout weight；英／中 Text w
 
 ### 2.3 Old Articles
 
-依下列方式瀏覽：
+可由按鈕切換兩種即時 Library 檢索方式：
 
 ```text
+View by Category:
 Category
 └── Year
     └── Month
         └── Article
+
+View by Date:
+Year
+└── Month
+    └── Article (newest first)
 ```
+
+日期模式不顯示 Category 層，只重新排列現有目錄資訊，不建立額外索引或複製文章；年份、月份與文章日期由新到舊。
 
 文章頁提供：
 

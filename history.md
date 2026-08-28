@@ -136,6 +136,7 @@ v0 已完成；後續只處理實際使用時發現的問題，不預建下一�
 
 - Old Articles 新增 Recent Articles，記錄並直接開啟去重後最近 10 篇文章。
 - 單篇文章新增確認式 Change Category／Delete Article；同步處理 text/audio 鏡像與 category metadata，並禁止在背景 TTS 進行中操作。
+- Old Articles 新增 View by Date／View by Category；日期模式為 `Year → Month → Article`，不再插入 Category 層，月份內由新到舊。
 
 ### 2026-08-28 — Full article translation stage
 

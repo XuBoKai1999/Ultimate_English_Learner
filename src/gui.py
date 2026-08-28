@@ -23,6 +23,21 @@ def list_directory(path):
     )
 
 
+def list_articles_by_date(text_root):
+    articles = []
+    for article_file in Path(text_root).glob("*/*/*/*/article.md"):
+        article = article_file.parent
+        _, year, month, _ = article.relative_to(text_root).parts
+        if not (year.isdigit() and month.isdigit()):
+            continue
+        articles.append((year, month, article))
+    return sorted(
+        articles,
+        key=lambda item: (item[0], item[1], item[2].name.casefold()),
+        reverse=True,
+    )
+
+
 def remember_recent_article(article_dir, text_root=LIBRARY_DIR / "text", path=RECENT_ARTICLES_FILE):
     relative = Path(article_dir).relative_to(text_root).as_posix()
     try:
@@ -1145,6 +1160,7 @@ class EnglishReader(tk.Tk):
             header, text="Recent Articles",
             command=lambda: self._show_page(self._recent_articles),
         ).pack(side="right", padx=(8, 0))
+        view_mode = {"value": "category"}
         status = ttk.Label(page, text="Select a folder to view its contents.")
         status.pack(side="bottom", fill="x", pady=(8, 0))
         tree = ttk.Treeview(page, columns=("type", "path"), displaycolumns=("type",))
@@ -1174,7 +1190,42 @@ class EnglishReader(tk.Tk):
                     tree.insert(child, "end", text="Loading…")
             status.config(text=f"{len(entries)} item(s) in {path}")
 
+        def populate_date():
+            tree.delete(*tree.get_children(""))
+            nodes = {}
+            articles = list_articles_by_date(text_root)
+            for year, month, article in articles:
+                year_node = nodes.get((year,))
+                if not year_node:
+                    year_node = nodes[(year,)] = tree.insert(
+                        "", "end", text=year, values=("Year", "")
+                    )
+                month_node = nodes.get((year, month))
+                if not month_node:
+                    month_node = nodes[(year, month)] = tree.insert(
+                        year_node, "end", text=month, values=("Month", "")
+                    )
+                tree.insert(
+                    month_node, "end", text=article.name,
+                    values=("Article", str(article)),
+                )
+            status.config(text=f"{len(articles)} article(s), grouped by year and month.")
+
+        def toggle_view():
+            if view_mode["value"] == "category":
+                view_mode["value"] = "date"
+                view_button.config(text="View by Category")
+                populate_date()
+            else:
+                view_mode["value"] = "category"
+                view_button.config(text="View by Date")
+                tree.delete(*tree.get_children(""))
+                populate()
+
         def refresh_selected():
+            if view_mode["value"] == "date":
+                populate_date()
+                return
             selection = tree.selection()
             populate(tree.focus() or (selection[0] if selection else ""))
 
@@ -1182,14 +1233,24 @@ class EnglishReader(tk.Tk):
             item = tree.focus()
             if not item:
                 return
-            path = Path(tree.set(item, "path"))
+            stored_path = tree.set(item, "path")
+            if not stored_path:
+                return
+            path = Path(stored_path)
             article_dir = path if path.is_dir() else path.parent
             if (article_dir / "article.md").is_file():
                 self._show_page(lambda parent: self._article(parent, article_dir))
 
+        view_button = ttk.Button(header, text="View by Date", command=toggle_view)
+        view_button.pack(side="right", padx=(8, 0))
         ttk.Button(header, text="Refresh", command=refresh_selected).pack(side="right")
-        tree.bind("<<TreeviewOpen>>", lambda event: refresh_selected())
-        tree.bind("<ButtonRelease-1>", lambda event: self.after_idle(refresh_selected))
+
+        def refresh_category_tree(event=None):
+            if view_mode["value"] == "category":
+                self.after_idle(refresh_selected)
+
+        tree.bind("<<TreeviewOpen>>", refresh_category_tree)
+        tree.bind("<ButtonRelease-1>", refresh_category_tree)
         tree.bind("<Double-1>", open_article)
         populate()
         return page
