@@ -512,6 +512,10 @@ Daily Learning 可依 `categories.md` 提供建議閱讀來源。
 
 文章朗讀提供 Normal 與 Typewriter 兩種顯示模式：Normal 只確保反白行可見；Typewriter 讓目前朗讀行持續位於文章框中央。選定模式寫入 `settings.json`，後續文章及下次啟動沿用。
 
+Article 文字區以輕量 Markdown viewer 呈現標題、粗體、斜體、inline／block code、引用及有序／無序清單；不渲染數學公式。Markdown 標記只在視覺上隱藏，底層 offset 不變，以維持 TTS timing 與雙擊跳轉。所有 Markdown fonts 使用 named fonts，跟隨 GUI zoom 等比例縮放。
+
+Article 音訊控制在進度條旁顯示 `MM:SS / MM:SS`，分別代表目前位置與音檔總長度。
+
 Old Articles 提供 Recent Articles，使用本地衍生清單記錄最近開啟的 10 篇文章；重複開啟時移到最前，超過上限移除最舊紀錄，不影響文章本體。
 
 v0：

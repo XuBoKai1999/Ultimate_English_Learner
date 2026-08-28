@@ -128,6 +128,9 @@ v0 已完成；後續只處理實際使用時發現的問題，不預建下一�
 ### 2026-08-28 — Article typewriter mode
 
 - 文章朗讀新增 Normal／Typewriter 切換；Typewriter 讓目前反白行平滑移動並持續置中，同一行內不重複刷新反白；選擇會跨文章、跨啟動保存。
+- 修正 Typewriter 第一行 display-line count 為零時造成 callback 中止；反白改以文字框實際 tag 為準，Replay／seek 會立即重新同步 timing，單次 callback 也不再永久停止播放器更新。
+- Article 播放器新增目前時間／總時長顯示，並與播放及 seek 同步。
+- Article 文字區改為保留 timing offsets 的輕量 Markdown viewer；支援標題、基本 inline 樣式、code、引用與清單，並跟隨 GUI zoom。
 
 ### 2026-08-28 — Recently read articles
 

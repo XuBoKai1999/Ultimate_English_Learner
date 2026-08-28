@@ -8,7 +8,8 @@ from unittest.mock import patch
 
 from src.articles import article_directory_name, import_analysis, import_cards, save_draft
 from src.contracts import validate_analysis, validate_card, validate_cards
-from src.gui import align_word_spans, centered_scroll_fraction, list_directory, load_recent_articles, nearest_span_index, parse_category_sources, remember_recent_article
+from src.gui import align_word_spans, centered_scroll_fraction, list_directory, load_recent_articles, markdown_layout, nearest_span_index, parse_category_sources, remember_recent_article
+from src.player import AudioPlayer, format_audio_time
 from src.review import complete_scheduled, daily_cards, dictation_matches, due_date, history_groups
 from src.settings import load_reading_mode, load_zoom, save_reading_mode, save_zoom
 from src.tts import build_article_audio, cleanup_audio_cache
@@ -90,6 +91,24 @@ class ContractTests(unittest.TestCase):
         self.assertEqual(spans, [(0, 5), (7, 12), (14, 19)])
         self.assertEqual(nearest_span_index(10, spans), 1)
         self.assertAlmostEqual(centered_scroll_fraction(50, 100, 0.2), 0.4)
+
+    def test_seek_syncs_highlight_immediately(self):
+        seen = []
+        player = type("FakePlayer", (), {})()
+        player.timings = [{"start": 0.1}, {"start": 1.0}]
+        player._word_index = -1
+        player.on_word = lambda index, item: seen.append(index)
+        AudioPlayer._sync_word(player, 1.2)
+        self.assertEqual(seen, [1])
+        self.assertEqual(format_audio_time(135.9), "02:15")
+
+    def test_markdown_layout_preserves_audio_offsets(self):
+        source = "# Title\n\n- **Bold** item\n"
+        rendered, tags = markdown_layout(source)
+        self.assertEqual(len(rendered), len(source))
+        self.assertEqual(rendered[source.index("-")], "•")
+        self.assertIn(("heading1", 2, 7), tags)
+        self.assertIn(("bold", source.index("Bold"), source.index("Bold") + 4), tags)
 
     def test_valid_contracts(self):
         item = {"text": "reason about", "type": "phrase", "level": "general"}

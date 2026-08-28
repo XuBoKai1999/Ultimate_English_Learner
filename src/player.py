@@ -7,8 +7,13 @@ from tkinter import messagebox, ttk
 import pygame
 
 
+def format_audio_time(seconds):
+    minutes, seconds = divmod(max(0, int(seconds)), 60)
+    return f"{minutes:02d}:{seconds:02d}"
+
+
 class AudioPlayer(ttk.LabelFrame):
-    def __init__(self, parent):
+    def __init__(self, parent, show_time=False):
         super().__init__(parent, text="Audio")
         if not pygame.mixer.get_init():
             pygame.mixer.init()
@@ -31,6 +36,9 @@ class AudioPlayer(ttk.LabelFrame):
         ttk.Button(controls, text="Replay", command=self.replay).pack(side="left")
         self.track_label = ttk.Label(controls, text="No audio selected")
         self.track_label.pack(side="left", padx=12)
+        self.time_label = ttk.Label(controls, text="00:00 / --:--") if show_time else None
+        if self.time_label:
+            self.time_label.pack(side="right")
 
         self.progress = tk.DoubleVar()
         scale = ttk.Scale(self, from_=0, to=1000, variable=self.progress)
@@ -58,6 +66,7 @@ class AudioPlayer(ttk.LabelFrame):
         self.on_word = on_word
         self._word_index = -1
         self.duration = pygame.mixer.Sound(str(audio)).get_length()
+        self._show_time()
         pygame.mixer.music.load(str(audio))
         try:
             os.utime(audio)
@@ -110,6 +119,7 @@ class AudioPlayer(ttk.LabelFrame):
         self.position = 0.0
         self.playing = False
         self.progress.set(0)
+        self._show_time()
         self.play_button.config(text="Play")
         self._word_index = -1
         if self.on_word:
@@ -118,6 +128,7 @@ class AudioPlayer(ttk.LabelFrame):
     def replay(self):
         if self._load_pending():
             self.position = 0.0
+            self._word_index = -1
             pygame.mixer.music.play(start=0.0)
             self.playing = True
             self.play_button.config(text="Pause")
@@ -132,6 +143,7 @@ class AudioPlayer(ttk.LabelFrame):
         if not self._load_pending():
             return
         self.position = min(self.duration, max(0.0, seconds))
+        self._word_index = -1
         pygame.mixer.music.stop()
         if play:
             pygame.mixer.music.play(start=self.position)
@@ -141,6 +153,24 @@ class AudioPlayer(ttk.LabelFrame):
             self.playing = False
             self.play_button.config(text="Play")
         self.progress.set(self.position / self.duration * 1000 if self.duration else 0)
+        self._show_time(self.position)
+        self._sync_word(self.position)
+
+    def _show_time(self, current=0):
+        if self.time_label:
+            total = format_audio_time(self.duration) if self.duration else "--:--"
+            self.time_label.config(text=f"{format_audio_time(current)} / {total}")
+
+    def _sync_word(self, current):
+        index = next(
+            (index for index in range(len(self.timings) - 1, -1, -1)
+             if self.timings[index]["start"] <= current),
+            -1,
+        )
+        if index != self._word_index:
+            self._word_index = index
+            if self.on_word:
+                self.on_word(index, self.timings[index] if index >= 0 else None)
 
     def _tick(self):
         try:
@@ -148,21 +178,14 @@ class AudioPlayer(ttk.LabelFrame):
                 return
         except tk.TclError:
             return
+        self.after(100, self._tick)
         if self.audio and self.duration:
             current = min(self.duration, self._current())
             if not self.dragging:
                 self.progress.set(current / self.duration * 1000)
-            index = next(
-                (index for index in range(len(self.timings) - 1, -1, -1)
-                 if self.timings[index]["start"] <= current),
-                -1,
-            )
-            if index != self._word_index:
-                self._word_index = index
-                if self.on_word:
-                    self.on_word(index, self.timings[index] if index >= 0 else None)
+            self._show_time(current)
+            self._sync_word(current)
             if self.playing and not pygame.mixer.music.get_busy():
                 self.playing = False
                 self.position = 0.0
                 self.play_button.config(text="Play")
-        self.after(100, self._tick)

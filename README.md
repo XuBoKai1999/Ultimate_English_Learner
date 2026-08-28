@@ -17,7 +17,9 @@
 - `edge-tts` 背景生成文章、單字／片語及例句 MP3。
 - 多篇教材生成進度與失敗重試。
 - 文章時間軸、拖曳跳轉、雙擊文字跳轉、朗讀行反白及自動捲動。
+- Article 播放器顯示目前播放時間與音檔總時長。
 - 文章朗讀可切換 Normal／Typewriter；Typewriter 讓目前朗讀行保持在閱讀框中央。
+- Article 以可縮放的 Markdown 樣式顯示標題、基本文字格式、程式碼、引用與清單；不處理數學公式。
 - Vocabulary Cards 獨立的短音訊控制與卡片閱讀介面。
 - GUI 整體縮放與閱讀模式設定記憶。
 - Daily Learning 直接顯示 `categories.md` 定義的分類、範圍與建議來源。

@@ -1,4 +1,5 @@
 import json
+import re
 import threading
 import random
 import tkinter as tk
@@ -88,6 +89,48 @@ def centered_scroll_fraction(line, total, visible):
     return max(0.0, min(1.0 - visible, line / max(total, 1) - visible / 2))
 
 
+def markdown_layout(markdown):
+    display = list(markdown)
+    tags = []
+    offset = 0
+    in_code = False
+    for line in markdown.splitlines(keepends=True):
+        content = line.rstrip("\r\n")
+        if content.startswith("```"):
+            tags.append(("syntax", offset, offset + len(content)))
+            in_code = not in_code
+        elif in_code:
+            tags.append(("code_block", offset, offset + len(content)))
+        else:
+            heading = re.match(r"^(#{1,6})\s+", content)
+            if heading:
+                level = min(len(heading.group(1)), 3)
+                tags.extend((("syntax", offset, offset + heading.end()),
+                             (f"heading{level}", offset + heading.end(), offset + len(content))))
+            bullet = re.match(r"^(\s*)[-+*]\s+", content)
+            if bullet:
+                marker = offset + len(bullet.group(1))
+                display[marker] = "•"
+                tags.append(("list", offset, offset + len(content)))
+            elif re.match(r"^\s*\d+[.)]\s+", content):
+                tags.append(("list", offset, offset + len(content)))
+            quote = re.match(r"^\s*>\s?", content)
+            if quote:
+                tags.extend((("syntax", offset, offset + quote.end()),
+                             ("quote", offset + quote.end(), offset + len(content))))
+        offset += len(line)
+    for pattern, tag, markers in (
+        (r"\*\*(.+?)\*\*", "bold", 2),
+        (r"(?<!\*)\*([^*\n]+?)\*(?!\*)", "italic", 1),
+        (r"`([^`\n]+?)`", "code", 1),
+    ):
+        for match in re.finditer(pattern, markdown):
+            tags.extend((("syntax", match.start(), match.start() + markers),
+                         (tag, match.start() + markers, match.end() - markers),
+                         ("syntax", match.end() - markers, match.end())))
+    return "".join(display), tags
+
+
 class EnglishReader(tk.Tk):
     def __init__(self):
         super().__init__()
@@ -103,6 +146,14 @@ class EnglishReader(tk.Tk):
             family=default_font.cget("family"),
             size=round(default_size * 1.4),
         )
+        body_size = self.reader_content_font.cget("size")
+        self.reader_bold_font = tkfont.Font(root=self, name="ReaderBoldFont", family=default_font.cget("family"), size=body_size, weight="bold")
+        self.reader_italic_font = tkfont.Font(root=self, name="ReaderItalicFont", family=default_font.cget("family"), size=body_size, slant="italic")
+        self.reader_code_font = tkfont.Font(root=self, name="ReaderCodeFont", family="Consolas", size=body_size)
+        self.reader_heading_fonts = {
+            level: tkfont.Font(root=self, name=f"ReaderHeading{level}Font", family=default_font.cget("family"), size=round(body_size * scale), weight="bold")
+            for level, scale in ((1, 1.8), (2, 1.5), (3, 1.25))
+        }
         self._font_sizes = {
             name: tkfont.Font(root=self, name=name, exists=True).cget("size")
             for name in tkfont.names(root=self)
@@ -686,14 +737,26 @@ class EnglishReader(tk.Tk):
         article_panel.rowconfigure(1, weight=1)
         panes.add(article_panel, text="Article")
 
-        player = AudioPlayer(article_panel)
+        player = AudioPlayer(article_panel, show_time=True)
         player.grid(row=0, column=0, columnspan=2, sticky="ew", pady=(0, 6))
 
         def load_audio(audio, timing, label, text, on_word=None):
             self._play_or_build(player, text, audio, timing, label, status, on_word)
 
         article_text = tk.Text(article_panel, wrap="word", font=self.reader_content_font)
-        article_text.insert("1.0", article)
+        rendered_article, markdown_tags = markdown_layout(article)
+        article_text.insert("1.0", rendered_article)
+        article_text.tag_configure("syntax", elide=True)
+        article_text.tag_configure("bold", font=self.reader_bold_font)
+        article_text.tag_configure("italic", font=self.reader_italic_font)
+        article_text.tag_configure("code", font=self.reader_code_font, background="#eeeeee")
+        article_text.tag_configure("code_block", font=self.reader_code_font, background="#eeeeee", lmargin1=16, lmargin2=16)
+        article_text.tag_configure("quote", foreground="#555555", lmargin1=20, lmargin2=20)
+        article_text.tag_configure("list", lmargin1=12, lmargin2=30)
+        for level, font in self.reader_heading_fonts.items():
+            article_text.tag_configure(f"heading{level}", font=font, spacing1=10, spacing3=6)
+        for tag, start, end in markdown_tags:
+            article_text.tag_add(tag, f"1.0+{start}c", f"1.0+{end}c")
         article_text.tag_configure("spoken", background="#ffe66d", foreground="#111111")
         article_text.config(state="disabled")
         article_text.grid(row=1, column=0, sticky="nsew", padx=(0, 6))
@@ -725,8 +788,10 @@ class EnglishReader(tk.Tk):
                 article_text.see(line_start)
                 return
             article_text.update_idletasks()
-            line = article_text.count("1.0", line_start, "displaylines")[0]
-            total = article_text.count("1.0", "end-1c", "displaylines")[0] + 1
+            before = article_text.count("1.0", line_start, "displaylines")
+            all_lines = article_text.count("1.0", "end-1c", "displaylines")
+            line = before[0] if before else 0
+            total = (all_lines[0] if all_lines else 0) + 1
             first, last = article_text.yview()
             scroll_state["target"] = centered_scroll_fraction(line, total, last - first)
             if scroll_state["job"] is None:
@@ -749,11 +814,11 @@ class EnglishReader(tk.Tk):
             if 0 <= index < len(article_spans) and article_spans[index]:
                 start, end = article_spans[index]
                 line_start = article_text.index(f"{start} display linestart")
-                if line_start == scroll_state["line"]:
-                    return
                 line_end = article_text.index(f"{start} display lineend")
-                article_text.tag_remove("spoken", "1.0", "end")
-                article_text.tag_add("spoken", line_start, line_end)
+                highlighted = tuple(map(str, article_text.tag_ranges("spoken")))
+                if highlighted != (line_start, line_end):
+                    article_text.tag_remove("spoken", "1.0", "end")
+                    article_text.tag_add("spoken", line_start, line_end)
                 scroll_state["line"] = line_start
                 scroll_to_line(line_start)
             elif index < 0:
