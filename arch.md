@@ -390,7 +390,7 @@ play example_en
 
 Dictation 畫面只保留 Play Word、Play Example、完整句子輸入框及必要的 Previous、Next、送出／檢查操作，不顯示另外兩種 Review Mode 的控制項。
 
-Scheduled Dictation 完成後，不論 Pass／Fail，都將該 scheduled encounter 標記完成、更新 bookkeeping，並指向自 article date 計算的下一個固定日期；同一卡當天不再派發。答案只作即時回饋，不推進或延後 mastery stage，因為沒有 mastery state。
+Scheduled Dictation 完成後，不論 Pass／Fail，都將該 scheduled encounter 標記完成、更新 bookkeeping，並指向自 article date 計算的下一個固定日期；card 仍留在當日 pool，但同一天不得再次推進。答案只作即時回饋，不推進或延後 mastery stage，因為沒有 mastery state。
 
 Dictation 答案使用 deterministic normalization，之後做 normalized token sequence 的 exact comparison；禁止 fuzzy matching 與 AI grading。
 
@@ -509,6 +509,10 @@ cards/
 ## 11. Source Suggestions
 
 Daily Learning 可依 `categories.md` 提供建議閱讀來源。
+
+文章朗讀提供 Normal 與 Typewriter 兩種顯示模式：Normal 只確保反白行可見；Typewriter 讓目前朗讀行持續位於文章框中央。選定模式寫入 `settings.json`，後續文章及下次啟動沿用。
+
+Old Articles 提供 Recent Articles，使用本地衍生清單記錄最近開啟的 10 篇文章；重複開啟時移到最前，超過上限移除最舊紀錄，不影響文章本體。
 
 v0：
 

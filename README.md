@@ -5,7 +5,7 @@
 ## Current Status
 
 - Step 01–07 已完成。
-- 最後同步：2026-08-28 11:09:29 +08:00。
+- 最後同步：2026-08-28 13:07:46 +08:00。
 
 ## Features
 
@@ -13,13 +13,17 @@
 - 三段連續式 AI prompts：文章清理、文章分析、單字卡生成。
 - prompt 可在 GUI 編輯、複製，並在確認後覆蓋原檔。
 - 即時 Library 檔案瀏覽器。
+- Old Articles 提供最近閱讀清單，保留最近開啟的 10 篇文章。
 - `edge-tts` 背景生成文章、單字／片語及例句 MP3。
 - 多篇教材生成進度與失敗重試。
 - 文章時間軸、拖曳跳轉、雙擊文字跳轉、朗讀行反白及自動捲動。
+- 文章朗讀可切換 Normal／Typewriter；Typewriter 讓目前朗讀行保持在閱讀框中央。
 - Vocabulary Cards 獨立的短音訊控制與卡片閱讀介面。
-- GUI 整體縮放與設定記憶。
+- GUI 整體縮放與閱讀模式設定記憶。
 - Daily Learning 直接顯示 `categories.md` 定義的分類、範圍與建議來源。
-- Daily Learning 提供 New Cards、History Review 與不限量 Active Dictation。
+- Daily Learning 提供不限張數的 New Cards，以及按複習週期分層的 History Review。
+- 卡片可選 English → Chinese、Chinese → English 或 Dictation，以及原始順序／隨機派發。
+- 學習頁提供雙播放鍵、Previous／Next、可隱藏卡片清單及逐層 Back 導覽。
 - time-only schedule、deterministic Dictation comparison 與 lazy TTS regeneration。
 
 ## Requirements
@@ -94,10 +98,12 @@ python -m unittest discover -s tests -v
 
 ## Step 07 Review System
 
-- Daily Learning 分為 New Cards、History Review、Active Dictation。
-- 每日上限：15 張新卡、10 張歷史複習卡。
+- Daily Learning 分為 New Cards 與按週期分層的 History Review，兩者都不設每日張數上限。
+- 每個週期顯示 interval、文章距今天數與卡片數量；選定後可選三種學習模式及原始順序／隨機派發。
+- 當天派發的 cards 完成後仍保留於當日 pool，可用 Previous、Next 或可隱藏的左側清單反覆練習；同一卡一天只推進一次 schedule。
+- 卡片提供 Play Word 與 Play Example；全域 Back 可逐層更換排序、模式或週期。
 - 派發只依 article date 與固定累積週期，不判斷是否學會，也不使用 level／overdue 權重或 graduated pool。
-- Dictation Pass／Fail 只提供回饋，不改變時間表。
+- Dictation Pass／Fail 只提供回饋，不改變固定時間表。
 - Dictation 使用 deterministic normalization 後精確比較，不使用 fuzzy matching 或 AI grading。
 - 音訊採 30 天 cache，缺檔時由播放操作 lazy regenerate。
 

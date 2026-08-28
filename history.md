@@ -125,6 +125,22 @@ v0 已完成；後續只處理實際使用時發現的問題，不預建下一�
 - Dictation 加入 Next。
 - 全域工具列加入 Back，可逐層返回 Daily Learning 的週期、模式與排序頁。
 
+### 2026-08-28 — Article typewriter mode
+
+- 文章朗讀新增 Normal／Typewriter 切換；Typewriter 讓目前反白行平滑移動並持續置中，同一行內不重複刷新反白；選擇會跨文章、跨啟動保存。
+
+### 2026-08-28 — Recently read articles
+
+- Old Articles 新增 Recent Articles，記錄並直接開啟去重後最近 10 篇文章。
+
+### 2026-08-28 13:37:06 +08:00 — Reading and navigation checkpoint
+
+- Step 07 現行流程為不限張數的 New Cards 與按週期分層的 History Review；不再提供 Active Dictation。
+- 當日 card pool 完成後仍保留，同一卡一天只推進一次；支援順序／隨機、Previous／Next、可隱藏清單與逐層 Back。
+- 文章提供平滑 Typewriter 模式並記憶偏好；Old Articles 保留最近閱讀的 10 篇文章。
+- `settings.json` 可同時保存 zoom 與 reading mode，兩者不互相覆蓋。
+- 13 項自動測試通過。
+
 ## Known Limitations
 
 - 背景音訊任務不跨程式啟動保存。

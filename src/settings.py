@@ -26,13 +26,33 @@ CATEGORIES = (
 )
 
 
-def load_zoom(path=SETTINGS_FILE):
+def _load(path):
     try:
-        value = json.loads(path.read_text(encoding="utf-8")).get("zoom", 1.0)
-        return value if isinstance(value, (int, float)) and not isinstance(value, bool) and 0.6 <= value <= 2.0 else 1.0
+        value = json.loads(path.read_text(encoding="utf-8"))
+        return value if isinstance(value, dict) else {}
     except (OSError, ValueError, AttributeError):
-        return 1.0
+        return {}
+
+
+def load_zoom(path=SETTINGS_FILE):
+    value = _load(path).get("zoom", 1.0)
+    return value if isinstance(value, (int, float)) and not isinstance(value, bool) and 0.6 <= value <= 2.0 else 1.0
 
 
 def save_zoom(value, path=SETTINGS_FILE):
-    path.write_text(json.dumps({"zoom": value}, indent=2) + "\n", encoding="utf-8")
+    settings = _load(path)
+    settings["zoom"] = value
+    path.write_text(json.dumps(settings, indent=2) + "\n", encoding="utf-8")
+
+
+def load_reading_mode(path=SETTINGS_FILE):
+    value = _load(path).get("reading_mode", "normal")
+    return value if value in ("normal", "typewriter") else "normal"
+
+
+def save_reading_mode(value, path=SETTINGS_FILE):
+    if value not in ("normal", "typewriter"):
+        raise ValueError("invalid reading mode")
+    settings = _load(path)
+    settings["reading_mode"] = value
+    path.write_text(json.dumps(settings, indent=2) + "\n", encoding="utf-8")

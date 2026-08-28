@@ -324,7 +324,7 @@ New Cards，或 History Review 選定週期後，先選 English → Chinese、Ch
 Dictation 畫面只保留 Play Word、Play Example、完整句子輸入框與必要的 Previous、Next、送出／檢查操作。播放 `example_en`、隱藏英文全文、要求輸入完整句子。Pass／Fail 只提供回饋，不影響派發：
 
 - 完成 scheduled encounter 後，不論結果都更新 bookkeeping 並指向從 article date 計算的下一固定日期。
-- 同一卡當天不再派發；完成 +353 天 encounter 後 schedule complete。
+- card 完成後仍留在當日 pool，但同一天不得再次推進；完成 +353 天 encounter 後 schedule complete。
 
 答案判定只使用 deterministic normalization 後的 exact token comparison，不使用 fuzzy matching 或 AI grading：
 
@@ -377,5 +377,9 @@ Dictation 畫面只保留 Play Word、Play Example、完整句子輸入框與必
 → TTS
 → 每日排程複習
 ```
+
+文章播放另提供 Normal／Typewriter 閱讀模式；Typewriter 會讓目前反白朗讀行保持在文字框中央。
+
+Old Articles 提供最近閱讀入口，持久保存去重後最近 10 篇並可直接重新開啟。
 
 除非另有指示，不要施工 `arch.md` 中列為 v0 non-goals 的功能。

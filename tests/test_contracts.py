@@ -8,9 +8,9 @@ from unittest.mock import patch
 
 from src.articles import article_directory_name, import_analysis, import_cards, save_draft
 from src.contracts import validate_analysis, validate_card, validate_cards
-from src.gui import align_word_spans, list_directory, nearest_span_index, parse_category_sources
+from src.gui import align_word_spans, centered_scroll_fraction, list_directory, load_recent_articles, nearest_span_index, parse_category_sources, remember_recent_article
 from src.review import complete_scheduled, daily_cards, dictation_matches, due_date, history_groups
-from src.settings import load_zoom, save_zoom
+from src.settings import load_reading_mode, load_zoom, save_reading_mode, save_zoom
 from src.tts import build_article_audio, cleanup_audio_cache
 
 
@@ -89,6 +89,7 @@ class ContractTests(unittest.TestCase):
         spans = align_word_spans("Hello, world. Hello again.", timings)
         self.assertEqual(spans, [(0, 5), (7, 12), (14, 19)])
         self.assertEqual(nearest_span_index(10, spans), 1)
+        self.assertAlmostEqual(centered_scroll_fraction(50, 100, 0.2), 0.4)
 
     def test_valid_contracts(self):
         item = {"text": "reason about", "type": "phrase", "level": "general"}
@@ -133,6 +134,10 @@ class ContractTests(unittest.TestCase):
             self.assertEqual(load_zoom(path), 1.0)
             save_zoom(1.4, path)
             self.assertEqual(load_zoom(path), 1.4)
+            save_reading_mode("typewriter", path)
+            self.assertEqual((load_zoom(path), load_reading_mode(path)), (1.4, "typewriter"))
+            save_zoom(1.2, path)
+            self.assertEqual(load_reading_mode(path), "typewriter")
             path.write_text('{"zoom": 99}', encoding="utf-8")
             self.assertEqual(load_zoom(path), 1.0)
 
@@ -146,6 +151,21 @@ class ContractTests(unittest.TestCase):
                 [item.name for item in list_directory(root)],
                 ["A folder", "B.txt"],
             )
+
+    def test_recent_articles_are_deduplicated_and_limited(self):
+        with TemporaryDirectory() as directory:
+            root = Path(directory) / "text"
+            recent = Path(directory) / "recent.json"
+            articles = []
+            for index in range(11):
+                article = root / "Category" / "2026" / "08" / f"article-{index}"
+                article.mkdir(parents=True)
+                (article / "article.md").write_text("x", encoding="utf-8")
+                articles.append(article)
+                remember_recent_article(article, root, recent)
+            remember_recent_article(articles[5], root, recent)
+            loaded = load_recent_articles(root, recent)
+            self.assertEqual((len(loaded), loaded[0]), (10, articles[5].resolve()))
 
     def test_ai_cleaned_article_save(self):
         cleaned = "# Title\n\nHello world."

@@ -9,14 +9,41 @@ from pathlib import Path
 from .articles import import_analysis, import_cards, save_draft
 from .player import AudioPlayer
 from .review import complete_scheduled, daily_cards, dictation_matches, history_groups
-from .settings import CATEGORIES, CATEGORIES_FILE, DRAFTS_DIR, LIBRARY_DIR, PROMPTS_DIR, load_zoom, save_zoom
+from .settings import CATEGORIES, CATEGORIES_FILE, DRAFTS_DIR, LIBRARY_DIR, PROMPTS_DIR, load_reading_mode, load_zoom, save_reading_mode, save_zoom
 from .tts import build_article_audio, build_speech, cleanup_audio_cache
+
+RECENT_ARTICLES_FILE = LIBRARY_DIR / "recent_articles.json"
+
 
 def list_directory(path):
     return sorted(
         (item for item in Path(path).iterdir() if not item.name.startswith(".")),
         key=lambda item: (not item.is_dir(), item.name.casefold()),
     )
+
+
+def remember_recent_article(article_dir, text_root=LIBRARY_DIR / "text", path=RECENT_ARTICLES_FILE):
+    relative = Path(article_dir).relative_to(text_root).as_posix()
+    try:
+        items = json.loads(Path(path).read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        items = []
+    items = [relative, *(item for item in items if item != relative)][:10]
+    Path(path).write_text(json.dumps(items, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def load_recent_articles(text_root=LIBRARY_DIR / "text", path=RECENT_ARTICLES_FILE):
+    try:
+        items = json.loads(Path(path).read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return []
+    root = Path(text_root).resolve()
+    articles = []
+    for item in items[:10]:
+        candidate = (root / item).resolve()
+        if candidate.is_relative_to(root) and (candidate / "article.md").is_file():
+            articles.append(candidate)
+    return articles
 
 
 def parse_category_sources(markdown):
@@ -55,6 +82,10 @@ def nearest_span_index(offset, spans):
             start, end = span
             choices.append((0 if start <= offset <= end else min(abs(offset - start), abs(offset - end)), index))
     return min(choices)[1] if choices else None
+
+
+def centered_scroll_fraction(line, total, visible):
+    return max(0.0, min(1.0 - visible, line / max(total, 1) - visible / 2))
 
 
 class EnglishReader(tk.Tk):
@@ -629,6 +660,10 @@ class EnglishReader(tk.Tk):
         return page
 
     def _article(self, parent, article_dir):
+        try:
+            remember_recent_article(article_dir)
+        except (OSError, ValueError):
+            pass
         page = ttk.Frame(parent, padding=16)
         header = ttk.Frame(page)
         header.pack(fill="x")
@@ -668,6 +703,42 @@ class EnglishReader(tk.Tk):
 
         article_spans = []
         article_timings = []
+        reading_mode = tk.StringVar(value=load_reading_mode())
+        scroll_state = {"line": None, "target": None, "job": None}
+
+        def animate_scroll():
+            target = scroll_state["target"]
+            if target is None:
+                scroll_state["job"] = None
+                return
+            current = article_text.yview()[0]
+            if abs(target - current) < 0.001:
+                article_text.yview_moveto(target)
+                scroll_state["job"] = None
+                return
+            article_text.yview_moveto(current + (target - current) * 0.22)
+            scroll_state["job"] = article_text.after(16, animate_scroll)
+
+        def scroll_to_line(line_start):
+            if reading_mode.get() == "normal":
+                scroll_state["target"] = None
+                article_text.see(line_start)
+                return
+            article_text.update_idletasks()
+            line = article_text.count("1.0", line_start, "displaylines")[0]
+            total = article_text.count("1.0", "end-1c", "displaylines")[0] + 1
+            first, last = article_text.yview()
+            scroll_state["target"] = centered_scroll_fraction(line, total, last - first)
+            if scroll_state["job"] is None:
+                animate_scroll()
+
+        def change_reading_mode():
+            try:
+                save_reading_mode(reading_mode.get())
+            except OSError:
+                pass
+            if scroll_state["line"]:
+                scroll_to_line(scroll_state["line"])
 
         def highlight_word(index, item):
             if not article_spans and player.timings:
@@ -675,13 +746,19 @@ class EnglishReader(tk.Tk):
                     article_spans.append(
                         None if span is None else (f"1.0+{span[0]}c", f"1.0+{span[1]}c")
                     )
-            article_text.tag_remove("spoken", "1.0", "end")
             if 0 <= index < len(article_spans) and article_spans[index]:
                 start, end = article_spans[index]
                 line_start = article_text.index(f"{start} display linestart")
+                if line_start == scroll_state["line"]:
+                    return
                 line_end = article_text.index(f"{start} display lineend")
+                article_text.tag_remove("spoken", "1.0", "end")
                 article_text.tag_add("spoken", line_start, line_end)
-                article_text.see(line_start)
+                scroll_state["line"] = line_start
+                scroll_to_line(line_start)
+            elif index < 0:
+                article_text.tag_remove("spoken", "1.0", "end")
+                scroll_state.update(line=None, target=None)
 
         def prepare_article_audio(show_error=True):
             audio = audio_dir / "article.mp3"
@@ -703,6 +780,15 @@ class EnglishReader(tk.Tk):
             text="Double-click the article to jump audio to that position.",
             wraplength=150,
         ).pack(fill="x", pady=(12, 0))
+        ttk.Label(article_actions, text="Reading mode").pack(anchor="w", pady=(16, 4))
+        ttk.Radiobutton(
+            article_actions, text="Normal", variable=reading_mode, value="normal",
+            command=change_reading_mode,
+        ).pack(anchor="w")
+        ttk.Radiobutton(
+            article_actions, text="Typewriter", variable=reading_mode, value="typewriter",
+            command=change_reading_mode,
+        ).pack(anchor="w")
 
         def jump_from_text(event):
             clicked = article_text.count("1.0", article_text.index(f"@{event.x},{event.y}"), "chars")[0]
@@ -812,6 +898,10 @@ class EnglishReader(tk.Tk):
         header = ttk.Frame(page)
         header.pack(fill="x")
         ttk.Label(header, text="Library").pack(side="left")
+        ttk.Button(
+            header, text="Recent Articles",
+            command=lambda: self._show_page(self._recent_articles),
+        ).pack(side="right", padx=(8, 0))
         status = ttk.Label(page, text="Select a folder to view its contents.")
         status.pack(side="bottom", fill="x", pady=(8, 0))
         tree = ttk.Treeview(page, columns=("type", "path"), displaycolumns=("type",))
@@ -859,6 +949,33 @@ class EnglishReader(tk.Tk):
         tree.bind("<ButtonRelease-1>", lambda event: self.after_idle(refresh_selected))
         tree.bind("<Double-1>", open_article)
         populate()
+        return page
+
+    def _recent_articles(self, parent):
+        page = ttk.Frame(parent, padding=16)
+        ttk.Label(page, text="Recently Read — latest 10").pack(anchor="w", pady=(0, 8))
+        articles = load_recent_articles()
+        if not articles:
+            ttk.Label(page, text="No recently read articles.").pack(pady=40)
+            return page
+        tree = ttk.Treeview(page, columns=("category", "path"), displaycolumns=("category",))
+        tree.heading("#0", text="Article", anchor="w")
+        tree.heading("category", text="Category", anchor="w")
+        tree.column("#0", width=560, stretch=True)
+        tree.column("category", width=220, stretch=False)
+        tree.pack(fill="both", expand=True)
+        for article in articles:
+            relative = article.relative_to(LIBRARY_DIR / "text")
+            tree.insert("", "end", text=article.name, values=(relative.parts[0], str(article)))
+
+        def open_selected(event=None):
+            item = tree.focus()
+            if item:
+                article = Path(tree.set(item, "path"))
+                self._show_page(lambda parent: self._article(parent, article))
+
+        ttk.Button(page, text="Open", command=open_selected).pack(anchor="e", pady=(8, 0))
+        tree.bind("<Double-1>", open_selected)
         return page
 
 
