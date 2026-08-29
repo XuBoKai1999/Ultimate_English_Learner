@@ -128,6 +128,8 @@ GUI 提供複製 `prompts/clean_article.md` 的按鈕，並只接收、顯示清
 
 接續 cleaned article 的同一個 AI 對話，GUI 顯示、複製及可確認覆蓋 `prompts/translate_article.md`。使用者貼回完整繁體中文 Markdown，程式驗證非空後保存為 `translation_zh.md`。
 
+Article reader 另提供不落盤的 inline selection translation：反白英文後顯示隨 GUI zoom 縮放的 Translate 浮動按鈕，按下後以單一 popup 顯示原文與 Google Translate 繁體中文結果。請求必須在背景 thread 執行，不得阻塞 Tk main thread；失敗只在 popup 顯示錯誤。此功能不得改寫 `article.md` 或 `translation_zh.md`，也不建立翻譯歷史或快取。
+
 ### Stage 2 — Article Analysis
 
 使用者將 prompt 接續貼入同一個 AI 對話；Copy 按鈕只複製 prompt，不重貼文章內容：

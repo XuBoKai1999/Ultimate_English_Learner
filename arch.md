@@ -100,6 +100,14 @@ Article 預設維持左側英文閱讀區、右側 Functions 的既有布局。�
 
 缺少 `translation_zh.md` 時，Functions 顯示 Add Chinese Translation，重用 New Article 的 translation prompt/editor；保存後只補寫現有文章並返回閱讀頁，不重跑 analysis/cards 或建立新 article unit。
 
+### Inline selection translation
+
+英文 Article Text widget 支援選取文字後的即時翻譯。使用者完成反白時，選取位置旁顯示較正文略小、跟隨 GUI zoom 等比例縮放的 Translate 浮動按鈕；右鍵 Translate 保留為備用入口。按下後重用單一自適應 popup，顯示所選英文及繁體中文結果。
+
+翻譯由 `src/translation.py` 直接使用 `deep-translator` 的 `GoogleTranslator(source="en", target="zh-TW")`。網路 I/O 在 daemon thread 執行，GUI 更新透過 Tk main thread；等待中顯示 `Translating...`，失敗時在 popup 內顯示簡短錯誤。離開 Article page、按 Esc 或正常關閉視窗時清除浮動 UI。
+
+此功能不保存翻譯、不建立 cache、history、dictionary、vocabulary entry、provider abstraction 或額外資料格式；canonical article 與全文 `translation_zh.md` 流程不受影響。
+
 Article 閱讀區與 Functions 固定使用 4:1 layout weight；英／中 Text widgets 不得以預設字元寬度撐大容器，GUI zoom 只能縮放內容，不得改變區域比例或擠掉功能區。
 
 切換分頁時立即停止音訊；進入 Article 分頁時立即將播放器來源重設為文章音訊，但將 MP3 解碼延後至上方播放器 Play 或文章雙擊操作，避免播放器保留上一張單字卡音訊，也避免分頁切換卡頓。

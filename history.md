@@ -1,6 +1,6 @@
 # Ultimate English Learner — Development History
 
-> Last updated: 2026-08-29 17:16:55 +08:00 (Asia/Taipei)
+> Last updated: 2026-08-29 17:42:45 +08:00 (Asia/Taipei)
 
 本文件供新開發者或新 agent 快速接手。規格以 `arch.md` 為準，施工順序與狀態以 `steps.md` 為準；此處記錄已完成工作、設計演變與目前限制。
 
@@ -183,6 +183,14 @@ v0 已完成；後續只處理實際使用時發現的問題，不預建下一�
 - 修正 `src/views/new_article.py` 搬移時遺漏的 `Path` import；否則 existing-article translation flow 會發生 `NameError`。
 - Ruff undefined-name 檢查、完整 17 項測試、`src` compile/import，以及指定導航與 workflow smoke checks 全部通過。
 - 未修改 GUI layout、功能、資料格式或架構。
+
+### 2026-08-29 17:42:45 +08:00 — Inline article translation
+
+- 新增 `deep-translator==1.11.4` 與 `src/translation.py`，直接使用 Google Translate 將英文翻為繁體中文。
+- Article reader 可反白單字、片語、句子或較長文字；完成選取後自動顯示 Translate 浮動按鈕，右鍵入口仍保留。
+- 浮動按鈕使用比正文稍小的 GUI 字型與字元尺寸，跟隨全域 zoom 等比例調整；translation popup 不再使用固定像素 geometry，避免 160% 時中文遭裁切。
+- 翻譯請求在背景 thread 執行；單一 popup 會重用，支援等待、錯誤、Esc、正常關閉及離開頁面清理。
+- 實際 Google 翻譯已驗證單字、片語、完整句、apostrophe／標點及 947 字元選取；popup 重用與失敗處理 smoke check 通過，完整測試為 18 項。
 
 ## Known Limitations
 

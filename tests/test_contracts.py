@@ -13,12 +13,19 @@ from src.player import AudioPlayer, format_audio_time
 from src.review import complete_scheduled, daily_cards, dictation_matches, due_date, history_groups
 from src.settings import load_reading_mode, load_zoom, save_reading_mode, save_zoom
 from src.tts import build_article_audio, cleanup_audio_cache
+from src.translation import translate_en_to_zh_tw
 
 
 CATEGORIES = ["AI & Technology", "Uncategorized"]
 
 
 class ContractTests(unittest.TestCase):
+    def test_inline_translation_uses_traditional_chinese(self):
+        with patch("src.translation.GoogleTranslator") as translator:
+            translator.return_value.translate.return_value = "測試"
+            self.assertEqual(translate_en_to_zh_tw("It's a test."), "測試")
+            translator.assert_called_once_with(source="en", target="zh-TW")
+
     def test_time_only_review_and_dictation(self):
         card = {
             "article_id": "2026-08-01-Title", "review_stage": 2,

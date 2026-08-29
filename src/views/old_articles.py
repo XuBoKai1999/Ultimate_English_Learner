@@ -1,5 +1,6 @@
 import json
 import re
+import threading
 import tkinter as tk
 from pathlib import Path
 from tkinter import messagebox, ttk
@@ -7,6 +8,7 @@ from tkinter import messagebox, ttk
 from ..articles import change_article_category, delete_article
 from ..player import AudioPlayer
 from ..settings import CATEGORIES, ENGLISH_READING_WPM, LIBRARY_DIR, load_reading_mode, save_reading_mode
+from ..translation import translate_en_to_zh_tw
 
 RECENT_ARTICLES_FILE = LIBRARY_DIR / "recent_articles.json"
 
@@ -194,6 +196,132 @@ def article(self, parent, article_dir):
     article_text.grid(row=0, column=0, sticky="nsew")
     article_scroll = ttk.Scrollbar(english_frame, orient="vertical", command=article_text.yview)
     article_scroll.grid(row=0, column=1, sticky="ns")
+
+    translation_popup = {"window": None, "english": None, "chinese": None, "request": 0}
+    translate_button = {"window": None}
+
+    def close_translation_popup(event=None):
+        window = translation_popup["window"]
+        if window is not None and window.winfo_exists():
+            window.destroy()
+        translation_popup.update(window=None, english=None, chinese=None)
+
+    def close_translate_button(event=None):
+        window = translate_button["window"]
+        if window is not None and window.winfo_exists():
+            window.destroy()
+        translate_button["window"] = None
+
+    page.bind(
+        "<Destroy>",
+        lambda event: (close_translation_popup(), close_translate_button())
+        if event.widget is page else None,
+    )
+
+    def show_inline_translation(selected=None):
+        if selected is None:
+            try:
+                selected = article_text.get("sel.first", "sel.last").strip()
+            except tk.TclError:
+                return
+        if not selected:
+            return
+        close_translate_button()
+
+        window = translation_popup["window"]
+        if window is None or not window.winfo_exists():
+            window = tk.Toplevel(self)
+            window.title("Translation")
+            window.transient(self)
+            window.protocol("WM_DELETE_WINDOW", close_translation_popup)
+            window.bind("<Escape>", close_translation_popup)
+            body = ttk.Frame(window, padding=10)
+            body.pack(fill="both", expand=True)
+            ttk.Label(body, text="English").pack(anchor="w")
+            english = tk.Text(
+                body, wrap="word", width=44, height=5, font=self.reader_content_font
+            )
+            english.pack(fill="both", expand=True, pady=(3, 8))
+            ttk.Label(body, text="繁體中文").pack(anchor="w")
+            chinese = tk.Text(
+                body, wrap="word", width=44, height=5, font=self.reader_content_font
+            )
+            chinese.pack(fill="both", expand=True, pady=(3, 0))
+            translation_popup.update(window=window, english=english, chinese=chinese)
+        else:
+            window.deiconify()
+            window.lift()
+
+        def set_text(widget, text):
+            widget.config(state="normal")
+            widget.delete("1.0", "end")
+            widget.insert("1.0", text)
+            widget.config(state="disabled")
+
+        set_text(translation_popup["english"], selected)
+        set_text(translation_popup["chinese"], "Translating...")
+        translation_popup["request"] += 1
+        request = translation_popup["request"]
+
+        def finish(text):
+            window = translation_popup["window"]
+            if request == translation_popup["request"] and window is not None and window.winfo_exists():
+                set_text(translation_popup["chinese"], text)
+
+        def worker():
+            try:
+                result = translate_en_to_zh_tw(selected)
+            except Exception as error:
+                result = f"Translation failed: {str(error)[:160]}"
+            try:
+                self.after(0, finish, result)
+            except (tk.TclError, RuntimeError):
+                pass
+
+        threading.Thread(target=worker, daemon=True).start()
+
+    def show_translate_button(event):
+        try:
+            selected = article_text.get("sel.first", "sel.last").strip()
+        except tk.TclError:
+            close_translate_button()
+            return
+        if not selected:
+            close_translate_button()
+            return
+        window = translate_button["window"]
+        if window is None or not window.winfo_exists():
+            window = tk.Toplevel(self)
+            window.overrideredirect(True)
+            window.transient(self)
+            window.bind("<Escape>", close_translate_button)
+            button = tk.Button(
+                window, text="Translate", font="TkDefaultFont", width=10, height=1,
+            )
+            button.pack()
+            translate_button.update(window=window, button=button)
+        translate_button["button"].config(
+            command=lambda text=selected: show_inline_translation(text)
+        )
+        window.geometry(f"+{event.x_root + 12}+{event.y_root + 10}")
+        window.deiconify()
+        window.lift()
+
+    context_menu = tk.Menu(article_text, tearoff=False)
+    context_menu.add_command(label="Translate", command=show_inline_translation)
+
+    def show_context_menu(event):
+        try:
+            article_text.get("sel.first", "sel.last")
+        except tk.TclError:
+            context_menu.entryconfigure("Translate", state="disabled")
+        else:
+            context_menu.entryconfigure("Translate", state="normal")
+        context_menu.tk_popup(event.x_root, event.y_root)
+        return "break"
+
+    article_text.bind("<Button-3>", show_context_menu)
+    article_text.bind("<ButtonRelease-1>", show_translate_button, add="+")
 
     if translation:
         translation_visible = {"value": False}
@@ -650,5 +778,3 @@ def recent_articles(self, parent):
     ttk.Button(page, text="Open", command=open_selected).pack(anchor="e", pady=(8, 0))
     tree.bind("<Double-1>", open_selected)
     return page
-
-

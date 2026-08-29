@@ -5,7 +5,7 @@
 ## Current Status
 
 - Step 01–07 已完成。
-- 最後同步：2026-08-29 17:16:55 +08:00。
+- 最後同步：2026-08-29 17:42:45 +08:00。
 
 ## Features
 
@@ -25,6 +25,7 @@
 - Article 以可縮放的 Markdown 樣式顯示標題、基本文字格式、程式碼、引用與清單；不處理數學公式。
 - 有全文翻譯時，可按 Show Chinese 將原英文閱讀框展開為同步捲動的英／中雙欄。
 - 缺少全文翻譯時，可從 Article Functions 進入既有翻譯 prompt/editor 補寫。
+- 英文閱讀器支援反白後的 inline translation：選取文字即顯示隨縮放調整的 Translate 浮動按鈕，並在程式內以單一 popup 顯示原文與繁體中文翻譯。
 - Vocabulary Cards 獨立的短音訊控制與卡片閱讀介面。
 - GUI 整體縮放與閱讀模式設定記憶。
 - Daily Learning 直接顯示 `categories.md` 定義的分類、範圍與建議來源。
