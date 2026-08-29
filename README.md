@@ -5,7 +5,7 @@
 ## Current Status
 
 - Step 01–07 已完成。
-- 最後同步：2026-08-29 16:51:01 +08:00。
+- 最後同步：2026-08-29 17:09:50 +08:00。
 
 ## Features
 
@@ -50,6 +50,19 @@ python -m pip install -r requirements.txt
 ```powershell
 python main.py
 ```
+
+## GUI Source Layout
+
+```text
+src/
+├── gui.py
+└── views/
+    ├── daily_learning.py
+    ├── new_article.py
+    └── old_articles.py
+```
+
+`gui.py` 負責程式啟動、主視窗、導航、共用狀態與頁面切換；三個 `views` 模組分別保存對應頁面的 UI 與頁面專屬互動。共用的縮放、lazy TTS 及背景教材生成任務仍由 `gui.py` 管理。
 
 ## Article Workflow
 

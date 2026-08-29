@@ -1,6 +1,6 @@
 # Ultimate English Learner — Development History
 
-> Last updated: 2026-08-28 11:09:29 +08:00 (Asia/Taipei)
+> Last updated: 2026-08-29 17:09:50 +08:00 (Asia/Taipei)
 
 本文件供新開發者或新 agent 快速接手。規格以 `arch.md` 為準，施工順序與狀態以 `steps.md` 為準；此處記錄已完成工作、設計演變與目前限制。
 
@@ -169,7 +169,16 @@ v0 已完成；後續只處理實際使用時發現的問題，不預建下一�
 - Article tab 新增英文閱讀時間估算；載入時依 238 WPM 計算，不處理中文或保存衍生資料。
 - 17 項自動測試通過。
 
+### 2026-08-29 17:09:50 +08:00 — GUI modules refactored
+
+- 將 1,289 行的 `src/gui.py` 保守拆分為 `views/daily_learning.py`、`views/new_article.py` 與 `views/old_articles.py`；`gui.py` 縮減至約 254 行。
+- `gui.py` 保留 application startup、主視窗、頂層導航、縮放、共用 lazy TTS、背景教材生成任務與頁面切換。
+- 頁面實作以既有 function 直接綁定 application，未加入 MVC／MVVM、controller、service、model、framework 或新 dependency。
+- 此次僅搬移既有程式碼；GUI layout、文字、資料格式、review scheduling、TTS、article storage、prompts 與 card logic 均未更動。
+- 既有 17 項測試全部通過；主視窗與三個頁面 builder 的啟動 smoke test 通過。
+
 ## Known Limitations
+
 
 - 背景音訊任務不跨程式啟動保存。
 - `edge-tts` 生成依賴網路。

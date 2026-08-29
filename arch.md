@@ -30,6 +30,21 @@
 
 ## 2. Main GUI
 
+### GUI code organization
+
+GUI 採用直接的 page-function 結構，不引入 MVC、MVVM、controller 或 service layer：
+
+```text
+src/
+├── gui.py                 # 啟動、主視窗、頂層導航、共用狀態與頁面切換
+└── views/
+    ├── daily_learning.py  # Daily Learning 與 review session
+    ├── new_article.py     # New Article pipeline
+    └── old_articles.py    # Library、article reader 與 vocabulary cards
+```
+
+各 view function 接收目前的 application instance 與 parent widget，因此沿用既有明確狀態與 callback。跨頁共用的縮放、導航、lazy TTS 與背景教材生成任務保留在 `gui.py`；view 不反向 import `gui.py`，避免 circular imports。
+
 GUI 有四個主要入口：
 
 | 頁面               | 功能                    |

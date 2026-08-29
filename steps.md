@@ -54,6 +54,19 @@ project/
 
 ## Step 02 — GUI Skeleton
 
+### Current GUI module layout
+
+GUI 骨架後續已按既有三個主要頁面保守拆分：
+
+```text
+src/gui.py
+src/views/daily_learning.py
+src/views/new_article.py
+src/views/old_articles.py
+```
+
+`gui.py` 只協調 application startup、主視窗、導航、縮放、共用音訊工作與頁面切換。各 view 保留原有 UI、callback 與資料流程；此次拆分不改變 layout、顯示文字、review scheduling、TTS、article storage、prompts 或 card logic，也未新增 controller／model／framework。
+
 先建立可操作的 GUI。
 
 目前四個主要入口：
