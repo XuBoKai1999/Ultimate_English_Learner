@@ -1,5 +1,6 @@
 import json
 import tkinter as tk
+from pathlib import Path
 from tkinter import messagebox, ttk
 
 from ..articles import import_analysis, import_cards, save_draft, save_translation
@@ -164,5 +165,4 @@ def new_article(self, parent, translation_target=None):
     ttk.Button(actions, text="Copy Cleaning Prompt", command=copy_cleaning_prompt).pack(side="left", padx=4)
     ttk.Button(actions, text="Save Article", command=save_article).pack(side="left", padx=4)
     return page
-
 

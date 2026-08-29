@@ -2,6 +2,7 @@ import random
 import tkinter as tk
 from tkinter import messagebox, ttk
 
+from ..player import AudioPlayer
 from ..review import complete_scheduled, daily_cards, dictation_matches, history_groups
 from ..settings import CATEGORIES_FILE, LIBRARY_DIR
 
@@ -246,5 +247,4 @@ def review_session(self, parent, cards, title, mode):
     card_list.bind("<<ListboxSelect>>", select_card)
     show()
     return page
-
 

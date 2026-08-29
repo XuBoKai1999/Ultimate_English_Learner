@@ -1,6 +1,6 @@
 # Ultimate English Learner — Development History
 
-> Last updated: 2026-08-29 17:09:50 +08:00 (Asia/Taipei)
+> Last updated: 2026-08-29 17:16:55 +08:00 (Asia/Taipei)
 
 本文件供新開發者或新 agent 快速接手。規格以 `arch.md` 為準，施工順序與狀態以 `steps.md` 為準；此處記錄已完成工作、設計演變與目前限制。
 
@@ -176,6 +176,13 @@ v0 已完成；後續只處理實際使用時發現的問題，不預建下一�
 - 頁面實作以既有 function 直接綁定 application，未加入 MVC／MVVM、controller、service、model、framework 或新 dependency。
 - 此次僅搬移既有程式碼；GUI layout、文字、資料格式、review scheduling、TTS、article storage、prompts 與 card logic 均未更動。
 - 既有 17 項測試全部通過；主視窗與三個頁面 builder 的啟動 smoke test 通過。
+
+### 2026-08-29 17:16:55 +08:00 — Post-refactor GUI regression fix
+
+- 修正 `src/views/daily_learning.py` 搬移時遺漏的 `AudioPlayer` import；否則進入 Review Session 時會發生 `NameError`。
+- 修正 `src/views/new_article.py` 搬移時遺漏的 `Path` import；否則 existing-article translation flow 會發生 `NameError`。
+- Ruff undefined-name 檢查、完整 17 項測試、`src` compile/import，以及指定導航與 workflow smoke checks 全部通過。
+- 未修改 GUI layout、功能、資料格式或架構。
 
 ## Known Limitations
 
