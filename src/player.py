@@ -29,7 +29,7 @@ class AudioPlayer(ttk.LabelFrame):
         self._word_index = -1
 
         controls = ttk.Frame(self)
-        controls.pack(fill="x", padx=8, pady=6)
+        controls.pack(fill="x", padx=4, pady=2)
         self.play_button = ttk.Button(controls, text="Play", command=self.toggle)
         self.play_button.pack(side="left")
         ttk.Button(controls, text="Stop", command=self.stop).pack(side="left", padx=4)
@@ -41,8 +41,8 @@ class AudioPlayer(ttk.LabelFrame):
             self.time_label.pack(side="right")
 
         self.progress = tk.DoubleVar()
-        scale = ttk.Scale(self, from_=0, to=1000, variable=self.progress)
-        scale.pack(fill="x", padx=8)
+        scale = ttk.Scale(controls, from_=0, to=1000, variable=self.progress)
+        scale.pack(side="left", fill="x", expand=True, padx=8)
         scale.bind("<ButtonPress-1>", lambda event: setattr(self, "dragging", True))
         scale.bind("<ButtonRelease-1>", self.seek)
         self.bind("<Destroy>", self._destroy)

@@ -10,7 +10,7 @@ from pathlib import Path
 from .articles import change_article_category, delete_article, import_analysis, import_cards, save_draft, save_translation
 from .player import AudioPlayer
 from .review import complete_scheduled, daily_cards, dictation_matches, history_groups
-from .settings import CATEGORIES, CATEGORIES_FILE, DRAFTS_DIR, LIBRARY_DIR, PROMPTS_DIR, load_reading_mode, load_zoom, save_reading_mode, save_zoom
+from .settings import CATEGORIES, CATEGORIES_FILE, DRAFTS_DIR, ENGLISH_READING_WPM, LIBRARY_DIR, PROMPTS_DIR, load_reading_mode, load_zoom, save_reading_mode, save_zoom
 from .tts import build_article_audio, build_speech, cleanup_audio_cache
 
 RECENT_ARTICLES_FILE = LIBRARY_DIR / "recent_articles.json"
@@ -102,6 +102,11 @@ def nearest_span_index(offset, spans):
 
 def centered_scroll_fraction(line, total, visible):
     return max(0.0, min(1.0 - visible, line / max(total, 1) - visible / 2))
+
+
+def estimate_english_reading(text, words_per_minute=ENGLISH_READING_WPM):
+    words = len(re.findall(r"[A-Za-z]+(?:['’-][A-Za-z]+)*", text))
+    return words, max(1, (words + words_per_minute - 1) // words_per_minute) if words else 0
 
 
 def markdown_layout(markdown):
@@ -763,30 +768,27 @@ class EnglishReader(tk.Tk):
             remember_recent_article(article_dir)
         except (OSError, ValueError):
             pass
-        page = ttk.Frame(parent, padding=16)
-        header = ttk.Frame(page)
-        header.pack(fill="x")
-        ttk.Button(
-            header, text="← Old Articles",
-            command=lambda: self._show_page(self._old_articles),
-        ).pack(side="left")
-        ttk.Label(header, text=article_dir.name).pack(side="left", padx=12)
+        page = ttk.Frame(parent, padding=(6, 2))
         status = ttk.Label(page, text="Ready.")
-        status.pack(side="bottom", fill="x", pady=(8, 0))
+        status.pack(side="bottom", fill="x", pady=(2, 0))
 
         article = (article_dir / "article.md").read_text(encoding="utf-8")
+        _, reading_minutes = estimate_english_reading(article)
         audio_dir = LIBRARY_DIR / "audio" / article_dir.relative_to(LIBRARY_DIR / "text")
 
         panes = ttk.Notebook(page)
-        panes.pack(fill="both", expand=True, pady=(8, 0))
-        article_panel = ttk.Frame(panes, padding=6)
+        panes.pack(fill="both", expand=True)
+        article_panel = ttk.Frame(panes, padding=3)
         article_panel.columnconfigure(0, weight=4, uniform="article-layout")
         article_panel.columnconfigure(1, weight=1, uniform="article-layout")
         article_panel.rowconfigure(1, weight=1)
-        panes.add(article_panel, text="Article")
+        panes.add(
+            article_panel,
+            text=f"Article · ~{reading_minutes} min" if reading_minutes else "Article",
+        )
 
         player = AudioPlayer(article_panel, show_time=True)
-        player.grid(row=0, column=0, columnspan=2, sticky="ew", pady=(0, 6))
+        player.grid(row=0, column=0, columnspan=2, sticky="ew", pady=(0, 3))
 
         def load_audio(audio, timing, label, text, on_word=None):
             self._play_or_build(player, text, audio, timing, label, status, on_word)

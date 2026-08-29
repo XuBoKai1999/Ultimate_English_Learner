@@ -10,6 +10,7 @@ SETTINGS_FILE = PROJECT_ROOT / "settings.json"
 TTS_VOICE = "en-US-JennyNeural"
 INTERVALS = (2, 5, 10, 21, 45, 90, 180)
 AUDIO_CACHE_DAYS = 30
+ENGLISH_READING_WPM = 238
 
 CATEGORIES = (
     "Physics & Mathematics",

@@ -542,6 +542,8 @@ Article 文字區以輕量 Markdown viewer 呈現標題、粗體、斜體、inli
 
 Article 音訊控制在進度條旁顯示 `MM:SS / MM:SS`，分別代表目前位置與音檔總長度。
 
+開啟 Article 時即時計算 `article.md` 的英文 word count，使用 `ENGLISH_READING_WPM = 238` 與 `ceil(words / WPM)` 估算默讀分鐘，顯示於 Article tab；不保存衍生結果、不計中文翻譯。238 WPM 依據 [Brysbaert 2019 對英文成人非小說默讀速率的 meta-analysis](https://www.sciencedirect.com/science/article/pii/S0749596X19300786)。
+
 Old Articles 提供 Recent Articles，使用本地衍生清單記錄最近開啟的 10 篇文章；重複開啟時移到最前，超過上限移除最舊紀錄，不影響文章本體。
 
 v0：

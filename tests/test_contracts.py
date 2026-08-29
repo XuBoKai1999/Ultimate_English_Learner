@@ -8,7 +8,7 @@ from unittest.mock import patch
 
 from src.articles import article_directory_name, change_article_category, delete_article, import_analysis, import_cards, save_draft, save_translation
 from src.contracts import validate_analysis, validate_card, validate_cards
-from src.gui import align_word_spans, centered_scroll_fraction, list_articles_by_date, list_directory, load_recent_articles, markdown_layout, nearest_span_index, parse_category_sources, remember_recent_article
+from src.gui import align_word_spans, centered_scroll_fraction, estimate_english_reading, list_articles_by_date, list_directory, load_recent_articles, markdown_layout, nearest_span_index, parse_category_sources, remember_recent_article
 from src.player import AudioPlayer, format_audio_time
 from src.review import complete_scheduled, daily_cards, dictation_matches, due_date, history_groups
 from src.settings import load_reading_mode, load_zoom, save_reading_mode, save_zoom
@@ -109,6 +109,7 @@ class ContractTests(unittest.TestCase):
         self.assertEqual(rendered[source.index("-")], "•")
         self.assertIn(("heading1", 2, 7), tags)
         self.assertIn(("bold", source.index("Bold"), source.index("Bold") + 4), tags)
+        self.assertEqual(estimate_english_reading("Don't count 中文. " + "word " * 237), (239, 2))
 
     def test_valid_contracts(self):
         item = {"text": "reason about", "type": "phrase", "level": "general"}

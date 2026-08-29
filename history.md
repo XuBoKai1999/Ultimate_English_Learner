@@ -163,6 +163,12 @@ v0 已完成；後續只處理實際使用時發現的問題，不預建下一�
 - Old Articles 可切換 Category-first 與 `Year → Month → Article` 日期檢索；日期模式不顯示 Category，文章由新到舊。
 - 17 項自動測試通過。
 
+### 2026-08-29 16:51:01 +08:00 — Article reader layout and reading estimate
+
+- 移除文章頁重複的內部返回／標題列，縮小外距，並將 Audio buttons、進度條與時間合併為單一橫列，增加閱讀器垂直高度。
+- Article tab 新增英文閱讀時間估算；載入時依 238 WPM 計算，不處理中文或保存衍生資料。
+- 17 項自動測試通過。
+
 ## Known Limitations
 
 - 背景音訊任務不跨程式啟動保存。

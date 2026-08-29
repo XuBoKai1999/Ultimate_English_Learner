@@ -390,6 +390,8 @@ Dictation 畫面只保留 Play Word、Play Example、完整句子輸入框與必
 
 文章播放另提供 Normal／Typewriter 閱讀模式；Typewriter 會讓目前反白朗讀行保持在文字框中央。
 
+載入 Article 時只計算英文 word count，依集中設定 `ENGLISH_READING_WPM = 238` 與 `ceil(words / WPM)` 即時顯示預估閱讀分鐘；不計中文、不保存衍生資料。
+
 Old Articles 提供最近閱讀入口，持久保存去重後最近 10 篇並可直接重新開啟。
 
 Old Articles 可切換 Category-first 與 Date-first；Date-first 不顯示 Category 層，月份內文章由新到舊。
