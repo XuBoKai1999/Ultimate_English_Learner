@@ -102,11 +102,19 @@ Article 預設維持左側英文閱讀區、右側 Functions 的既有布局。�
 
 ### Inline selection translation
 
-英文 Article Text widget 支援選取文字後的即時翻譯。使用者完成反白時，選取位置旁顯示較正文略小、跟隨 GUI zoom 等比例縮放的 Translate 浮動按鈕；右鍵 Translate 保留為備用入口。按下後重用單一自適應 popup，顯示所選英文及繁體中文結果。
+英文 Article Text widget 支援選取文字後的即時翻譯。使用者完成反白時，選取位置旁顯示較正文略小、跟隨 GUI zoom 等比例縮放的 Translate 浮動按鈕；不提供右鍵選單。按下後重用單一自適應 popup，顯示所選英文及繁體中文結果。
 
-翻譯由 `src/translation.py` 直接使用 `deep-translator` 的 `GoogleTranslator(source="en", target="zh-TW")`。網路 I/O 在 daemon thread 執行，GUI 更新透過 Tk main thread；等待中顯示 `Translating...`，失敗時在 popup 內顯示簡短錯誤。離開 Article page、按 Esc 或正常關閉視窗時清除浮動 UI。
+`src/translation.py` 是小型 network lookup layer：`deep-translator` 的 `GoogleTranslator(source="en", target="zh-TW")` 先負責翻譯；短單字再由 Datamuse `/sug` 提供高相似拼字建議（首筆為原字時不顯示建議）；最後以修正後或原始單字查詢 Free Dictionary API `/api/v2/entries/en/<word>` 的結構化英文詞性、每詞性最多兩條定義、可用例句及少量同義詞。標點包住的單一英文詞仍可 lookup；含多個單字的片語或句子只執行翻譯。
 
-此功能不保存翻譯、不建立 cache、history、dictionary、vocabulary entry、provider abstraction 或額外資料格式；canonical article 與全文 `translation_zh.md` 流程不受影響。
+所有網路 I/O 在 daemon thread 執行，GUI 更新透過 Tk main thread；等待中顯示 `Looking up...`。三個來源獨立降級，任一失敗時仍顯示其他可用結果，不呈現 stack trace。新查詢以 request id 取代舊結果；點擊 popup 外、離開 Article page、按 Esc 或正常關閉視窗時清除浮動 UI，popup 內點擊不關閉。
+
+Lookup 採漸進式顯示，不以 Dictionary 控制整份結果：Google Translate 完成後立即顯示中文；接著 Datamuse 完成時加入明示 suggestion 與修正後翻譯；Free Dictionary 最後在背景等待並補上詞性與定義。Dictionary 等待期間顯示 `Dictionary lookup continuing...`。Dictionary status 必須區分：HTTP 404 為 `No dictionary entry found.`、request timeout 為 `Dictionary lookup timed out.`、其他服務錯誤為 `Dictionary service unavailable.`；不得從翻譯字串猜測詞性或定義。
+
+Popup 上方英文區依選取文字的估算 display lines 自動使用 1–6 行，單字不保留多餘空白。下方結果直接從 dictionary structured data 以 Text tags 呈現 heading、part of speech、縮排定義、斜體 example 與 synonyms，並提供垂直捲軸；不把資料先轉成 Markdown 字串。
+
+English Text 保持可編輯；使用者可直接補全或修改查詢文字，按 Enter 後遞增同一 popup 的 request id 並重新執行 Google → Datamuse → Dictionary 流程。Enter 不插入換行，舊 request 的延遲 callback 不得覆蓋新結果。
+
+此功能不保存 lookup、不建立 cache、history、vocabulary entry、provider abstraction 或額外資料格式；不爬取網頁，且 canonical article 與全文 `translation_zh.md` 流程不受影響。
 
 Article 閱讀區與 Functions 固定使用 4:1 layout weight；英／中 Text widgets 不得以預設字元寬度撐大容器，GUI zoom 只能縮放內容，不得改變區域比例或擠掉功能區。
 

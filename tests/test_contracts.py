@@ -1,10 +1,11 @@
 import json
 import os
 import unittest
+import requests
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from tempfile import TemporaryDirectory
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
 from src.articles import article_directory_name, change_article_category, delete_article, import_analysis, import_cards, save_draft, save_translation
 from src.contracts import validate_analysis, validate_card, validate_cards
@@ -13,7 +14,7 @@ from src.player import AudioPlayer, format_audio_time
 from src.review import complete_scheduled, daily_cards, dictation_matches, due_date, history_groups
 from src.settings import load_reading_mode, load_zoom, save_reading_mode, save_zoom
 from src.tts import build_article_audio, cleanup_audio_cache
-from src.translation import translate_en_to_zh_tw
+from src.translation import lookup_dictionary, lookup_inline, single_english_word, suggest_word, translate_en_to_zh_tw
 
 
 CATEGORIES = ["AI & Technology", "Uncategorized"]
@@ -25,6 +26,102 @@ class ContractTests(unittest.TestCase):
             translator.return_value.translate.return_value = "測試"
             self.assertEqual(translate_en_to_zh_tw("It's a test."), "測試")
             translator.assert_called_once_with(source="en", target="zh-TW")
+
+    def test_dictionary_lookup_is_concise(self):
+        response = Mock(status_code=200)
+        response.json.return_value = [{
+            "word": "reliable", "phonetic": "rɪˈlaɪəbl",
+            "meanings": [{
+                "partOfSpeech": "adjective", "synonyms": ["dependable"],
+                "definitions": [
+                    {"definition": "consistently good", "example": "a reliable source"},
+                    {"definition": "able to be trusted", "synonyms": ["trustworthy"]},
+                    {"definition": "not displayed"},
+                ],
+            }],
+        }]
+        with patch("src.translation.requests.get", return_value=response):
+            result = lookup_dictionary("reliable")
+        self.assertEqual(len(result["meanings"][0]["definitions"]), 2)
+        self.assertEqual(result["meanings"][0]["synonyms"], ["dependable", "trustworthy"])
+
+    def test_datamuse_suggestion_requires_a_close_match(self):
+        response = Mock()
+        response.json.return_value = [{"word": "reliable"}]
+        with patch("src.translation.requests.get", return_value=response):
+            self.assertEqual(suggest_word("eliable"), "reliable")
+
+    def test_phrase_lookup_only_translates(self):
+        with (
+            patch("src.translation.translate_en_to_zh_tw", return_value="可靠的結果"),
+            patch("src.translation.lookup_dictionary") as dictionary,
+            patch("src.translation.suggest_word") as suggestion,
+        ):
+            result = lookup_inline("reliable results")
+        self.assertEqual(result["translation"], "可靠的結果")
+        dictionary.assert_not_called()
+        suggestion.assert_not_called()
+
+    def test_lookup_services_fail_independently(self):
+        dictionary = {"word": "run", "phonetic": "", "meanings": []}
+        with (
+            patch("src.translation.translate_en_to_zh_tw", side_effect=OSError("offline")),
+            patch("src.translation.lookup_dictionary", return_value=dictionary),
+            patch("src.translation.suggest_word", return_value=None),
+        ):
+            result = lookup_inline("run")
+        self.assertIsNone(result["translation"])
+        self.assertIs(result["dictionary"], dictionary)
+        self.assertEqual(result["dictionary_status"], "found")
+
+        with (
+            patch("src.translation.translate_en_to_zh_tw", return_value="可靠的"),
+            patch("src.translation.lookup_dictionary", side_effect=OSError("offline")),
+            patch("src.translation.suggest_word", return_value="reliable"),
+        ):
+            result = lookup_inline("eliable")
+        self.assertEqual(result["suggestion"], "reliable")
+        self.assertEqual(result["translation"], "可靠的")
+        self.assertIsNone(result["dictionary"])
+        self.assertEqual(result["dictionary_status"], "unavailable")
+
+        with (
+            patch("src.translation.translate_en_to_zh_tw", return_value="測試"),
+            patch("src.translation.lookup_dictionary", return_value=None),
+            patch("src.translation.suggest_word", side_effect=OSError("offline")),
+        ):
+            result = lookup_inline("typo")
+        self.assertEqual(result["translation"], "測試")
+        self.assertIsNone(result["suggestion"])
+        self.assertEqual(result["dictionary_status"], "not_found")
+
+        corrected = {"word": "reliable", "phonetic": "", "meanings": []}
+        updates = []
+        with (
+            patch("src.translation.translate_en_to_zh_tw", side_effect=["殘缺翻譯", "可靠的"]),
+            patch("src.translation.lookup_dictionary", return_value=corrected),
+            patch("src.translation.suggest_word", return_value="reliable"),
+        ):
+            result = lookup_inline("eliable", updates.append)
+        self.assertEqual(result["suggestion"], "reliable")
+        self.assertIs(result["dictionary"], corrected)
+        self.assertEqual(result["dictionary_status"], "found")
+        self.assertEqual(
+            [(item["translation"], item["suggestion"], item["dictionary_status"]) for item in updates],
+            [("殘缺翻譯", None, None), ("可靠的", "reliable", None), ("可靠的", "reliable", "found")],
+        )
+
+        with (
+            patch("src.translation.translate_en_to_zh_tw", return_value="電晶體"),
+            patch("src.translation.lookup_dictionary", side_effect=requests.Timeout()),
+            patch("src.translation.suggest_word", return_value=None),
+        ):
+            result = lookup_inline("transistor")
+        self.assertEqual(result["dictionary_status"], "timeout")
+
+    def test_dictionary_word_allows_surrounding_punctuation(self):
+        self.assertEqual(single_english_word('(Reliable!)'), "reliable")
+        self.assertIsNone(single_english_word("reliable results"))
 
     def test_time_only_review_and_dictation(self):
         card = {

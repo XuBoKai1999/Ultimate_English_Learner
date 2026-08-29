@@ -1,6 +1,6 @@
 # Ultimate English Learner — Development History
 
-> Last updated: 2026-08-29 17:42:45 +08:00 (Asia/Taipei)
+> Last updated: 2026-08-29 18:50:03 +08:00 (Asia/Taipei)
 
 本文件供新開發者或新 agent 快速接手。規格以 `arch.md` 為準，施工順序與狀態以 `steps.md` 為準；此處記錄已完成工作、設計演變與目前限制。
 
@@ -187,10 +187,58 @@ v0 已完成；後續只處理實際使用時發現的問題，不預建下一�
 ### 2026-08-29 17:42:45 +08:00 — Inline article translation
 
 - 新增 `deep-translator==1.11.4` 與 `src/translation.py`，直接使用 Google Translate 將英文翻為繁體中文。
-- Article reader 可反白單字、片語、句子或較長文字；完成選取後自動顯示 Translate 浮動按鈕，右鍵入口仍保留。
+- Article reader 可反白單字、片語、句子或較長文字；完成選取後只顯示 Translate 浮動按鈕，不保留右鍵入口。
 - 浮動按鈕使用比正文稍小的 GUI 字型與字元尺寸，跟隨全域 zoom 等比例調整；translation popup 不再使用固定像素 geometry，避免 160% 時中文遭裁切。
-- 翻譯請求在背景 thread 執行；單一 popup 會重用，支援等待、錯誤、Esc、正常關閉及離開頁面清理。
+- 翻譯請求在背景 thread 執行；單一 popup 會重用，支援等待、錯誤、點擊外部關閉、Esc、正常關閉及離開頁面清理。
 - 實際 Google 翻譯已驗證單字、片語、完整句、apostrophe／標點及 947 字元選取；popup 重用與失敗處理 smoke check 通過，完整測試為 18 項。
+
+### 2026-08-29 18:10:40 +08:00 — Lightweight dictionary lookup
+
+- Inline translation 延伸為三來源 lookup：`deep-translator` 翻譯、Datamuse 拼字建議、Free Dictionary API 英文 dictionary data；未新增 dependency 或 API key。
+- 單字支援外圍標點、明示 `Did you mean` correction、修正後翻譯／查字；片語與完整句只翻譯。
+- Dictionary 顯示最多四組詞性、每組最多兩條定義、API 提供的例句及最多六個同義詞，保持 popup 精簡。
+- 三來源失敗互不影響；快速連續 lookup 只呈現最新 request。popup 外點擊關閉，內部選取／點擊不會提前關閉。
+- 實際服務驗證：`eliable` 得到 `reliable` 建議、`run` 得到四組詞性與精簡 dictionary data；Free Dictionary API 對部分詞彙曾逾時，graceful degradation 正常。
+- 完整測試增至 23 項，compile/import 與 GUI popup smoke checks 通過。
+
+### 2026-08-29 18:17:01 +08:00 — Dictionary popup layout refined
+
+- 英文原文區由固定五行改為依選取內容自動使用 1–6 行；單字只佔一行。
+- Dictionary 結果改用結構化 Text tags 排版，分離詞頭、詞性、定義、例句與同義詞，並加入縮排、間距、斜體及垂直捲軸。
+- 160% GUI zoom layout smoke check、23 項測試及 compile/import check 通過。
+
+### 2026-08-29 18:23:43 +08:00 — Partial-word lookup latency fixed
+
+- 將翻譯、原詞 dictionary、Datamuse suggestion 及修正詞 lookup 改為重疊執行，避免殘缺詞依序累加多個 timeout。
+- Datamuse／Dictionary timeout 由 8 秒縮至 4 秒；`microcontrolle` 實測約 4.5 秒取得 `microcontroller` 建議及修正後中文。
+- Free Dictionary API 本輪對 `microcontroller` 的 `en`／`en_US` 均逾時；UI 改為明示 dictionary unavailable，服務恢復時仍自動顯示詞性、定義、例句與同義詞。
+- 23 項測試及 compile/import check 通過。
+
+### 2026-08-29 18:28:45 +08:00 — Lookup capped at two seconds
+
+- Datamuse／Dictionary HTTP timeout 由 4 秒降為 1.5 秒，整體 lookup 設定 2 秒 display deadline。
+- deadline 後不再等待仍在執行的外部請求，立即顯示期限內取得的翻譯、建議與 dictionary data。
+- `microcontrolle` 實測 1.99 秒返回 `microcontroller` 建議與中文；未及回應的 dictionary 正確降級為 unavailable。
+- 23 項測試及 compile/import check 通過。
+
+### 2026-08-29 18:38:09 +08:00 — Dictionary outcomes separated
+
+- Dictionary lookup result 新增 `found`、`not_found`、`timeout`、`unavailable` 明確狀態。
+- 只有 API 明確回 HTTP 404 才顯示沒有詞條；request timeout 或兩秒 deadline 顯示逾時，其他服務錯誤顯示 service unavailable。
+- 23 項測試及 compile/import check 通過。
+
+### 2026-08-29 18:43:42 +08:00 — Lookup now updates progressively
+
+- 移除將整份結果限制在兩秒 deadline 的錯誤做法；Google 翻譯完成即先更新 popup，不再等待 Dictionary。
+- Datamuse suggestion 與修正後翻譯為第二階段，Free Dictionary 為最後階段；字典等待中顯示 continuing 狀態。
+- `microcontroller` 實測 Google 翻譯在 0.33 秒先顯示，Dictionary 後續結果不會清除既有翻譯。
+- 23 項測試及 compile/import check 通過。
+
+### 2026-08-29 18:48:30 +08:00 — Editable lookup query
+
+- Translation popup 的 English 欄位改為可編輯，允許直接補全殘缺單字或改寫查詢。
+- 按 Enter 會重用同一 popup 重新搜尋，不插入換行；request id 保護仍避免舊結果覆蓋新查詢。
+- Tk Return-key smoke check、23 項測試及 compile/import check 通過。
 
 ## Known Limitations
 

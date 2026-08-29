@@ -128,7 +128,7 @@ GUI 提供複製 `prompts/clean_article.md` 的按鈕，並只接收、顯示清
 
 接續 cleaned article 的同一個 AI 對話，GUI 顯示、複製及可確認覆蓋 `prompts/translate_article.md`。使用者貼回完整繁體中文 Markdown，程式驗證非空後保存為 `translation_zh.md`。
 
-Article reader 另提供不落盤的 inline selection translation：反白英文後顯示隨 GUI zoom 縮放的 Translate 浮動按鈕，按下後以單一 popup 顯示原文與 Google Translate 繁體中文結果。請求必須在背景 thread 執行，不得阻塞 Tk main thread；失敗只在 popup 顯示錯誤。此功能不得改寫 `article.md` 或 `translation_zh.md`，也不建立翻譯歷史或快取。
+Article reader 另提供不落盤的 inline lookup：反白英文後顯示隨 GUI zoom 縮放的 Translate 浮動按鈕。查詢在背景依 Google 繁中翻譯 → Datamuse 拼字建議 → Free Dictionary 的順序漸進更新；English 欄位可直接修改並按 Enter 在同一 popup 重查，舊請求不得覆蓋新結果。片語／句子只顯示翻譯；單一英文詞另顯示精簡的英文詞性、定義、例句與同義詞。三個來源獨立降級，並區分無詞條、逾時與服務不可用；popup 外點擊關閉、內部點擊不關閉。不得改寫文章／全文翻譯，不建立歷史、快取或額外 dependency。
 
 ### Stage 2 — Article Analysis
 

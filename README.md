@@ -5,7 +5,7 @@
 ## Current Status
 
 - Step 01–07 已完成。
-- 最後同步：2026-08-29 17:42:45 +08:00。
+- 最後同步：2026-08-29 18:50:03 +08:00。
 
 ## Features
 
@@ -25,7 +25,8 @@
 - Article 以可縮放的 Markdown 樣式顯示標題、基本文字格式、程式碼、引用與清單；不處理數學公式。
 - 有全文翻譯時，可按 Show Chinese 將原英文閱讀框展開為同步捲動的英／中雙欄。
 - 缺少全文翻譯時，可從 Article Functions 進入既有翻譯 prompt/editor 補寫。
-- 英文閱讀器支援反白後的 inline translation：選取文字即顯示隨縮放調整的 Translate 浮動按鈕，並在程式內以單一 popup 顯示原文與繁體中文翻譯。
+- 英文閱讀器支援輕量 inline lookup：反白後顯示隨縮放調整的 Translate 浮動按鈕；結果依序漸進顯示 Google 繁中翻譯、Datamuse 拼字建議及 Free Dictionary 的英文詞性、定義、例句與同義詞，並區分無詞條、逾時與服務不可用。
+- Lookup popup 的 English 欄位可直接補字或修改；按 Enter 後在同一 popup 重新執行完整查詢。
 - Vocabulary Cards 獨立的短音訊控制與卡片閱讀介面。
 - GUI 整體縮放與閱讀模式設定記憶。
 - Daily Learning 直接顯示 `categories.md` 定義的分類、範圍與建議來源。

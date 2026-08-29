@@ -1,4 +1,5 @@
 import json
+import math
 import re
 import threading
 import tkinter as tk
@@ -8,7 +9,7 @@ from tkinter import messagebox, ttk
 from ..articles import change_article_category, delete_article
 from ..player import AudioPlayer
 from ..settings import CATEGORIES, ENGLISH_READING_WPM, LIBRARY_DIR, load_reading_mode, save_reading_mode
-from ..translation import translate_en_to_zh_tw
+from ..translation import lookup_inline
 
 RECENT_ARTICLES_FILE = LIBRARY_DIR / "recent_articles.json"
 
@@ -197,14 +198,22 @@ def article(self, parent, article_dir):
     article_scroll = ttk.Scrollbar(english_frame, orient="vertical", command=article_text.yview)
     article_scroll.grid(row=0, column=1, sticky="ns")
 
-    translation_popup = {"window": None, "english": None, "chinese": None, "request": 0}
+    translation_popup = {
+        "window": None, "english": None, "chinese": None, "request": 0,
+        "outside_binding": None,
+    }
     translate_button = {"window": None}
 
     def close_translation_popup(event=None):
+        binding = translation_popup["outside_binding"]
+        if binding is not None:
+            self.unbind("<Button-1>", binding)
         window = translation_popup["window"]
         if window is not None and window.winfo_exists():
             window.destroy()
-        translation_popup.update(window=None, english=None, chinese=None)
+        translation_popup.update(
+            window=None, english=None, chinese=None, outside_binding=None
+        )
 
     def close_translate_button(event=None):
         window = translate_button["window"]
@@ -239,44 +248,112 @@ def article(self, parent, article_dir):
             body.pack(fill="both", expand=True)
             ttk.Label(body, text="English").pack(anchor="w")
             english = tk.Text(
-                body, wrap="word", width=44, height=5, font=self.reader_content_font
+                body, wrap="word", width=44, height=1, font=self.reader_content_font
             )
-            english.pack(fill="both", expand=True, pady=(3, 8))
-            ttk.Label(body, text="繁體中文").pack(anchor="w")
+            english.pack(fill="x", pady=(3, 8))
+            english.bind(
+                "<Return>",
+                lambda event: show_inline_translation(
+                    english.get("1.0", "end-1c").strip()
+                ) or "break",
+            )
+            ttk.Label(body, text="Translation / Dictionary").pack(anchor="w")
+            result_frame = ttk.Frame(body)
+            result_frame.pack(fill="both", expand=True, pady=(3, 0))
             chinese = tk.Text(
-                body, wrap="word", width=44, height=5, font=self.reader_content_font
+                result_frame, wrap="word", width=44, height=10,
+                font=self.reader_content_font,
             )
-            chinese.pack(fill="both", expand=True, pady=(3, 0))
+            chinese.pack(side="left", fill="both", expand=True)
+            result_scroll = ttk.Scrollbar(result_frame, command=chinese.yview)
+            result_scroll.pack(side="right", fill="y")
+            chinese.config(yscrollcommand=result_scroll.set)
+            chinese.tag_configure("heading", font=self.reader_bold_font, spacing1=8, spacing3=3)
+            chinese.tag_configure("part", font=self.reader_bold_font, spacing1=8, spacing3=2)
+            chinese.tag_configure("definition", lmargin1=12, lmargin2=34, spacing1=3)
+            chinese.tag_configure(
+                "example", font=self.reader_italic_font, foreground="#555555",
+                lmargin1=34, lmargin2=34, spacing1=2,
+            )
+            chinese.tag_configure("synonyms", lmargin1=34, lmargin2=34, spacing1=3)
             translation_popup.update(window=window, english=english, chinese=chinese)
+            translation_popup["outside_binding"] = self.bind(
+                "<Button-1>", close_translation_popup, add="+"
+            )
         else:
             window.deiconify()
             window.lift()
 
-        def set_text(widget, text):
+        def set_text(widget, text, disabled=True):
             widget.config(state="normal")
             widget.delete("1.0", "end")
             widget.insert("1.0", text)
-            widget.config(state="disabled")
+            if disabled:
+                widget.config(state="disabled")
 
-        set_text(translation_popup["english"], selected)
-        set_text(translation_popup["chinese"], "Translating...")
+        set_text(translation_popup["english"], selected, disabled=False)
+        translation_popup["english"].mark_set("insert", "end-1c")
+        translation_popup["english"].config(
+            height=min(6, max(1, sum(
+                max(1, math.ceil(len(line) / 44)) for line in selected.splitlines()
+            )))
+        )
+        set_text(translation_popup["chinese"], "Looking up...")
         translation_popup["request"] += 1
         request = translation_popup["request"]
 
-        def finish(text):
+        def render_result(widget, result):
+            widget.config(state="normal")
+            widget.delete("1.0", "end")
+            if result["suggestion"]:
+                widget.insert("end", f'Did you mean: {result["suggestion"]}?\n', "heading")
+            if result["translation"]:
+                widget.insert("end", "繁體中文\n", "heading")
+                widget.insert("end", f'{result["translation"]}\n')
+            dictionary = result["dictionary"]
+            if dictionary:
+                heading = dictionary["word"]
+                if dictionary["phonetic"]:
+                    heading += f'  /{dictionary["phonetic"]}/'
+                widget.insert("end", f'\n{heading}\n', "heading")
+                for meaning in dictionary["meanings"]:
+                    widget.insert("end", f'{meaning["part_of_speech"]}\n', "part")
+                    for definition in meaning["definitions"]:
+                        widget.insert("end", f'•  {definition["definition"]}\n', "definition")
+                        if definition["example"]:
+                            widget.insert(
+                                "end", f'Example: {definition["example"]}\n', "example"
+                            )
+                    if meaning["synonyms"]:
+                        widget.insert(
+                            "end", f'Synonyms: {", ".join(meaning["synonyms"])}\n',
+                            "synonyms",
+                        )
+            elif result["dictionary_status"] == "not_found":
+                widget.insert("end", "\nNo dictionary entry found.\n", "example")
+            elif result["dictionary_status"] == "timeout":
+                widget.insert("end", "\nDictionary lookup timed out.\n", "example")
+            elif result["dictionary_status"] == "unavailable":
+                widget.insert("end", "\nDictionary service unavailable.\n", "example")
+            elif result["word"]:
+                widget.insert("end", "\nDictionary lookup continuing...\n", "example")
+            if not widget.get("1.0", "end-1c").strip():
+                widget.insert("end", "No lookup result available.")
+            widget.config(state="disabled")
+
+        def finish(result):
             window = translation_popup["window"]
             if request == translation_popup["request"] and window is not None and window.winfo_exists():
-                set_text(translation_popup["chinese"], text)
+                render_result(translation_popup["chinese"], result)
 
         def worker():
-            try:
-                result = translate_en_to_zh_tw(selected)
-            except Exception as error:
-                result = f"Translation failed: {str(error)[:160]}"
-            try:
-                self.after(0, finish, result)
-            except (tk.TclError, RuntimeError):
-                pass
+            def publish(result):
+                try:
+                    self.after(0, finish, result)
+                except (tk.TclError, RuntimeError):
+                    pass
+
+            lookup_inline(selected, publish)
 
         threading.Thread(target=worker, daemon=True).start()
 
@@ -307,20 +384,6 @@ def article(self, parent, article_dir):
         window.deiconify()
         window.lift()
 
-    context_menu = tk.Menu(article_text, tearoff=False)
-    context_menu.add_command(label="Translate", command=show_inline_translation)
-
-    def show_context_menu(event):
-        try:
-            article_text.get("sel.first", "sel.last")
-        except tk.TclError:
-            context_menu.entryconfigure("Translate", state="disabled")
-        else:
-            context_menu.entryconfigure("Translate", state="normal")
-        context_menu.tk_popup(event.x_root, event.y_root)
-        return "break"
-
-    article_text.bind("<Button-3>", show_context_menu)
     article_text.bind("<ButtonRelease-1>", show_translate_button, add="+")
 
     if translation:
